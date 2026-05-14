@@ -1,0 +1,22 @@
+@use './helpers/index' as *;
+
+:root {
+    --color-light: #FFFFFF;
+    --color-light_2: #ddeef8;
+
+    --color-powdery: #7a4a6a;
+    --color-dark-powder: #5a3a5a;
+    --color--pink_1: #b07a95;
+    --color--pink_2: #8a6070;
+    --color--pink_3: #9b6b8a;
+    --color--pink_4: #f0dce8;
+
+    --color--light-blue: #7a9ab0;
+
+    --font-family-base: 'Caveat', sans-serif;
+
+    --transition-duration: 0.2s;
+
+    --container-width: #{rem(1600)};
+    --container-padding-x: #{rem(16)};
+}

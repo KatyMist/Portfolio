@@ -1,0 +1,68 @@
+@use '../helpers/index' as *;
+
+.nav {
+    position: absolute;
+    top: rem(24);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    @include tablet {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(to bottom, #f4b8c8, #c9e8f5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 50;
+
+        &.is-active {
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+
+    &__list {
+        display: flex;
+        gap: rem(20);
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+            gap: rem(32);
+        }
+    }
+
+    &__link { // меню
+        font-size: rem(35);
+        color: var(--color-light);
+        text-decoration: none;
+        opacity: 0.8;
+        letter-spacing: 0.05em;
+        transition: opacity 0.2s ease;
+
+        @include mobile {
+            font-size: rem(22);
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+html.is-lock {
+    overflow: hidden;
+}

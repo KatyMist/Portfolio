@@ -1,0 +1,18 @@
+//главный scss файл проекта для импорта остальных файлов стилей 
+
+@use 'normalize';
+@use 'fonts';
+@use 'variables';
+@use 'utils';
+@use 'globals';
+
+
+@use '../styles/blocks/logo';
+@use '../styles/blocks/nav';
+@use '../styles/blocks/burger';
+@use '../styles/blocks/hero';
+@use '../styles/blocks/about';
+@use '../styles/blocks/skills';
+@use '../styles/blocks/projects';
+@use '../styles/blocks/contacts';
+@use '../styles/blocks/footer';   

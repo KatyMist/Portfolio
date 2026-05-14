@@ -1,0 +1,63 @@
+/*
+Принимает агрументами max and min размер шрифра в px, 
+но без указания единицы измерения
+(добавляет использование clamp)
+*/
+@use 'sass:math';
+@use './functions' as *;
+
+@mixin fluid-text($max: 48, $min: 16) {
+    font-size: fluid($max, $min);
+}
+
+//визуаль скрывать и отображать элементы 
+@mixin hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@mixin show {
+    opacity: 1;
+    visibility: visible;
+}
+
+//разворачивается в ряд flex свойств для центрирования содержимого элемента 
+@mixin flex-center($isInline: false) {
+    @if $isInline {
+        display: inline-flex;
+    } @else  {
+        display: flex;
+    }
+
+    justify-content: center;
+    align-items: center;
+}
+
+//центрирование через абсолютное позиционирования 
+@mixin abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+//рисует квадрат определенного размера 
+@mixin square($size) {
+    width: $size;
+    height: $size;
+}
+
+//визуальное сокрытие элементов 
+@mixin visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+}
+

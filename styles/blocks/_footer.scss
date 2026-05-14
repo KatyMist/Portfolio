@@ -1,0 +1,25 @@
+@use '../helpers/index' as *;
+
+
+.footer {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(
+        to bottom,
+        #cce6f5 0%,
+        #e8b4d0 50%,
+        #f48fb1 100%
+    );
+    padding: rem(32) rem(20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__text {
+        font-size: rem(20);
+        letter-spacing: 0.1em;
+        color: rgba(255, 255, 255, 0.85);
+        text-align: center;
+        margin: 0;
+    }
+}

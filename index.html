@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Ekaterina Tumanova</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont/tabler-icons.min.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
+    <script src="./scripts/main.js" type="module" defer></script>
+</head>
+<body>
+    <main>
+        <section class="hero">
+            <button class="burger" type="button" aria-label="Открыть меню" data-js-burger>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </button>
+
+            <nav class="nav" data-js-nav>
+                <ul class="nav__list">
+                    <li><a href="#about" class="nav__link">обо мне</a></li>
+                    <li><a href="#skills" class="nav__link">навыки</a></li>
+                    <li><a href="#projects" class="nav__link">проекты</a></li>
+                    <li><a href="#contacts" class="nav__link">контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="hero__content">
+                <a href="#" class="hero__logo" aria-label="Наверх">
+                    <svg
+                        class="hero__logo-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                        aria-hidden="true"
+                    >
+                        <g transform="translate(0 512) scale(0.1 -0.1)" fill="currentColor">
+                            <path d="M2365 3653 c-73 -7 -143 -24 -155 -39 -17 -20 -15 -63 3 -81 13 -14 31 -14 152 -2 354 34 668 -75 883 -306 28 -30 57 -55 64 -55 7 0 54 12 103 26 113 32 281 42 392 24 189 -30 401 -125 541 -243 49 -41 89 -48 115 -19 27 30 20 57 -28 101 -143 132 -403 249 -625 282 -107 15 -290 6 -390 -19 l-75 -20 -55 51 c-129 118 -298 215 -450 257 -141 39 -328 56 -475 43z"/>
+                            <path d="M815 3314 c-11 -2 -46 -6 -78 -9 -65 -7 -97 -30 -97 -68 0 -13 9 -32 19 -41 18 -16 29 -17 134 -5 286 30 543 -54 732 -238 41 -40 78 -73 82 -73 4 0 54 12 112 26 94 24 118 26 230 21 100 -4 143 -10 211 -32 113 -37 221 -92 311 -159 79 -60 106 -67 133 -37 31 34 17 71 -46 121 -123 99 -304 182 -467 215 -101 21 -313 16 -400 -9 l-55 -15 -55 52 c-145 137 -336 222 -554 246 -91 10 -167 12 -212 5z"/>
+                            <path d="M1100 2270 c-155 -14 -200 -38 -186 -96 10 -39 38 -47 119 -33 115 21 352 16 474 -10 250 -52 408 -138 599 -323 45 -43 84 -78 86 -78 2 0 41 11 86 24 124 38 228 49 376 43 255 -10 496 -103 722 -278 42 -32 85 -59 95 -59 25 0 61 48 53 74 -7 28 -60 74 -159 141 -168 113 -377 198 -568 231 -132 23 -359 15 -484 -18 l-93 -24 -42 44 c-195 200 -481 330 -797 362 -113 11 -154 11 -281 0z"/>
+                        </g>
+                    </svg>
+                </a>
+                <h1 class="hero__title">ПОРТФОЛИО</h1>
+                <p class="hero__name">Екатерина Туманова | Frontend Developer Intern</p>
+                <p class="hero__tech">HTML | SCSS | JS</p>
+            </div>
+
+            <div class="hero__clouds">
+                <svg class="clouds-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 500">
+
+                    <!-- ОБЛАКО ЛЕВОЕ -->
+                    <g class="cloud cloud--1">
+                        <ellipse cx="-20" cy="320" rx="140" ry="75" fill="white"/>
+                        <ellipse cx="-60" cy="300" rx="90" ry="80" fill="white"/>
+                        <ellipse cx="80" cy="270" rx="85" ry="90" fill="white"/>
+                        <ellipse cx="160" cy="290" rx="80" ry="85" fill="white"/>
+                        <ellipse cx="120" cy="250" rx="65" ry="70" fill="white"/>
+                        <ellipse cx="50" cy="235" rx="60" ry="65" fill="white"/>
+                        <ellipse cx="90" cy="220" rx="50" ry="58" fill="white"/>
+                        <ellipse cx="-80" cy="315" rx="65" ry="60" fill="white"/>
+                        <ellipse cx="200" cy="310" rx="60" ry="58" fill="white"/>
+                        <ellipse cx="60" cy="360" rx="155" ry="45" fill="white"/>
+                    </g>
+
+                    <!-- ОБЛАКО ЦЕНТРАЛЬНОЕ -->
+                    <g class="cloud cloud--2">
+                        <ellipse cx="720" cy="300" rx="170" ry="85" fill="white"/>
+                        <ellipse cx="620" cy="280" rx="115" ry="95" fill="white"/>
+                        <ellipse cx="820" cy="275" rx="115" ry="90" fill="white"/>
+                        <ellipse cx="720" cy="250" rx="105" ry="100" fill="white"/>
+                        <ellipse cx="660" cy="225" rx="85" ry="85" fill="white"/>
+                        <ellipse cx="780" cy="220" rx="85" ry="88" fill="white"/>
+                        <ellipse cx="720" cy="200" rx="70" ry="75" fill="white"/>
+                        <ellipse cx="700" cy="185" rx="52" ry="60" fill="white"/>
+                        <ellipse cx="745" cy="188" rx="52" ry="62" fill="white"/>
+                        <ellipse cx="560" cy="295" rx="80" ry="72" fill="white"/>
+                        <ellipse cx="880" cy="290" rx="80" ry="70" fill="white"/>
+                        <ellipse cx="720" cy="360" rx="195" ry="50" fill="white"/>
+                        <ellipse cx="600" cy="368" rx="110" ry="38" fill="white"/>
+                        <ellipse cx="840" cy="368" rx="110" ry="38" fill="white"/>
+                    </g>
+
+                    <!-- ОБЛАКО ПРАВОЕ -->
+                    <g class="cloud cloud--3">
+                        <ellipse cx="1460" cy="315" rx="140" ry="75" fill="white"/>
+                        <ellipse cx="1520" cy="298" rx="90" ry="80" fill="white"/>
+                        <ellipse cx="1380" cy="268" rx="85" ry="90" fill="white"/>
+                        <ellipse cx="1300" cy="288" rx="80" ry="82" fill="white"/>
+                        <ellipse cx="1320" cy="248" rx="65" ry="70" fill="white"/>
+                        <ellipse cx="1400" cy="232" rx="60" ry="65" fill="white"/>
+                        <ellipse cx="1360" cy="218" rx="50" ry="56" fill="white"/>
+                        <ellipse cx="1540" cy="312" rx="65" ry="58" fill="white"/>
+                        <ellipse cx="1260" cy="308" rx="60" ry="56" fill="white"/>
+                        <ellipse cx="1420" cy="358" rx="155" ry="45" fill="white"/>
+                    </g>
+
+                    <!-- МАЛОЕ ОБЛАКО ЛЕВЕЕ ЦЕНТРА -->
+                    <g class="cloud cloud--4">
+                        <ellipse cx="440" cy="335" rx="80" ry="48" fill="white"/>
+                        <ellipse cx="400" cy="315" rx="58" ry="55" fill="white"/>
+                        <ellipse cx="455" cy="305" rx="55" ry="58" fill="white"/>
+                        <ellipse cx="420" cy="292" rx="42" ry="45" fill="white"/>
+                        <ellipse cx="458" cy="288" rx="40" ry="44" fill="white"/>
+                        <ellipse cx="440" cy="368" rx="90" ry="32" fill="white"/>
+                    </g>
+
+                    <!-- МАЛОЕ ОБЛАКО ПРАВЕЕ ЦЕНТРА -->
+                    <g class="cloud cloud--5">
+                        <ellipse cx="990" cy="330" rx="80" ry="48" fill="white"/>
+                        <ellipse cx="950" cy="310" rx="58" ry="55" fill="white"/>
+                        <ellipse cx="1005" cy="302" rx="55" ry="58" fill="white"/>
+                        <ellipse cx="968" cy="288" rx="42" ry="45" fill="white"/>
+                        <ellipse cx="1006" cy="285" rx="40" ry="44" fill="white"/>
+                        <ellipse cx="990" cy="366" rx="90" ry="32" fill="white"/>
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <!-- Облако вверху слева -->
+            <div class="about__cloud about__cloud--top-left">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                    <ellipse cx="100" cy="65" rx="90" ry="40" fill="white" opacity="0.7"/>
+                    <ellipse cx="70" cy="55" rx="55" ry="45" fill="white" opacity="0.7"/>
+                    <ellipse cx="120" cy="50" rx="52" ry="48" fill="white" opacity="0.7"/>
+                    <ellipse cx="95" cy="42" rx="42" ry="40" fill="white" opacity="0.65"/>
+                    <ellipse cx="70" cy="36" rx="32" ry="34" fill="white" opacity="0.6"/>
+                    <ellipse cx="118" cy="38" rx="30" ry="32" fill="white" opacity="0.6"/>
+                </svg>
+            </div>
+
+            <!-- Облако снизу слева -->
+            <div class="about__cloud about__cloud--bottom-left">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                    <ellipse cx="100" cy="65" rx="90" ry="40" fill="white" opacity="0.7"/>
+                    <ellipse cx="70" cy="55" rx="55" ry="45" fill="white" opacity="0.7"/>
+                    <ellipse cx="120" cy="50" rx="52" ry="48" fill="white" opacity="0.7"/>
+                    <ellipse cx="95" cy="42" rx="42" ry="40" fill="white" opacity="0.65"/>
+                    <ellipse cx="68" cy="38" rx="30" ry="32" fill="white" opacity="0.6"/>
+                </svg>
+            </div>
+
+            <!-- Облако вверху справа -->
+            <div class="about__cloud about__cloud--top-right">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                    <ellipse cx="100" cy="65" rx="90" ry="40" fill="white" opacity="0.7"/>
+                    <ellipse cx="75" cy="52" rx="55" ry="48" fill="white" opacity="0.7"/>
+                    <ellipse cx="125" cy="50" rx="52" ry="45" fill="white" opacity="0.7"/>
+                    <ellipse cx="100" cy="40" rx="42" ry="40" fill="white" opacity="0.65"/>
+                    <ellipse cx="80" cy="34" rx="30" ry="30" fill="white" opacity="0.6"/>
+                    <ellipse cx="120" cy="36" rx="28" ry="30" fill="white" opacity="0.6"/>
+                </svg>
+            </div>
+
+            <div class="about__inner">
+                <div class="about__text">
+                    <p class="about__greeting">Привет! Я Катя</p>
+
+                    <p class="about__desc">
+                        -  начинающий frontend-разработчик. 
+                    </p>
+
+                    <p class="about__desc">
+                        Изучаю создание современных и адаптивных пользовательских интерфейсов, работаю с HTML, SCSS и JavaScript.
+                    </p>
+
+                    <p class="about__desc">
+                        Практикую семантическую верстку, адаптацию сайтов под разные устройства и стараюсь уделять внимание чистоте и структуре кода.
+                    </p>
+
+                    <p class="about__desc">
+                        Использую Git и GitHub для работы с проектами и продолжаю развивать frontend-навыки, изучая архитектуру стилей, JavaScript и современные UI-подходы.
+                    </p>
+
+                    <p class="about__desc">
+                        Сейчас также начинаю изучать React и стараюсь постоянно развиваться в frontend-разработке.
+                    </p>
+
+                    <ul class="about__tags">
+                        <li class="about__tag">HTML</li>
+                        <li class="about__tag">SCSS</li>
+                        <li class="about__tag">JavaScript</li>
+                        <li class="about__tag">Git и GitHub</li>
+                        <li class="about__tag about__tag--plan">React ✦</li>
+                    </ul>
+                </div>
+
+                <div class="about__photo">
+                    <div class="about__blob">
+                        <img src="./images/photo.jpg" alt="Катя" class="about__img"/>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="skills" id="skills">
+
+            <!-- Декоративные облака -->
+            <div class="skills__cloud skills__cloud--tl" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                    <ellipse cx="100" cy="65" rx="90" ry="38"/>
+                    <ellipse cx="70" cy="52" rx="55" ry="44"/>
+                    <ellipse cx="120" cy="48" rx="52" ry="46"/>
+                    <ellipse cx="95" cy="40" rx="40" ry="38"/>
+                    <ellipse cx="70" cy="34" rx="30" ry="32"/>
+                </svg>
+            </div>
+
+            <div class="skills__cloud skills__cloud--tr" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                    <ellipse cx="100" cy="65" rx="88" ry="36"/>
+                    <ellipse cx="75" cy="50" rx="52" ry="46"/>
+                    <ellipse cx="125" cy="48" rx="50" ry="44"/>
+                    <ellipse cx="100" cy="38" rx="40" ry="38"/>
+                </svg>
+            </div>
+
+            <div class="skills__cloud skills__cloud--bl" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                    <ellipse cx="100" cy="65" rx="85" ry="34"/>
+                    <ellipse cx="70" cy="52" rx="50" ry="42"/>
+                    <ellipse cx="120" cy="50" rx="48" ry="40"/>
+                </svg>
+            </div>
+
+            <div class="skills__cloud skills__cloud--br" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                    <ellipse cx="100" cy="65" rx="90" ry="38"/>
+                    <ellipse cx="75" cy="52" rx="55" ry="44"/>
+                    <ellipse cx="125" cy="50" rx="52" ry="42"/>
+                    <ellipse cx="100" cy="40" rx="42" ry="40"/>
+                    <ellipse cx="120" cy="35" rx="28" ry="30"/>
+                </svg>
+            </div>
+
+            <h2 class="skills__title">НАВЫКИ</h2>
+
+            <div class="skills__grid">
+
+                <!-- СЕРТИФИКАТЫ И КУРСЫ — на всю ширину -->
+                <div class="skills__card skills__card--education">
+                    <p class="skills__card-title">
+                        <i class="ti ti-certificate" aria-hidden="true"></i>
+                        Сертификаты и курсы
+                    </p>
+
+                    <div class="skills__edu-inner">
+                        <!-- Пройденные курсы -->
+                        <div class="skills__edu-group">
+                            <p class="skills__edu-subtitle">Frontend-разработка</p>
+                            <p class="skills__edu-item">«Веб-разработка для начинающих: HTML и CSS»</p>
+                            <p class="skills__edu-item">«HTML CSS JS (lite)»</p>
+                            <p class="skills__edu-item">«Погружение в JavaScript: для начинающих»</p>
+                            <p class="skills__edu-item">«Твой JavaScript»</p>
+                        </div>
+
+                        <!-- В процессе -->
+                        <div class="skills__edu-group">
+                            <p class="skills__edu-subtitle">В процессе изучения</p>
+                            <p class="skills__edu-item">Основы Git и GitHub</p>
+                            <p class="skills__edu-item">JavaScript</p>
+                            <p class="skills__edu-item">React</p>
+                            <p class="skills__edu-item">Frontend-компоненты и UI</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ОБРАЗОВАНИЕ — на всю ширину -->
+                <div class="skills__card skills__card--education">
+                    <p class="skills__card-title">
+                        <i class="ti ti-school" aria-hidden="true"></i>
+                        Высшее образование
+                    </p>
+
+                    <div class="skills__degree-list">
+                        <div class="skills__degree-item">
+                            <div class="skills__degree-icon" aria-hidden="true">
+                                <i class="ti ti-leaf"></i>
+                            </div>
+                            <div>
+                                <p class="skills__degree-name">Экология и природопользование</p>
+                                <p class="skills__degree-level">Бакалавр</p>
+                            </div>
+                        </div>
+
+                        <div class="skills__degree-item">
+                            <div class="skills__degree-icon" aria-hidden="true">
+                                <i class="ti ti-building-bank"></i>
+                            </div>
+                            <div>
+                                <p class="skills__degree-name">Государственное и муниципальное управление</p>
+                                <p class="skills__degree-level">Магистр <span class="skills__cert">с отличием</span></p>
+                            </div>
+                        </div>
+
+                        <div class="skills__degree-item">
+                            <div class="skills__degree-icon" aria-hidden="true">
+                                <i class="ti ti-tree"></i>
+                            </div>
+                            <div>
+                                <p class="skills__degree-name">Лесное дело («Государственное управление лесами»)</p>
+                                <p class="skills__degree-level">Магистр <span class="skills__cert">с отличием</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+
+            <div class="projects__cloud projects__cloud--tl" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                    <ellipse cx="100" cy="65" rx="90" ry="38"/>
+                    <ellipse cx="70" cy="52" rx="55" ry="44"/>
+                    <ellipse cx="120" cy="48" rx="52" ry="46"/>
+                    <ellipse cx="95" cy="40" rx="40" ry="38"/>
+                </svg>
+            </div>
+
+            <div class="projects__cloud projects__cloud--br" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                    <ellipse cx="100" cy="65" rx="88" ry="36"/>
+                    <ellipse cx="75" cy="50" rx="52" ry="46"/>
+                    <ellipse cx="125" cy="48" rx="50" ry="44"/>
+                    <ellipse cx="100" cy="38" rx="40" ry="38"/>
+                </svg>
+            </div>
+
+            <h2 class="projects__title">ПРОЕКТЫ</h2>
+
+            <div class="projects__grid">
+                <!-- Проект 1 — kropp-fitness -->
+                <a href="https://github.com/KatyMist/KROPP-FITNESS" class="projects__card" target="_blank" rel="noopener noreferrer">
+                    <div class="projects__card-img">
+                        <img src="./images/KROPP-FITNESS.png" alt="Kropp Fitness" />
+                    </div>
+                    <div class="projects__card-body">
+                        <p class="projects__card-title">Kropp Fitness</p>
+                        <p class="projects__card-desc">Учебный frontend-проект</p>
+                        <ul class="projects__card-tags">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                    </div>
+                    <span class="projects__card-arrow">
+                        <i class="ti ti-arrow-up-right" aria-hidden="true"></i>
+                    </span>
+                </a>
+
+                <!-- Проект 2 — второй сайт -->
+                <a href="https://github.com/KatyMist/FUTURE-TECH" class="projects__card" target="_blank" rel="noopener noreferrer">
+                    <div class="projects__card-img">
+                        <img src="./images/FutureTech.png" alt="Проект 2" />
+                    </div>
+                    <div class="projects__card-body">
+                        <p class="projects__card-title">Future Tech</p>
+                        <p class="projects__card-desc">Учебный frontend-проект</p>
+                        <ul class="projects__card-tags">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JS</li>
+                        </ul>
+                    </div>
+                    <span class="projects__card-arrow">
+                        <i class="ti ti-arrow-up-right" aria-hidden="true"></i>
+                    </span>
+                </a>
+
+                <!-- Мой сайт — портфолио -->
+                <a href="#" class="projects__card" target="_blank" rel="noopener noreferrer">
+                    <div class="projects__card-img">
+                        <img src="./images/I.png" alt="Портфолио" />
+                    </div>
+                    <div class="projects__card-body">
+                        <p class="projects__card-title">Портфолио</p>
+                        <p class="projects__card-desc">Личный сайт-портфолио</p>
+                        <ul class="projects__card-tags">
+                            <li>HTML</li>
+                            <li>SCSS</li>
+                            <li>JS</li>
+                        </ul>
+                    </div>
+                    <span class="projects__card-arrow">
+                        <i class="ti ti-arrow-up-right" aria-hidden="true"></i>
+                    </span>
+                </a>
+
+                <!-- Пустая ячейка 1 -->
+                <div class="projects__card projects__card--empty">
+                    <p class="projects__empty-text">Проект скоро появится</p>
+                </div>
+
+                <!-- Пустая ячейка 2 -->
+                <div class="projects__card projects__card--empty">
+                    <p class="projects__empty-text">Проект скоро появится</p>
+                </div>
+
+                <!-- Пустая ячейка 3 -->
+                <div class="projects__card projects__card--empty">
+                    <p class="projects__empty-text">Проект скоро появится</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contacts" id="contacts">
+
+            <div class="contacts__cloud contacts__cloud--tl" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                    <ellipse cx="100" cy="65" rx="90" ry="38"/>
+                    <ellipse cx="70" cy="52" rx="55" ry="44"/>
+                    <ellipse cx="120" cy="48" rx="52" ry="46"/>
+                    <ellipse cx="95" cy="40" rx="40" ry="38"/>
+                    <ellipse cx="70" cy="34" rx="30" ry="32"/>
+                </svg>
+            </div>
+
+            <div class="contacts__cloud contacts__cloud--tr" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                    <ellipse cx="100" cy="65" rx="88" ry="36"/>
+                    <ellipse cx="75" cy="50" rx="52" ry="46"/>
+                    <ellipse cx="125" cy="48" rx="50" ry="44"/>
+                    <ellipse cx="100" cy="38" rx="40" ry="38"/>
+                </svg>
+            </div>
+
+            <div class="contacts__cloud contacts__cloud--bl" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                    <ellipse cx="100" cy="65" rx="85" ry="34"/>
+                    <ellipse cx="70" cy="52" rx="50" ry="42"/>
+                    <ellipse cx="120" cy="50" rx="48" ry="40"/>
+                    <ellipse cx="95" cy="40" rx="36" ry="36"/>
+                </svg>
+            </div>
+
+            <div class="contacts__cloud contacts__cloud--br" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                    <ellipse cx="100" cy="65" rx="90" ry="38"/>
+                    <ellipse cx="75" cy="52" rx="55" ry="44"/>
+                    <ellipse cx="125" cy="50" rx="52" ry="42"/>
+                    <ellipse cx="100" cy="40" rx="42" ry="40"/>
+                    <ellipse cx="120" cy="35" rx="28" ry="30"/>
+                </svg>
+            </div>
+
+            <h2 class="contacts__title">КОНТАКТЫ</h2>
+
+            <div class="contacts__grid">
+
+                <a href="https://github.com/KatyMist" class="contacts__card" target="_blank" rel="noopener noreferrer">
+                    <div class="contacts__card-icon">
+                        <i class="ti ti-brand-github" aria-hidden="true"></i>
+                    </div>
+                    <p class="contacts__card-name">GitHub</p>
+                    <p class="contacts__card-desc">Мои репозитории и проекты</p>
+                    <span class="contacts__card-arrow">
+                        <i class="ti ti-arrow-up-right" aria-hidden="true"></i>
+                    </span>
+                </a>
+
+                <a href="https://stepik.org/users/1179792686/profile" class="contacts__card" target="_blank" rel="noopener noreferrer">
+                    <div class="contacts__card-icon">
+                        <i class="ti ti-star" aria-hidden="true"></i>
+                    </div>
+                    <p class="contacts__card-name">Stepik</p>
+                    <p class="contacts__card-desc">Сертификаты и курсы</p>
+                    <span class="contacts__card-arrow">
+                        <i class="ti ti-arrow-up-right" aria-hidden="true"></i>
+                    </span>
+                </a>
+
+                <a href="https://hh.ru/resume/b77b4490ff107e4c760039ed1f5262426e565a" class="contacts__card" target="_blank" rel="noopener noreferrer">
+                    <div class="contacts__card-icon">
+                        <i class="ti ti-file-cv" aria-hidden="true"></i>
+                    </div>
+                    <p class="contacts__card-name">HH.ru</p>
+                    <p class="contacts__card-desc">Резюме и опыт работы</p>
+                    <span class="contacts__card-arrow">
+                        <i class="ti ti-arrow-up-right" aria-hidden="true"></i>
+                    </span>
+                </a>
+
+                <a href="https://t.me/KatyMist" class="contacts__card" target="_blank" rel="noopener noreferrer">
+                    <div class="contacts__card-icon">
+                        <i class="ti ti-brand-telegram" aria-hidden="true"></i>
+                    </div>
+                    <p class="contacts__card-name">Telegram</p>
+                    <p class="contacts__card-desc">Написать напрямую</p>
+                    <span class="contacts__card-arrow">
+                        <i class="ti ti-arrow-up-right" aria-hidden="true"></i>
+                    </span>
+                </a>
+
+            </div>
+
+            <p class="contacts__footer">Открыта к новым проектам и сотрудничеству</p>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">© 2026 Tumanova Ekaterina — Frontend Developer Intern</p>
+    </footer>
+
+</body>
+</html>

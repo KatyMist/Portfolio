@@ -1,0 +1,55 @@
+@use '../helpers/index' as *;
+
+.burger {
+    display: none;
+    position: fixed;
+    top: rem(20);
+    right: rem(20);
+    z-index: 100;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--color-powdery);
+
+    @include square(rem(36));
+
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: rem(8) rem(4);
+    }
+
+    &:hover {
+        color: var(--color-dark-powder);
+    }
+
+    &.is-active {
+        .burger__line {
+            &:first-child {
+                rotate: 45deg;
+                transform-origin: 0;
+                translate: 0.25em -0.1em;
+            }
+            &:nth-child(2) {
+                rotate: -45deg;
+            }
+            &:last-child {
+                width: 0;
+            }
+        }
+    }
+
+    &__line {
+        width: 100%;
+        height: rem(2);
+        background-color: currentColor;
+        border-radius: 1rem;
+        transition: all 0.3s ease;
+
+        &:last-child {
+            width: 55%;
+            align-self: flex-end;
+        }
+    }
+}

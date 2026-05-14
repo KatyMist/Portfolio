@@ -1,0 +1,316 @@
+@use '../helpers/index' as *;
+
+.skills { //третья страница
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        #f4e8f0 0%,
+        #f9eef6 20%,
+        #edf5fb 60%,
+        #dff0fa 100%
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: rem(100) rem(80) rem(80);
+ 
+    @include laptop {
+        padding: rem(80) rem(50) rem(60);
+    }
+ 
+    @include tablet {
+        padding: rem(60) rem(30) rem(50);
+    }
+ 
+    @include mobile {
+        padding: rem(50) rem(20) rem(40);
+    }
+ 
+    // декоративные облака 
+    &__cloud {
+        position: absolute;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.55;
+ 
+        svg {
+            width: 100%;
+            height: 100%;
+ 
+            ellipse {
+                fill: var(--color-light);
+            }
+        }
+ 
+        &--tl {
+            top: rem(20);
+            left: rem(-30);
+            width: rem(220);
+            animation: drift-small 9s ease-in-out infinite;
+        }
+ 
+        &--tr {
+            top: rem(30);
+            right: rem(40);
+            width: rem(170);
+            animation: drift-small 11s ease-in-out infinite;
+            animation-delay: 1.5s;
+        }
+ 
+        &--bl {
+            bottom: rem(40);
+            left: rem(60);
+            width: rem(150);
+            animation: drift-small 10s ease-in-out infinite;
+            animation-delay: 0.5s;
+        }
+ 
+        &--br {
+            bottom: rem(20);
+            right: rem(-20);
+            width: rem(190);
+            animation: drift-small 12s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+    }
+ 
+    // заголовок секции 
+    &__title {
+        font-size: rem(80);
+        font-weight: 300;
+        letter-spacing: 0.12em;
+        color: var(--color--pink_3);
+        opacity: 0.85;
+        margin: 0 0 rem(56);
+        position: relative;
+        z-index: 1;
+ 
+        @include laptop {
+            font-size: rem(50);
+            margin-bottom: rem(40);
+        }
+ 
+        @include tablet {
+            font-size: rem(36);
+            margin-bottom: rem(32);
+        }
+ 
+        @include mobile {
+            font-size: rem(28);
+            margin-bottom: rem(24);
+        }
+    }
+ 
+    // сетка карточек
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: rem(24);
+        width: 100%;
+        max-width: rem(1100);
+        position: relative;
+        z-index: 1;
+ 
+        @include tablet {
+            grid-template-columns: 1fr;
+            gap: rem(20);
+        }
+    }
+ 
+    // одна карточка 
+    &__card {
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: rem(24);
+        border: 0.5px solid rgba(180, 150, 200, 0.22);
+        padding: rem(32) rem(36);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+ 
+        @include tablet {
+            padding: rem(24) rem(26);
+        }
+ 
+        @include mobile {
+            padding: rem(20) rem(20);
+            border-radius: rem(18);
+        }
+ 
+        // обучение — на всю ширину (первая строка)
+        &--education {
+            grid-column: 1 / -1;
+        }
+    }
+ 
+    // шапка карточки 
+    &__card-title {
+        display: flex;
+        align-items: center;
+        gap: rem(10);
+        font-size: rem(25);
+        font-weight: 500;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--color--pink_3);
+        margin: 0 0 rem(28);
+
+        @include tablet {
+            font-size: rem(20);
+            margin-bottom: rem(18);
+        }
+
+        @include mobile-s {
+            font-size: rem(17);
+            margin-bottom: rem(15);
+        }
+ 
+        svg {
+            width: rem(20);
+            height: rem(20);
+            opacity: 0.75;
+            flex-shrink: 0;
+        }
+    }
+ 
+    // блок обучения 
+    &__edu-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: rem(28) rem(48);
+ 
+        @include mobile {
+            grid-template-columns: 1fr;
+            gap: rem(24);
+        }
+    }
+ 
+    &__edu-group {
+        display: flex;
+        flex-direction: column;
+        gap: rem(6);
+    }
+ 
+    &__edu-subtitle {
+        font-size: rem(20);
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--color--light-blue);
+        margin-bottom: rem(14);
+        opacity: 0.8;
+
+        @include tablet {
+            font-size: rem(15);
+            margin-bottom: rem(8);
+        }
+    }
+ 
+    &__edu-item {
+        position: relative;
+        padding-left: rem(18);
+        font-size: rem(20);
+        color: var(--color--pink_2);
+        line-height: 2;
+        opacity: 0.85;
+
+        @include tablet {
+            font-size: rem(15);
+            line-height: 1.6;
+        }
+ 
+        &::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--color--light-blue);
+            opacity: 0.6;
+            font-size: rem(15);
+            top: rem(4);
+        }
+    }
+ 
+    &__cert {
+        display: inline-block;
+        font-size: rem(20);
+        padding: rem(2) rem(10);
+        border-radius: rem(10);
+        background: rgba(255, 182, 210, 0.25);
+        color: #d4537a;
+        border: 0.5px solid rgba(220, 130, 170, 0.35);
+        margin-left: rem(6);
+        vertical-align: middle;
+        white-space: nowrap;
+
+        @include tablet {
+            font-size: rem(15);
+            padding: rem(1) rem(6);
+        }
+    }
+ 
+    // блок образования 
+    &__degree-list {
+        display: flex;
+        flex-direction: column;
+    }
+ 
+    &__degree-item {
+        display: flex;
+        align-items: flex-start;
+        gap: rem(18);
+        padding: rem(18) 0;
+        border-bottom: 0.5px solid rgba(180, 160, 210, 0.15);
+ 
+        &:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+ 
+        &:first-child {
+            padding-top: 0;
+        }
+    }
+ 
+    &__degree-icon {
+        width: rem(40);
+        height: rem(40);
+        border-radius: 50%;
+        background: rgba(180, 140, 210, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        color: var(--color--pink_3);
+ 
+        svg {
+            width: rem(20);
+            height: rem(20);
+        }
+    }
+ 
+    &__degree-name {
+        font-size: rem(20);
+        color: var(--color--pink_2);
+        line-height: 1.5;
+        opacity: 0.85;
+
+        @include tablet {
+            font-size: rem(15);
+            padding: rem(1) rem(6);
+        }
+    }
+ 
+    &__degree-level {
+        font-size: rem(20);
+        color: var(--color--light-blue);
+        opacity: 0.7;
+        margin-top: rem(4);
+
+        @include tablet {
+            font-size: rem(15);
+            padding: rem(1) rem(6);
+        }
+    }
+
+}
