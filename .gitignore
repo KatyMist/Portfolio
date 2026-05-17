@@ -3,3 +3,4 @@ node_modules/
 styles/main.css.map
 .DS_Store
 **/.DS_Store
+*.css.map
