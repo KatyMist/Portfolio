@@ -21,3 +21,13 @@
         display: none !important;
     } 
 }
+
+@media (prefers-reduced-motion: reduce) {
+    .cloud--1, .cloud--2, .cloud--3,
+    .cloud--4, .cloud--5,
+    .about__cloud, .skills__cloud,
+    .contacts__cloud, .projects__cloud,
+    .offline__icon {
+        animation: none;
+    }
+}

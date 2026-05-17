@@ -15,10 +15,13 @@ class Nav {
 
         if (!this.burgerEl || !this.navEl) return
 
+        this.burgerEl.setAttribute('aria-expanded', 'false') // ← начальное состояние
+
         this.burgerEl.addEventListener('click', () => {
-            this.burgerEl.classList.toggle(this.stateClasses.isActive)
+            const isActive = this.burgerEl.classList.toggle(this.stateClasses.isActive)
             this.navEl.classList.toggle(this.stateClasses.isActive)
             document.documentElement.classList.toggle(this.stateClasses.isLock)
+            this.burgerEl.setAttribute('aria-expanded', isActive ? 'true' : 'false') // ← обновляем
         })
     }
 }

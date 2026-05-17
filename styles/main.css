@@ -278,10 +278,20 @@ svg * {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .cloud--1, .cloud--2, .cloud--3,
+  .cloud--4, .cloud--5,
+  .about__cloud, .skills__cloud,
+  .contacts__cloud, .projects__cloud,
+  .offline__icon {
+    animation: none;
+  }
+}
 body {
   font-size: clamp(1.25rem, 1.048553719rem + 0.826446281vw, 1.875rem);
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   font-family: var(--font-family-base);
   min-height: 100%;
   line-height: 1.5;
@@ -340,12 +350,12 @@ a[class] {
   text-decoration: none;
 }
 
-a[aria-label],
-button[aria-label] {
+a[aria-label]:not(.burger),
+button[aria-label]:not(.burger) {
   position: relative;
 }
-a[aria-label]::before,
-button[aria-label]::before {
+a[aria-label]:not(.burger)::before,
+button[aria-label]:not(.burger)::before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -366,7 +376,7 @@ svg * {
 }
 
 :focus-visible {
-  outline: 0.125rem dashed var(--color-light);
+  outline: 0.125rem dashed var(--color-powdery);
   outline-offset: 0.25rem;
   transition-duration: 0s !important;
 }
@@ -410,7 +420,7 @@ svg * {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 50;
+    z-index: 90;
   }
   .nav.is-active {
     visibility: visible;
@@ -455,10 +465,11 @@ html.is-lock {
 
 .burger {
   display: none;
-  position: fixed !important;
+  position: fixed;
   top: 1.25rem;
   right: 1.25rem;
-  z-index: 100;
+  left: auto;
+  z-index: 200;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -1604,6 +1615,199 @@ html.is-lock {
   color: rgba(255, 255, 255, 0.85);
   text-align: center;
   margin: 0;
+}
+
+#loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #f4b8c8 0%, #d4e9f7 100%);
+  transition: opacity 0.7s ease;
+}
+#loader.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader__birds {
+  margin-bottom: 2rem;
+  opacity: 0.7;
+  animation: sway 3s ease-in-out infinite alternate;
+}
+
+.loader__text {
+  font-family: "Caveat", cursive;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(180, 100, 130, 0.2);
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+}
+
+.loader__cursor {
+  display: inline-block;
+  width: 2px;
+  height: 0.85em;
+  background: #ffffff;
+  margin-left: 4px;
+  vertical-align: middle;
+  animation: blink 0.75s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.loader__sub {
+  font-family: "Caveat", cursive;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 0.4rem;
+  letter-spacing: 0.05em;
+}
+
+.loader__bar {
+  width: 120px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 2px;
+  margin-top: 1.5rem;
+  overflow: hidden;
+}
+.loader__bar-fill {
+  height: 100%;
+  background: #ffffff;
+  border-radius: 2px;
+  animation: progress 2.4s ease-in-out infinite;
+}
+
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+  70% {
+    width: 88%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.loader__clouds {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  line-height: 0;
+}
+.loader__clouds svg {
+  width: 100%;
+  display: block;
+}
+
+#offline-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #f4b8c8 0%, #d4e9f7 100%);
+}
+#offline-screen[hidden] {
+  display: none;
+}
+
+.offline__icon {
+  margin-bottom: 1rem;
+  opacity: 0.75;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+.offline__title {
+  font-family: "Caveat", cursive;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(180, 100, 130, 0.2);
+  letter-spacing: 0.03em;
+}
+
+.offline__sub {
+  font-family: "Caveat", cursive;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 0.3rem;
+  letter-spacing: 0.04em;
+}
+
+.offline__btn {
+  margin-top: 1.5rem;
+  font-family: "Caveat", cursive;
+  font-size: 1.2rem;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  padding: 0.4rem 1.6rem;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+.offline__btn:hover {
+  background: rgba(255, 255, 255, 0.32);
+}
+.offline__btn:active {
+  transform: scale(0.97);
+}
+
+.offline__clouds {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  line-height: 0;
+}
+.offline__clouds svg {
+  width: 100%;
+  display: block;
+}
+
+.loader__clouds svg ellipse,
+.offline__clouds svg ellipse {
+  fill: white !important;
+}
+
+.loader__text {
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.loader__sub {
+  text-align: center;
+  width: 100%;
+}
+
+.offline__icon svg {
+  stroke: rgba(255, 255, 255, 0.7) !important;
+  fill: none !important;
 }
 
 /*# sourceMappingURL=main.css.map */

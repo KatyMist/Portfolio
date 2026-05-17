@@ -2,15 +2,76 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Ekaterina Tumanova</title>
+    <title>Ekaterina Tumanova — Frontend Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Портфолио Екатерины Тумановой — Frontend Developer Intern. HTML, SCSS, JavaScript.">
+    <meta property="og:title" content="Ekaterina Tumanova — Frontend Developer">
+    <meta property="og:description" content="Портфолио начинающего frontend-разработчика">
+    <meta property="og:image" content="./images/I.png">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont/tabler-icons.min.css">
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
     <script src="./scripts/main.js" type="module" defer></script>
 </head>
 <body>
+    <!-- Экран загрузки -->
+    <div id="loader">
+    
+    <div class="loader__text">
+        <span id="loader-typed"></span><span class="loader__cursor"></span>
+    </div>
+    <p class="loader__sub">Frontend Developer Intern</p>
+    
+    <div class="loader__bar">
+        <div class="loader__bar-fill"></div>
+    </div>
+    
+    <div class="loader__clouds">
+        <svg aria-hidden="true" viewBox="0 0 1440 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <ellipse cx="160"  cy="120" rx="160" ry="58" fill="white"/>
+        <ellipse cx="100"  cy="108" rx="95"  ry="44" fill="white"/>
+        <ellipse cx="230"  cy="104" rx="110" ry="50" fill="white"/>
+        <ellipse cx="580"  cy="125" rx="200" ry="65" fill="white"/>
+        <ellipse cx="500"  cy="110" rx="120" ry="50" fill="white"/>
+        <ellipse cx="680"  cy="108" rx="140" ry="54" fill="white"/>
+        <ellipse cx="1050" cy="122" rx="180" ry="60" fill="white"/>
+        <ellipse cx="970"  cy="106" rx="110" ry="46" fill="white"/>
+        <ellipse cx="1160" cy="105" rx="130" ry="50" fill="white"/>
+        <ellipse cx="1360" cy="118" rx="140" ry="55" fill="white"/>
+        <ellipse cx="1290" cy="104" rx="90"  ry="42" fill="white"/>
+        </svg>
+    </div>
+    </div>
+    
+    <!-- Экран ошибки (нет сети) -->
+    <div id="offline-screen" hidden>
+    
+    <div class="offline__icon">
+        <svg aria-hidden="true" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-linecap="round">
+        <path d="M1 1l22 22M16.72 11.06A10.94 10.94 0 0119 12.55M5 12.55a10.94 10.94 0 015.17-2.39M10.71 5.05A16 16 0 0122.56 9M1.42 9a15.91 15.91 0 014.7-2.88M8.53 16.11a6 6 0 016.95 0M12 20h.01"/>
+        </svg>
+    </div>
+    <p class="offline__title">нет соединения</p>
+    <p class="offline__sub">проверь подключение к сети</p>
+    <button class="offline__btn" onclick="location.reload()">↻ попробовать снова</button>
+    
+    <div class="offline__clouds">
+        <svg aria-hidden="true" viewBox="0 0 1440 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <ellipse cx="160"  cy="120" rx="160" ry="58" fill="white"/>
+        <ellipse cx="100"  cy="108" rx="95"  ry="44" fill="white"/>
+        <ellipse cx="230"  cy="104" rx="110" ry="50" fill="white"/>
+        <ellipse cx="580"  cy="125" rx="200" ry="65" fill="white"/>
+        <ellipse cx="500"  cy="110" rx="120" ry="50" fill="white"/>
+        <ellipse cx="680"  cy="108" rx="140" ry="54" fill="white"/>
+        <ellipse cx="1050" cy="122" rx="180" ry="60" fill="white"/>
+        <ellipse cx="970"  cy="106" rx="110" ry="46" fill="white"/>
+        <ellipse cx="1160" cy="105" rx="130" ry="50" fill="white"/>
+        <ellipse cx="1360" cy="118" rx="140" ry="55" fill="white"/>
+        <ellipse cx="1290" cy="104" rx="90"  ry="42" fill="white"/>
+        </svg>
+    </div>
+    </div>
     <main>
         <section class="hero">
             <button class="burger" type="button" aria-label="Открыть меню" data-js-burger>
@@ -49,7 +110,7 @@
             </div>
 
             <div class="hero__clouds">
-                <svg class="clouds-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 500">
+                <svg aria-hidden="true" class="clouds-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 500">
 
                     <!-- ОБЛАКО ЛЕВОЕ -->
                     <g class="cloud cloud--1">
@@ -123,7 +184,7 @@
         <section class="about" id="about">
             <!-- Облако вверху слева -->
             <div class="about__cloud about__cloud--top-left">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
                     <ellipse cx="100" cy="65" rx="90" ry="40" fill="white" opacity="0.7"/>
                     <ellipse cx="70" cy="55" rx="55" ry="45" fill="white" opacity="0.7"/>
                     <ellipse cx="120" cy="50" rx="52" ry="48" fill="white" opacity="0.7"/>
@@ -135,7 +196,7 @@
 
             <!-- Облако снизу слева -->
             <div class="about__cloud about__cloud--bottom-left">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
                     <ellipse cx="100" cy="65" rx="90" ry="40" fill="white" opacity="0.7"/>
                     <ellipse cx="70" cy="55" rx="55" ry="45" fill="white" opacity="0.7"/>
                     <ellipse cx="120" cy="50" rx="52" ry="48" fill="white" opacity="0.7"/>
@@ -146,7 +207,7 @@
 
             <!-- Облако вверху справа -->
             <div class="about__cloud about__cloud--top-right">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
                     <ellipse cx="100" cy="65" rx="90" ry="40" fill="white" opacity="0.7"/>
                     <ellipse cx="75" cy="52" rx="55" ry="48" fill="white" opacity="0.7"/>
                     <ellipse cx="125" cy="50" rx="52" ry="45" fill="white" opacity="0.7"/>
@@ -191,7 +252,7 @@
 
                 <div class="about__photo">
                     <div class="about__blob">
-                        <img src="./images/photo.jpg" alt="Катя" class="about__img"/>
+                        <img src="./images/photo.jpg" alt="Екатерина Туманова, frontend-разработчик" class="about__img"/>
                     </div>
                 </div>
             </div>
@@ -202,7 +263,7 @@
 
             <!-- Декоративные облака -->
             <div class="skills__cloud skills__cloud--tl" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
                     <ellipse cx="100" cy="65" rx="90" ry="38"/>
                     <ellipse cx="70" cy="52" rx="55" ry="44"/>
                     <ellipse cx="120" cy="48" rx="52" ry="46"/>
@@ -212,7 +273,7 @@
             </div>
 
             <div class="skills__cloud skills__cloud--tr" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
                     <ellipse cx="100" cy="65" rx="88" ry="36"/>
                     <ellipse cx="75" cy="50" rx="52" ry="46"/>
                     <ellipse cx="125" cy="48" rx="50" ry="44"/>
@@ -221,7 +282,7 @@
             </div>
 
             <div class="skills__cloud skills__cloud--bl" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
                     <ellipse cx="100" cy="65" rx="85" ry="34"/>
                     <ellipse cx="70" cy="52" rx="50" ry="42"/>
                     <ellipse cx="120" cy="50" rx="48" ry="40"/>
@@ -229,7 +290,7 @@
             </div>
 
             <div class="skills__cloud skills__cloud--br" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
                     <ellipse cx="100" cy="65" rx="90" ry="38"/>
                     <ellipse cx="75" cy="52" rx="55" ry="44"/>
                     <ellipse cx="125" cy="50" rx="52" ry="42"/>
@@ -257,12 +318,12 @@
                             <p class="skills__edu-item">«HTML CSS JS (lite)»</p>
                             <p class="skills__edu-item">«Погружение в JavaScript: для начинающих»</p>
                             <p class="skills__edu-item">«Твой JavaScript»</p>
+                            <p class="skills__edu-item">Основы Git и GitHub</p>
                         </div>
 
                         <!-- В процессе -->
                         <div class="skills__edu-group">
                             <p class="skills__edu-subtitle">В процессе изучения</p>
-                            <p class="skills__edu-item">Основы Git и GitHub</p>
                             <p class="skills__edu-item">JavaScript</p>
                             <p class="skills__edu-item">React</p>
                             <p class="skills__edu-item">Frontend-компоненты и UI</p>
@@ -316,7 +377,7 @@
         <section class="projects" id="projects">
 
             <div class="projects__cloud projects__cloud--tl" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
                     <ellipse cx="100" cy="65" rx="90" ry="38"/>
                     <ellipse cx="70" cy="52" rx="55" ry="44"/>
                     <ellipse cx="120" cy="48" rx="52" ry="46"/>
@@ -325,7 +386,7 @@
             </div>
 
             <div class="projects__cloud projects__cloud--br" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
                     <ellipse cx="100" cy="65" rx="88" ry="36"/>
                     <ellipse cx="75" cy="50" rx="52" ry="46"/>
                     <ellipse cx="125" cy="48" rx="50" ry="44"/>
@@ -357,7 +418,7 @@
                 <!-- Проект 2 — второй сайт -->
                 <a href="https://github.com/KatyMist/FUTURE-TECH" class="projects__card" target="_blank" rel="noopener noreferrer">
                     <div class="projects__card-img">
-                        <img src="./images/FutureTech.png" alt="Проект 2" />
+                        <img src="./images/FutureTech.png" alt="Future Tech — учебный frontend-проект" />
                     </div>
                     <div class="projects__card-body">
                         <p class="projects__card-title">Future Tech</p>
@@ -412,7 +473,7 @@
         <section class="contacts" id="contacts">
 
             <div class="contacts__cloud contacts__cloud--tl" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
                     <ellipse cx="100" cy="65" rx="90" ry="38"/>
                     <ellipse cx="70" cy="52" rx="55" ry="44"/>
                     <ellipse cx="120" cy="48" rx="52" ry="46"/>
@@ -422,7 +483,7 @@
             </div>
 
             <div class="contacts__cloud contacts__cloud--tr" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
                     <ellipse cx="100" cy="65" rx="88" ry="36"/>
                     <ellipse cx="75" cy="50" rx="52" ry="46"/>
                     <ellipse cx="125" cy="48" rx="50" ry="44"/>
@@ -431,7 +492,7 @@
             </div>
 
             <div class="contacts__cloud contacts__cloud--bl" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
                     <ellipse cx="100" cy="65" rx="85" ry="34"/>
                     <ellipse cx="70" cy="52" rx="50" ry="42"/>
                     <ellipse cx="120" cy="50" rx="48" ry="40"/>
@@ -440,7 +501,7 @@
             </div>
 
             <div class="contacts__cloud contacts__cloud--br" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
                     <ellipse cx="100" cy="65" rx="90" ry="38"/>
                     <ellipse cx="75" cy="52" rx="55" ry="44"/>
                     <ellipse cx="125" cy="50" rx="52" ry="42"/>
@@ -453,7 +514,7 @@
 
             <div class="contacts__grid">
 
-                <a href="https://github.com/KatyMist" class="contacts__card" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/KatyMist" class="contacts__card" aria-label="GitHub профиль Екатерины Тумановой" target="_blank" rel="noopener noreferrer">
                     <div class="contacts__card-icon">
                         <i class="ti ti-brand-github" aria-hidden="true"></i>
                     </div>
@@ -464,7 +525,7 @@
                     </span>
                 </a>
 
-                <a href="https://stepik.org/users/1179792686/profile" class="contacts__card" target="_blank" rel="noopener noreferrer">
+                <a href="https://stepik.org/users/1179792686/profile" class="contacts__card" aria-label="Профиль на Stepik — сертификаты Екатерины Тумановой" target="_blank" rel="noopener noreferrer">
                     <div class="contacts__card-icon">
                         <i class="ti ti-star" aria-hidden="true"></i>
                     </div>
@@ -475,7 +536,7 @@
                     </span>
                 </a>
 
-                <a href="https://hh.ru/resume/b77b4490ff107e4c760039ed1f5262426e565a" class="contacts__card" target="_blank" rel="noopener noreferrer">
+                <a href="https://hh.ru/resume/b77b4490ff107e4c760039ed1f5262426e565a" class="contacts__card" aria-label="Резюме Екатерины Тумановой на HH.ru" target="_blank" rel="noopener noreferrer">
                     <div class="contacts__card-icon">
                         <i class="ti ti-file-cv" aria-hidden="true"></i>
                     </div>
@@ -486,7 +547,7 @@
                     </span>
                 </a>
 
-                <a href="https://t.me/KatyMist" class="contacts__card" target="_blank" rel="noopener noreferrer">
+                <a href="https://t.me/KatyMist" class="contacts__card" aria-label="Telegram Екатерины Тумановой" target="_blank" rel="noopener noreferrer">
                     <div class="contacts__card-icon">
                         <i class="ti ti-brand-telegram" aria-hidden="true"></i>
                     </div>
