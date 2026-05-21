@@ -1,91 +1,84 @@
 @use '../helpers/index' as *;
 
-// переменные (совпадают с твоим сайтом) 
-$pink:     #f4b8c8;
-$blue:     #d4e9f7;
-$white:    #ffffff;
-$font-hand: 'Caveat', cursive;
- 
-
 //  ЭКРАН ЗАГРУЗКИ
 
-#loader {position: fixed;
+#loader {
+    position: fixed;
     inset: 0;
     z-index: 9999;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(180deg, $pink 0%, $blue 100%);
+    background: linear-gradient(180deg, #f4b8c8 0%, #d4e9f7 100%);
     transition: opacity 0.7s ease;
-    
+
     &.hide {
         opacity: 0;
         pointer-events: none;
     }
 }
- 
-.loader__birds {
-    margin-bottom: 2rem;
-    opacity: 0.7;
-    animation: sway 3s ease-in-out infinite alternate;
-}
- 
+
 .loader__text {
-    font-family: $font-hand;
+    font-family: 'Caveat', cursive;
     font-size: clamp(1.6rem, 4vw, 2.4rem);
-    color: $white;
+    color: #ffffff;
     text-shadow: 0 2px 12px rgba(180, 100, 130, 0.2);
     min-height: 3rem;
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
     letter-spacing: 0.03em;
 }
- 
+
 .loader__cursor {
     display: inline-block;
     width: 2px;
     height: 0.85em;
-    background: $white;
+    background: #ffffff;
     margin-left: 4px;
     vertical-align: middle;
     animation: blink 0.75s steps(1) infinite;
 }
- 
+
 @keyframes blink {
     50% { opacity: 0; }
 }
- 
+
 .loader__sub {
-    font-family: $font-hand;
+    font-family: 'Caveat', cursive;
     font-size: clamp(1rem, 2.5vw, 1.25rem);
-    color: rgba($white, 0.75);
+    color: rgba(#ffffff, 0.75);
     margin-top: 0.4rem;
     letter-spacing: 0.05em;
+    text-align: center;
+    width: 100%;
 }
- 
+
 .loader__bar {
     width: 120px;
     height: 2px;
-    background: rgba($white, 0.25);
+    background: rgba(#ffffff, 0.25);
     border-radius: 2px;
     margin-top: 1.5rem;
     overflow: hidden;
-    
+
     &-fill {
         height: 100%;
-        background: $white;
+        background: #ffffff;
         border-radius: 2px;
         animation: progress 2.4s ease-in-out infinite;
     }
 }
- 
+
 @keyframes progress {
     0%   { width: 0%; }
     70%  { width: 88%; }
     100% { width: 100%; }
 }
- 
+
 .loader__clouds {
     position: absolute;
     bottom: 0;
@@ -93,13 +86,17 @@ $font-hand: 'Caveat', cursive;
     width: 100%;
     pointer-events: none;
     line-height: 0;
-    
+
     svg {
         width: 100%;
         display: block;
+
+        ellipse {
+            fill: #ffffff;
+        }
     }
 }
- 
+
 
 //  ЭКРАН ОШИБКИ
 
@@ -111,56 +108,60 @@ $font-hand: 'Caveat', cursive;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(180deg, $pink 0%, $blue 100%);
-    
+    background: linear-gradient(180deg, #f4b8c8 0%, #d4e9f7 100%);
+
     &[hidden] { display: none; }
 }
 
- 
 .offline__icon {
     margin-bottom: 1rem;
     opacity: 0.75;
     animation: float 3s ease-in-out infinite;
+
+    svg {
+        stroke: rgba(255, 255, 255, 0.7);
+        fill: none;
+    }
 }
- 
+
 @keyframes float {
-    0%, 100% { transform: translateY(0);    }
+    0%, 100% { transform: translateY(0); }
     50%       { transform: translateY(-6px); }
 }
- 
+
 .offline__title {
-    font-family: $font-hand;
+    font-family: 'Caveat', cursive;
     font-size: clamp(1.8rem, 4vw, 2.6rem);
-    color: $white;
+    color: #ffffff;
     text-shadow: 0 2px 12px rgba(180, 100, 130, 0.2);
     letter-spacing: 0.03em;
 }
- 
+
 .offline__sub {
-    font-family: $font-hand;
+    font-family: 'Caveat', cursive;
     font-size: clamp(1rem, 2.5vw, 1.2rem);
-    color: rgba($white, 0.7);
+    color: rgba(#ffffff, 0.7);
     margin-top: 0.3rem;
     letter-spacing: 0.04em;
 }
- 
+
 .offline__btn {
     margin-top: 1.5rem;
-    font-family: $font-hand;
+    font-family: 'Caveat', cursive;
     font-size: 1.2rem;
-    color: $white;
-    background: rgba($white, 0.18);
-    border: 1.5px solid rgba($white, 0.5);
+    color: #ffffff;
+    background: rgba(#ffffff, 0.18);
+    border: 1.5px solid rgba(#ffffff, 0.5);
     border-radius: 30px;
     padding: 0.4rem 1.6rem;
     cursor: pointer;
     letter-spacing: 0.04em;
     transition: background 0.2s ease, transform 0.1s ease;
-    
-    &:hover  { background: rgba($white, 0.32); }
+
+    &:hover  { background: rgba(#ffffff, 0.32); }
     &:active { transform: scale(0.97); }
 }
- 
+
 .offline__clouds {
     position: absolute;
     bottom: 0;
@@ -168,34 +169,13 @@ $font-hand: 'Caveat', cursive;
     width: 100%;
     pointer-events: none;
     line-height: 0;
-    
+
     svg {
         width: 100%;
         display: block;
+
+        ellipse {
+            fill: #ffffff;
+        }
     }
-
-
-
-}
- 
-// фикс облаков
-.loader__clouds svg ellipse,
-.offline__clouds svg ellipse {
-    fill: white !important;
-}
-
-.loader__text {
-    text-align: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.loader__sub {
-    text-align: center;
-    width: 100%;
-}
-
-.offline__icon svg {
-    stroke: rgba(255, 255, 255, 0.7) !important;
-    fill: none !important;
 }

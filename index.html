@@ -2,18 +2,27 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Ekaterina Tumanova — Frontend Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Портфолио Екатерины Тумановой — Frontend Developer Intern. HTML, SCSS, JavaScript.">
-    <meta property="og:title" content="Ekaterina Tumanova — Frontend Developer">
-    <meta property="og:description" content="Портфолио начинающего frontend-разработчика">
-    <meta property="og:image" content="./images/I.png">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+    <title>Екатерина Туманова — Frontend Developer</title>
+    <meta name="description" content="Портфолио начинающего frontend-разработчика. HTML, SCSS, JavaScript.">
+
+    <meta property="og:title" content="Екатерина Туманова — Frontend Developer">
+    <meta property="og:description" content="Портфолио начинающего frontend-разработчика. HTML, SCSS, JavaScript.">
+    <meta property="og:image" content="https://katymist.github.io/Portfolio/images/I.png">
+    <meta property="og:url" content="https://katymist.github.io/Portfolio/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="canonical" href="https://katymist.github.io/Portfolio/">
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
+
+    <link rel="preload" href="./fonts/Caveat.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont/tabler-icons.min.css">
     <link rel="stylesheet" href="./styles/main.css">
-    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
+
     <script src="./scripts/main.js" type="module" defer></script>
 </head>
+
 <body>
     <!-- Экран загрузки -->
     <div id="loader">
@@ -85,10 +94,10 @@
                     <li><a href="#about" class="nav__link">обо мне</a></li>
                     <li><a href="#skills" class="nav__link">навыки</a></li>
                     <li><a href="#projects" class="nav__link">проекты</a></li>
+                    <li><a href="#workflow" class="nav__link">процесс</a></li>
                     <li><a href="#contacts" class="nav__link">контакты</a></li>
                 </ul>
             </nav>
-
             <div class="hero__content">
                 <a href="#" class="hero__logo" aria-label="Наверх">
                     <svg
@@ -109,7 +118,7 @@
                 <p class="hero__tech">HTML | SCSS | JS</p>
             </div>
 
-            <div class="hero__clouds">
+            <div class="hero__clouds" aria-hidden="true">
                 <svg aria-hidden="true" class="clouds-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 500">
 
                     <!-- ОБЛАКО ЛЕВОЕ -->
@@ -305,10 +314,10 @@
 
                 <!-- СЕРТИФИКАТЫ И КУРСЫ — на всю ширину -->
                 <div class="skills__card skills__card--education">
-                    <p class="skills__card-title">
+                    <h3 class="skills__card-title">
                         <i class="ti ti-certificate" aria-hidden="true"></i>
                         Сертификаты и курсы
-                    </p>
+                    </h3>
 
                     <div class="skills__edu-inner">
                         <!-- Пройденные курсы -->
@@ -333,10 +342,10 @@
 
                 <!-- ОБРАЗОВАНИЕ — на всю ширину -->
                 <div class="skills__card skills__card--education">
-                    <p class="skills__card-title">
+                    <h3 class="skills__card-title">
                         <i class="ti ti-school" aria-hidden="true"></i>
                         Высшее образование
-                    </p>
+                    </h3>
 
                     <div class="skills__degree-list">
                         <div class="skills__degree-item">
@@ -400,7 +409,7 @@
                 <!-- Проект 1 — kropp-fitness -->
                 <a href="https://github.com/KatyMist/KROPP-FITNESS" class="projects__card" target="_blank" rel="noopener noreferrer">
                     <div class="projects__card-img">
-                        <img src="./images/KROPP-FITNESS.png" alt="Kropp Fitness" />
+                        <img src="./images/KROPP-FITNESS.png" alt="Kropp Fitness" loading="lazy" decoding="async" />
                     </div>
                     <div class="projects__card-body">
                         <p class="projects__card-title">Kropp Fitness</p>
@@ -418,7 +427,7 @@
                 <!-- Проект 2 — второй сайт -->
                 <a href="https://github.com/KatyMist/FUTURE-TECH" class="projects__card" target="_blank" rel="noopener noreferrer">
                     <div class="projects__card-img">
-                        <img src="./images/FutureTech.png" alt="Future Tech — учебный frontend-проект" />
+                        <img src="./images/FutureTech.png" alt="Future Tech — учебный frontend-проект" loading="lazy" decoding="async" />
                     </div>
                     <div class="projects__card-body">
                         <p class="projects__card-title">Future Tech</p>
@@ -437,7 +446,7 @@
                 <!-- Мой сайт — портфолио -->
                 <a href="https://katymist.github.io/Portfolio/" class="projects__card" target="_blank" rel="noopener noreferrer">
                     <div class="projects__card-img">
-                        <img src="./images/I.png" alt="Портфолио" />
+                        <img src="./images/I.png" alt="Портфолио" loading="lazy" decoding="async" />
                     </div>
                     <div class="projects__card-body">
                         <p class="projects__card-title">Портфолио</p>
@@ -469,6 +478,164 @@
                 </div>
             </div>
         </section>
+
+        <section class="workflow" id="workflow">
+ 
+            <div class="workflow__cloud workflow__cloud--tl" aria-hidden="true">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                    <ellipse cx="100" cy="65" rx="90" ry="38"/>
+                    <ellipse cx="70" cy="52" rx="55" ry="44"/>
+                    <ellipse cx="120" cy="48" rx="52" ry="46"/>
+                    <ellipse cx="95" cy="40" rx="40" ry="38"/>
+                    <ellipse cx="70" cy="34" rx="30" ry="32"/>
+                </svg>
+            </div>
+        
+            <div class="workflow__cloud workflow__cloud--tr" aria-hidden="true">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                    <ellipse cx="100" cy="65" rx="88" ry="36"/>
+                    <ellipse cx="75" cy="50" rx="52" ry="46"/>
+                    <ellipse cx="125" cy="48" rx="50" ry="44"/>
+                    <ellipse cx="100" cy="38" rx="40" ry="38"/>
+                </svg>
+            </div>
+        
+            <div class="workflow__cloud workflow__cloud--bl" aria-hidden="true">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                    <ellipse cx="100" cy="65" rx="85" ry="34"/>
+                    <ellipse cx="70" cy="52" rx="50" ry="42"/>
+                    <ellipse cx="120" cy="50" rx="48" ry="40"/>
+                    <ellipse cx="95" cy="40" rx="36" ry="36"/>
+                </svg>
+            </div>
+        
+            <div class="workflow__cloud workflow__cloud--br" aria-hidden="true">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                    <ellipse cx="100" cy="65" rx="90" ry="38"/>
+                    <ellipse cx="75" cy="52" rx="55" ry="44"/>
+                    <ellipse cx="125" cy="50" rx="52" ry="42"/>
+                    <ellipse cx="100" cy="40" rx="42" ry="40"/>
+                    <ellipse cx="120" cy="35" rx="28" ry="30"/>
+                </svg>
+            </div>
+        
+            <p class="workflow__subtitle">HTML · SCSS · JavaScript</p>
+        
+            <h2 class="workflow__title">
+                На данном этапе обучения я занимаюсь разработкой проектных сайтов,
+                где каждый проект проходит через последовательные этапы создания
+            </h2>
+        
+            <div class="workflow__carousel" data-js-carousel tabindex="0">
+        
+                <div class="workflow__track" data-js-track>
+        
+                    <article class="workflow__card">
+                        <span class="workflow__num">01</span>
+                        <h3 class="workflow__card-title">Знакомство с проектом</h3>
+                        <p class="workflow__card-text">Сначала обсуждаем ваш проект: задачи, идеи, стиль, пожелания и атмосферу будущего сайта. Вы заполняете небольшой бриф, а затем мы уточняем детали в переписке или на созвоне.</p>
+                        <p class="workflow__card-note">Для меня важно не просто «сделать сайт», а понять, каким вы хотите видеть свой проект и какое впечатление он должен оставлять.</p>
+                    </article>
+        
+                    <article class="workflow__card">
+                        <span class="workflow__num">02</span>
+                        <h3 class="workflow__card-title">Подготовка материалов</h3>
+                        <p class="workflow__card-text">Перед стартом разработки собираются все необходимые материалы:</p>
+                        <ul class="workflow__card-list">
+                            <li>тексты</li>
+                            <li>фотографии и изображения</li>
+                            <li>логотип и фирменные элементы</li>
+                            <li>примеры сайтов, которые вам нравятся</li>
+                        </ul>
+                    </article>
+        
+                    <article class="workflow__card">
+                        <span class="workflow__num">03</span>
+                        <h3 class="workflow__card-title">Продумывание структуры</h3>
+                        <p class="workflow__card-text">На этом этапе создаётся логика сайта:</p>
+                        <ul class="workflow__card-list">
+                            <li>определяются страницы</li>
+                            <li>продумывается последовательность блоков</li>
+                            <li>выстраивается удобный путь пользователя</li>
+                        </ul>
+                        <p class="workflow__card-note">Сайт должен быть не только красивым, но и понятным.</p>
+                    </article>
+        
+                    <article class="workflow__card">
+                        <span class="workflow__num">04</span>
+                        <h3 class="workflow__card-title">Создание визуальной концепции</h3>
+                        <p class="workflow__card-text">На основе ваших референсов и пожеланий мы вместе определяем визуальное направление: цвета, типографику, стилистику интерфейса и детали, создающие атмосферу. Я подготовлю набросок концепции перед стартом вёрстки.</p>
+                        <p class="workflow__card-note">Люблю, когда сайт выглядит живым, лёгким и запоминающимся, а не просто «как у всех».</p>
+                    </article>
+        
+                    <article class="workflow__card">
+                        <span class="workflow__num">05</span>
+                        <h3 class="workflow__card-title">Вёрстка и разработка</h3>
+                        <p class="workflow__card-text">Когда структура и стиль согласованы — начинается реализация проекта. Сайт собирается с использованием современных технологий: HTML, SCSS и JavaScript.</p>
+                        <p class="workflow__card-note">Добавляются адаптивность, анимации, интерактивные элементы и всё, что делает интерфейс удобным и современным.</p>
+                    </article>
+        
+                    <article class="workflow__card">
+                        <span class="workflow__num">06</span>
+                        <h3 class="workflow__card-title">Адаптация под устройства</h3>
+                        <p class="workflow__card-text">Сайт тщательно проверяется на разных экранах и устройствах:</p>
+                        <ul class="workflow__card-list">
+                            <li>смартфоны</li>
+                            <li>планшеты</li>
+                            <li>ноутбуки и большие мониторы</li>
+                            <li>современные браузеры</li>
+                        </ul>
+                        <p class="workflow__card-note">Адаптивность продумывается сразу, а не добавляется для галочки в конце.</p>
+                    </article>
+        
+                    <article class="workflow__card">
+                        <span class="workflow__num">07</span>
+                        <h3 class="workflow__card-title">Проверка и финальные правки</h3>
+                        <p class="workflow__card-text">Перед публикацией проводится финальное тестирование:</p>
+                        <ul class="workflow__card-list">
+                            <li>корректность отображения</li>
+                            <li>работа ссылок и форм</li>
+                            <li>скорость загрузки</li>
+                            <li>проверка контента и структуры</li>
+                        </ul>
+                        <p class="workflow__card-note">После просмотра вы присылаете список правок — всё дорабатывается до аккуратного финального результата.</p>
+                    </article>
+        
+                    <article class="workflow__card">
+                        <span class="workflow__num">08</span>
+                        <h3 class="workflow__card-title">Публикация сайта</h3>
+                        <p class="workflow__card-text">Готовый сайт размещается в интернете — например, через GitHub Pages, Netlify или другую платформу.</p>
+                        <p class="workflow__card-note">При необходимости подключается домен и выполняется базовая настройка публикации.</p>
+                    </article>
+        
+                    <article class="workflow__card">
+                        <span class="workflow__num">09</span>
+                        <h3 class="workflow__card-title">Передача проекта</h3>
+                        <p class="workflow__card-text">После завершения работы вы получаете:</p>
+                        <ul class="workflow__card-list">
+                            <li>ссылку на готовый сайт</li>
+                            <li>исходные файлы проекта</li>
+                            <li>рекомендации по дальнейшему использованию</li>
+                        </ul>
+                        <p class="workflow__card-note">Также объясняю, что можно редактировать самостоятельно и как поддерживать сайт в дальнейшем.</p>
+                    </article>
+        
+                </div>
+        
+            </div>
+        
+            <div class="workflow__controls">
+                <button class="workflow__btn" data-js-prev aria-label="Назад">
+                    <i class="ti ti-arrow-left" aria-hidden="true"></i>
+                </button>
+                <div class="workflow__dots" data-js-dots></div>
+                <button class="workflow__btn" data-js-next aria-label="Вперёд">
+                    <i class="ti ti-arrow-right" aria-hidden="true"></i>
+                </button>
+            </div>
+        
+        </section>
+ 
 
         <section class="contacts" id="contacts">
 

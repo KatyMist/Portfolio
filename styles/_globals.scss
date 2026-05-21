@@ -87,6 +87,12 @@ svg * {
     transition-duration: var(--transition-duration);
 }
 
+// Исключение для стрелок
+.workflow__arrow svg * {
+    stroke: revert !important;
+    fill: revert !important;
+}
+
 // Фокус
 :focus-visible {
     outline: rem(2) dashed var(--color-powdery);
