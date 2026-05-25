@@ -375,11 +375,6 @@ svg * {
   transition-duration: var(--transition-duration);
 }
 
-.workflow__arrow svg * {
-  stroke: revert !important;
-  fill: revert !important;
-}
-
 :focus-visible {
   outline: 0.125rem dashed var(--color-powdery);
   outline-offset: 0.25rem;
@@ -1641,12 +1636,6 @@ html.is-lock {
   pointer-events: none;
 }
 
-.loader__birds {
-  margin-bottom: 2rem;
-  opacity: 0.7;
-  animation: sway 3s ease-in-out infinite alternate;
-}
-
 .loader__text {
   font-family: "Caveat", cursive;
   font-size: clamp(1.6rem, 4vw, 2.4rem);
@@ -1655,6 +1644,9 @@ html.is-lock {
   min-height: 3rem;
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
   letter-spacing: 0.03em;
 }
 
@@ -1679,6 +1671,8 @@ html.is-lock {
   color: rgba(255, 255, 255, 0.75);
   margin-top: 0.4rem;
   letter-spacing: 0.05em;
+  text-align: center;
+  width: 100%;
 }
 
 .loader__bar {
@@ -1719,6 +1713,9 @@ html.is-lock {
   width: 100%;
   display: block;
 }
+.loader__clouds svg ellipse {
+  fill: #ffffff;
+}
 
 #offline-screen {
   position: fixed;
@@ -1738,6 +1735,10 @@ html.is-lock {
   margin-bottom: 1rem;
   opacity: 0.75;
   animation: float 3s ease-in-out infinite;
+}
+.offline__icon svg {
+  stroke: rgba(255, 255, 255, 0.7);
+  fill: none;
 }
 
 @keyframes float {
@@ -1796,26 +1797,8 @@ html.is-lock {
   width: 100%;
   display: block;
 }
-
-.loader__clouds svg ellipse,
 .offline__clouds svg ellipse {
-  fill: white !important;
-}
-
-.loader__text {
-  text-align: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.loader__sub {
-  text-align: center;
-  width: 100%;
-}
-
-.offline__icon svg {
-  stroke: rgba(255, 255, 255, 0.7) !important;
-  fill: none !important;
+  fill: #ffffff;
 }
 
 .workflow {
