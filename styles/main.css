@@ -469,7 +469,7 @@ svg * {
 }
 @media (width <= 90.06125rem) {
   .nav__link {
-    font-size: 1.75rem;
+    font-size: 1.625rem;
   }
 }
 @media (width <= 47.99875rem) {

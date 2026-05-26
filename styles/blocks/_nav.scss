@@ -54,7 +54,7 @@
         transition: opacity 0.2s ease;
 
         @include laptop {        
-            font-size: rem(28);
+            font-size: rem(26);
         }
 
         @include mobile {
