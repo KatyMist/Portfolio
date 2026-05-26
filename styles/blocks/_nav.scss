@@ -53,6 +53,10 @@
         letter-spacing: 0.05em;
         transition: opacity 0.2s ease;
 
+        @include laptop {        
+            font-size: rem(28);
+        }
+
         @include mobile {
             font-size: rem(22);
         }
