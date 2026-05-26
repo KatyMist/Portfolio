@@ -195,6 +195,16 @@
         line-height: 1.5;
     }
 
+    &__card-note {
+        font-size: rem(13);
+        color: var(--color--pink_3);
+        opacity: 0.6;
+        margin: 0;
+        line-height: 1.4;
+        font-style: italic;
+        letter-spacing: 0.02em;
+    }
+
     &__card-tags {
         display: flex;
         flex-wrap: wrap;
