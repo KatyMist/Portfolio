@@ -828,6 +828,13 @@ html.is-lock {
   height: 85vh;
   position: relative;
 }
+@media (width <= 47.99875rem) {
+  .about__blob {
+    height: 70vw;
+    width: 70vw;
+    margin: 0 auto;
+  }
+}
 .about__blob::before {
   content: "";
   position: absolute;
@@ -1649,6 +1656,12 @@ html.is-lock {
   color: rgba(255, 255, 255, 0.85);
   text-align: center;
   margin: 0;
+}
+@media (width <= 47.99875rem) {
+  .footer__text {
+    font-size: 0.8125rem;
+    letter-spacing: 0.05em;
+  }
 }
 
 #loader {
