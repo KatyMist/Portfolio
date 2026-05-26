@@ -175,6 +175,12 @@
         height: 85vh;
         position: relative;
 
+        @include mobile {       
+            height: 70vw;       // квадратная база — даст круг
+            width: 70vw;
+            margin: 0 auto;
+        }
+
         &::before {
             content: '';
             position: absolute;
