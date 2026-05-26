@@ -93,3 +93,20 @@ svg * {
     outline-offset: rem(4);
     transition-duration: 0s !important;
 }
+
+* {
+  cursor: none !important;
+}
+
+.cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 999999;
+  width: 14px;
+  height: 14px;
+  background: white;
+  border: 1.5px solid #d0a8b8;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+}
