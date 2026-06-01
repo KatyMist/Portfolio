@@ -21,30 +21,6 @@
     <link rel="stylesheet" href="./styles/main.css">
 
     <script src="./scripts/main.js" type="module" defer></script>
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109337117', 'ym');
-
-        ym(109337117, 'init', {
-            ssr: true,
-            webvisor: true,
-            clickmap: true,
-            ecommerce: "dataLayer",
-            referrer: document.referrer,
-            url: location.href,
-            accurateTrackBounce: true,
-            trackLinks: true
-        });
-    </script>
-    <noscript>
-        <div><img src="https://mc.yandex.ru/watch/109337117" style="position:absolute; left:-9999px;" alt="" /></div>
-    </noscript>
-    <!-- /Yandex.Metrika counter -->
 
 
 </head>
@@ -107,6 +83,7 @@
         </svg>
     </div>
     </div>
+
     <main>
         <section class="hero">
             <button class="burger" type="button" aria-label="Открыть меню" data-js-burger>
@@ -300,123 +277,112 @@
 
         <section class="skills" id="skills">
 
-            <!-- Декоративные облака -->
             <div class="skills__cloud skills__cloud--tl" aria-hidden="true">
-                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
-                    <ellipse cx="100" cy="65" rx="90" ry="38"/>
-                    <ellipse cx="70" cy="52" rx="55" ry="44"/>
-                    <ellipse cx="120" cy="48" rx="52" ry="46"/>
-                    <ellipse cx="95" cy="40" rx="40" ry="38"/>
-                    <ellipse cx="70" cy="34" rx="30" ry="32"/>
-                </svg>
+                <a href="./index.html">
+                    <img src="./icons/1.svg"
+                        alt="Экология"
+                        width="64"
+                        height="64">
+                </a>
             </div>
-
             <div class="skills__cloud skills__cloud--tr" aria-hidden="true">
-                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
                     <ellipse cx="100" cy="65" rx="88" ry="36"/>
                     <ellipse cx="75" cy="50" rx="52" ry="46"/>
                     <ellipse cx="125" cy="48" rx="50" ry="44"/>
-                    <ellipse cx="100" cy="38" rx="40" ry="38"/>
                 </svg>
             </div>
-
-            <div class="skills__cloud skills__cloud--bl" aria-hidden="true">
-                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
-                    <ellipse cx="100" cy="65" rx="85" ry="34"/>
-                    <ellipse cx="70" cy="52" rx="50" ry="42"/>
-                    <ellipse cx="120" cy="50" rx="48" ry="40"/>
-                </svg>
-            </div>
-
             <div class="skills__cloud skills__cloud--br" aria-hidden="true">
-                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
                     <ellipse cx="100" cy="65" rx="90" ry="38"/>
                     <ellipse cx="75" cy="52" rx="55" ry="44"/>
                     <ellipse cx="125" cy="50" rx="52" ry="42"/>
-                    <ellipse cx="100" cy="40" rx="42" ry="40"/>
-                    <ellipse cx="120" cy="35" rx="28" ry="30"/>
                 </svg>
             </div>
 
-            <h2 class="skills__title">НАВЫКИ</h2>
+            <h2 class="skills__title">МОЙ ПУТЬ</h2>
+            <p class="skills__subtitle">во Frontend</p>
+            <p class="skills__desc">Каждый шаг — это опыт, который привёл меня к любимому делу</p>
 
-            <div class="skills__grid">
-
-                <!-- СЕРТИФИКАТЫ И КУРСЫ — на всю ширину -->
-                <div class="skills__card skills__card--education">
-                    <h3 class="skills__card-title">
-                        <i class="ti ti-certificate" aria-hidden="true"></i>
-                        Сертификаты и курсы
-                    </h3>
-
-                    <div class="skills__edu-inner">
-                        <!-- Пройденные курсы -->
-                        <div class="skills__edu-group">
-                            <p class="skills__edu-subtitle">Frontend-разработка</p>
-                            <p class="skills__edu-item">«Веб-разработка для начинающих: HTML и CSS»</p>
-                            <p class="skills__edu-item">«HTML CSS JS (lite)»</p>
-                            <p class="skills__edu-item">«Погружение в JavaScript: для начинающих»</p>
-                            <p class="skills__edu-item">«Твой JavaScript»</p>
-                            <p class="skills__edu-item">Основы Git и GitHub</p>
-                        </div>
-
-                        <!-- В процессе -->
-                        <div class="skills__edu-group">
-                            <p class="skills__edu-subtitle">В процессе изучения</p>
-                            <p class="skills__edu-item">JavaScript</p>
-                            <p class="skills__edu-item">React</p>
-                            <p class="skills__edu-item">Frontend-компоненты и UI</p>
-                        </div>
+            <div class="skills__timeline">
+                <!-- 2015 -->
+                <div class="skills__item">
+                    <div class="skills__icon-wrap"><i class="ti ti-leaf"></i></div>
+                    <div class="skills__dot"></div>
+                    <div class="skills__card">
+                        <span class="skills__year">2015</span>
+                        <p class="skills__label">Окончила</p>
+                        <p class="skills__name">Экология и природопользование</p>
+                        <p class="skills__level">Бакалавр</p>
                     </div>
                 </div>
 
-                <!-- ОБРАЗОВАНИЕ — на всю ширину -->
-                <div class="skills__card skills__card--education">
-                    <h3 class="skills__card-title">
-                        <i class="ti ti-school" aria-hidden="true"></i>
-                        Высшее образование
-                    </h3>
+                <!-- 2018 -->
+                <div class="skills__item">
+                    <div class="skills__icon-wrap"><i class="ti ti-building-bank"></i></div>
+                    <div class="skills__dot"></div>
+                    <div class="skills__card">
+                        <span class="skills__year">2018</span>
+                        <p class="skills__label">Окончила</p>
+                        <p class="skills__name">Государственное и муниципальное управление</p>
+                        <p class="skills__level">Магистр с отличием</p>
+                    </div>
+                </div>
 
-                    <div class="skills__degree-list">
-                        <div class="skills__degree-item">
-                            <div class="skills__degree-icon" aria-hidden="true">
-                                <i class="ti ti-leaf"></i>
-                            </div>
-                            <div>
-                                <p class="skills__degree-name">Экология и природопользование</p>
-                                <p class="skills__degree-level">Бакалавр</p>
-                            </div>
+                <!-- 2021 -->
+                <div class="skills__item">
+                    <div class="skills__icon-wrap"><i class="ti ti-tree"></i></div>
+                    <div class="skills__dot"></div>
+                    <div class="skills__card">
+                        <span class="skills__year">2021</span>
+                        <p class="skills__label">Окончила</p>
+                        <p class="skills__name">Лесное дело</p>
+                        <p class="skills__level">Магистр с отличием</p>
+                    </div>
+                </div>
+
+                <!-- 2026 -->
+                <div class="skills__item skills__item--accent">
+                    <div class="skills__icon-wrap skills__icon-wrap--accent">
+                        <i class="ti ti-code"></i>
+                    </div>
+                    <div class="skills__dot skills__dot--accent"></div>
+                    <div class="skills__card skills__card--accent">
+                        <div class="skills__card-preview">
+                            <span class="skills__year">2026 ✨</span>
+                            <p class="skills__label">Начало пути во Frontend</p>
                         </div>
-
-                        <div class="skills__degree-item">
-                            <div class="skills__degree-icon" aria-hidden="true">
-                                <i class="ti ti-building-bank"></i>
-                            </div>
-                            <div>
-                                <p class="skills__degree-name">Государственное и муниципальное управление</p>
-                                <p class="skills__degree-level">Магистр <span class="skills__cert">с отличием</span></p>
-                            </div>
-                        </div>
-
-                        <div class="skills__degree-item">
-                            <div class="skills__degree-icon" aria-hidden="true">
-                                <i class="ti ti-tree"></i>
-                            </div>
-                            <div>
-                                <p class="skills__degree-name">Лесное дело</p>
-                                <p class="skills__degree-level">Магистр <span class="skills__cert">с отличием</span></p>
-                            </div>
+                        <div class="skills__card-expanded">
+                            <span class="skills__year">2026 ✨</span>
+                            <p class="skills__label">Начало пути во Frontend</p>
+                            <p class="skills__text">С 2026 года я изучаю современные технологии веб-разработки, создаю учебные проекты и постепенно превращаю новые знания в практический опыт.</p>
+                            <p class="skills__text">Каждый завершённый курс помогает лучше понимать устройство современных интерфейсов и уверенно двигаться вперёд. Результаты обучения собраны на <a href="https://stepik.org/users/1179792686/profile" target="_blank" rel="noopener">Stepik</a>.</p>
+                            <p class="skills__text">Сейчас активно работаю с HTML, SCSS, JavaScript и Git, а также продолжаю изучение React.</p>
                         </div>
                     </div>
                 </div>
 
             </div>
+
+            <div class="skills__stack">
+                <p class="skills__stack-title">Мой стек технологий</p>
+                <div class="skills__stack-grid">
+                    <span class="skills__tag">HTML</span>
+                    <span class="skills__tag">SCSS</span>
+                    <span class="skills__tag">JavaScript</span>
+                    <span class="skills__tag">Git & GitHub</span>
+                    <span class="skills__tag skills__tag--soon">React <em>в процессе</em></span>
+                    <span class="skills__tag skills__tag--soon">TypeScript <em>скоро</em></span>
+                </div>
+                <p class="skills__footer-text">Мой путь продолжается, и я с радостью двигаюсь вперёд, создавая новые проекты и совершенствуя навыки каждый день</p>
+            </div>
+
         </section>
 
         <section class="projects" id="projects">
 
             <div class="projects__cloud projects__cloud--tl" aria-hidden="true">
-                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
                     <ellipse cx="100" cy="65" rx="90" ry="38"/>
                     <ellipse cx="70" cy="52" rx="55" ry="44"/>
                     <ellipse cx="120" cy="48" rx="52" ry="46"/>
@@ -425,7 +391,7 @@
             </div>
 
             <div class="projects__cloud projects__cloud--br" aria-hidden="true">
-                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
                     <ellipse cx="100" cy="65" rx="88" ry="36"/>
                     <ellipse cx="75" cy="50" rx="52" ry="46"/>
                     <ellipse cx="125" cy="48" rx="50" ry="44"/>
@@ -434,81 +400,85 @@
             </div>
 
             <h2 class="projects__title">ПРОЕКТЫ</h2>
+            <p class="projects__subtitle">Место, где идеи обретают форму, а код оживляет дизайн ✨</p>
 
-            <div class="projects__grid">
-                <!-- Проект 1 — kropp-fitness -->
-                <a href="https://katymist.github.io/KROPP-FITNESS/" class="projects__card" target="_blank" rel="noopener noreferrer">
-                    <div class="projects__card-img">
-                        <img src="./images/KROPP-FITNESS.png" alt="Kropp Fitness" loading="lazy" decoding="async" />
-                    </div>
-                    <div class="projects__card-body">
-                        <p class="projects__card-title">Kropp Fitness</p>
-                        <p class="projects__card-desc">Учебный frontend-проект</p>
-                        <ul class="projects__card-tags">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                        </ul>
-                    </div>
-                    <span class="projects__card-arrow">
-                        <i class="ti ti-arrow-up-right" aria-hidden="true"></i>
-                    </span>
-                </a>
+            <div class="projects__accordion">
 
-                <!-- Проект 2 — второй сайт -->
-                <a href="https://github.com/KatyMist/FUTURE-TECH" class="projects__card" target="_blank" rel="noopener noreferrer">
-                    <div class="projects__card-img">
-                        <img src="./images/FutureTech.png" alt="Future Tech — учебный frontend-проект" loading="lazy" decoding="async" />
+                <div class="projects__item" data-href="https://katymist.github.io/KROPP-FITNESS/" data-bg="./images/KROPP-FITNESS.png">
+                    <div class="projects__item-collapsed">
+                        <span class="projects__item-num">01</span>
+                        <span class="projects__item-label">KROPP FITNESS</span>
+                        <span class="projects__item-arrow">→</span>
                     </div>
-                    <div class="projects__card-body">
-                        <p class="projects__card-title">Future Tech</p>
-                        <p class="projects__card-desc">Учебный frontend-проект</p>
-                        <ul class="projects__card-tags">
-                            <li>HTML</li>
-                            <li>SCSS</li>
-                            <li>JS</li>
-                        </ul>
+                    <div class="projects__item-expanded">
+                        <div class="projects__item-info">
+                            <span class="projects__item-num">01</span>
+                            <h3 class="projects__item-title">Kropp Fitness</h3>
+                            <p class="projects__item-desc">Учебный фронтенд-проект</p>
+                            <p class="projects__item-text">Адаптивный лендинг фитнес-клуба, созданный в рамках обучения по видеоуроку. </br> Проект позволил закрепить навыки семантической и адаптивной вёрстки с использованием HTML и CSS.</p>
+                            <ul class="projects__item-tags">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                            </ul>
+                            <a href="https://katymist.github.io/KROPP-FITNESS/" class="projects__item-btn" target="_blank" rel="noopener noreferrer">
+                                Посмотреть проект ↗
+                            </a>
+                        </div>
                     </div>
-                    <span class="projects__card-arrow">
-                        <i class="ti ti-arrow-up-right" aria-hidden="true"></i>
-                    </span>
-                </a>
-
-                <!-- Мой сайт — портфолио -->
-                <a href="https://katymist.github.io/Portfolio/" class="projects__card" target="_blank" rel="noopener noreferrer">
-                    <div class="projects__card-img">
-                        <img src="./images/I.png" alt="Портфолио" loading="lazy" decoding="async" />
-                    </div>
-                    <div class="projects__card-body">
-                        <p class="projects__card-title">Портфолио</p>
-                        <p class="projects__card-desc">Личный сайт-портфолио</p>
-                        <p class="projects__card-note">Авторский дизайн — концепция, палитра и стиль разработаны самостоятельно</p>
-                        <ul class="projects__card-tags">
-                            <li>HTML</li>
-                            <li>SCSS</li>
-                            <li>JS</li>
-                        </ul>
-                    </div>
-                    <span class="projects__card-arrow">
-                        <i class="ti ti-arrow-up-right" aria-hidden="true"></i>
-                    </span>
-                </a>
-
-                <!-- Пустая ячейка 1 -->
-                <div class="projects__card projects__card--empty">
-                    <p class="projects__empty-text">Проект в разработке ✨</p>
-                    <p class="projects__empty-text">Школа — студия подологии и здоровой эстетики Анны Кудуровой 💅</p>
                 </div>
 
-                <!-- Пустая ячейка 2 -->
-                <div class="projects__card projects__card--empty">
-                    <p class="projects__empty-text">Проект скоро появится</p>
+                <div class="projects__item" data-href="https://katymist.github.io/FUTURE-TECH/" data-bg="./images/FutureTech.png">
+                    <div class="projects__item-collapsed">
+                        <span class="projects__item-num">02</span>
+                        <span class="projects__item-label">FUTURE TECH</span>
+                        <span class="projects__item-arrow">→</span>
+                    </div>
+                    <div class="projects__item-expanded">
+                        <div class="projects__item-info">
+                            <span class="projects__item-num">02</span>
+                            <h3 class="projects__item-title">Future Tech</h3>
+                            <p class="projects__item-desc">Учебный фронтенд-проект</p>
+                            <p class="projects__item-text">Лендинг о технологиях будущего, выполненный в рамках обучения по видеоуроку.</br>В процессе разработки реализованы адаптивная вёрстка и интерактивные элементы с использованием HTML, SCSS и JavaScript.</p>
+                            <ul class="projects__item-tags">
+                                <li>HTML</li>
+                                <li>SCSS</li>
+                                <li>JS</li>
+                            </ul>
+                            <a href="https://katymist.github.io/FUTURE-TECH/" class="projects__item-btn" target="_blank" rel="noopener noreferrer">
+                                Посмотреть проект ↗
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Пустая ячейка 3 -->
-                <div class="projects__card projects__card--empty">
-                    <p class="projects__empty-text">Проект скоро появится</p>
+                <div class="projects__item" data-href="https://katymist.github.io/Portfolio/" data-bg="./images/I.png">
+                    <div class="projects__item-collapsed">
+                        <span class="projects__item-num">03</span>
+                        <span class="projects__item-label">ПОРТФОЛИО</span>
+                        <span class="projects__item-arrow">→</span>
+                    </div>
+                    <div class="projects__item-expanded">
+                        <div class="projects__item-info">
+                            <span class="projects__item-num">03</span>
+                            <h3 class="projects__item-title">Портфолио</h3>
+                            <p class="projects__item-desc">Личный сайт-портфолио</p>
+                            <p class="projects__item-text">Личный сайт-портфолио с авторским дизайном и собственной концепцией.</br>Проект создан с нуля: от разработки визуального стиля и цветовой палитры до адаптивной вёрстки и реализации интерактивных элементов на HTML, SCSS и JavaScript.</p>
+                            <ul class="projects__item-tags">
+                                <li>HTML</li>
+                                <li>SCSS</li>
+                                <li>JS</li>
+                            </ul>
+                            <a href="https://katymist.github.io/Portfolio/" class="projects__item-btn" target="_blank" rel="noopener noreferrer">
+                                Посмотреть проект ↗
+                            </a>
+                        </div>
+                    </div>
                 </div>
+
             </div>
+
+            <p class="projects__hint">Наведите на проект, чтобы узнать больше</p>
+
         </section>
 
         <section class="workflow" id="workflow">
