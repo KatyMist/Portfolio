@@ -120,12 +120,7 @@
         padding: 0 rem(8);
 
         @include mobile {
-            flex-direction: row;
-            flex: none;
-            width: 100%;
-            padding: rem(12) 0 rem(12) rem(50);
-            gap: rem(12);
-            align-items: flex-start;
+            max-width: 100%; 
         }
     }
 
@@ -149,10 +144,7 @@
         }
 
         @include mobile {
-            position: absolute;
-            left: rem(12);
-            top: rem(50);
-            margin: 0;
+            display: none;
         }
     }
 
@@ -204,6 +196,9 @@
 
 
 
+
+
+
     &__card {
         background: rgba(255, 255, 255, 0.75);
         border-radius: rem(20);
@@ -215,7 +210,7 @@
         flex: 1;
 
         @include mobile {
-            text-align: left;
+            text-align: center;
             flex: none;
         }
 
@@ -242,7 +237,10 @@
         display: block;
         margin-bottom: rem(4);
 
-        @include mobile { font-size: rem(22); }
+        @include mobile { 
+            text-align: center;
+            font-size: rem(22); 
+        }
     }
 
     &__label {
@@ -251,6 +249,10 @@
         opacity: 0.7;
         margin: 0 0 rem(4);
         letter-spacing: 0.04em;
+
+        @include mobile {
+            text-align: center;
+        }
     }
 
     &__name {
@@ -259,6 +261,10 @@
         margin: 0 0 rem(4);
         line-height: 1.4;
         font-weight: 500;
+
+        @include mobile {
+            text-align: center;
+        }
     }
 
     &__level {
@@ -266,6 +272,10 @@
         color: var(--color--light-blue);
         opacity: 0.75;
         margin: 0;
+
+        @include mobile {
+            text-align: center;
+        }
     }
 
 
@@ -311,6 +321,10 @@
             color: var(--color--pink_3);
             text-decoration: underline;
             text-underline-offset: rem(3);
+        }
+
+        @include mobile {
+            text-align: center;
         }
     }
 
