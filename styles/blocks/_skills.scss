@@ -85,25 +85,28 @@
         z-index: 1;
         margin-bottom: rem(48);
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: rem(82);
-            left: 0;
-            right: 0;
-            border-top: 1.5px dashed rgba(210, 130, 180, 0.45);
-            z-index: 0;
-        }
-
         @include mobile {
             flex-direction: column;
-            &::before {
-                top: 0; bottom: 0;
-                left: rem(20); right: auto;
-                border-top: none;
-                border-left: 1.5px dashed rgba(210, 130, 180, 0.45);
-            }
         }
+
+    }
+
+    &__timeline-line {
+        position: absolute;
+        top: rem(-290);
+        left: 0;
+        width: 80%;
+
+        @include laptop { 
+            top: rem(-240);
+        }
+
+
+        @include tablet { 
+            top: rem(-190);
+        }
+
+        @include mobile { display: none; }
     }
 
     &__item {
@@ -148,31 +151,55 @@
         @include mobile {
             position: absolute;
             left: rem(12);
-            top: rem(16);
+            top: rem(50);
             margin: 0;
         }
     }
 
     &__icon-wrap {
-        width: rem(52);
-        height: rem(52); 
-        border-radius: rem(14);
-        background: rgba(255, 220, 235, 0.5);
+        width: rem(80);
+        height: rem(80);
+        border-radius: rem(20);
+        background: rgba(255, 220, 235, 0.4);
         border: 0.5px solid rgba(210, 130, 180, 0.2);
         display: flex;
         align-items: center;
         justify-content: center;
         flex-shrink: 0;
-        font-size: rem(22);
-        color: var(--color--pink_3);
-        opacity: 0.85;
-        margin-bottom: rem(16); // отступ до точки
+        margin-bottom: rem(16);
+
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease,
+            background-color 0.3s ease;
+
+        img {
+            width: rem(78);
+            height: rem(78);
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover {
+            transform: translateY(rem(-6));
+            background: rgba(255, 220, 235, 0.65);
+            box-shadow:
+                0 rem(8) rem(20) rgba(155, 107, 138, 0.15);
+
+            img {
+                transform: scale(1.08);
+            }
+        }
 
         &--accent {
             background: rgba(210, 130, 180, 0.15);
+            font-size: rem(22);
+            color: var(--color--pink_3);
         }
 
-        @include mobile { display: none; }
+        @include mobile {
+            display: none;
+        }
     }
 
 

@@ -3,7 +3,7 @@
 .contacts { //5 страница
     position: relative;
     z-index: 2;
-    min-height: 100vh;
+    min-height: unset;
     background: linear-gradient(
         to bottom,
         #cce6f5 0%,
@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: rem(100) rem(80) rem(80);
+    padding-bottom: rem(60); 
 
     @include laptop {
         padding: rem(80) rem(50) rem(60);
