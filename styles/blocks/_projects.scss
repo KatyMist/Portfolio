@@ -100,7 +100,6 @@
         @include mobile {
             flex-direction: column;
             height: auto;
-            gap: rem(12);
         }
     }
 
@@ -119,9 +118,9 @@
 
         @include mobile {
             flex: none;
-            height: rem(64);
+            height: rem(70);
             width: 100%;
-            transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: height 0.4s ease;
 
             &:hover,
             &.is-active {
@@ -213,6 +212,10 @@
             opacity: 1;
             pointer-events: auto;
         }
+
+        @include mobile {
+            background-image: none !important;
+        }
     }
 
     &__item-info {
@@ -224,6 +227,15 @@
         padding: rem(32) rem(48);
         background: linear-gradient(135deg, rgba(255,240,248,0.97) 0%, rgba(240,248,255,0.97) 100%);
         z-index: 2;
+
+        @include mobile {
+            padding: rem(16) rem(20);  // Меньше отступа
+            gap: rem(8);
+        }
+
+        @include mobile {
+            font-size: rem(20);  // Меньше размер
+        }
     }
 
     &__item-title {
@@ -253,6 +265,10 @@
         opacity: 0.9;
 
         @include tablet { font-size: rem(13); }
+
+        @include mobile {
+            font-size: rem(12);
+        }
     }
 
     &__item-tags {
@@ -317,6 +333,20 @@
                 transparent 35%
             );
             z-index: 1;
+        }
+
+        @include mobile {
+            height: rem(180);
+
+            .projects__item:hover .projects__item-collapsed {
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            .projects__item:hover .projects__item-expanded {
+                opacity: 0;
+                pointer-events: none;
+            }
         }
     }
 
