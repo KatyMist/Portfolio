@@ -1906,10 +1906,11 @@ html.is-lock {
   z-index: 2;
   background: linear-gradient(to bottom, #f5e2ef 0%, #f8e6f1 40%, #fdf7fb 100%);
   border-top: none;
-  padding: 1.75rem 1.25rem;
+  padding: 5rem 1.25rem 7.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .footer__text {
   font-size: 1.125rem;
@@ -1917,6 +1918,33 @@ html.is-lock {
   color: rgba(176, 128, 170, 0.8);
   text-align: center;
   margin: 0;
+  position: relative;
+  top: 90px;
+  z-index: 1;
+}
+.footer__love {
+  position: absolute;
+  bottom: -1.25rem;
+  left: -1.25rem;
+  width: 18.75rem;
+  height: 18.75rem;
+  opacity: 0.7;
+  z-index: 0;
+}
+.footer__love img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+}
+@media (width <= 47.99875rem) {
+  .footer__love {
+    width: 11.25rem;
+    height: 11.25rem;
+    bottom: -0.625rem;
+    left: -0.625rem;
+  }
 }
 
 #loader {
