@@ -20,8 +20,16 @@ export default class ProjectsAccordion {
                 item.style.backgroundPosition = 'center';
             }
 
+            // На десктопе — mouseenter
             item.addEventListener('mouseenter', () => {
                 if (window.innerWidth > 768) this.setActive(i);
+            });
+
+            // На мобильной — клик для переключения
+            item.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    this.setActive(i);
+                }
             });
         });
 
@@ -36,6 +44,9 @@ export default class ProjectsAccordion {
             const centeredInView = rect.top <= 100 && rect.bottom >= window.innerHeight - 100;
 
             if (!centeredInView) return;
+
+            // На мобильной скролл не работает для проектов
+            if (window.innerWidth <= 768) return;
 
             const goingDown = e.deltaY > 0;
 
