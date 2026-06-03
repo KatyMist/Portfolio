@@ -1017,6 +1017,7 @@ html.is-lock {
 @media (width <= 47.99875rem) {
   .skills__timeline {
     flex-direction: column;
+    gap: 1.5rem;
   }
 }
 .skills__timeline-line {
