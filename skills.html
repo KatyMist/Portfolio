@@ -7,6 +7,8 @@
     <meta name="description" content="Навыки">
     <link rel="icon" href="/favicon.ico" type="image/x-icon"> 
     <link rel="stylesheet" href="./styles/main.css">
+
+    <script src="./scripts/main.js" type="module" defer></script>
 </head>
 <body>
     <header class="header">
@@ -26,16 +28,6 @@
             <span></span>
         </button>
     </header>
-
-    <script>
-        const burger = document.getElementById('burger');
-        const nav = document.getElementById('nav');
-        
-        burger.addEventListener('click', () => {
-            nav.classList.toggle('nav--active');
-            burger.classList.toggle('burger--active');
-        });
-    </script>
 
     <main>
         <section class="hero">
@@ -61,6 +53,8 @@
         </div>
     </footer>
 
+    <div class="cursor" id="cursor"></div>
+
     <div class="loading-screen" id="loadingScreen">
         <div class="loading-content">
             <div class="loading-name" id="nameLoader">Екатерина Туманова</div>
@@ -68,38 +62,18 @@
         </div>
     </div>
 
-    <script>
-        function typeText(element, text, speed) {
-            element.textContent = '';
-            let i = 0;
-            function type() {
-                if (i < text.length) {
-                    element.textContent += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                }
-            }
-            type();
-        }
-
-        window.addEventListener('load', () => {
-            document.getElementById('nameLoader').textContent = '';
-            document.getElementById('roleLoader').textContent = '';
-            
-            setTimeout(() => {
-                typeText(document.getElementById('nameLoader'), 'Екатерина Туманова', 50);
-                setTimeout(() => {
-                    typeText(document.getElementById('roleLoader'), 'Frontend Developer', 50);
-                }, 1000);
-                
-                setTimeout(() => {
-                    document.getElementById('loadingScreen').classList.add('fade-out');
-                    setTimeout(() => {
-                        document.getElementById('loadingScreen').style.display = 'none';
-                    }, 800);
-                }, 2500);
-            }, 500);
-        });
-    </script>
+    <div class="cookies-banner" id="cookiesBanner">
+        <div class="cookies-banner__container">
+            <div class="cookies-banner__content">
+                <img class="cookies-banner__icon" src="./icons/heart.svg" alt="Cookies" />
+                <p class="cookies-banner__text">
+                    Мы используем <a href="privacy.html" class="cookies-banner__link">cookie-файлы</a> 
+                    для корректной работы сайта и анализа посещаемости
+                </p>
+            </div>
+            <button class="cookies-banner__accept" id="acceptCookies">Согласен</button>
+            <button class="cookies-banner__close" id="closeCookies">×</button>
+        </div>
+    </div>
 </body>
 </html>

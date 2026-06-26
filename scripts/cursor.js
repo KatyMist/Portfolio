@@ -1,33 +1,31 @@
-export default class Cursor {
+class Cursor {
     constructor() {
-        console.log('✅ Cursor class started');
-        
         this.cursor = document.getElementById('cursor');
-        console.log('Cursor element found:', this.cursor);
         
         if (!this.cursor) {
-            console.error('❌ ERROR: #cursor not found in HTML');
+            console.error('❌ Cursor element not found');
             return;
         }
         
-        this.lastX = -999;
-        this.lastY = -999;
+        this.lastX = 0;
+        this.lastY = 0;
         this.throttle = false;
-        this.colors = ['#B8E4F7','#9dd8f4','#caedfb','#FFB7C5','#ffa0b8','#ffd0da','#ffffff'];
+        this.colors = ['#B8E4F7','#9dd8f4','#caedfb','#FFB7C5','#ffa0b8','#ffd0da'];
+        
         this.initMove();
         this.initHover();
         this.initGlitter();
-        
-        console.log('✅ Cursor fully initialized');
     }
+
     initMove() {
         document.addEventListener('mousemove', (e) => {
-            this.cursor.style.left = `${e.clientX}px`;
-            this.cursor.style.top = `${e.clientY}px`;
+            this.cursor.style.left = e.clientX + 'px';
+            this.cursor.style.top = e.clientY + 'px';
         });
     }
+
     initHover() {
-        const targets = document.querySelectorAll('a, button, label, .hero__card');
+        const targets = document.querySelectorAll('a, button');
         targets.forEach(el => {
             el.addEventListener('mouseenter', () => {
                 this.cursor.classList.add('cursor--hover');
@@ -37,35 +35,57 @@ export default class Cursor {
             });
         });
     }
+
     initGlitter() {
+        let lastParticleTime = 0;
+        
         document.addEventListener('mousemove', (e) => {
-            const x = e.clientX, y = e.clientY;
-            const d = Math.hypot(x - this.lastX, y - this.lastY);
-            if (d < 8 || this.throttle) return;
-            this.throttle = true;
-            for (let i = 0; i < 8; i++) this.spawnParticle(x, y);
-            this.lastX = x;
-            this.lastY = y;
-            setTimeout(() => (this.throttle = false), 30);
+            const now = Date.now();
+            if (now - lastParticleTime < 30) return;
+            
+            lastParticleTime = now;
+            
+            for (let i = 0; i < 3; i++) {
+                this.spawnParticle(e.clientX, e.clientY);
+            }
         });
     }
+
     spawnParticle(x, y) {
         const el = document.createElement('div');
         const angle = Math.random() * Math.PI * 2;
-        const dist = 18 + Math.random() * 44;
+        const dist = 15 + Math.random() * 30;
         const dx = Math.cos(angle) * dist;
         const dy = Math.sin(angle) * dist;
-        const s = 4 * (0.4 + Math.random() * 1.0);
+        const size = 3 + Math.random() * 4;
         const color = this.colors[Math.floor(Math.random() * this.colors.length)];
-        const dur = 800 * (0.65 + Math.random() * 0.55);
-        el.style.cssText = `position: fixed;pointer-events: none;border-radius: 50%;width: ${s}px;height: ${s}px;left: ${x - s / 2}px;top: ${y - s / 2}px;background: ${color};box-shadow: 0 0 ${s * 1.5}px ${color};z-index: 999998;transition: transform ${dur}ms ease-out, opacity ${dur}ms ease-out;`;
+        const duration = 600 + Math.random() * 400;
+        
+        el.style.cssText = `
+            position: fixed;
+            pointer-events: none;
+            border-radius: 50%;
+            width: ${size}px;
+            height: ${size}px;
+            left: ${x}px;
+            top: ${y}px;
+            background: ${color};
+            z-index: 999998;
+        `;
+        
         document.body.appendChild(el);
+        
         requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-                el.style.transform = `translate(${dx}px, ${dy}px) scale(0)`;
-                el.style.opacity = '0';
-            });
+            el.style.transition = `all ${duration}ms ease-out`;
+            el.style.transform = `translate(${dx}px, ${dy}px) scale(0)`;
+            el.style.opacity = '0';
         });
-        setTimeout(() => el.remove(), dur + 50);
+        
+        setTimeout(() => el.remove(), duration + 50);
     }
+}
+
+export function initCursor() {
+    document.body.style.cursor = 'none';
+    new Cursor();
 }

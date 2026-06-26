@@ -6,6 +6,8 @@
     <title>Политика конфеденциальности — Екатерина Туманова</title>
     <meta name="description" content="Политика конфеденциальности">
     <link rel="stylesheet" href="./styles/main.css">
+
+    <script src="./scripts/main.js" type="module" defer></script>
 </head>
 <body>
     <header class="header">
@@ -25,16 +27,6 @@
             <span></span>
         </button>
     </header>
-
-    <script>
-        const burger = document.getElementById('burger');
-        const nav = document.getElementById('nav');
-        
-        burger.addEventListener('click', () => {
-            nav.classList.toggle('nav--active');
-            burger.classList.toggle('burger--active');
-        });
-    </script>
 
     <main>
         <section class="hero privacy-section">
@@ -202,5 +194,28 @@
             <p class="footer__text-small">Сайт использует сервис веб-аналитики Яндекс.Метрика</p>
         </div>
     </footer>
+
+    <div class="cursor" id="cursor"></div>
+
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-name" id="nameLoader">Екатерина Туманова</div>
+            <div class="loading-role" id="roleLoader">Frontend Developer</div>
+        </div>
+    </div>
+
+    <div class="cookies-banner" id="cookiesBanner">
+        <div class="cookies-banner__container">
+            <div class="cookies-banner__content">
+                <img class="cookies-banner__icon" src="./icons/heart.svg" alt="Cookies" />
+                <p class="cookies-banner__text">
+                    Мы используем <a href="privacy.html" class="cookies-banner__link">cookie-файлы</a> 
+                    для корректной работы сайта и анализа посещаемости
+                </p>
+            </div>
+            <button class="cookies-banner__accept" id="acceptCookies">Согласен</button>
+            <button class="cookies-banner__close" id="closeCookies">×</button>
+        </div>
+    </div>
 </body>
 </html>
