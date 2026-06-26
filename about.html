@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Екатерина Туманова — Frontend Developer</title>
-    <meta name="description" content="Портфолио frontend разработчика Екатерины Туманова">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon"> 
+    <title>Обо мне — Екатерина Туманова Frontend Developer</title>
+    <meta name="description" content="Про меня">
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
     <header class="header">
         <nav class="nav" id="nav">
             <ul class="nav__list">
-                <li><a href="index.html" class="nav__link is-active">ПОРТФОЛИО</a></li>
-                <li><a href="about.html" class="nav__link">ОБО МНЕ</a></li>
+                <li><a href="index.html" class="nav__link">ПОРТФОЛИО</a></li>
+                <li><a href="about.html" class="nav__link is-active">ОБО МНЕ</a></li>
                 <li><a href="skills.html" class="nav__link">НАВЫКИ</a></li>
                 <li><a href="projects.html" class="nav__link">ПРОЕКТЫ</a></li>
                 <li><a href="process.html" class="nav__link">ПРОЦЕСС</a></li>
@@ -39,12 +38,13 @@
 
     <main>
         <section class="hero">
-            <div class="hero__bg-title">ПОРТФОЛИО</div>
-            <div class="hero__year">'26</div>
+            <div class="hero__bg-title">ОБО МНЕ</div>
             
-            <div class="hero__overlay-text">
-                <h2 class="hero__overlay-name">Екатерина Туманова</h2>
-                <p class="hero__overlay-role">Frontend Developer</p>
+            <div class="work-in-progress">
+                <h2 class="work-in-progress__title">Work in Progress</h2>
+                <p class="work-in-progress__text">
+                    🚧 Сайт находится в процессе разработки. Совсем скоро здесь появится ещё больше интересного! ✨
+                </p>
             </div>
         </section>
     </main>
@@ -59,12 +59,6 @@
             <p class="footer__text-small">Сайт использует сервис веб-аналитики Яндекс.Метрика</p>
         </div>
     </footer>
-
-    <div class="cursor" id="cursor"></div>
-
-    <script type="module" src="./js/main.js"></script>
-
-
 
     <div class="loading-screen" id="loadingScreen">
         <div class="loading-content">
@@ -104,45 +98,6 @@
                     }, 800);
                 }, 2500);
             }, 500);
-        });
-    </script>
-
-    <div class="cookies-banner" id="cookiesBanner">
-        <div class="cookies-banner__container">
-            <div class="cookies-banner__content">
-                <img class="cookies-banner__icon" src="./icons/heart.svg" alt="Cookies" />
-                <p class="cookies-banner__text">
-                    Мы используем <a href="privacy.html" class="cookies-banner__link">cookie-файлы</a> 
-                    для корректной работы сайта и анализа посещаемости
-                </p>
-            </div>
-            <button class="cookies-banner__accept" id="acceptCookies">Согласен</button>
-            <button class="cookies-banner__close" id="closeCookies">×</button>
-        </div>
-    </div>
-
-    <script>
-        const cookiesBanner = document.getElementById('cookiesBanner');
-        const acceptBtn = document.getElementById('acceptCookies');
-        const closeBtn = document.getElementById('closeCookies');
-
-        if (localStorage.getItem('cookiesAccepted')) {
-            cookiesBanner.style.display = 'none';
-        }
-
-        acceptBtn.addEventListener('click', () => {
-            localStorage.setItem('cookiesAccepted', 'true');
-            cookiesBanner.classList.add('cookies-banner--fade-out');
-            setTimeout(() => {
-                cookiesBanner.style.display = 'none';
-            }, 300);
-        });
-
-        closeBtn.addEventListener('click', () => {
-            cookiesBanner.classList.add('cookies-banner--fade-out');
-            setTimeout(() => {
-                cookiesBanner.style.display = 'none';
-            }, 300);
         });
     </script>
 </body>

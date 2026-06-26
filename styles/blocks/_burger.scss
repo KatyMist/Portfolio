@@ -1,56 +1,98 @@
-@use '../helpers/index' as *;
+@use '../helpers' as *;
+@use '../variables' as *;
 
 .burger {
     display: none;
-    position: fixed;
-    top: rem(20);
-    right: rem(20);
-    left: auto;
-    z-index: 200;
-    background: transparent;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: rem(48);
+    height: rem(48);
+    background: none;
     border: none;
+    padding: 0;
     cursor: pointer;
-    color: var(--color-powdery);
+    z-index: 101;
+    margin-left: auto;
 
-    @include square(rem(36));
-
-    @include tablet {
+    @include mobile {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: rem(8) rem(4);
     }
 
-    &:hover {
-        color: var(--color-dark-powder);
-    }
+    span {
+        width: rem(24);
+        height: 2px;
+        background: $color-text;
+        transition: all 0.3s ease;
+        position: absolute;
 
-    &.is-active {
-        .burger__line {
-            &:first-child {
-                rotate: 45deg;
-                transform-origin: 0;
-                translate: 0.25em -0.1em;
-            }
-            &:nth-child(2) {
-                rotate: -45deg;
-            }
-            &:last-child {
-                width: 0;
-            }
+        &:nth-child(1) {
+            transform: translateY(-6px);
+        }
+
+        &:nth-child(3) {
+            transform: translateY(6px);
         }
     }
 
-    &__line {
-        width: 100%;
-        height: rem(2);
-        background-color: currentColor;
-        border-radius: 1rem;
-        transition: all 0.3s ease;
+    &.burger--active {
+        span:nth-child(1) {
+            transform: rotate(45deg);
+        }
+        span:nth-child(2) {
+            opacity: 0;
+        }
+        span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+    }
+}
 
-        &:last-child {
-            width: 55%;
-            align-self: flex-end;
+.nav {
+    @include mobile {
+        position: fixed;
+        top: rem(60);
+        left: 0;
+        right: 0;
+        background: $color-bg-main;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        z-index: 100;
+
+        &.nav--active {
+            max-height: 100vh;
+        }
+    }
+}
+
+.nav__list {
+    display: flex;
+    gap: rem(40);
+    justify-content: flex-end;  
+    flex-wrap: wrap;
+    padding-right: rem(32);      
+
+    @include tablet {
+        gap: rem(24);
+        padding-right: rem(24);
+    }
+
+    @include mobile {
+        flex-direction: column;
+        gap: 0;
+        padding: rem(20) rem(16);
+        text-align: center;
+    }
+}
+
+.nav__link {
+    @include mobile {
+        padding: rem(12) 0;
+        display: block;
+        
+        &.is-active::after {
+            display: none;  // ← УБЕРИ линию под активным
         }
     }
 }

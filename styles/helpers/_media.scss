@@ -1,80 +1,96 @@
-//mixin media запросов - для удобства адаптива
+@use "./functions" as *;
 
-@use './functions' as *;
-
-//дробные значения для обхода багов 
+$desktop: 1920.98;
 $laptop: 1440.98;
 $tablet: 1023.98;
 $mobile: 767.98;
 $mobile-s: 480.98;
+$mobile-xs: 320.98;
 
+// DESKTOP (1920+)
+@mixin desktop-above {
+  @media (min-width: #{rem($desktop)}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{rem($desktop)}) {
+    @content;
+  }
+}
+
+// LAPTOP (1440-1920)
 @mixin laptop-above {
-    @media (width > rem($laptop)) {
-        @content;
-    }
+  @media (min-width: #{rem($laptop)}) {
+    @content;
+  }
 }
 
 @mixin laptop {
-    @media (width <= rem($laptop)) {
-        @content;
-    }
+  @media (max-width: #{rem($laptop)}) {
+    @content;
+  }
 }
 
+// TABLET (768-1440)
 @mixin tablet-above {
-    @media (width > rem($tablet)) {
-        @content;
-    }
-}
-
-@mixin tablet-only {
-    @media (width > rem($mobile)) and (width <= rem($tablet)) {
-        @content;
-    }
+  @media (min-width: #{rem($tablet)}) {
+    @content;
+  }
 }
 
 @mixin tablet {
-    @media (width <= rem($tablet)) {
-        @content;
-    }
+  @media (max-width: #{rem($tablet)}) {
+    @content;
+  }
 }
 
+// MOBILE (481-768)
 @mixin mobile-above {
-    @media (width > rem($mobile)) {
-        @content;
-    }
+  @media (min-width: #{rem($mobile)}) {
+    @content;
+  }
 }
 
 @mixin mobile {
-    @media (width <= rem($mobile)) {
-        @content;
-    }
+  @media (max-width: #{rem($mobile)}) {
+    @content;
+  }
 }
 
+// MOBILE SMALL (320-480)
 @mixin mobile-s-above {
-    @media (width > rem($mobile-s)) {
-        @content;
-    }
+  @media (min-width: #{rem($mobile-s)}) {
+    @content;
+  }
 }
 
 @mixin mobile-s {
-    @media (width <= rem($mobile-s)) {
-        @content;
-    }
+  @media (max-width: #{rem($mobile-s)}) {
+    @content;
+  }
 }
 
-//для граммотного добавления элементу состояния фокуса
-@mixin hover($hasActiveEffectOnMobile: true) {
-    @media (any-hover: hover) {
-        &:hover {
-            @content;
-        }
-    }
+// MOBILE XS (320-)
+@mixin mobile-xs {
+  @media (max-width: #{rem($mobile-xs)}) {
+    @content;
+  }
+}
 
-    @if ($hasActiveEffectOnMobile) {
-        @media (any-hover: none) {
-            &:active {
-                @content;
-            }
-        }
+@mixin hover($hasActiveEffectOnMobile: true) {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
     }
+  }
+
+  @if ($hasActiveEffectOnMobile) {
+    @media (any-hover: none) {
+      &:active {
+        @content;
+      }
+    }
+  }
 }

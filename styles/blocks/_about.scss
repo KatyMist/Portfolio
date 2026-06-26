@@ -1,242 +1,170 @@
-@use '../helpers/index' as *;
+@use '../helpers' as *;
+@use '../variables' as *;
 
-.about { //2 страница
-    position: relative; //для абсолютного позиционирования облаков
-    z-index: 2; // поверх hero секции
-    min-height: 100vh; // занимает весь экран по высоте
-    background: linear-gradient(
-        to bottom,
-        #dff0fa 0%,
-        #edf5fb 25%,
-        #f5f0f8 55%,
-        #f4e8f0 100%
-    );
-    display: flex;
-    align-items: center;
-    padding: rem(120) rem(80);
+.about-section {
+    position: relative;
+}
+
+.about-section .hero__bg-title {
+    display: none;
+}
+
+.about-container {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(60);
+    padding: rem(60) rem(32);
+    align-items: start;
 
     @include tablet {
-        padding: rem(80) rem(40);
+        grid-template-columns: 1fr;
+        gap: rem(60);
+        padding: rem(40) rem(24);
     }
 
     @include mobile {
-        padding: rem(60) rem(20);
+        gap: rem(40);
+        padding: rem(32) rem(16);
+    }
+}
+
+.about__header {
+    display: flex;
+    align-items: center;
+    gap: rem(12);
+    margin: 0;  
+    height: rem(24);
+}
+
+.about__icon {
+    font-size: rem(20);
+    color: $color-primary;
+}
+
+.about__subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: rem(14);
+    font-weight: 700;
+    color: $color-primary;
+    letter-spacing: 1px;
+    margin: 0;
+    line-height: 1;
+}
+
+.about__title {
+    font-family: 'MarckScript-Regular', sans-serif; 
+    font-size: fluid(32, 20);
+    font-weight: 700;
+    color: $color-primary;
+    margin-bottom: rem(28);
+    line-height: 1.2;
+}
+
+.about__text {
+    font-family: 'MarckScript-Regular', sans-serif; 
+    font-size: rem(20);
+    font-weight: 400;
+    color: $color-text-light;
+    line-height: 1.7;
+    margin-bottom: rem(14);
+
+    @include mobile {
+        font-size: rem(12);
+    }
+}
+
+.about__btn {
+    display: inline-block;
+    padding: rem(12) rem(28);
+    background: transparent;
+    color: $color-primary;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: rem(12);
+    border: 2px solid $color-primary;
+    border-radius: rem(8);
+    transition: all 0.3s ease;
+    margin-top: rem(24);
+
+    @include hover {
+        background: $color-primary-light;
+        transform: translateY(-2px);
     }
 
-    // flex-контейнер, текст слева и фото справа в одну строку
-    &__inner { 
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: rem(80);
-        width: 100%;
-        max-width: rem(1300);
-        margin: 0 auto;
+    @include mobile {
+        font-size: rem(11);
+        padding: rem(10) rem(20);
+    }
+}
 
-        //На мобилке переворачивается — фото сверху, текст снизу.
-        @include tablet {
-            gap: rem(55);
-        }
+.about__skills-header {
+    margin: 0;  
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: auto;
+    margin-bottom: rem(28);
+}
 
-        @include mobile {
-            flex-direction: column-reverse;
-            gap: rem(40);
-        }
+.about__skills-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: rem(14);
+    font-weight: 700;
+    color: $color-primary;
+    letter-spacing: 1px;
+    margin: 0;
+    line-height: 1;
+}
+
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(12);
+
+    @include tablet {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    &__text { //  колонка с текстом, всё по центру горизонтально
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;     
-        text-align: center; 
-        transform: translateX(rem(-80));    
-        gap: rem(40); // воздух
-
-        @include laptop {
-            transform: translateX(rem(-10));
-            gap: rem(5);
-        }
+    @include mobile {
+        grid-template-columns: repeat(2, 1fr);
     }
+}
 
-    &__title { // заголовок "обо мне" (no)
-        font-size: rem(60);
-        font-weight: 300;
-        color: var(--color--pink_3);
-        letter-spacing: 0.12em;
-        margin: 0;
-        opacity: 0.85;
-        line-height: 1.2;
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: rem(16);
+    background: $color-primary-light;
+    border: 1px solid $color-primary;
+    border-radius: rem(10);
+    text-align: center;
+    transition: all 0.3s ease;
+    min-height: rem(100);
+    text-decoration: none;  
+    color: inherit;  
 
-        @include tablet {
-            font-size: rem(58);
-        }
-
-        @include mobile {
-            font-size: rem(40);
-        }
+    @include hover {
+        background: $color-primary;
+        transform: translateY(-2px);
     }
+}
 
-    &__greeting { //"Привет! Я Катя"
-        font-size: rem(80); 
-        color: var(--color--pink_1);
-        margin: 0;
-        opacity: 0.9;
-        line-height: 1.3;
+.skill-card__icon {
+    display: block;
+    font-size: rem(24);
+    margin-bottom: rem(6);
+}
 
-        @include laptop {
-            font-size: rem(50);
-        }
-
-        @include tablet {
-            font-size: rem(36);
-        }
-
-        @include mobile {
-            font-size: rem(28);
-        }
-    }
-
-    &__desc { // основные абзацы
-        font-size: rem(18); 
-        color: var(--color--pink_2);
-        opacity: 0.8;
-        margin: 0;
-        line-height: 1.8;
-        letter-spacing: 0.02em;
-
-        @include laptop {
-            font-size: rem(16); 
-        }
-
-        @include tablet {
-            font-size: rem(16);
-        }
-
-        @include mobile {
-            font-size: rem(15);
-        }
-    }
-
-    &__tags { //теги HTML, SCSS, JavaScript и т.д., flex с переносом и центрированием.
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: rem(14);
-        list-style: none;
-        padding: 0;
-        margin: 0;
-
-        @include laptop {
-            gap: rem(8);
-        }
-
-        
-    }
-
-    &__tag { // один тег
-        padding: rem(10) rem(26);
-        border-radius: rem(30);
-        font-size: rem(20); 
-        background-color: var(--color--pink_4);
-        color: var(--color--pink_3);
-        letter-spacing: 0.05em;
-
-        @include laptop {
-            padding: rem(6) rem(16);
-            font-size: rem(15);
-        }
-
-        &--plan {
-            background-color: var(--color-light_2);
-            color: var(--color--light-blue);
-        }
-    }
-
-    &__photo { // правая колонка с фото
-        flex: 0 0 55%;
-        position: relative;
-        margin-right: rem(-80);
-
-        @include tablet {
-            flex: 0 0 50%;
-            margin-right: rem(-40);
-        }
-
-        @include mobile {
-            flex: 0 0 100%;
-            width: 100%;
-            margin-right: 0;
-        }
-    }
-
-    &__blob { // контейнер для фото 
-        width: 100%;
-        height: 85vh;
-        position: relative;
-
-        @include mobile {       
-            height: 70vw;       // квадратная база — даст круг
-            width: 70vw;
-            margin: 0 auto;
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, #f4b8c8 0%, #e8c5d8 50%, #c9e8f5 100%);
-            border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
-            z-index: 0;
-        }
-    }
-
-    &__img { //фото
-        position: relative;
-        z-index: 1;
-        width: 90%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 65% 15%;
-        border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
-        display: block;
-        margin: 0 auto;
-    }
-
-    &__cloud { // маленькие декоративные облака
-        position: absolute;
-        pointer-events: none;
-        z-index: 0;
-        color: var(--color-light);
-
-
-        svg {
-            width: 100%;
-            height: 100%;
-        }
-
-        &--top-left {
-            top: rem(40);
-            left: rem(-20);
-            width: rem(220);
-            animation: drift-small 9s ease-in-out infinite;
-        }
-
-        &--bottom-left {
-            bottom: rem(-20);
-            left: rem(20);
-            width: rem(180);
-            animation: drift-small 11s ease-in-out infinite;
-            animation-delay: 1s;
-        }
-
-        &--top-right {
-            top: rem(40); // ← было -20, опускаем
-            right: rem(200);
-            width: rem(200);
-            animation: drift-small 10s ease-in-out infinite;
-            animation-delay: 2s;
-        }
-    }
+.skill-card__text {
+    font-family: 'Manrope', sans-serif;
+    font-size: rem(11);
+    font-weight: 600;
+    color: $color-bg-main;
+    line-height: 1.3;
 }
 

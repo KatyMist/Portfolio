@@ -1,11 +1,3 @@
-@forward 'functions';
-@forward 'media';
-@forward 'mixins';
-@forward 'animations';
-
-/*
-при необходимости sass функций, медиа или mixins - 
-необходимо будет обращать именно к данному файлу index.scss, 
-в который уже включены все необходимые файлы с утилитарными "штуками"
-*/
-
+@forward './functions';
+@forward './media';
+@forward './mixins';

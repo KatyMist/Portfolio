@@ -1,56 +1,108 @@
-@use '../helpers/index' as *;
+@use '../helpers' as *;
+@use '../variables' as *;
 
 .footer {
+    padding: rem(16) rem(32);
+    background: $color-bg-main;
     position: relative;
-    z-index: 2;
-
-    background: linear-gradient(
-        to bottom,
-        #f5e2ef 0%,
-        #f8e6f1 40%,
-        #fdf7fb 100%
-    );
-
-    border-top: none;
-
-    padding: rem(80) rem(20) rem(120);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    overflow: hidden;
+    gap: rem(20);
 
-    &__text {
-        font-size: rem(18);
-        letter-spacing: 0.08em;
-        color: rgba(176, 128, 170, 0.8);
-        text-align: center;
-        margin: 0;
-        position: relative;
-        top: 90px; // опустить на 20px
-        z-index: 1;
+    @include mobile {
+        flex-direction: column;
+        gap: rem(8);
+        padding: rem(12) rem(16) rem(0);
     }
 
-    &__love {
-        position: absolute;
-        bottom: rem(-20);
-        left: rem(-20);
-        width: rem(300);
-        height: rem(300);
-        opacity: 0.7;
-        z-index: 0;
+    @include mobile-s {
+        justify-content: center;
+        text-align: center;
+    }
+}
 
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            display: block;
-        }
+.footer__left,
+.footer__right {
+    display: flex;
+    align-items: center;
+    gap: rem(12);
 
-        @include mobile {
-            width: rem(180);
-            height: rem(180);
-            bottom: rem(-10);
-            left: rem(-10);
-        }
+    @include mobile {
+        gap: rem(6);
+    }
+
+    @include mobile-s {
+        flex-direction: column;
+        gap: rem(4);
+    }
+}
+
+.footer__text { //текст футер 2026
+    color: $color-text-muted;
+    font-size: rem(12);
+    margin: 0;
+
+    @include tablet {
+        font-size: rem(10);
+    }
+
+    @include mobile {
+        font-size: rem(9);
+    }
+
+    @include mobile-s {
+        font-size: rem(7);
+    }
+}
+
+.footer__text-small {
+    color: $color-text-muted;
+    font-size: rem(12);
+    margin: 0;
+
+    @include tablet {
+        font-size: rem(10);
+    }
+
+    @include mobile {
+        font-size: rem(9);
+    }
+
+    @include mobile-s {
+        font-size: rem(7);
+    }
+}
+
+.footer__divider {
+    color: $color-text-muted;
+    font-size: rem(12);
+
+    @include mobile {
+        font-size: rem(8);
+    }
+
+    @include mobile-s {
+        display: none;
+    }
+}
+
+.footer__link {
+    color: $color-primary;
+    font-size: rem(12);
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    @include hover {
+        color: $color-primary-light;
+        text-decoration: underline;
+    }
+
+    @include tablet {
+        font-size: rem(10);
+    }
+
+    @include mobile-s {
+        font-size: rem(7);
     }
 }

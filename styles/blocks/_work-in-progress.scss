@@ -1,0 +1,29 @@
+@use '../helpers' as *;
+@use '../variables' as *;
+
+.work-in-progress {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+}
+
+.work-in-progress__title {
+    font-family: 'Oswald', sans-serif;
+    font-size: fluid(48, 24);
+    font-weight: 700;
+    color: $color-text-muted;
+}
+
+.work-in-progress__text {
+    font-family: 'Manrope', sans-serif;
+    font-size: rem(16);
+    color: $color-text-light;
+    line-height: 1.6;
+
+    @include mobile {
+        font-size: rem(14);
+    }
+}
