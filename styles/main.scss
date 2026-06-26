@@ -1,21 +1,21 @@
-//главный scss файл проекта для импорта остальных файлов стилей 
+// ──────────────────────────────────────────────────────────
+// ГЛАВНЫЙ ФАЙЛ СТИЛЕЙ
+// ──────────────────────────────────────────────────────────
 
-@use 'normalize';
-@use 'fonts';
-@use 'variables';
-@use 'utils';
-@use 'globals';
+@use './variables';
+@use 'helpers/functions';
+@use 'helpers/media';
+@use 'helpers/mixins';
 
-
-@use '../styles/blocks/logo';
-@use '../styles/blocks/nav';
-@use '../styles/blocks/burger';
-@use '../styles/blocks/hero';
-@use '../styles/blocks/about';
-@use '../styles/blocks/skills';
-@use '../styles/blocks/projects';
-@use '../styles/blocks/contacts';
-@use '../styles/blocks/footer';   
-@use '../styles/blocks/loader';   
-@use '../styles/blocks/workflow';
-@use '../styles/blocks/ticker';
+@use './normalize';
+@use './fonts';
+@use './globals';
+@use './utils';
+@use './blocks/hero';
+@use './blocks/work-in-progress';
+@use './blocks/about';
+@use './blocks/loading';
+@use './blocks/footer';
+@use './blocks/privacy';
+@use './blocks/burger';
+@use './blocks/cookies';
