@@ -1,4 +1,9 @@
-import Cursor from './cursor.js';
+import { initBurger } from './burger.js';
+import { initLoader } from './loader.js';
+import { initCookies } from './cookies.js';
+import { initCursor } from './cursor.js';
 
-document.body.style.cursor = 'none';
-new Cursor();
+initBurger();
+initLoader();
+initCookies();
+initCursor();

@@ -7,6 +7,8 @@
     <meta name="description" content="Портфолио frontend разработчика Екатерины Туманова">
     <link rel="icon" href="/favicon.ico" type="image/x-icon"> 
     <link rel="stylesheet" href="./styles/main.css">
+
+    <script src="./scripts/main.js" type="module" defer></script>
 </head>
 <body>
     <header class="header">
@@ -26,16 +28,6 @@
             <span></span>
         </button>
     </header>
-
-    <script>
-        const burger = document.getElementById('burger');
-        const nav = document.getElementById('nav');
-        
-        burger.addEventListener('click', () => {
-            nav.classList.toggle('nav--active');
-            burger.classList.toggle('burger--active');
-        });
-    </script>
 
     <main>
         <section class="hero">
@@ -62,50 +54,12 @@
 
     <div class="cursor" id="cursor"></div>
 
-    <script type="module" src="./js/main.js"></script>
-
-
-
     <div class="loading-screen" id="loadingScreen">
         <div class="loading-content">
             <div class="loading-name" id="nameLoader">Екатерина Туманова</div>
             <div class="loading-role" id="roleLoader">Frontend Developer</div>
         </div>
     </div>
-
-    <script>
-        function typeText(element, text, speed) {
-            element.textContent = '';
-            let i = 0;
-            function type() {
-                if (i < text.length) {
-                    element.textContent += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                }
-            }
-            type();
-        }
-
-        window.addEventListener('load', () => {
-            document.getElementById('nameLoader').textContent = '';
-            document.getElementById('roleLoader').textContent = '';
-            
-            setTimeout(() => {
-                typeText(document.getElementById('nameLoader'), 'Екатерина Туманова', 50);
-                setTimeout(() => {
-                    typeText(document.getElementById('roleLoader'), 'Frontend Developer', 50);
-                }, 1000);
-                
-                setTimeout(() => {
-                    document.getElementById('loadingScreen').classList.add('fade-out');
-                    setTimeout(() => {
-                        document.getElementById('loadingScreen').style.display = 'none';
-                    }, 800);
-                }, 2500);
-            }, 500);
-        });
-    </script>
 
     <div class="cookies-banner" id="cookiesBanner">
         <div class="cookies-banner__container">
@@ -120,30 +74,5 @@
             <button class="cookies-banner__close" id="closeCookies">×</button>
         </div>
     </div>
-
-    <script>
-        const cookiesBanner = document.getElementById('cookiesBanner');
-        const acceptBtn = document.getElementById('acceptCookies');
-        const closeBtn = document.getElementById('closeCookies');
-
-        if (localStorage.getItem('cookiesAccepted')) {
-            cookiesBanner.style.display = 'none';
-        }
-
-        acceptBtn.addEventListener('click', () => {
-            localStorage.setItem('cookiesAccepted', 'true');
-            cookiesBanner.classList.add('cookies-banner--fade-out');
-            setTimeout(() => {
-                cookiesBanner.style.display = 'none';
-            }, 300);
-        });
-
-        closeBtn.addEventListener('click', () => {
-            cookiesBanner.classList.add('cookies-banner--fade-out');
-            setTimeout(() => {
-                cookiesBanner.style.display = 'none';
-            }, 300);
-        });
-    </script>
 </body>
 </html>
