@@ -9,16 +9,14 @@
     &::before {
         content: '';
         position: absolute;
-        top: -100px;
-        left: -150px;
-        right: -150px;
-        bottom: -100px;
+        top: -200px;
+        left: -200px;
+        right: -200px;
+        bottom: -200px;
         background: 
-            radial-gradient(ellipse 1000px 500px at 20% 25%, rgba($color-primary-light, 0.25) 0%, transparent 65%),
-            radial-gradient(ellipse 800px 700px at 80% 60%, rgba($color-accent-blue-light, 0.2) 0%, transparent 68%),
-            radial-gradient(ellipse 600px 400px at 50% 50%, rgba($color-accent-blue-light, 0.12) 0%, transparent 75%);
-        border-radius: rem(30);
-        filter: blur(90px);
+            radial-gradient(ellipse 1200px 600px at 15% 20%, rgba($color-primary-light, 0.15) 0%, transparent 80%),
+            radial-gradient(ellipse 900px 800px at 85% 70%, rgba($color-accent-blue-light, 0.12) 0%, transparent 85%);
+        filter: blur(120px);
         z-index: 0;
         pointer-events: none;
     }
