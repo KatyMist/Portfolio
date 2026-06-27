@@ -3,7 +3,6 @@
 
 .about-section {
     position: relative;
-    
 
     // Градиент фон (яркий, как на главной)
     &::before {
@@ -20,6 +19,11 @@
         z-index: 0;
         pointer-events: none;
     }
+    
+}
+
+.about-section::before {
+    content: none; //УБИРАЮ ПУСТОПУ ПОД ФУТЕРОМ!!
 }
 
 .about-section .hero__bg-title {
