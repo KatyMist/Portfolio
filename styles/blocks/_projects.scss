@@ -1,0 +1,272 @@
+@use '../helpers' as *;
+@use '../variables' as *;
+
+.projects-section {
+    position: relative;
+    padding: rem(80) rem(32);
+    background: $color-bg-main;
+
+    @include tablet {
+        padding: rem(60) rem(24);
+    }
+
+    @include mobile {
+        padding: rem(40) rem(16);
+    }
+}
+
+.projects-header {
+    position: relative;
+    z-index: 2;
+    margin-bottom: rem(80);
+    text-align: center;
+    max-width: rem(800);
+    margin-left: auto;
+    margin-right: auto;
+
+    @include tablet {
+        margin-bottom: rem(60);
+    }
+
+    @include mobile {
+        margin-bottom: rem(40);
+    }
+}
+
+.projects-title {
+    font-family: 'Philosopher', sans-serif;
+    font-size: fluid(48, 28);
+    font-weight: 700;
+    color: $color-primary;
+    margin: 0 0 rem(20) 0;
+    line-height: 1.2;
+
+    @include mobile {
+        font-size: rem(28);
+        margin-bottom: rem(16);
+    }
+}
+
+.projects-subtitle {
+    font-family: 'MarckScript-Regular', sans-serif;
+    font-size: rem(16);
+    font-weight: 400;
+    color: $color-text-light;
+    margin: 0;
+    line-height: 1.6;
+
+    @include mobile {
+        font-size: rem(14);
+        line-height: 1.5;
+    }
+}
+
+.projects-grid {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: rem(100);
+
+    @include tablet {
+        gap: rem(80);
+    }
+
+    @include mobile {
+        gap: rem(60);
+    }
+}
+
+.project-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(60);
+    align-items: start;
+    position: relative;
+    padding-bottom: rem(80);  // ← МЕСТО ДЛЯ ЛИНИИ
+    border-bottom: 1px solid $color-primary-light;  // ← РОЗОВАЯ ЛИНИЯ
+
+    &:last-child {
+        border-bottom: none;  // ← БЕЗ ЛИНИИ НА ПОСЛЕДНЕМ
+    }
+
+    &:nth-child(even) {
+        direction: rtl;
+        
+        .project-content,
+        .project-image {
+            direction: ltr;
+        }
+    }
+
+    @include tablet {
+        grid-template-columns: 1fr;
+        gap: rem(40);
+        padding-bottom: rem(60);
+
+        &:nth-child(even) {
+            direction: ltr;
+        }
+    }
+
+    @include mobile {
+        gap: rem(30);
+        padding-bottom: rem(40);
+    }
+}
+
+.project-number {
+    position: absolute;
+    top: rem(20);  // ← ВЫШЕ
+    right: rem(40);  // ← ВПРАВО (не влево!)
+    font-family: 'Oswald', sans-serif;
+    font-size: rem(80);
+    font-weight: 700;
+    color: $color-primary-light;
+    opacity: 0.2;  // ← ЕЩЕ ПРОЗРАЧНЕЕ
+    line-height: 1;
+    z-index: -1;  // ← ПОЗАДИ ТЕКСТА
+
+    @include tablet {
+        font-size: rem(60);
+        right: rem(20);
+    }
+
+    @include mobile {
+        font-size: rem(40);
+        opacity: 0.15;
+    }
+}
+
+.project-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-name {
+    font-family: 'MarckScript-Regular', sans-serif;
+    font-size: fluid(36, 24);
+    font-weight: 700;
+    color: $color-primary;
+    margin: 0 0 rem(8) 0;
+    line-height: 1.2;
+
+    @include mobile {
+        font-size: rem(24);
+    }
+}
+
+.project-type {
+    font-family: 'Oswald', sans-serif;
+    font-size: rem(12);
+    font-weight: 700;
+    color: $color-primary;
+    letter-spacing: 1px;
+    margin: 0 0 rem(16) 0;
+    text-transform: uppercase;
+
+    @include mobile {
+        font-size: rem(11);
+        margin-bottom: rem(12);
+    }
+}
+
+.project-description {
+    font-family: 'Philosopher', sans-serif;
+    font-size: rem(16);
+    font-weight: 400;
+    color: $color-text-light;
+    margin: 0 0 rem(24) 0;
+    line-height: 1.7;
+
+    @include tablet {
+        font-size: rem(15);
+    }
+
+    @include mobile {
+        font-size: rem(14);
+        line-height: 1.6;
+        margin-bottom: rem(20);
+    }
+}
+
+.project-buttons {
+    display: flex;
+    gap: rem(16);
+    flex-wrap: wrap;
+
+    @include mobile {
+        gap: rem(12);
+    }
+}
+
+.project-btn {
+    display: inline-block;
+    padding: rem(12) rem(22);
+    background: transparent;
+    color: $color-primary;
+    font-family: 'MarckScript-Regular', sans-serif;
+    font-size: rem(14);
+    font-weight: 600;
+    border: 2px solid $color-primary;
+    border-radius: rem(8);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+
+    @include hover {
+        background: $color-primary;
+        color: $color-bg-main;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba($color-primary, 0.2);
+    }
+
+    @include mobile {
+        font-size: rem(12);
+        padding: rem(10) rem(16);
+    }
+
+    &--secondary {
+        background: transparent;
+        border-color: $color-primary-light;
+        color: $color-primary-light;
+
+        @include hover {
+            background: $color-primary-light;
+            color: $color-bg-main;
+            border-color: $color-primary-light;
+        }
+    }
+}
+
+.project-image {
+    position: relative;
+    z-index: 1;
+    border-radius: rem(12);
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba($color-primary, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    @include hover {
+        transform: translateY(-8px);
+        box-shadow: 0 30px 80px rgba($color-primary, 0.25);
+    }
+
+    @include tablet {
+        order: -1;
+    }
+
+    @include mobile {
+        order: unset;
+    }
+}
+
+.project-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}

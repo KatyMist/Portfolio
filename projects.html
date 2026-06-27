@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Проекты - Екатерина Туманова Frontend Developer</title>
-    <meta name="description" content="Проекты">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon"> 
+    <title>Проекты — Екатерина Туманова Frontend Developer</title>
+
+    <meta name="description" content="Мои проекты - Екатерина Туманова Frontend Developer">
+    <meta property="og:title" content="Проекты | Екатерина Туманова">
+    <meta property="og:description" content="Мои работы: Kropp Fitness, Future Tech, Подолог, Портфолио">
+    <meta property="og:image" content="/images/Main2.jpg">
+
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"> 
+    <link rel="canonical" href="https://katymist.github.io/Portfolio/projects.html">
 
     <script src="./scripts/main.js" type="module" defer></script>
 </head>
@@ -30,18 +36,88 @@
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero__bg-title">ПРОЕКТЫ</div>
-            
-            <div class="work-in-progress">
-                <h2 class="work-in-progress__title">Work in Progress</h2>
-                <p class="work-in-progress__text">
-                    🚧 Сайт находится в процессе разработки. Совсем скоро здесь появится ещё больше интересного! ✨
-                </p>
+        <section class="projects-section">
+            <div class="projects-header">
+                <h2 class="projects-title">ПРОЕКТЫ</h2>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Проект 1: Kropp Fitness -->
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-name">01 | Kropp Fitness</h3>
+                        <p class="project-type">Учебный проект</p>
+                        <p class="project-description">
+                            Адаптивный лендинг фитнес-клуба, созданный в рамках обучения по видеоуроку. Проект позволил закрепить навыки семантической и адаптивной вёрстки с использованием <b>HTML</b> и <b>CSS</b>.
+                        </p>
+                        <div class="project-buttons">
+                            <a href="https://katymist.github.io/KROPP-FITNESS/" class="project-btn" target="_blank">Смотреть проект →</a>
+                            <a href="https://github.com/KatyMist/KROPP-FITNESS" class="project-btn project-btn--secondary" target="_blank">Разработка →</a>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="./images/project/1.jpg" alt="Kropp Fitness сайт" class="project-img">
+                    </div>
+                </article>
+
+                <!-- Проект 2: Future Tech -->
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-name">02 | Future Tech</h3>
+                        <p class="project-type">Учебный проект</p>
+                        <p class="project-description">
+                            Лендинг о технологиях будущего, выполненный в рамках обучения по видеоуроку. В процессе разработки реализованы адаптивная вёрстка и интерактивные элементы с использованием <b>HTML</b>, <b>SCSS</b> и <b>JavaScript</b>.
+                        </p>
+                        <div class="project-buttons">
+                            <a href="https://katymist.github.io/FUTURE-TECH/" class="project-btn" target="_blank">Смотреть проект →</a>
+                            <a href="https://github.com/KatyMist/FUTURE-TECH" class="project-btn project-btn--secondary" target="_blank">Разработка →</a>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="./images/project/2.jpg" alt="Future Tech сайт" class="project-img">
+                    </div>
+                </article>
+
+                <!-- Проект 3: Сайт для подолога -->
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-name">03 | Сайт для подолога</h3>
+                        <p class="project-type">Полноценный коммерческий проект, разработанный с нуля по брифу клиента</p>
+                        <p class="project-description">Сайт для подолога, созданный с учётом специфики сферы и потребностей целевой аудитории. Я самостоятельно выполнила весь цикл разработки: спроектировала структуру сайта, реализовала адаптивную вёрстку, подключила необходимый функционал и подготовила проект к публикации.</p>
+                        <p class="project-description">Особое внимание уделила удобству пользователей, скорости загрузки, семантической HTML-разметке и корректному отображению сайта на всех устройствах.</p>
+                        <p class="project-description">Помимо разработки, я выполнила базовую SEO-оптимизацию: настроила метатеги, структуру заголовков, оптимизировала изображения, подготовила сайт для корректной индексации поисковыми системами и улучшила технические показатели, влияющие на поисковое продвижение.</p>
+                        <p class="project-description">Также подключила и настроила Яндекс Метрику, чтобы клиент мог отслеживать посещаемость сайта, поведение пользователей, источники трафика и эффективность продвижения.</p>
+                        <p class="project-description">В результате клиент получил современный, быстрый и удобный сайт, полностью соответствующий требованиям брифа, готовый к продвижению и дальнейшей аналитике.</p>
+                        <div class="project-buttons">
+                            <a href="https://annakudurova.ru/" class="project-btn" target="_blank">Смотреть проект →</a>
+                            <a href="https://github.com/KatyMist/-Podolog_Anna_Kudurova" class="project-btn project-btn--secondary" target="_blank">Разработка →</a>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="./images/project/3.jpg" alt="Сайт подолога" class="project-img">
+                    </div>
+                </article>
+
+                <!-- Проект 4: Личный сайт-портфолио -->
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-name">04 | Личный сайт-портфолио</h3>
+                        <p class="project-type">Персональный проект</p>
+                        <p class="project-description">Личный сайт-портфолио с авторским дизайном и собственной концепцией.</p>
+                        <p class="project-description">Проект создан с нуля: от разработки визуального стиля и цветовой палитры до адаптивной вёрстки и реализации интерактивных элементов на HTML, SCSS и JavaScript.</p>
+                        <div class="project-buttons">
+                            <a href="https://katymist.github.io/Portfolio/" class="project-btn" target="_blank">Смотреть проект →</a>
+                            <a href="https://github.com/KatyMist/Portfolio" class="project-btn project-btn--secondary" target="_blank">Разработка →</a>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="./images/project/4.jpg" alt="Портфолио сайт" class="project-img">
+                    </div>
+                </article>
             </div>
         </section>
     </main>
-    
+
     <footer class="footer">
         <div class="footer__left">
             <p class="footer__text">© 2026 Ekaterina Tumanova — Frontend Developer</p>
