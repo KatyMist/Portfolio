@@ -3,6 +3,25 @@
 
 .about-section {
     position: relative;
+    
+
+    // Градиент фон (яркий, как на главной)
+    &::before {
+        content: '';
+        position: absolute;
+        top: -100px;
+        left: -150px;
+        right: -150px;
+        bottom: -100px;
+        background: 
+            radial-gradient(ellipse 1000px 500px at 20% 25%, rgba($color-primary-light, 0.25) 0%, transparent 65%),
+            radial-gradient(ellipse 800px 700px at 80% 60%, rgba($color-accent-blue-light, 0.2) 0%, transparent 68%),
+            radial-gradient(ellipse 600px 400px at 50% 50%, rgba($color-accent-blue-light, 0.12) 0%, transparent 75%);
+        border-radius: rem(30);
+        filter: blur(90px);
+        z-index: 0;
+        pointer-events: none;
+    }
 }
 
 .about-section .hero__bg-title {

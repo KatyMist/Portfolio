@@ -23,6 +23,17 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+#root,
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    margin-top: auto;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: $font-weight-bold;
     line-height: 1.2;
