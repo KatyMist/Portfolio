@@ -30,17 +30,38 @@
     }
 }
 
+.about__left {
+    display: flex;
+    flex-direction: column;
+}
+
+.about__right {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    @include tablet {
+        justify-content: center;
+    }
+
+    @include mobile {
+        justify-content: center;
+    }
+}
+
 .about__header {
     display: flex;
     align-items: center;
     gap: rem(12);
     margin: 0;  
-    height: rem(24);
+    margin-bottom: rem(8);
+    height: auto;
 }
 
 .about__icon {
     font-size: rem(20);
     color: $color-primary;
+    line-height: 1;
 }
 
 .about__subtitle {
@@ -55,11 +76,16 @@
 
 .about__title {
     font-family: 'MarckScript-Regular', sans-serif; 
-    font-size: fluid(32, 20);
+    font-size: fluid(48, 28);
     font-weight: 700;
     color: $color-primary;
+    margin: 0;
     margin-bottom: rem(28);
     line-height: 1.2;
+
+    @include tablet {
+        text-align: center;
+    }
 }
 
 .about__text {
@@ -68,34 +94,123 @@
     font-weight: 400;
     color: $color-text-light;
     line-height: 1.7;
+    margin: 0;
     margin-bottom: rem(14);
 
+    &:last-of-type {
+        margin-bottom: rem(24);
+    }
+
+    @include laptop {
+        font-size: rem(17);
+    }
+
+    @include tablet {
+        text-align: center;
+        font-size: rem(16);
+    }
+
     @include mobile {
-        font-size: rem(12);
+        text-align: center;
+        font-size: rem(14);
+        line-height: 1.6;
+        margin-bottom: rem(12);
+
+        &:last-of-type {
+            margin-bottom: rem(20);
+        }
     }
 }
 
 .about__btn {
     display: inline-block;
-    padding: rem(12) rem(28);
+    width: fit-content;
+    align-self: flex-start;
+    padding: rem(14) rem(22);
     background: transparent;
     color: $color-primary;
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
     font-size: rem(12);
     border: 2px solid $color-primary;
-    border-radius: rem(8);
+    border-radius: 100px;
+    cursor: pointer;
     transition: all 0.3s ease;
-    margin-top: rem(24);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 
     @include hover {
         background: $color-primary-light;
+        color: $color-bg-main;
         transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba($color-primary, 0.2);
+    }
+
+    @include tablet {
+        align-self: center;
+        padding: rem(12) rem(20);
     }
 
     @include mobile {
+        align-self: center;
         font-size: rem(11);
-        padding: rem(10) rem(20);
+        padding: rem(12) rem(20);
+    }
+}
+
+// Стили для фото
+.about__photo-wrapper {
+    position: relative;
+    width: rem(580);
+    height: rem(580);
+    overflow: hidden;
+    flex-shrink: 0;
+    border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+    border: rem(14) solid $color-primary-light;
+    box-shadow: 0 20px 60px rgba($color-primary, 0.15);
+
+    // ← THIRD: laptop (только если нет других совпадений)
+    @include laptop {
+        width: rem(470);
+        height: rem(480);
+        border-width: rem(16);
+    }
+
+    @include tablet {
+        width: rem(480);
+        height: rem(500);
+        border-width: rem(12);
+    }
+
+    @include mobile {
+        width: rem(420);
+        height: rem(320);
+        border-width: rem(10);
+    }
+}
+
+.about__photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+// Секция навыков (если потребуется позже)
+.about__skills-section {
+    margin-top: rem(60);
+    padding-top: rem(60);
+    border-top: 1px solid rgba($color-primary, 0.2);
+
+    @include tablet {
+        margin-top: rem(40);
+        padding-top: rem(40);
+    }
+
+    @include mobile {
+        margin-top: rem(32);
+        padding-top: rem(32);
     }
 }
 
@@ -106,6 +221,12 @@
     align-items: center;
     height: auto;
     margin-bottom: rem(28);
+    gap: rem(12);
+}
+
+.about__skills-icon {
+    font-size: rem(20);
+    color: $color-primary;
 }
 
 .about__skills-title {
@@ -118,7 +239,6 @@
     line-height: 1;
 }
 
-
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -130,6 +250,11 @@
 
     @include mobile {
         grid-template-columns: repeat(2, 1fr);
+        gap: rem(10);
+    }
+
+    @include mobile-s {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -146,11 +271,18 @@
     transition: all 0.3s ease;
     min-height: rem(100);
     text-decoration: none;  
-    color: inherit;  
+    color: inherit;
+    cursor: pointer;
 
     @include hover {
         background: $color-primary;
         transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba($color-primary, 0.2);
+    }
+
+    @include mobile {
+        min-height: rem(90);
+        padding: rem(14);
     }
 }
 
@@ -158,6 +290,7 @@
     display: block;
     font-size: rem(24);
     margin-bottom: rem(6);
+    line-height: 1;
 }
 
 .skill-card__text {
@@ -166,5 +299,8 @@
     font-weight: 600;
     color: $color-bg-main;
     line-height: 1.3;
-}
 
+    @include mobile {
+        font-size: rem(10);
+    }
+}

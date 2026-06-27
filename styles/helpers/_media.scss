@@ -46,6 +46,13 @@ $mobile-xs: 320.98;
   }
 }
 
+// ПРОМЕЖУТОК 1024-1440 (между tablet и laptop)
+@mixin between-tablet-laptop {
+  @media (min-width: #{rem(1024)}) and (max-width: #{rem(1439)}) {
+    @content;
+  }
+}
+
 // MOBILE (481-768)
 @mixin mobile-above {
   @media (min-width: #{rem($mobile)}) {
