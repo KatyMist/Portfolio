@@ -262,15 +262,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#root,
 main {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  display: block;
 }
 
 footer {
-  margin-top: auto;
+  margin-top: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -812,6 +809,10 @@ ul, ol {
   filter: blur(120px);
   z-index: 0;
   pointer-events: none;
+}
+
+.about-section::before {
+  content: none;
 }
 
 .about-section .hero__bg-title {
