@@ -242,6 +242,34 @@ svg * {
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Philosopher";
+  src: url("../fonts/Philosopher-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Philosopher";
+  src: url("../fonts/Philosopher-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Philosopher";
+  src: url("../fonts/Philosopher-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Philosopher";
+  src: url("../fonts/Philosopher-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
 * {
   margin: 0;
   padding: 0;
@@ -429,8 +457,8 @@ ul, ol {
 }
 
 .nav__link {
-  font-family: "Oswald", sans-serif;
-  font-weight: 700;
+  font-family: "Philosopher", sans-serif;
+  font-weight: 600;
   font-size: 0.875rem;
   color: #333333;
   transition: color 0.3s ease;
@@ -1190,7 +1218,7 @@ ul, ol {
   flex-direction: column;
   align-items: center;
   gap: 0.75rem;
-  font-family: "MarckScript-Regular", sans-serif;
+  font-family: "Philosopher", sans-serif;
   font-weight: 700;
 }
 
@@ -1258,6 +1286,7 @@ ul, ol {
 }
 
 .footer__text {
+  font-family: "Philosopher", sans-serif;
   color: #7A7477;
   font-size: 0.75rem;
   margin: 0;
@@ -1279,6 +1308,7 @@ ul, ol {
 }
 
 .footer__text-small {
+  font-family: "Philosopher", sans-serif;
   color: #7A7477;
   font-size: 0.75rem;
   margin: 0;
@@ -1315,6 +1345,7 @@ ul, ol {
 }
 
 .footer__link {
+  font-family: "Philosopher", sans-serif;
   color: #CFA7B8;
   font-size: 0.75rem;
   text-decoration: none;
@@ -1724,7 +1755,7 @@ section {
 }
 
 .cookies-banner__text {
-  font-family: "Manrope", sans-serif;
+  font-family: "Philosopher", sans-serif;
   font-size: 0.8125rem;
   color: #666666;
   line-height: 1.5;
@@ -1775,7 +1806,7 @@ section {
   color: white;
   border: none;
   border-radius: 6.25rem;
-  font-family: "Oswald", sans-serif;
+  font-family: "Philosopher", sans-serif;
   font-weight: 600;
   font-size: 0.75rem;
   cursor: pointer;
@@ -1874,4 +1905,313 @@ section {
     opacity: 0;
     transform: translateY(1.25rem);
   }
+}
+.projects-section {
+  position: relative;
+  padding: 5rem 2rem;
+  background: #FBFCFD;
+}
+@media (max-width: 63.99875rem) {
+  .projects-section {
+    padding: 3.75rem 1.5rem;
+  }
+}
+@media (max-width: 47.99875rem) {
+  .projects-section {
+    padding: 2.5rem 1rem;
+  }
+}
+
+.projects-header {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 5rem;
+  text-align: center;
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 63.99875rem) {
+  .projects-header {
+    margin-bottom: 3.75rem;
+  }
+}
+@media (max-width: 47.99875rem) {
+  .projects-header {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.projects-title {
+  font-family: "Philosopher", sans-serif;
+  font-size: clamp(1.75rem, 1.347107438rem + 1.652892562vw, 3rem);
+  font-weight: 700;
+  color: #CFA7B8;
+  margin: 0 0 1.25rem 0;
+  line-height: 1.2;
+}
+@media (max-width: 47.99875rem) {
+  .projects-title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.projects-subtitle {
+  font-family: "MarckScript-Regular", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #666666;
+  margin: 0;
+  line-height: 1.6;
+}
+@media (max-width: 47.99875rem) {
+  .projects-subtitle {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+}
+
+.projects-grid {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 6.25rem;
+}
+@media (max-width: 63.99875rem) {
+  .projects-grid {
+    gap: 5rem;
+  }
+}
+@media (max-width: 47.99875rem) {
+  .projects-grid {
+    gap: 3.75rem;
+  }
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.75rem;
+  align-items: start;
+  position: relative;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid #E8C7D4;
+}
+.project-card:last-child {
+  border-bottom: none;
+}
+.project-card:nth-child(even) {
+  direction: rtl;
+}
+.project-card:nth-child(even) .project-content,
+.project-card:nth-child(even) .project-image {
+  direction: ltr;
+}
+@media (max-width: 63.99875rem) {
+  .project-card {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding-bottom: 3.75rem;
+  }
+  .project-card:nth-child(even) {
+    direction: ltr;
+  }
+}
+@media (max-width: 47.99875rem) {
+  .project-card {
+    gap: 1.875rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+.project-number {
+  position: absolute;
+  top: 1.25rem;
+  right: 2.5rem;
+  font-family: "Oswald", sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  color: #E8C7D4;
+  opacity: 0.2;
+  line-height: 1;
+  z-index: -1;
+}
+@media (max-width: 63.99875rem) {
+  .project-number {
+    font-size: 3.75rem;
+    right: 1.25rem;
+  }
+}
+@media (max-width: 47.99875rem) {
+  .project-number {
+    font-size: 2.5rem;
+    opacity: 0.15;
+  }
+}
+
+.project-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-name {
+  font-family: "MarckScript-Regular", sans-serif;
+  font-size: clamp(1.5rem, 1.2582644628rem + 0.9917355372vw, 2.25rem);
+  font-weight: 700;
+  color: #CFA7B8;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+}
+@media (max-width: 47.99875rem) {
+  .project-name {
+    font-size: 1.5rem;
+  }
+}
+
+.project-type {
+  font-family: "Oswald", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #CFA7B8;
+  letter-spacing: 1px;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+}
+@media (max-width: 47.99875rem) {
+  .project-type {
+    font-size: 0.6875rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+.project-description {
+  font-family: "Philosopher", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #666666;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.7;
+}
+@media (max-width: 63.99875rem) {
+  .project-description {
+    font-size: 0.9375rem;
+  }
+}
+@media (max-width: 47.99875rem) {
+  .project-description {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.project-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+@media (max-width: 47.99875rem) {
+  .project-buttons {
+    gap: 0.75rem;
+  }
+}
+
+.project-btn {
+  display: inline-block;
+  padding: 0.75rem 1.375rem;
+  background: transparent;
+  color: #CFA7B8;
+  font-family: "MarckScript-Regular", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 2px solid #CFA7B8;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+@media (any-hover: hover) {
+  .project-btn:hover {
+    background: #CFA7B8;
+    color: #FBFCFD;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(207, 167, 184, 0.2);
+  }
+}
+@media (any-hover: none) {
+  .project-btn:active {
+    background: #CFA7B8;
+    color: #FBFCFD;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(207, 167, 184, 0.2);
+  }
+}
+@media (max-width: 47.99875rem) {
+  .project-btn {
+    font-size: 0.75rem;
+    padding: 0.625rem 1rem;
+  }
+}
+.project-btn--secondary {
+  background: transparent;
+  border-color: #E8C7D4;
+  color: #E8C7D4;
+}
+@media (any-hover: hover) {
+  .project-btn--secondary:hover {
+    background: #E8C7D4;
+    color: #FBFCFD;
+    border-color: #E8C7D4;
+  }
+}
+@media (any-hover: none) {
+  .project-btn--secondary:active {
+    background: #E8C7D4;
+    color: #FBFCFD;
+    border-color: #E8C7D4;
+  }
+}
+
+.project-image {
+  position: relative;
+  z-index: 1;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(207, 167, 184, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+@media (any-hover: hover) {
+  .project-image:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 80px rgba(207, 167, 184, 0.25);
+  }
+}
+@media (any-hover: none) {
+  .project-image:active {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 80px rgba(207, 167, 184, 0.25);
+  }
+}
+@media (max-width: 63.99875rem) {
+  .project-image {
+    order: -1;
+  }
+}
+@media (max-width: 47.99875rem) {
+  .project-image {
+    order: unset;
+  }
+}
+
+.project-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=main.css.map */
