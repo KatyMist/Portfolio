@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Навыки - Екатерина Туманова Frontend Developer</title>
-    <meta name="description" content="Навыки">
+    <title>Навыки — Екатерина Туманова Frontend Developer</title>
+    <meta name="description" content="Мои навыки и курсы - Екатерина Туманова Frontend Developer">
+    <meta property="og:title" content="Навыки | Екатерина Туманова">
+    <meta property="og:description" content="Frontend навыки: HTML, CSS, JavaScript, Git, GitHub, SEO">
+    <meta property="og:image" content="/images/Main2.jpg">
+
     <link rel="icon" href="/favicon.ico" type="image/x-icon"> 
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="canonical" href="https://katymist.github.io/Portfolio/skills.html">
 
     <script src="./scripts/main.js" type="module" defer></script>
 </head>
@@ -30,18 +35,128 @@
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero__bg-title">НАВЫКИ</div>
-            
-            <div class="work-in-progress">
-                <h2 class="work-in-progress__title">Work in Progress</h2>
-                <p class="work-in-progress__text">
-                    🚧 Сайт находится в процессе разработки. Совсем скоро здесь появится ещё больше интересного! ✨
-                </p>
+        <section class="skills-section">
+            <!-- МОИ НАВЫКИ -->
+            <div class="skills-container">
+                <div class="skills-header">
+                    <h2 class="skills-title">Мои навыки</h2>
+                    <p class="skills-description">
+                        Я непрерывно развиваюсь во фронтенд-разработке, изучаю и применяю современные инструменты и технологии. Создаю адаптивные и производительные веб-приложения, уделяя внимание качеству вёрстки и корректной работе интерфейсов.
+                    </p>
+                </div>
+
+                <div class="skills-scroll">
+                    <div class="skills-grid">
+                        <!-- HTML -->
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="./icons/skills/1.svg" alt="HTML">
+                            </div>
+                            <h3 class="skill-name">HTML</h3>
+                        </div>
+
+                        <!-- CSS / SCSS -->
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="./icons/skills/2.svg" alt="CSS">
+                            </div>
+                            <h3 class="skill-name">CSS / SCSS</h3>
+                        </div>
+
+                        <!-- JavaScript -->
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <!-- SVG иконка здесь -->
+                            </div>
+                            <h3 class="skill-name">JavaScript</h3>
+                        </div>
+
+                        <!-- Git -->
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                
+                            </div>
+                            <h3 class="skill-name">Git</h3>
+                        </div>
+
+                        <!-- GitHub -->
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <!-- SVG иконка здесь -->
+                            </div>
+                            <h3 class="skill-name">GitHub</h3>
+                        </div>
+
+                        <!-- SEO -->
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <!-- SVG иконка здесь -->
+                            </div>
+                            <h3 class="skill-name">SEO</h3>
+                        </div>
+
+                        <!-- Figma -->
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <!-- SVG иконка здесь -->
+                            </div>
+                            <h3 class="skill-name">Figma (вёрстка по макетам)</h3>
+                        </div>
+
+                        <!-- React -->
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <!-- SVG иконка здесь -->
+                            </div>
+                            <h3 class="skill-name">React (в процессе изучения)</h3>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- МОИ КУРСЫ -->
+            <div class="courses-container">
+                <div class="courses-header">
+                    <h2 class="courses-title">Мои курсы</h2>
+                    <p class="courses-description">
+                        Продолжаю учиться и совершенствовать свои навыки каждый день!<br>
+                        <a href="https://stepik.org/users/1179792686/profile" class="courses-link" target="_blank">→ Все курсы на Stepik</a>
+                    </p>
+                </div>
+
+                <div class="courses-scroll">
+                    <div class="courses-grid">
+                        <!-- Курс 1 -->
+                        <a href="https://stepik.org/cert/3125831" class="course-card" target="_blank">
+                            <h3 class="course-name">→ Веб-разработка для начинающих: HTML и CSS</h3>
+                        </a>
+
+                        <!-- Курс 2 -->
+                        <a href="https://stepik.org/cert/3164880" class="course-card" target="_blank">
+                            <h3 class="course-name">→ HTML CSS JS (lite)</h3>
+                        </a>
+
+                        <!-- Курс 3 -->
+                        <a href="https://stepik.org/cert/3167224" class="course-card" target="_blank">
+                            <h3 class="course-name">→ Погружение в JavaScript: для начинающих</h3>
+                        </a>
+
+                        <!-- Курс 4 -->
+                        <a href="https://stepik.org/cert/3217403" class="course-card" target="_blank">
+                            <h3 class="course-name">→ Твой JavaScript</h3>
+
+                        <!-- Курс 5 -->
+                        <a href="https://stepik.org/cert/3247384" class="course-card" target="_blank">
+                            <h3 class="course-name">→ Основы Git и GitHub</h3>
+                        </a>
+
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    
+
     <footer class="footer">
         <div class="footer__left">
             <p class="footer__text">© 2026 Ekaterina Tumanova — Frontend Developer</p>

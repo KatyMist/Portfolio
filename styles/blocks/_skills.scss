@@ -1,0 +1,368 @@
+@use '../helpers' as *;
+@use '../variables' as *;
+
+.skills-section {
+    position: relative;
+    padding: rem(80) rem(32);
+    background: $color-bg-main;
+
+    @include tablet {
+        padding: rem(60) rem(24);
+    }
+
+    @include mobile {
+        padding: rem(40) rem(16);
+    }
+}
+
+//  МОИ НАВЫКИ
+
+.skills-container {
+    padding-bottom: rem(80);
+    border-bottom: 1px solid $color-primary-light;
+    margin-bottom: rem(80);
+
+    @include tablet {
+        padding-bottom: rem(60);
+        margin-bottom: rem(60);
+    }
+
+    @include mobile {
+        padding-bottom: rem(40);
+        margin-bottom: rem(40);
+    }
+}
+
+.skills-header {
+    margin-bottom: rem(50);
+
+    @include mobile {
+        margin-bottom: rem(40);
+    }
+}
+
+.skills-title {
+    font-family: 'MarckScript-Regular', sans-serif;
+    font-size: fluid(36, 24);
+    font-weight: 700;
+    color: $color-primary;
+    margin: 0 0 rem(16) 0;
+    line-height: 1.2;
+
+    @include mobile {
+        font-size: rem(24);
+        margin-bottom: rem(12);
+    }
+}
+
+.skills-description {
+    font-family: 'MarckScript-Regular', sans-serif;
+    font-size: rem(16);
+    font-weight: 400;
+    color: $color-text-light;
+    margin: 0;
+    line-height: 1.6;
+    max-width: rem(600);
+
+    @include mobile {
+        font-size: rem(14);
+    }
+}
+
+.skills-scroll {
+    overflow-x: auto;
+    overflow-y: visible;
+    padding-bottom: rem(20);
+    margin: 0 -rem(32);
+    padding-left: rem(32);
+    padding-right: rem(32);
+    scroll-behavior: smooth;
+
+    @include tablet {
+        margin: 0 -rem(24);
+        padding-left: rem(24);
+        padding-right: rem(24);
+    }
+
+    @include mobile {
+        margin: 0 -rem(16);
+        padding-left: rem(16);
+        padding-right: rem(16);
+    }
+
+    // МИКРО скролл
+    &::-webkit-scrollbar {
+        height: rem(2);  // ← СОВСЕМ ТОНКИЙ
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $color-primary-light;
+        border-radius: rem(1);
+        opacity: 0.5;
+
+        &:hover {
+            background: $color-primary;
+            opacity: 0.8;
+        }
+    }
+}
+
+.skills-grid {
+    display: flex;
+    gap: rem(24);
+    width: max-content;  // ← СКРОЛЛ РАБОТАЕТ
+    padding-bottom: rem(10);
+
+    @include tablet {
+        gap: rem(20);
+    }
+
+    @include mobile {
+        gap: rem(16);
+    }
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: rem(12);
+    min-width: rem(140);
+    padding: rem(24) rem(16);
+    text-align: center;
+    background: $color-white;
+    border: 1px solid rgba($color-primary-light, 0.3);
+    border-radius: rem(8);
+    transition: all 0.3s ease;
+
+    @include hover {
+        background: rgba($color-primary-light, 0.05);
+        border-color: $color-primary-light;
+        box-shadow: 0 8px 24px rgba($color-primary, 0.1);  // ← БЕЗ translateY
+    }
+
+    @include tablet {
+        min-width: rem(120);
+        padding: rem(20) rem(14);
+    }
+
+    @include mobile {
+        min-width: rem(100);
+        padding: rem(16) rem(12);
+        gap: rem(8);
+    }
+}
+
+.skill-icon {
+    display: none;  
+}
+
+.skill-name {
+    font-family: 'Philosopher', sans-serif;
+    font-size: rem(14);
+    font-weight: 600;
+    color: $color-primary;
+    margin: 0;
+    line-height: 1.3;
+
+    @include mobile {
+        font-size: rem(12);
+    }
+}
+
+// МОИ КУРСЫ 
+
+.courses-container {
+    position: relative;
+    text-align: right;  // ← ВСЁ К ПРАВОМУ КРАЮ
+}
+
+.courses-header {
+    margin-bottom: rem(50);
+    text-align: right;
+
+    @include mobile {
+        margin-bottom: rem(40);
+    }
+}
+
+.courses-title {
+    font-family: 'MarckScript-Regular', sans-serif;
+    font-size: fluid(36, 24);
+    font-weight: 700;
+    color: $color-primary;
+    margin: 0 0 rem(16) 0;
+    line-height: 1.2;
+    text-align: right;  // ← ЗАГОЛОВОК СПРАВА
+
+    @include mobile {
+        font-size: rem(24);
+        margin-bottom: rem(12);
+    }
+}
+
+.courses-description {
+    font-family: 'MarckScript-Regular', sans-serif;
+    font-size: rem(16);
+    font-weight: 400;
+    color: $color-text-light;
+    margin: 0;
+    line-height: 1.6;
+    max-width: rem(600);
+    margin-left: auto;  // ← К ПРАВОМУ КРАЮ
+    text-align: right;
+
+    @include mobile {
+        font-size: rem(14);
+    }
+}
+
+// ГОРИЗОНТАЛЬНЫЙ СКРОЛЛ КУРСЫ
+.courses-scroll {
+    overflow-x: auto;
+    overflow-y: visible;
+    padding-bottom: rem(20);
+    margin: 0 -rem(32);
+    padding-left: rem(32);
+    padding-right: rem(32);
+    scroll-behavior: smooth;
+    direction: rtl;  // ← СКРОЛЛ СПРАВА
+
+    @include tablet {
+        margin: 0 -rem(24);
+        padding-left: rem(24);
+        padding-right: rem(24);
+    }
+
+    @include mobile {
+        margin: 0 -rem(16);
+        padding-left: rem(16);
+        padding-right: rem(16);
+    }
+
+    // Тонкий скролл
+    &::-webkit-scrollbar {
+        height: rem(2);
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $color-primary-light;
+        border-radius: rem(1);
+        opacity: 0.5;
+
+        &:hover {
+            background: $color-primary;
+            opacity: 0.8;
+        }
+    }
+}
+
+.courses-grid {
+    display: flex;
+    gap: rem(24);
+    width: max-content;
+    padding-bottom: rem(10);
+    direction: ltr; 
+
+    @include tablet {
+        gap: rem(20);
+    }
+
+    @include mobile {
+        gap: rem(16);
+    }
+}
+
+.course-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: rem(12);
+    min-width: rem(140);
+    padding: rem(24) rem(16);
+    background: $color-white;
+    border: 1px solid rgba($color-primary-light, 0.3);
+    border-radius: rem(8);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    @include hover {
+        background: rgba($color-primary-light, 0.05);
+        border-color: $color-primary-light;
+        box-shadow: 0 8px 24px rgba($color-primary, 0.1);
+    }
+
+    @include tablet {
+        min-width: rem(120);
+        padding: rem(20) rem(14);
+    }
+
+    @include mobile {
+        min-width: rem(100);
+        padding: rem(16) rem(12);
+        gap: rem(8);
+    }
+}
+
+.course-icon {
+    display: none;  
+}
+
+.course-name {
+    font-family: 'Philosopher', sans-serif;
+    font-size: rem(14);
+    font-weight: 600;
+    color: $color-primary;
+    margin: 0;
+    line-height: 1.3;
+    text-align: center;
+
+    @include mobile {
+        font-size: rem(12);
+    }
+}
+
+// FOOTER КУРСОВ
+.courses-footer {
+    font-family: 'MarckScript-Regular', sans-serif;
+    font-size: rem(16);
+    font-weight: 400;
+    color: $color-text-light;
+    margin: rem(60) 0 0 0;
+    text-align: center;
+    line-height: 1.6;
+
+    @include mobile {
+        font-size: rem(14);
+        margin-top: rem(40);
+    }
+}
+
+.courses-footer-icon {
+    display: inline-block;
+    margin-right: rem(8);
+    font-size: rem(20);
+}
+
+.courses-link {
+    display: inline-block;
+    color: $color-primary;
+    text-decoration: none;
+    margin-left: rem(8);
+    transition: all 0.3s ease;
+
+    @include hover {
+        color: $color-primary-light;
+    }
+}
