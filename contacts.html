@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты - Екатерина Туманова Frontend Developer</title>
-    <meta name="description" content="Контакты">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon"> 
+    <title>Контакты — Екатерина Туманова Frontend Developer</title>
+
+    <!-- Open Graph теги для соцсетей -->
+    <meta name="description" content="Контакты - Екатерина Туманова Frontend Developer">
+    <meta property="og:title" content="Контакты | Екатерина Туманова">
+    <meta property="og:description" content="GitHub, Stepik, HH.ru, Telegram">
+    <meta property="og:image" content="/images/Main2.jpg">
+
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"> 
+    <link rel="canonical" href="https://katymist.github.io/Portfolio/contacts.html">
 
     <script src="./scripts/main.js" type="module" defer></script>
 </head>
@@ -30,18 +37,52 @@
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero__bg-title">КОНТАКТЫ</div>
-            
-            <div class="work-in-progress">
-                <h2 class="work-in-progress__title">Work in Progress</h2>
-                <p class="work-in-progress__text">
-                    🚧 Сайт находится в процессе разработки. Совсем скоро здесь появится ещё больше интересного! ✨
-                </p>
+        <section class="contacts-section">
+            <div class="contacts-container">
+                <!-- ЛЕВАЯ ЧАСТЬ -->
+                <div class="contacts-left">
+                    <h2 class="contacts-title">Давайте создавать интересные проекты вместе <span class="contacts-emoji">✨</span></h2>
+                    <p class="contacts-description">
+                        Буду рада сотрудничеству, новым идеям и знакомствам.
+                    </p>
+                </div>
+
+                <!-- ПРАВАЯ ЧАСТЬ - КАРТОЧКИ -->
+                <div class="contacts-right">
+                    <div class="contacts-grid">
+                        <!-- GitHub -->
+                        <a href="https://github.com/KatyMist" class="contact-card" target="_blank">
+                            <h3 class="contact-name">GitHub</h3>
+                            <p class="contact-subtitle">Мои репозитории и проекты</p>
+                            <span class="contact-arrow">→</span>
+                        </a>
+
+                        <!-- Stepik -->
+                        <a href="https://stepik.org/users/1179792686/profile" class="contact-card" target="_blank">
+                            <h3 class="contact-name">Stepik</h3>
+                            <p class="contact-subtitle">Сертификаты и курсы</p>
+                            <span class="contact-arrow">→</span>
+                        </a>
+
+                        <!-- HH.ru -->
+                        <a href="https://ulyanovsk.hh.ru/resume/b77b4490ff107e4c760039ed1f5262426e565a" class="contact-card" target="_blank">
+                            <h3 class="contact-name">HH.ru</h3>
+                            <p class="contact-subtitle">Резюме и опыт работы</p>
+                            <span class="contact-arrow">→</span>
+                        </a>
+
+                        <!-- Telegram -->
+                        <a href="https://t.me/katymist" class="contact-card" target="_blank">
+                            <h3 class="contact-name">Telegram</h3>
+                            <p class="contact-subtitle">Написать напрямую</p>
+                            <span class="contact-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    
+
     <footer class="footer">
         <div class="footer__left">
             <p class="footer__text">© 2026 Ekaterina Tumanova — Frontend Developer</p>

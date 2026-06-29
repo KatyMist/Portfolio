@@ -15,6 +15,14 @@
     }
 }
 
+// ВСЁ СОДЕРЖИМОЕ ВЫШЕ ФОНА
+.skills-container,
+.courses-container {
+    position: relative;
+    z-index: 2;
+}
+
+
 //  МОИ НАВЫКИ
 
 .skills-container {
@@ -365,4 +373,32 @@
     @include hover {
         color: $color-primary-light;
     }
+}
+
+.courses-decoration {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: rem(400);
+    height: rem(400);
+    overflow: hidden;
+    opacity: 0.8;
+    z-index: 0;
+    pointer-events: none;
+
+    @include tablet {
+        display: none;  // ← СКРЫВАЕМ НА TABLET И МЕНЬШЕ
+    }
+}
+
+.courses-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.courses-container {
+    position: relative;
+    z-index: 2;  // ← ВЫШЕ изображения
+    text-align: right;
 }
