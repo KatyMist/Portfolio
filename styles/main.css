@@ -2900,4 +2900,184 @@ section {
 }
 .contact-card:hover .contact-arrow {
   transform: translateX(4px);
+}
+
+.process-section {
+  position: relative;
+  padding: 5rem 2rem;
+  background: #FBFCFD;
+}
+@media (max-width: 63.99875rem) {
+  .process-section {
+    padding: 3.75rem 1.5rem;
+  }
+}
+@media (max-width: 47.99875rem) {
+  .process-section {
+    padding: 2.5rem 1rem;
+  }
+}
+
+.process-header {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 5rem;
+  text-align: center;
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 63.99875rem) {
+  .process-header {
+    margin-bottom: 3.75rem;
+  }
+}
+@media (max-width: 47.99875rem) {
+  .process-header {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.process-title {
+  font-family: "MarckScript-Regular", sans-serif;
+  font-size: clamp(1.75rem, 1.347107438rem + 1.652892562vw, 3rem);
+  font-weight: 700;
+  color: #CFA7B8;
+  margin: 0 0 1.25rem 0;
+  line-height: 1.2;
+}
+@media (max-width: 47.99875rem) {
+  .process-title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.process-subtitle {
+  font-family: "MarckScript-Regular", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #666666;
+  margin: 0;
+  line-height: 1.6;
+}
+@media (max-width: 47.99875rem) {
+  .process-subtitle {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+}
+
+.process-grid {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+@media (max-width: 63.99875rem) {
+  .process-grid {
+    gap: 3.75rem;
+  }
+}
+@media (max-width: 47.99875rem) {
+  .process-grid {
+    gap: 2.5rem;
+  }
+}
+
+.process-card {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 3.75rem;
+  align-items: flex-start;
+  position: relative;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid #E8C7D4;
+}
+.process-card:nth-child(even) {
+  direction: rtl;
+  text-align: right;
+}
+.process-card .process-number,
+.process-card .process-content {
+  direction: ltr;
+}
+.process-card:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+@media (max-width: 63.99875rem) {
+  .process-card {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding-bottom: 3.75rem;
+  }
+  .process-card:nth-child(even) {
+    direction: ltr;
+    text-align: left;
+  }
+}
+@media (max-width: 47.99875rem) {
+  .process-card {
+    gap: 1.875rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+.process-number {
+  font-family: "Oswald", sans-serif;
+  font-size: 7.5rem;
+  font-weight: 700;
+  color: #E8C7D4;
+  opacity: 0.3;
+  line-height: 1;
+  text-align: left;
+}
+@media (max-width: 63.99875rem) {
+  .process-number {
+    display: none;
+  }
+}
+
+.process-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.process-name {
+  font-family: "MarckScript-Regular", sans-serif;
+  font-size: clamp(1.25rem, 1.0888429752rem + 0.6611570248vw, 1.75rem);
+  font-weight: 700;
+  color: #CFA7B8;
+  margin: 0;
+  line-height: 1.2;
+}
+@media (max-width: 47.99875rem) {
+  .process-name {
+    font-size: 1.25rem;
+  }
+}
+
+.process-description {
+  font-family: "MarckScript-Regular", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #666666;
+  margin: 0;
+  line-height: 1.7;
+}
+@media (max-width: 63.99875rem) {
+  .process-description {
+    font-size: 0.9375rem;
+  }
+}
+@media (max-width: 47.99875rem) {
+  .process-description {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
 }/*# sourceMappingURL=main.css.map */
