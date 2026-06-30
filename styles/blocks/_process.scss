@@ -1,0 +1,175 @@
+@use '../helpers' as *;
+@use '../variables' as *;
+
+.process-section {
+    position: relative;
+    padding: rem(80) rem(32);
+    background: $color-bg-main;
+
+    @include tablet {
+        padding: rem(60) rem(24);
+    }
+
+    @include mobile {
+        padding: rem(40) rem(16);
+    }
+}
+
+.process-header {
+    position: relative;
+    z-index: 2;
+    margin-bottom: rem(80);
+    text-align: center;
+    max-width: rem(800);
+    margin-left: auto;
+    margin-right: auto;
+
+    @include tablet {
+        margin-bottom: rem(60);
+    }
+
+    @include mobile {
+        margin-bottom: rem(40);
+    }
+}
+
+.process-title {
+    font-family: 'MarckScript-Regular', sans-serif;
+    font-size: fluid(48, 28);
+    font-weight: 700;
+    color: $color-primary;
+    margin: 0 0 rem(20) 0;
+    line-height: 1.2;
+
+    @include mobile {
+        font-size: rem(28);
+        margin-bottom: rem(16);
+    }
+}
+
+.process-subtitle {
+    font-family: 'MarckScript-Regular', sans-serif;
+    font-size: rem(16);
+    font-weight: 400;
+    color: $color-text-light;
+    margin: 0;
+    line-height: 1.6;
+
+    @include mobile {
+        font-size: rem(14);
+        line-height: 1.5;
+    }
+}
+
+// ВЕРТИКАЛЬНЫЙ СПИСОК КАК В ПРОЕКТАХ
+.process-grid {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: rem(80);
+
+    @include tablet {
+        gap: rem(60);
+    }
+
+    @include mobile {
+        gap: rem(40);
+    }
+}
+
+.process-card {
+    display: grid;
+    grid-template-columns: rem(120) 1fr;
+    gap: rem(60);
+    align-items: flex-start;
+    position: relative;
+    padding-bottom: rem(80);
+    border-bottom: 1px solid $color-primary-light;
+
+    // ЧЁТНЫЕ - ВСЁ СПРАВА КАК НА СКРИНШОТЕ!
+    &:nth-child(even) {
+        direction: rtl;
+        text-align: right;
+    }
+
+    .process-number,
+    .process-content {
+        direction: ltr;  // ← тексты читаются слева-направо
+    }
+
+    &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    @include tablet {
+        grid-template-columns: 1fr;
+        gap: rem(40);
+        padding-bottom: rem(60);
+
+        &:nth-child(even) {
+            direction: ltr;  // ← на tablet просто слева
+            text-align: left;
+        }
+    }
+
+    @include mobile {
+        gap: rem(30);
+        padding-bottom: rem(40);
+    }
+}
+
+.process-number {
+    font-family: 'Oswald', sans-serif;
+    font-size: rem(120);
+    font-weight: 700;
+    color: $color-primary-light;
+    opacity: 0.3;
+    line-height: 1;
+    text-align: left;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.process-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+}
+
+
+.process-name {
+    font-family: 'MarckScript-Regular', sans-serif;
+    font-size: fluid(28, 20);
+    font-weight: 700;
+    color: $color-primary;
+    margin: 0;
+    line-height: 1.2;
+
+    @include mobile {
+        font-size: rem(20);
+    }
+}
+
+.process-description {
+    font-family: 'MarckScript-Regular', sans-serif;
+    font-size: rem(16);
+    font-weight: 400;
+    color: $color-text-light;
+    margin: 0;
+    line-height: 1.7;
+
+    @include tablet {
+        font-size: rem(15);
+    }
+
+    @include mobile {
+        font-size: rem(14);
+        line-height: 1.6;
+    }
+}
