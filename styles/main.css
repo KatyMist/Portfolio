@@ -1021,9 +1021,17 @@ ul, ol {
 }
 @media (max-width: 47.99875rem) {
   .about__photo-wrapper {
-    width: 26.25rem;
-    height: 20rem;
-    border-width: 0.625rem;
+    width: 100%;
+    max-width: 20rem;
+    height: 17.5rem;
+    padding: 0.625rem;
+  }
+}
+@media (max-width: 30.06125rem) {
+  .about__photo-wrapper {
+    max-width: 16.25rem;
+    height: 13.75rem;
+    padding: 0.5rem;
   }
 }
 
