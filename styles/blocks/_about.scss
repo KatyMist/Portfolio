@@ -4,7 +4,6 @@
 .about-section {
     position: relative;
 
-    // Градиент фон (яркий, как на главной)
     &::before {
         content: '';
         position: absolute;
@@ -13,13 +12,12 @@
         right: -200px;
         bottom: -200px;
         background: 
-            radial-gradient(ellipse 1200px 600px at 15% 20%, rgba($color-primary-light, 0.15) 0%, transparent 80%),
-            radial-gradient(ellipse 900px 800px at 85% 70%, rgba($color-accent-blue-light, 0.12) 0%, transparent 85%);
+            radial-gradient(ellipse 1200px 600px at 15% 20%, rgba($color-bg-green, 0.15) 0%, transparent 80%),
+            radial-gradient(ellipse 900px 800px at 85% 70%, rgba($color-bg-beige, 0.2) 0%, transparent 85%);
         filter: blur(120px);
         z-index: 0;
         pointer-events: none;
     }
-    
 }
 
 .about-section::before {
@@ -89,7 +87,7 @@
 
 .about__icon {
     font-size: rem(20);
-    color: $color-primary;
+    color: $color-bg-green;
     line-height: 1;
 }
 
@@ -97,7 +95,7 @@
     font-family: 'Oswald', sans-serif;
     font-size: rem(14);
     font-weight: 700;
-    color: $color-primary;
+    color: $color-bg-green;
     letter-spacing: 1px;
     margin: 0;
     line-height: 1;
@@ -107,7 +105,7 @@
     font-family: 'MarckScript-Regular', sans-serif; 
     font-size: fluid(48, 28);
     font-weight: 700;
-    color: $color-primary;
+    color: $color-bg-green;
     margin: 0;
     margin-bottom: rem(28);
     line-height: 1.2;
@@ -149,11 +147,11 @@
     align-self: flex-start;
     padding: rem(14) rem(22);
     background: transparent;
-    color: $color-primary;
+    color: $color-bg-green;
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
     font-size: rem(12);
-    border: 2px solid $color-primary;
+    border: 2px solid $color-bg-green;
     border-radius: 100px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -161,10 +159,10 @@
     letter-spacing: 0.5px;
 
     @include hover {
-        background: $color-primary-light;
-        color: $color-bg-main;
+        background: $color-bg-beige;
+        color: $color-text;
         transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba($color-primary, 0.2);
+        box-shadow: 0 8px 24px rgba($color-bg-green, 0.2);
     }
 
     @include tablet {
@@ -184,29 +182,28 @@
     position: relative;
     width: rem(580);
     height: rem(580);
-    overflow: hidden;
     flex-shrink: 0;
     border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
-    border: rem(14) solid $color-primary-light;
-    box-shadow: 0 20px 60px rgba($color-primary, 0.15);
+    padding: rem(14);                      // это и есть "толщина" рамки
+    background: $gradient-portfolio-bg1;   // градиент заливает именно эту рамку
+    box-shadow: 0 20px 60px rgba($color-bg-green, 0.15);
 
-    // ← THIRD: laptop (только если нет других совпадений)
     @include laptop {
         width: rem(470);
         height: rem(480);
-        border-width: rem(16);
+        padding: rem(16);
     }
 
     @include tablet {
         width: rem(480);
         height: rem(500);
-        border-width: rem(12);
+        padding: rem(12);
     }
 
     @include mobile {
         width: rem(420);
         height: rem(320);
-        border-width: rem(10);
+        padding: rem(10);
     }
 }
 
@@ -216,13 +213,15 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+    border-radius: inherit;
+    overflow: hidden;
 }
 
 // Секция навыков (если потребуется позже)
 .about__skills-section {
     margin-top: rem(60);
     padding-top: rem(60);
-    border-top: 1px solid rgba($color-primary, 0.2);
+    border-top: 1px solid rgba($color-bg-green, 0.2);
 
     @include tablet {
         margin-top: rem(40);
@@ -247,14 +246,14 @@
 
 .about__skills-icon {
     font-size: rem(20);
-    color: $color-primary;
+    color: $color-bg-green;
 }
 
 .about__skills-title {
     font-family: 'Oswald', sans-serif;
     font-size: rem(14);
     font-weight: 700;
-    color: $color-primary;
+    color: $color-bg-green;
     letter-spacing: 1px;
     margin: 0;
     line-height: 1;
@@ -285,8 +284,8 @@
     align-items: center;
     justify-content: center;
     padding: rem(16);
-    background: $color-primary-light;
-    border: 1px solid $color-primary;
+    background: $color-bg-beige;
+    border: 1px solid $color-bg-green;
     border-radius: rem(10);
     text-align: center;
     transition: all 0.3s ease;
@@ -296,9 +295,9 @@
     cursor: pointer;
 
     @include hover {
-        background: $color-primary;
+        background: $color-bg-green;
         transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba($color-primary, 0.2);
+        box-shadow: 0 8px 24px rgba($color-bg-green, 0.2);
     }
 
     @include mobile {
@@ -318,7 +317,7 @@
     font-family: 'Manrope', sans-serif;
     font-size: rem(11);
     font-weight: 600;
-    color: $color-bg-main;
+    color: $color-text;
     line-height: 1.3;
 
     @include mobile {

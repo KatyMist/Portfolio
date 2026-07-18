@@ -127,21 +127,21 @@
 }
 
 .cookies-banner__link {
-    color: $color-accent-blue-light;
+    color: $color-bg-green;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
 
     @include hover {
         text-decoration: underline;
-        color: $color-primary;
+        color: darken($color-bg-green, 10%);
     }
 }
 
 .cookies-banner__accept {
     padding: rem(10) rem(24);
-    background: $gradient-portfolio-bg;
-    color: white;
+    background: $gradient-portfolio-bg1;
+    color: $color-text-light;
     border: none;
     border-radius: rem(100);
     font-family: 'Philosopher', sans-serif;
@@ -154,7 +154,7 @@
 
     @include hover {
         transform: translateY(-2px);
-        box-shadow: 0 rem(8) rem(24) rgba($color-primary, 0.2);
+        box-shadow: 0 rem(8) rem(24) rgba($color-bg-green, 0.3);
     }
 
     @include tablet {

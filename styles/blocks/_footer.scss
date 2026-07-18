@@ -42,7 +42,7 @@
 
 .footer__text { //текст футер 2026
     font-family: 'Philosopher', sans-serif;
-    color: $color-text-muted;
+    color: $color-text;
     font-size: rem(12);
     margin: 0;
 
@@ -61,7 +61,7 @@
 
 .footer__text-small {
     font-family: 'Philosopher', sans-serif;
-    color: $color-text-muted;
+    color: $color-text;
     font-size: rem(12);
     margin: 0;
 
@@ -93,7 +93,7 @@
 
 .footer__link {
     font-family: 'Philosopher', sans-serif;
-    color: $color-primary;
+    color: $color-bg-green;
     font-size: rem(12);
     text-decoration: none;
     transition: color 0.3s ease;

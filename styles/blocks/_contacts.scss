@@ -10,7 +10,7 @@
     align-items: center;
     overflow: hidden;
 
-    // РОЗОВО-ГОЛУБОЙ ГРАДИЕНТ
+    //  ГРАДИЕНТ
     &::before {
         content: '';
         position: absolute;
@@ -19,8 +19,8 @@
         right: 0;
         bottom: 0;
         background: 
-            radial-gradient(ellipse 1000px 700px at 20% 30%, rgba($color-primary-light, 0.25) 0%, transparent 70%),
-            radial-gradient(ellipse 1100px 800px at 80% 60%, rgba($color-accent-blue-light, 0.2) 0%, transparent 75%);
+            radial-gradient(ellipse 1000px 700px at 20% 30%, rgba($color-bg-beige, 0.3) 0%, transparent 70%),
+            radial-gradient(ellipse 1100px 800px at 80% 60%, rgba($color-bg-green, 0.2) 0%, transparent 75%);
         filter: blur(100px);
         z-index: 0;
         pointer-events: none;
@@ -42,6 +42,12 @@
 
         @include tablet {
             display: none;
+        }
+
+        // фиксируем позицию на очень широких экранах
+        @media (min-width: 1920px) {
+            right: auto;
+            left: calc(50% + 700px - 900px);
         }
     }
 
@@ -95,7 +101,7 @@
     font-family: 'Oswald', sans-serif;
     font-size: fluid(56, 32);
     font-weight: 800;
-    background: $gradient-portfolio-text;
+    background: linear-gradient(135deg, #C9D4BC 0%, #A8B49C 50%, #8A9880 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -103,7 +109,7 @@
     line-height: 1.2;
 
     @include tablet {
-        text-align: center;  // ← ГАРАНТИРОВАННО В ЦЕНТР
+        text-align: center;
     }
 
     @include mobile {
@@ -163,21 +169,21 @@
     gap: rem(16);
     padding: rem(32) rem(28);
     background: rgba($color-white, 0.7);
-    border: 1px solid rgba($color-primary-light, 0.3);
+    border: 1px solid rgba($color-bg-beige, 0.5);
     border-radius: rem(16);
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
     z-index: 2;
-    align-items: center;  // ← ЦЕНТР ПО ГОРИЗОНТАЛИ
-    text-align: center;    // ← ТЕКСТ ПО ЦЕНТРУ
+    align-items: center;
+    text-align: center;
 
     @include hover {
         background: rgba($color-white, 0.9);
-        border-color: $color-primary-light;
+        border-color: $color-bg-green;
         transform: translateY(-6px);
-        box-shadow: 0 16px 40px rgba($color-primary, 0.12);
+        box-shadow: 0 16px 40px rgba($color-bg-green, 0.15);
     }
 
     @include tablet {
@@ -194,7 +200,7 @@
     font-family: 'MarckScript-Regular', sans-serif;
     font-size: rem(20);
     font-weight: 700;
-    color: $color-primary;
+    color: $color-bg-green;
     margin: 0;
     line-height: 1.2;
 
@@ -223,9 +229,9 @@
 .contact-arrow {
     display: inline-block;
     font-size: rem(20);
-    color: $color-primary;
+    color: $color-bg-green;
     transition: transform 0.3s ease;
-    margin-top: rem(8);  // ← ОТСТУП СВЕРХУ
+    margin-top: rem(8);
 
     .contact-card:hover & {
         transform: translateX(4px);
