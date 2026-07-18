@@ -1023,7 +1023,7 @@ ul, ol {
   .about__photo-wrapper {
     width: 26.25rem;
     height: 20rem;
-    padding: 0.625rem;
+    border-width: 0.625rem;
   }
 }
 
