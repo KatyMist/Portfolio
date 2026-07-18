@@ -68,9 +68,9 @@ ul, ol {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: #B8E4F7;
-    border: 2px solid #9dd8f4;
-    box-shadow: 0 0 15px rgba(184, 228, 247, 0.8);
+    background: #BCC6B2;
+    border: 2px solid #A8B49C;
+    box-shadow: 0 0 15px rgba(188, 198, 178, 0.8);
     transform: translate(-50%, -50%);
     z-index: 999999;
     pointer-events: none;
@@ -80,16 +80,16 @@ ul, ol {
     &--hover {
         width: 24px;
         height: 24px;
-        background: #caedfb;
+        background: #D4DBC9;
         border-color: #FFB7C5;
-        box-shadow: 0 0 25px rgba(184, 228, 247, 1), 0 0 40px rgba(255, 183, 197, 0.6);
+        box-shadow: 0 0 25px rgba(188, 198, 178, 1), 0 0 40px rgba(255, 183, 197, 0.6);
     }
 }
 
 .cursor--hover {
     width: 24px;
     height: 24px;
-    background: #caedfb;
+    background: #D4DBC9;
     border-color: #FFB7C5;
-    box-shadow: 0 0 25px rgba(184, 228, 247, 1), 0 0 40px rgba(255, 183, 197, 0.6);
+    box-shadow: 0 0 25px rgba(188, 198, 178, 1), 0 0 40px rgba(255, 183, 197, 0.6);
 }

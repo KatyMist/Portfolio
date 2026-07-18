@@ -3,9 +3,11 @@
 // ПЕРЕМЕННЫЕ ПРОЕКТА 
 
 // ЦВЕТА - ОСНОВНОЙ ФОН
-$color-bg-main: #FBFCFD;
+$color-bg-main: #FAF8F4;
 $color-bg-light: #FCFAFB;
 $color-bg-dark: #F2EEF0;
+$color-bg-green:#BCC6B2;
+$color-bg-beige:#E8DECE;
 
 // ЦВЕТА - ОСНОВНЫЕ
 $color-primary: #CFA7B8;
@@ -26,6 +28,8 @@ $color-border: rgba(0, 0, 0, 0.1);
 // ГРАДИЕНТЫ
 $gradient-portfolio-text: linear-gradient(180deg, #e9c8d9 0%, #d7c6ef 100%);
 $gradient-portfolio-bg: linear-gradient(180deg, #e8c6d8 0%, #d8b8ea 100%);
+$gradient-portfolio-bg1: linear-gradient(135deg,#F9F6EF 0%,#E8DECE 45%,#BCC6B2 100%);
+
 
 // ТИПОГРАФИКА
 $font-family-base: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;

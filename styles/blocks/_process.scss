@@ -37,7 +37,7 @@
     font-family: 'MarckScript-Regular', sans-serif;
     font-size: fluid(48, 28);
     font-weight: 700;
-    color: $color-primary;
+    color: $color-bg-green;
     margin: 0 0 rem(20) 0;
     line-height: 1.2;
 
@@ -85,9 +85,8 @@
     align-items: flex-start;
     position: relative;
     padding-bottom: rem(80);
-    border-bottom: 1px solid $color-primary-light;
+    border-bottom: 1px solid $color-bg-beige;
 
-    // ЧЁТНЫЕ - ВСЁ СПРАВА КАК НА СКРИНШОТЕ!
     &:nth-child(even) {
         direction: rtl;
         text-align: right;
@@ -95,7 +94,7 @@
 
     .process-number,
     .process-content {
-        direction: ltr;  // ← тексты читаются слева-направо
+        direction: ltr;
     }
 
     &:last-child {
@@ -109,7 +108,7 @@
         padding-bottom: rem(60);
 
         &:nth-child(even) {
-            direction: ltr;  // ← на tablet просто слева
+            direction: ltr;
             text-align: left;
         }
     }
@@ -124,7 +123,7 @@
     font-family: 'Oswald', sans-serif;
     font-size: rem(120);
     font-weight: 700;
-    color: $color-primary-light;
+    color: $color-bg-beige;
     opacity: 0.3;
     line-height: 1;
     text-align: left;
@@ -147,7 +146,7 @@
     font-family: 'MarckScript-Regular', sans-serif;
     font-size: fluid(28, 20);
     font-weight: 700;
-    color: $color-primary;
+    color: $color-bg-green;
     margin: 0;
     line-height: 1.2;
 

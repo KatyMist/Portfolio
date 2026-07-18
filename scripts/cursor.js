@@ -10,7 +10,7 @@ class Cursor {
         this.lastX = 0;
         this.lastY = 0;
         this.throttle = false;
-        this.colors = ['#B8E4F7','#9dd8f4','#caedfb','#FFB7C5','#ffa0b8','#ffd0da'];
+        this.colors = ['#FFFFFF','#F5F5F5','#E8E8E8','#D4D4D4','#C0C0C0','#F0F0F5'];
         
         this.initMove();
         this.initHover();

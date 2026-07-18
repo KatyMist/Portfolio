@@ -65,7 +65,7 @@
     position: relative;
 
     &.is-active {
-        color: $color-primary;
+        color: $color-bg-green;
         
         &::after {
             content: '';
@@ -74,12 +74,12 @@
             left: 0;
             right: 0;
             height: 2px;
-            background: $color-primary;
+            background: $color-bg-green;
         }
     }
 
     @include hover {
-        color: $color-primary;
+        color: $color-bg-green;
     }
 }
 
@@ -112,7 +112,7 @@
     font-size: fluid(250, 80);
     font-weight: 800;
     white-space: nowrap;
-    background: $gradient-portfolio-bg;
+    background: $gradient-portfolio-bg1;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -127,9 +127,7 @@
         left: -150px;
         right: -150px;
         bottom: -100px;
-        background: 
-            radial-gradient(ellipse 900px 600px at 25% 30%, rgba($color-primary-light, 0.3) 0%, transparent 70%),
-            radial-gradient(ellipse 800px 700px at 75% 70%, rgba($color-accent-blue-light, 0.2) 0%, transparent 70%);
+        background: radial-gradient(ellipse 900px 600px at 25% 30%, rgba($color-primary-light, 0.3) 0%, transparent 70%);
         border-radius: rem(30);
         filter: blur(80px);
         z-index: -1;
@@ -137,12 +135,12 @@
 
     @include mobile {
         font-size: rem(70);
-        top: 30%;
+        top: 44%;   // было 30%
     }
 
     @include mobile-s {
         font-size: rem(50);
-        top: 25%;
+        top: 42%;   // было 25%
     }
 }
 
@@ -154,7 +152,7 @@
     font-family: 'Oswald', sans-serif;
     font-size: fluid(200, 60);
     font-weight: 700;
-    color: $color-accent-blue-light;
+    color: $color-bg-green;
     opacity: 0.8;
     z-index: 0;
     pointer-events: none;
@@ -169,6 +167,13 @@
 
     @include mobile {
         display: none;
+    }
+
+    // фиксируем позицию на очень широких экранах
+    @media (min-width: 1920px) {
+        right: auto;
+        left: calc(50% + 760px);
+        translate: -30% -50%;
     }
 }
 
@@ -194,7 +199,7 @@
     font-family: 'Manrope', sans-serif;
     font-size: rem(18);
     font-weight: 600;
-    color: $color-text-light;
+    color: $color-bg-green;
     margin-bottom: rem(32);
 
     @include mobile {
@@ -206,7 +211,7 @@
 .hero__btn {
     display: inline-block;
     padding: rem(14) rem(28);
-    background: $color-primary-light;
+    background: $color-bg-green;
     color: $color-text;
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
@@ -292,9 +297,7 @@
         left: -80px;
         right: -80px;
         bottom: 0;
-        background: 
-            radial-gradient(ellipse 800px 500px at 25% 30%, rgba($color-primary-light, 0.5) 0%, transparent 70%),
-            radial-gradient(ellipse 700px 600px at 75% 70%, rgba($color-accent-blue-light, 0.4) 0%, transparent 70%);
+        background: radial-gradient(ellipse 800px 500px at 25% 30%, rgba($color-primary-light, 0.5) 0%, transparent 70%);
         border-radius: rem(20);
         filter: blur(70px);
         z-index: -1;
@@ -325,12 +328,12 @@
 
     @include mobile {
         gap: rem(8);
-        margin-top: rem(16);
+        margin-top: rem(-40);
     }
 
     @include mobile-s {
         gap: rem(4);
-        margin-top: rem(12);
+        margin-top: rem(-30);
     }
 }
 
@@ -339,7 +342,7 @@
     font-family: 'MarckScript-Regular', cursive;
     font-size: rem(90);
     font-weight: 400;
-    color: $color-accent-blue-light;
+    color: $color-bg-green;
     margin: 0;
     line-height: 1.2;
 
@@ -361,7 +364,7 @@
     font-family: 'MarckScript-Regular', sans-serif;
     font-size: rem(40);
     font-weight: 600;
-    color: $color-accent-blue-light;
+    color: $color-bg-green;
     margin: 0;
 
     @include tablet {
