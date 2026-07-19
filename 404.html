@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница не найдена — Екатерина Туманова</title>
+
+    <!-- Open Graph теги для соцсетей -->
+    <meta name="description" content="Страница не найдена — Екатерина Туманова Frontend Developer">
+    <meta property="og:title" content="404 — Страница не найдена">
+    <meta property="og:description" content="Запрашиваемая страница не найдена">
+    <meta property="og:image" content="/images/Main.jpg">
+
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+    <script src="./scripts/main.js" type="module" defer></script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109337117', 'ym');
+
+        ym(109337117, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/109337117" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+</head>
+<body>
+    <header class="header">
+        <nav class="nav" id="nav">
+            <ul class="nav__list">
+                <li><a href="index.html" class="nav__link">ПОРТФОЛИО</a></li>
+                <li><a href="about.html" class="nav__link">ОБО МНЕ</a></li>
+                <li><a href="skills.html" class="nav__link">НАВЫКИ</a></li>
+                <li><a href="projects.html" class="nav__link">ПРОЕКТЫ</a></li>
+                <li><a href="process.html" class="nav__link">ПРОЦЕСС</a></li>
+                <li><a href="contacts.html" class="nav__link">КОНТАКТЫ</a></li>
+            </ul>
+        </nav>
+        <button class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <main>
+        <section class="notfound-section">
+            <div class="notfound-container">
+                <h1 class="notfound__code">404</h1>
+                <img src="./images/cat.png" alt="" class="notfound__image">
+                <h2 class="notfound__title">Упс! Что-то пошло не так</h2>
+                <p class="notfound__text">
+                    Запрашиваемая страница не найдена. Возможно, ссылка устарела или адрес введён с ошибкой.
+                </p>
+                <a href="index.html" class="notfound__link">← На главную</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__left">
+            <p class="footer__text">© 2026 Ekaterina Tumanova — Frontend Developer</p>
+        </div>
+        <div class="footer__right">
+            <a href="privacy.html" class="footer__link">Политика конфеденциальности</a>
+            <span class="footer__divider">|</span>
+            <p class="footer__text-small">Сайт использует сервис веб-аналитики Яндекс.Метрика</p>
+        </div>
+    </footer>
+
+    <div class="cursor" id="cursor"></div>
+
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-name" id="nameLoader">Екатерина Туманова</div>
+            <div class="loading-role" id="roleLoader">Frontend Developer</div>
+        </div>
+    </div>
+
+    <div class="cookies-banner" id="cookiesBanner">
+        <div class="cookies-banner__container">
+            <div class="cookies-banner__content">
+                <img class="cookies-banner__icon" src="./icons/heart.svg" alt="Cookies" />
+                <p class="cookies-banner__text">
+                    Мы используем <a href="privacy.html" class="cookies-banner__link">cookie-файлы</a> 
+                    для корректной работы сайта и анализа посещаемости
+                </p>
+            </div>
+            <button class="cookies-banner__accept" id="acceptCookies">Согласен</button>
+            <button class="cookies-banner__close" id="closeCookies">×</button>
+        </div>
+    </div>
+</body>
+</html>
