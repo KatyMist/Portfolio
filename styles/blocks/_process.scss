@@ -173,3 +173,27 @@
 .process-content section {
     margin-bottom: rem(48);
 }
+
+.process__download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: rem(8);
+    font-family: 'Manrope', sans-serif;
+    font-size: rem(14);
+    font-weight: 600;
+    color: $color-bg-green;
+    background: rgba($color-bg-green, 0.1);
+    border: 1px solid $color-bg-green;
+    border-radius: 100px;
+    padding: rem(14) rem(22);
+    margin-top: rem(8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    @include hover {
+        background: $color-bg-green;
+        color: $color-white;
+        box-shadow: 0 0 rem(16) rgba($color-bg-green, 0.5);
+        transform: translateY(-2px);
+    }
+}
