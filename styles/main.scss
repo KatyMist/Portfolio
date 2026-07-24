@@ -13,7 +13,6 @@
 @use './utils';
 @use './blocks/hero';
 @use './blocks/work-in-progress';
-@use './blocks/about';
 @use './blocks/loading';
 @use './blocks/footer';
 @use './blocks/privacy';
@@ -22,6 +21,6 @@
 @use './blocks/projects';
 @use './blocks/skills';
 @use './blocks/contacts';
-@use './blocks/process';
 @use './blocks/cursor';
 @use './blocks/notfound';
+@use './blocks/process';
