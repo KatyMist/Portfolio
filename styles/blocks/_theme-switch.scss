@@ -1,0 +1,96 @@
+@use '../helpers' as *;
+@use '../variables' as *;
+
+.theme-switch {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.theme-switch__track {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: rem(52);
+    height: rem(28);
+    border-radius: 999px;
+    background: var(--color-bg-beige);
+    padding: rem(3);
+    transition: var(--theme-transition);
+}
+
+.theme-switch__label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Philosopher', sans-serif;
+    font-size: rem(13);
+    font-weight: 700;
+    letter-spacing: rem(1);
+    text-transform: uppercase;
+    color: var(--color-text-light);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    &--light {
+        left: rem(16);
+    }
+
+    &--dark {
+        right: rem(16);
+    }
+}
+
+[data-theme-state="light"] .theme-switch__label--light,
+[data-theme-state="dark"] .theme-switch__label--dark {
+    opacity: 1;
+}
+
+.theme-switch__thumb {
+    position: relative;
+    z-index: 1;
+    width: rem(22);
+    height: rem(22);
+    border-radius: 50%;
+    background: var(--color-white);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(0);
+    transition: transform 0.35s ease, background 0.35s ease;
+}
+
+[data-theme-state="dark"] .theme-switch__thumb {
+    transform: translateX(rem(24));
+    background: var(--color-bg-dark);
+}
+
+.theme-switch__icon {
+    position: absolute;
+    width: rem(13);
+    height: rem(13);
+    color: var(--color-bg-green);
+    opacity: 0;
+    transform: scale(0.6) rotate(-30deg);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.theme-switch__icon--sun {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+}
+
+
+[data-theme-state="dark"] .theme-switch__icon--sun {
+    opacity: 0;
+    transform: scale(0.6) rotate(30deg);
+}
+
+[data-theme-state="dark"] .theme-switch__icon--moon {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+    color: var(--color-primary-light);
+}

@@ -1,0 +1,19 @@
+@use '../helpers' as *;
+@use '../variables' as *;
+
+.header { //шапка сайта
+    padding: rem(24) rem(32);
+    background: var(--color-bg-main);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: flex-end;  
+    align-items: center;
+    gap: rem(20);
+    transition: background-color 0.4s ease;
+
+     @include mobile {
+        padding: rem(16) rem(12);
+    }
+}
