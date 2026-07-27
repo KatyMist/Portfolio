@@ -1,0 +1,68 @@
+@use '../helpers' as *;
+@use '../variables' as *;
+
+.nav {
+    @include mobile {
+        position: fixed;
+        top: rem(60);
+        left: 0;
+        right: 0;
+        background: var(--color-bg-main-transparent, rgba(0, 0, 0, 0.6));
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        z-index: 100;
+
+        &.nav--active {
+            max-height: 100vh;
+        }
+    }
+}
+
+
+.nav__list {
+    display: flex;
+    gap: rem(40);
+    justify-content: flex-end;  
+    flex-wrap: wrap;
+    padding-right: rem(32);      
+
+    @include tablet {
+        gap: rem(24);
+        padding-right: rem(24);
+    }
+
+    @include mobile {
+        flex-direction: column;
+        gap: 0;
+        padding: rem(20) rem(16);
+        text-align: center;
+    }
+}
+
+.nav__link {
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 600;
+    font-size: rem(14);
+    color: var(--color-text);
+    transition: color 0.3s ease;
+    position: relative;
+
+    &.is-active {
+        color: var(--color-bg-green);
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--color-bg-green);
+        }
+    }
+
+    @include hover {
+        color: var(--color-bg-green);
+    }
+}

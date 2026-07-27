@@ -1,7 +1,5 @@
 // ПЕРЕМЕННЫЕ ПРОЕКТА 
 
-// ПЕРЕМЕННЫЕ ПРОЕКТА 
-
 // ЦВЕТА - ОСНОВНОЙ ФОН
 $color-bg-main: #FAF8F4;
 $color-bg-light: #FCFAFB;
@@ -30,9 +28,58 @@ $gradient-portfolio-text: linear-gradient(180deg, #e9c8d9 0%, #d7c6ef 100%);
 $gradient-portfolio-bg: linear-gradient(180deg, #e8c6d8 0%, #d8b8ea 100%);
 $gradient-portfolio-bg1: linear-gradient(135deg,#F9F6EF 0%,#E8DECE 45%,#BCC6B2 100%);
 
-
 // ТИПОГРАФИКА
 $font-family-base: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 $font-weight-regular: 400;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
+
+// ==========================================
+// ТЕМА (светлая / тёмная) — CSS custom properties
+// ==========================================
+:root {
+    --color-bg-main: #{$color-bg-main};
+    --color-bg-light: #{$color-bg-light};
+    --color-bg-dark: #{$color-bg-dark};
+    --color-bg-green: #{$color-bg-green};
+    --color-bg-beige: #{$color-bg-beige};
+
+    --color-primary: #{$color-primary};
+    --color-primary-light: #{$color-primary-light};
+    --color-accent-blue: #{$color-accent-blue};
+    --color-accent-blue-light: #{$color-accent-blue-light};
+
+    --color-text: #{$color-text};
+    --color-text-light: #{$color-text-light};
+    --color-text-muted: #{$color-text-muted};
+    --color-white: #{$color-white};
+
+    --color-secondary: #{$color-secondary};
+    --color-border: #{$color-border};
+    --color-glow: rgba(232, 199, 212, 0.3);
+
+    --theme-transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+[data-theme="dark"] {
+    --color-bg-main: #1C1E1B;
+    --color-bg-light: #232520;
+    --color-bg-dark: #171815;
+    --color-bg-green: #A8B89C;
+    --color-bg-beige: #3A362E;
+    
+
+    --color-primary: #B98CA0;
+    --color-primary-light: #C9A6B6;
+    --color-accent-blue: #9DB4E0;
+    --color-accent-blue-light: #8AA4D8;
+
+    --color-text: #EDEBE4;
+    --color-text-light: #B6B2A9;
+    --color-text-muted: #9C9691;
+    --color-white: #26241F;
+
+    --color-secondary: #93A8CE;
+    --color-border: rgba(255, 255, 255, 0.1);
+    --color-glow: rgba(185, 140, 160, 0.1);
+}
