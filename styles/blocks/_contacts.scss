@@ -3,12 +3,13 @@
 
 .contacts-section {
     position: relative;
-    padding: rem(100) rem(32) rem(300) rem(32);  // ← ЕЩЕ БОЛЬШЕ
-    background: $color-bg-main;
-    min-height: 100vh;  // ← НА ВЕСЬ ЭКРАН
+    padding: rem(100) rem(32) rem(300) rem(32);
+    background: var(--color-bg-main);
+    min-height: 100vh;
     display: flex;
     align-items: center;
     overflow: hidden;
+    transition: background-color 0.4s ease;
 
     //  ГРАДИЕНТ
     &::before {
@@ -19,7 +20,7 @@
         right: 0;
         bottom: 0;
         background: 
-            radial-gradient(ellipse 1000px 700px at 20% 30%, rgba($color-bg-beige, 0.3) 0%, transparent 70%),
+            radial-gradient(ellipse 1000px 700px at 20% 30%, var(--color-glow) 0%, transparent 70%),
             radial-gradient(ellipse 1100px 800px at 80% 60%, rgba($color-bg-green, 0.2) 0%, transparent 75%);
         filter: blur(100px);
         z-index: 0;
@@ -44,7 +45,6 @@
             display: none;
         }
 
-        // фиксируем позицию на очень широких экранах
         @media (min-width: 1920px) {
             right: auto;
             left: calc(50% + 700px - 900px);
@@ -71,7 +71,7 @@
     width: 100%;
     margin: 0 auto;
     position: relative;
-    z-index: 2;  // ← ВЫШЕ фона
+    z-index: 2;
 
     @include tablet {
         grid-template-columns: 1fr;
@@ -89,7 +89,7 @@
     position: relative;
 
     @include tablet {
-        text-align: center;  // ← ЦЕНТР НА TABLET И МЕНЬШЕ
+        text-align: center;
     }
 
     @include mobile {
@@ -129,9 +129,10 @@
     font-family: 'MarckScript-Regular', sans-serif;
     font-size: rem(18);
     font-weight: 400;
-    color: $color-text-light;
+    color: var(--color-text-light);
     margin: 0;
     line-height: 1.7;
+    transition: color 0.4s ease;
 
     @include tablet {
         font-size: rem(16);
@@ -168,8 +169,8 @@
     flex-direction: column;
     gap: rem(16);
     padding: rem(32) rem(28);
-    background: rgba($color-white, 0.7);
-    border: 1px solid rgba($color-bg-beige, 0.5);
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
     border-radius: rem(16);
     text-decoration: none;
     cursor: pointer;
@@ -180,8 +181,8 @@
     text-align: center;
 
     @include hover {
-        background: rgba($color-white, 0.9);
-        border-color: $color-bg-green;
+        background: var(--color-card-bg-hover);
+        border-color: var(--color-bg-green);
         transform: translateY(-6px);
         box-shadow: 0 16px 40px rgba($color-bg-green, 0.15);
     }
@@ -200,7 +201,7 @@
     font-family: 'MarckScript-Regular', sans-serif;
     font-size: rem(20);
     font-weight: 700;
-    color: $color-bg-green;
+    color: var(--color-bg-green);
     margin: 0;
     line-height: 1.2;
 
@@ -217,9 +218,10 @@
     font-family: 'MarckScript-Regular', sans-serif;
     font-size: rem(14);
     font-weight: 400;
-    color: $color-text-light;
+    color: var(--color-text-light);
     margin: 0;
     line-height: 1.5;
+    transition: color 0.4s ease;
 
     @include mobile {
         font-size: rem(12);
@@ -229,7 +231,7 @@
 .contact-arrow {
     display: inline-block;
     font-size: rem(20);
-    color: $color-bg-green;
+    color: var(--color-bg-green);
     transition: transform 0.3s ease;
     margin-top: rem(8);
 
