@@ -4,7 +4,7 @@
 .projects-section {
     position: relative;
     padding: rem(80) rem(32);
-    background: $color-bg-main;
+    background: var(--color-bg-main);
 
     @include tablet {
         padding: rem(60) rem(24);
@@ -37,7 +37,7 @@
     font-family: 'Philosopher', sans-serif;
     font-size: fluid(48, 28);
     font-weight: 700;
-    color: $color-bg-green;
+    color: var(--color-bg-green);
     margin: 0 0 rem(20) 0;
     line-height: 1.2;
 
@@ -51,7 +51,7 @@
     font-family: 'MarckScript-Regular', sans-serif;
     font-size: rem(16);
     font-weight: 400;
-    color: $color-text-light;
+    color: var(--color-text-light);
     margin: 0;
     line-height: 1.6;
 
@@ -84,7 +84,7 @@
     align-items: start;
     position: relative;
     padding-bottom: rem(80);
-    border-bottom: 1px solid $color-bg-beige;  // ← была розовая линия
+    border-bottom: 1px solid var(--color-bg-beige);
 
     &:last-child {
         border-bottom: none;
@@ -92,7 +92,7 @@
 
     &:nth-child(even) {
         direction: rtl;
-        
+
         .project-content,
         .project-image {
             direction: ltr;
@@ -122,7 +122,7 @@
     font-family: 'Oswald', sans-serif;
     font-size: rem(80);
     font-weight: 700;
-    color: $color-bg-beige;
+    color: var(--color-bg-beige);
     opacity: 0.2;
     line-height: 1;
     z-index: -1;
@@ -149,7 +149,7 @@
     font-family: 'MarckScript-Regular', sans-serif;
     font-size: fluid(36, 24);
     font-weight: 700;
-    color: $color-bg-green;
+    color: var(--color-bg-green);
     margin: 0 0 rem(8) 0;
     line-height: 1.2;
 
@@ -162,7 +162,7 @@
     font-family: 'Oswald', sans-serif;
     font-size: rem(12);
     font-weight: 700;
-    color: $color-bg-green;
+    color: var(--color-bg-green);
     letter-spacing: 1px;
     margin: 0 0 rem(16) 0;
     text-transform: uppercase;
@@ -177,7 +177,7 @@
     font-family: 'Philosopher', sans-serif;
     font-size: rem(16);
     font-weight: 400;
-    color: $color-text-light;
+    color: var(--color-text-light);
     margin: 0 0 rem(24) 0;
     line-height: 1.7;
 
@@ -206,11 +206,11 @@
     display: inline-block;
     padding: rem(12) rem(22);
     background: transparent;
-    color: $color-bg-green;
+    color: var(--color-bg-green);
     font-family: 'MarckScript-Regular', sans-serif;
     font-size: rem(14);
     font-weight: 600;
-    border: 2px solid $color-bg-green;
+    border: 2px solid var(--color-bg-green);
     border-radius: rem(8);
     text-decoration: none;
     cursor: pointer;
@@ -218,8 +218,8 @@
     white-space: nowrap;
 
     @include hover {
-        background: $color-bg-green;
-        color: $color-bg-main;
+        background: var(--color-bg-green);
+        color: var(--color-bg-main);
         transform: translateY(-2px);
         box-shadow: 0 8px 24px rgba($color-bg-green, 0.2);
     }
@@ -231,13 +231,13 @@
 
     &--secondary {
         background: transparent;
-        border-color: $color-bg-beige;
-        color: darken($color-bg-beige, 25%);
+        border-color: var(--color-bg-beige);
+        color: var(--color-beige-dark);
 
         @include hover {
-            background: $color-bg-beige;
-            color: $color-bg-main;
-            border-color: $color-bg-beige;
+            background: var(--color-bg-beige);
+            color: var(--color-bg-main);
+            border-color: var(--color-bg-beige);
         }
     }
 }
