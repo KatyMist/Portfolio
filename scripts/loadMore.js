@@ -8,8 +8,8 @@ export function initLoadMore() {
 
         const setLabel = (isHidden) => {
             button.innerHTML = isHidden
-                ? `<span>Load</span><span class="load-more__arrow">↓</span><span>More</span>`
-                : `<span>Show</span><span class="load-more__arrow load-more__arrow--up">↑</span><span>Less</span>`;
+                ? `<span>Все</span><span class="load-more__arrow">↓</span><span>проекты</span>`
+                : `<span>Скрыть</span><span class="load-more__arrow load-more__arrow--up">↑</span><span>проекты</span>`;
         };
 
         setLabel(true);
