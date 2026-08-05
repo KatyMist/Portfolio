@@ -16,6 +16,7 @@
     <link rel="canonical" href="https://katymist.github.io/Portfolio/projects.html">
 
     <script src="./scripts/main.js" type="module" defer></script>
+    <script src="./scripts/projects-accordion.js" type="module" defer></script>
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -70,116 +71,190 @@
     <main>
         <section class="projects-section">
             <div class="projects-header">
-                <h2 class="projects-title">ПРОЕКТЫ</h2>
+                <h2 class="projects-title">ПОРТФОЛИО</h2>
             </div>
 
-            <div class="projects-grid">
-                <!-- Проект 1: Kropp Fitness -->
-                <article class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-name">01 | Kropp Fitness</h3>
-                        <p class="project-type">Учебный проект</p>
-                        <p class="project-description">
-                            Адаптивный лендинг фитнес-клуба, созданный в рамках обучения по видеоуроку. Проект позволил закрепить навыки семантической и адаптивной вёрстки с использованием <b>HTML</b> и <b>CSS</b>.
-                        </p>
-                        <div class="project-buttons">
-                            <a href="https://katymist.github.io/KROPP-FITNESS/" class="project-btn" target="_blank">Смотреть проект →</a>
-                            <a href="https://github.com/KatyMist/KROPP-FITNESS" class="project-btn project-btn--secondary" target="_blank">Разработка →</a>
-                        </div>
-                    </div>
-                    <div class="project-image">
-                        <img src="./images/project/1.jpg" alt="Kropp Fitness сайт" class="project-img">
-                    </div>
-                </article>
+            <!-- ===== Коммерческие проекты ===== -->
+            <div class="projects-category">
+                <div class="projects-category__header">
+                    <h3 class="projects-category__title">Коммерческие проекты</h3>
+                    <p class="projects-category__desc">Разработка сайтов для реальных заказчиков и собственных проектов.</p>
+                </div>
 
-                <!-- Проект 2: Future Tech -->
-                <article class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-name">02 | Future Tech</h3>
-                        <p class="project-type">Учебный проект</p>
-                        <p class="project-description">
-                            Лендинг о технологиях будущего, выполненный в рамках обучения по видеоуроку. В процессе разработки реализованы адаптивная вёрстка и интерактивные элементы с использованием <b>HTML</b>, <b>SCSS</b> и <b>JavaScript</b>.
-                        </p>
-                        <div class="project-buttons">
-                            <a href="https://katymist.github.io/FUTURE-TECH/" class="project-btn" target="_blank">Смотреть проект →</a>
-                            <a href="https://github.com/KatyMist/FUTURE-TECH" class="project-btn project-btn--secondary" target="_blank">Разработка →</a>
+                <div class="project-accordion">
+                    <!-- Сайт для подолога -->
+                    <article class="project-accordion__item">
+                        <button class="project-accordion__toggle" type="button" aria-expanded="false" aria-controls="panel-commercial-1">
+                            <span class="project-accordion__number">01</span>
+                            <span class="project-accordion__name">Сайт для подолога</span>
+                            <span class="project-accordion__icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="project-accordion__panel" id="panel-commercial-1">
+                            <div class="project-accordion__inner">
+                                <div class="project-accordion__row">
+                                    <div class="project-content">
+                                        <p class="project-type">Полноценный коммерческий проект, разработанный с нуля по брифу заказчика</p>
+                                        <p class="project-description">Сайт для подолога, созданный с учётом специфики сферы и потребностей целевой аудитории. Я самостоятельно выполнила весь цикл разработки: спроектировала структуру сайта, реализовала адаптивную вёрстку, подключила необходимый функционал и подготовила проект к публикации.</p>
+                                        <p class="project-description">Особое внимание уделила удобству пользователей, скорости загрузки, семантической HTML-разметке и корректному отображению сайта на всех устройствах.</p>
+                                        <p class="project-description">Помимо разработки, я выполнила базовую SEO-оптимизацию: настроила метатеги, структуру заголовков, оптимизировала изображения, подготовила сайт для корректной индексации поисковыми системами и улучшила технические показатели, влияющие на поисковое продвижение.</p>
+                                        <p class="project-description">Также подключила и настроила Яндекс Метрику, чтобы заказчик мог отслеживать посещаемость сайта, поведение пользователей, источники трафика и эффективность продвижения.</p>
+                                        <p class="project-description">В результате заказчик получил современный, быстрый и удобный сайт, полностью соответствующий требованиям брифа, готовый к продвижению и дальнейшей аналитике.</p>
+                                        <div class="project-buttons">
+                                            <a href="https://annakudurova.ru/" class="project-btn" target="_blank">Смотреть проект →</a>
+                                            <a href="https://github.com/KatyMist/-Podolog_Anna_Kudurova" class="project-btn project-btn--secondary" target="_blank">Разработка →</a>
+                                        </div>
+                                    </div>
+                                    <div class="project-image">
+                                        <img src="./images/project/3.jpg" alt="Сайт подолога" class="project-img">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="project-image">
-                        <img src="./images/project/2.jpg" alt="Future Tech сайт" class="project-img">
-                    </div>
-                </article>
+                    </article>
 
-                <!-- Проект 3: Сайт для подолога -->
-                <article class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-name">03 | Сайт для подолога</h3>
-                        <p class="project-type">Полноценный коммерческий проект, разработанный с нуля по брифу заказчика</p>
-                        <p class="project-description">Сайт для подолога, созданный с учётом специфики сферы и потребностей целевой аудитории. Я самостоятельно выполнила весь цикл разработки: спроектировала структуру сайта, реализовала адаптивную вёрстку, подключила необходимый функционал и подготовила проект к публикации.</p>
-                        <p class="project-description">Особое внимание уделила удобству пользователей, скорости загрузки, семантической HTML-разметке и корректному отображению сайта на всех устройствах.</p>
-                        <p class="project-description">Помимо разработки, я выполнила базовую SEO-оптимизацию: настроила метатеги, структуру заголовков, оптимизировала изображения, подготовила сайт для корректной индексации поисковыми системами и улучшила технические показатели, влияющие на поисковое продвижение.</p>
-                        <p class="project-description">Также подключила и настроила Яндекс Метрику, чтобы заказчик мог отслеживать посещаемость сайта, поведение пользователей, источники трафика и эффективность продвижения.</p>
-                        <p class="project-description">В результате заказчик получил современный, быстрый и удобный сайт, полностью соответствующий требованиям брифа, готовый к продвижению и дальнейшей аналитике.</p>
-                        <div class="project-buttons">
-                            <a href="https://annakudurova.ru/" class="project-btn" target="_blank">Смотреть проект →</a>
-                            <a href="https://github.com/KatyMist/-Podolog_Anna_Kudurova" class="project-btn project-btn--secondary" target="_blank">Разработка →</a>
+                    <!-- Личный сайт-портфолио -->
+                    <article class="project-accordion__item">
+                        <button class="project-accordion__toggle" type="button" aria-expanded="false" aria-controls="panel-commercial-2">
+                            <span class="project-accordion__number">02</span>
+                            <span class="project-accordion__name">Личный сайт-портфолио</span>
+                            <span class="project-accordion__icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="project-accordion__panel" id="panel-commercial-2">
+                            <div class="project-accordion__inner">
+                                <div class="project-accordion__row">
+                                    <div class="project-content">
+                                        <p class="project-type">Персональный проект</p>
+                                        <p class="project-description">Личный сайт-портфолио с авторским дизайном и собственной концепцией.</p>
+                                        <p class="project-description">Проект создан с нуля: от разработки визуального стиля и цветовой палитры до адаптивной вёрстки и реализации интерактивных элементов на HTML, SCSS и JavaScript.</p>
+                                        <div class="project-buttons">
+                                            <a href="https://katymist.github.io/Portfolio/" class="project-btn" target="_blank">Смотреть проект →</a>
+                                            <a href="https://github.com/KatyMist/Portfolio" class="project-btn project-btn--secondary" target="_blank">Разработка →</a>
+                                        </div>
+                                    </div>
+                                    <div class="project-image">
+                                        <img src="./images/project/4.jpg" alt="Портфолио сайт" class="project-img">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="project-image">
-                        <img src="./images/project/3.jpg" alt="Сайт подолога" class="project-img">
-                    </div>
-                </article>
+                    </article>
+                </div>
+            </div>
 
-                <!-- Проект 4: Личный сайт-портфолио -->
-                <article class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-name">04 | Личный сайт-портфолио</h3>
-                        <p class="project-type">Персональный проект</p>
-                        <p class="project-description">Личный сайт-портфолио с авторским дизайном и собственной концепцией.</p>
-                        <p class="project-description">Проект создан с нуля: от разработки визуального стиля и цветовой палитры до адаптивной вёрстки и реализации интерактивных элементов на HTML, SCSS и JavaScript.</p>
-                        <div class="project-buttons">
-                            <a href="https://katymist.github.io/Portfolio/" class="project-btn" target="_blank">Смотреть проект →</a>
-                            <a href="https://github.com/KatyMist/Portfolio" class="project-btn project-btn--secondary" target="_blank">Разработка →</a>
-                        </div>
-                    </div>
-                    <div class="project-image">
-                        <img src="./images/project/4.jpg" alt="Портфолио сайт" class="project-img">
-                    </div>
-                </article>
+            <!-- ===== Учебные проекты ===== -->
+            <div class="projects-category">
+                <div class="projects-category__header">
+                    <h3 class="projects-category__title">Учебные проекты</h3>
+                    <p class="projects-category__desc">Проекты, выполненные в процессе обучения и для развития навыков.</p>
+                </div>
 
-                <!-- Проект 5: Todo React -->
-                <article class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-name">05 | Todo React</h3>
-                        <p class="project-type">Учебный проект</p>
-                        <p class="project-description">Todo React — учебное SPA-приложение для управления задачами, разработанное в процессе изучения React. Проект создан на основе видеоуроков с последующей самостоятельной доработкой. В ходе разработки были освоены компонентный подход, React Hooks, Context API, взаимодействие с REST API и организация структуры приложения.</p>
-                        <p class="project-description">Реализованы создание, поиск, редактирование, удаление и изменение статуса задач с синхронизацией данных через JSON Server.</p>
-                        <div class="project-buttons">
-                            <a href="https://katymist.github.io/todo-react/" class="project-btn" target="_blank">Смотреть проект →</a>
-                            <a href="https://github.com/KatyMist/todo-react" class="project-btn project-btn--secondary" target="_blank">Разработка →</a>
+                <div class="project-accordion">
+                    <!-- Kropp Fitness -->
+                    <article class="project-accordion__item">
+                        <button class="project-accordion__toggle" type="button" aria-expanded="false" aria-controls="panel-edu-1">
+                            <span class="project-accordion__number">01</span>
+                            <span class="project-accordion__name">Kropp Fitness</span>
+                            <span class="project-accordion__icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="project-accordion__panel" id="panel-edu-1">
+                            <div class="project-accordion__inner">
+                                <div class="project-accordion__row">
+                                    <div class="project-content">
+                                        <p class="project-type">Учебный проект</p>
+                                        <p class="project-description">Адаптивный лендинг фитнес-клуба, созданный в рамках обучения по видеоуроку. Проект позволил закрепить навыки семантической и адаптивной вёрстки с использованием <b>HTML</b> и <b>CSS</b>.</p>
+                                        <div class="project-buttons">
+                                            <a href="https://katymist.github.io/KROPP-FITNESS/" class="project-btn" target="_blank">Смотреть проект →</a>
+                                            <a href="https://github.com/KatyMist/KROPP-FITNESS" class="project-btn project-btn--secondary" target="_blank">Разработка →</a>
+                                        </div>
+                                    </div>
+                                    <div class="project-image">
+                                        <img src="./images/project/1.jpg" alt="Kropp Fitness сайт" class="project-img">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="project-image">
-                        <img src="./images/project/5.jpg" alt="Портфолио сайт" class="project-img">
-                    </div>
-                </article>
+                    </article>
 
-                <!-- Проект 6: Pizzeria | Gestione del Menu -->
-                <article class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-name">06 | Pizzeria - Gestione del Menu </h3>
-                        <p class="project-type">Учебный проект</p>
-                        <p class="project-description">SPA-приложение для управления меню пиццерии, разработанное на React и TypeScript. Реализованы CRUD-операции, контролируемые формы с валидацией и сохранением данных в localStorage.</p>
-                        <p class="project-description">Основная логика выполнена в рамках обучающего курса, дизайн интерфейса, адаптивная вёрстка и стилизация на SCSS разработаны самостоятельно.</p>
-                        <div class="project-buttons">
-                            <a href="https://github.com/KatyMist/React-Typescript-Project-Public-Starter" class="project-btn" target="_blank">Смотреть проект →</a>
-                            <a href="https://katymist.github.io/React-Typescript-Project-Public-Starter/" class="project-btn project-btn--secondary" target="_blank">Разработка →</a>
+                    <!-- Future Tech -->
+                    <article class="project-accordion__item">
+                        <button class="project-accordion__toggle" type="button" aria-expanded="false" aria-controls="panel-edu-2">
+                            <span class="project-accordion__number">02</span>
+                            <span class="project-accordion__name">Future Tech</span>
+                            <span class="project-accordion__icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="project-accordion__panel" id="panel-edu-2">
+                            <div class="project-accordion__inner">
+                                <div class="project-accordion__row">
+                                    <div class="project-content">
+                                        <p class="project-type">Учебный проект</p>
+                                        <p class="project-description">Лендинг о технологиях будущего, выполненный в рамках обучения по видеоуроку. В процессе разработки реализованы адаптивная вёрстка и интерактивные элементы с использованием <b>HTML</b>, <b>SCSS</b> и <b>JavaScript</b>.</p>
+                                        <div class="project-buttons">
+                                            <a href="https://katymist.github.io/FUTURE-TECH/" class="project-btn" target="_blank">Смотреть проект →</a>
+                                            <a href="https://github.com/KatyMist/FUTURE-TECH" class="project-btn project-btn--secondary" target="_blank">Разработка →</a>
+                                        </div>
+                                    </div>
+                                    <div class="project-image">
+                                        <img src="./images/project/2.jpg" alt="Future Tech сайт" class="project-img">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="project-image">
-                        <img src="./images/project/6.jpg" alt="Портфолио сайт" class="project-img">
-                    </div>
-                </article>
+                    </article>
+
+                    <!-- Todo React -->
+                    <article class="project-accordion__item">
+                        <button class="project-accordion__toggle" type="button" aria-expanded="false" aria-controls="panel-edu-3">
+                            <span class="project-accordion__number">03</span>
+                            <span class="project-accordion__name">Todo React</span>
+                            <span class="project-accordion__icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="project-accordion__panel" id="panel-edu-3">
+                            <div class="project-accordion__inner">
+                                <div class="project-accordion__row">
+                                    <div class="project-content">
+                                        <p class="project-type">Учебный проект</p>
+                                        <p class="project-description">Todo React — учебное SPA-приложение для управления задачами, разработанное в процессе изучения React. Проект создан на основе видеоуроков с последующей самостоятельной доработкой. В ходе разработки были освоены компонентный подход, React Hooks, Context API, взаимодействие с REST API и организация структуры приложения.</p>
+                                        <p class="project-description">Реализованы создание, поиск, редактирование, удаление и изменение статуса задач с синхронизацией данных через JSON Server.</p>
+                                        <div class="project-buttons">
+                                            <a href="https://katymist.github.io/todo-react/" class="project-btn" target="_blank">Смотреть проект →</a>
+                                            <a href="https://github.com/KatyMist/todo-react" class="project-btn project-btn--secondary" target="_blank">Разработка →</a>
+                                        </div>
+                                    </div>
+                                    <div class="project-image">
+                                        <img src="./images/project/5.jpg" alt="Todo React проект" class="project-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Pizzeria - Gestione del Menu -->
+                    <article class="project-accordion__item">
+                        <button class="project-accordion__toggle" type="button" aria-expanded="false" aria-controls="panel-edu-4">
+                            <span class="project-accordion__number">04</span>
+                            <span class="project-accordion__name">Pizzeria — Gestione del Menu</span>
+                            <span class="project-accordion__icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="project-accordion__panel" id="panel-edu-4">
+                            <div class="project-accordion__inner">
+                                <div class="project-accordion__row">
+                                    <div class="project-content">
+                                        <p class="project-type">Учебный проект</p>
+                                        <p class="project-description">SPA-приложение для управления меню пиццерии, разработанное на React и TypeScript. Реализованы CRUD-операции, контролируемые формы с валидацией и сохранением данных в localStorage.</p>
+                                        <p class="project-description">Основная логика выполнена в рамках обучающего курса, дизайн интерфейса, адаптивная вёрстка и стилизация на SCSS разработаны самостоятельно.</p>
+                                        <div class="project-buttons">
+                                            <a href="https://github.com/KatyMist/React-Typescript-Project-Public-Starter" class="project-btn" target="_blank">Смотреть проект →</a>
+                                            <a href="https://katymist.github.io/React-Typescript-Project-Public-Starter/" class="project-btn project-btn--secondary" target="_blank">Разработка →</a>
+                                        </div>
+                                    </div>
+                                    <div class="project-image">
+                                        <img src="./images/project/6.jpg" alt="Pizzeria проект" class="project-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
     </main>
