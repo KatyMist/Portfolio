@@ -41,18 +41,36 @@
 
 .skills-title,
 .courses-title {
-    font-family: 'Philosopherr', sans-serif;
+    position: relative;
+    font-family: 'Philosopher', sans-serif;
     font-size: fluid(36, 24);
     font-weight: 700;
     color: var(--color-bg-green);
-    margin: 0 0 rem(16) 0;
+    margin: 0 0 rem(28) 0;
     line-height: 1.2;
     text-align: center;
     transition: color 0.4s ease;
 
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: rem(-14);
+        transform: translateX(-50%);
+        width: rem(64);
+        height: 3px;
+        background: var(--color-bg-green);
+        border-radius: 2px;
+    }
+
     @include mobile {
         font-size: rem(24);
-        margin-bottom: rem(12);
+        margin-bottom: rem(22);
+
+        &::after {
+            width: rem(44);
+            bottom: rem(-10);
+        }
     }
 }
 

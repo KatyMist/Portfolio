@@ -18,32 +18,51 @@
 .projects-header {
     position: relative;
     z-index: 2;
-    margin-bottom: rem(80);
+    margin-bottom: rem(60);
     text-align: center;
     max-width: rem(800);
     margin-left: auto;
     margin-right: auto;
 
     @include tablet {
-        margin-bottom: rem(60);
+        margin-bottom: rem(48);
     }
 
     @include mobile {
-        margin-bottom: rem(40);
+        margin-bottom: rem(32);
     }
 }
 
 .projects-title {
+    position: relative;
+    display: inline-block;
     font-family: 'Philosopher', sans-serif;
     font-size: fluid(48, 28);
     font-weight: 700;
     color: var(--color-bg-green);
-    margin: 0 0 rem(20) 0;
+    margin: 0 0 rem(32) 0;
     line-height: 1.2;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: rem(-16);
+        transform: translateX(-50%);
+        width: rem(64);
+        height: 3px;
+        background: var(--color-bg-green);
+        border-radius: 2px;
+    }
 
     @include mobile {
         font-size: rem(28);
-        margin-bottom: rem(16);
+        margin-bottom: rem(24);
+
+        &::after {
+            width: rem(44);
+            bottom: rem(-12);
+        }
     }
 }
 
@@ -61,101 +80,255 @@
     }
 }
 
-.projects-grid {
+/* ===== Категории проектов ===== */
+
+.projects-category {
     position: relative;
     z-index: 2;
-    display: flex;
-    flex-direction: column;
-    gap: rem(100);
+    margin-bottom: rem(100);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 
     @include tablet {
-        gap: rem(80);
+        margin-bottom: rem(70);
     }
 
     @include mobile {
-        gap: rem(60);
+        margin-bottom: rem(50);
     }
 }
 
-.project-card {
+.projects-category__header {
+    margin-bottom: rem(48);
+    text-align: center;
+
+    @include mobile {
+        margin-bottom: rem(32);
+    }
+}
+
+.projects-category__title {
+    font-family: 'Philosopher', sans-serif;
+    font-size: fluid(32, 22);
+    font-weight: 700;
+    color: var(--color-bg-green);
+    margin: 0 0 rem(10) 0;
+    line-height: 1.2;
+
+    @include mobile {
+        font-size: rem(22);
+    }
+}
+
+.projects-category__desc {
+    font-family: 'MarckScript-Regular', sans-serif;
+    font-size: rem(16);
+    font-weight: 400;
+    color: var(--color-text-light);
+    margin: 0;
+    line-height: 1.6;
+
+    @include mobile {
+        font-size: rem(14);
+    }
+}
+
+/* ===== Аккордеон проектов ===== */
+
+.project-accordion {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-accordion__item {
+    border-top: 1px solid var(--color-bg-beige);
+
+    &:last-child {
+        border-bottom: 1px solid var(--color-bg-beige);
+    }
+}
+
+.project-accordion__toggle {
+    display: flex;
+    align-items: center;
+    gap: rem(24);
+    width: 100%;
+    padding: rem(28) rem(4);
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus-visible {
+        outline: 1px solid var(--color-bg-green);
+        outline-offset: 6px;
+    }
+
+    @include mobile {
+        gap: rem(14);
+        padding: rem(20) rem(2);
+    }
+}
+
+.project-accordion__number {
+    flex-shrink: 0;
+    font-family: 'Oswald', sans-serif;
+    font-size: rem(14);
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--color-bg-green);
+    opacity: 0.35;
+    min-width: rem(28);
+
+    @include mobile {
+        font-size: rem(12);
+        min-width: rem(20);
+    }
+}
+
+.project-accordion__name {
+    flex: 1;
+    font-family: 'MarckScript-Regular', sans-serif;
+    font-size: fluid(32, 20);
+    font-weight: 700;
+    color: var(--color-bg-green);
+    line-height: 1.2;
+    transition: opacity 0.25s ease;
+
+    .project-accordion__toggle:hover & {
+        opacity: 0.75;
+    }
+
+    @include mobile {
+        font-size: rem(19);
+    }
+}
+
+.project-accordion__icon {
+    position: relative;
+    flex-shrink: 0;
+    width: rem(30);
+    height: rem(30);
+    border: 1px solid var(--color-bg-beige);
+    border-radius: 50%;
+    transition: border-color 0.25s ease, background 0.25s ease;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background: var(--color-bg-green);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    &::before {
+        width: rem(12);
+        height: 1.5px;
+        transform: translate(-50%, -50%);
+    }
+
+    &::after {
+        width: 1.5px;
+        height: rem(12);
+        transform: translate(-50%, -50%);
+    }
+
+    .project-accordion__toggle:hover & {
+        border-color: var(--color-bg-green);
+    }
+
+    @include mobile {
+        width: rem(24);
+        height: rem(24);
+
+        &::before {
+            width: rem(10);
+        }
+
+        &::after {
+            height: rem(10);
+        }
+    }
+}
+
+.project-accordion__item.is-open .project-accordion__icon {
+    background: var(--color-bg-green);
+
+    &::before,
+    &::after {
+        background: var(--color-bg-main);
+    }
+
+    &::after {
+        transform: translate(-50%, -50%) rotate(90deg);
+        opacity: 0;
+    }
+}
+
+.project-accordion__panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s ease;
+}
+
+.project-accordion__item.is-open .project-accordion__panel {
+    grid-template-rows: 1fr;
+}
+
+.project-accordion__inner {
+    overflow: hidden;
+}
+
+.project-accordion__row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: rem(60);
     align-items: start;
-    position: relative;
-    padding-bottom: rem(80);
-    border-bottom: 1px solid var(--color-bg-beige);
-
-    &:last-child {
-        border-bottom: none;
-    }
-
-    &:nth-child(even) {
-        direction: rtl;
-
-        .project-content,
-        .project-image {
-            direction: ltr;
-        }
-    }
+    padding: 0 rem(4) rem(56) rem(4);
 
     @include tablet {
         grid-template-columns: 1fr;
-        gap: rem(40);
-        padding-bottom: rem(60);
-
-        &:nth-child(even) {
-            direction: ltr;
-        }
+        gap: rem(32);
+        padding: 0 rem(4) rem(40) rem(4);
     }
 
     @include mobile {
-        gap: rem(30);
-        padding-bottom: rem(40);
+        gap: rem(24);
+        padding: 0 rem(2) rem(28) rem(2);
     }
 }
 
-.project-number {
-    position: absolute;
-    top: rem(20);
-    right: rem(40);
-    font-family: 'Oswald', sans-serif;
-    font-size: rem(80);
-    font-weight: 700;
-    color: var(--color-bg-beige);
-    opacity: 0.2;
-    line-height: 1;
-    z-index: -1;
+/* чередование сторон, как в исходном дизайне */
+.project-accordion__item:nth-child(even) .project-accordion__row {
+    direction: rtl;
+
+    .project-content,
+    .project-image {
+        direction: ltr;
+    }
 
     @include tablet {
-        font-size: rem(60);
-        right: rem(20);
-    }
-
-    @include mobile {
-        font-size: rem(40);
-        opacity: 0.15;
+        direction: ltr;
     }
 }
+
+/* ===== Содержимое карточки внутри аккордеона ===== */
 
 .project-content {
     position: relative;
     z-index: 1;
     display: flex;
     flex-direction: column;
-}
-
-.project-name {
-    font-family: 'MarckScript-Regular', sans-serif;
-    font-size: fluid(36, 24);
-    font-weight: 700;
-    color: var(--color-bg-green);
-    margin: 0 0 rem(8) 0;
-    line-height: 1.2;
-
-    @include mobile {
-        font-size: rem(24);
-    }
 }
 
 .project-type {
@@ -178,8 +351,12 @@
     font-size: rem(16);
     font-weight: 400;
     color: var(--color-text-light);
-    margin: 0 0 rem(24) 0;
+    margin: 0 0 rem(20) 0;
     line-height: 1.7;
+
+    &:last-of-type {
+        margin-bottom: rem(24);
+    }
 
     @include tablet {
         font-size: rem(15);
@@ -188,7 +365,7 @@
     @include mobile {
         font-size: rem(14);
         line-height: 1.6;
-        margin-bottom: rem(20);
+        margin-bottom: rem(16);
     }
 }
 
@@ -257,10 +434,6 @@
 
     @include tablet {
         order: -1;
-    }
-
-    @include mobile {
-        order: unset;
     }
 }
 
