@@ -1258,7 +1258,7 @@ section {
   border: none;
   padding: 0;
   cursor: pointer;
-  z-index: 101;
+  z-index: 1000;
   margin-left: auto;
 }
 @media (max-width: 47.99875rem) {
@@ -1270,8 +1270,9 @@ section {
   width: 1.5rem;
   height: 2px;
   background: #333333;
-  transition: all 0.3s ease;
   position: absolute;
+  transform-origin: center;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .burger span:nth-child(1) {
   transform: translateY(-6px);
@@ -1280,29 +1281,44 @@ section {
   transform: translateY(6px);
 }
 .burger.burger--active span:nth-child(1) {
-  transform: rotate(45deg);
+  transform: translateY(0) rotate(45deg);
 }
 .burger.burger--active span:nth-child(2) {
   opacity: 0;
+  transform: scale(0);
 }
 .burger.burger--active span:nth-child(3) {
-  transform: rotate(-45deg);
+  transform: translateY(0) rotate(-45deg);
+}
+
+.header {
+  position: relative;
+  z-index: 100;
 }
 
 @media (max-width: 47.99875rem) {
   .nav {
-    position: fixed;
-    top: 3.75rem;
-    left: 0;
-    right: 0;
-    background: #FAF8F4;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    z-index: 100;
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: #FAF8F4 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+    z-index: 999;
   }
   .nav.nav--active {
-    max-height: 100vh;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .nav.nav--active .nav__link {
+    opacity: 1;
   }
 }
 
@@ -1322,16 +1338,21 @@ section {
 @media (max-width: 47.99875rem) {
   .nav__list {
     flex-direction: column;
-    gap: 0;
-    padding: 1.25rem 1rem;
+    align-items: center;
+    gap: 1.75rem;
+    padding: 0;
     text-align: center;
+    width: 100%;
   }
 }
 
 @media (max-width: 47.99875rem) {
   .nav__link {
-    padding: 0.75rem 0;
+    padding: 0;
     display: block;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.4s ease 0.1s;
   }
   .nav__link.is-active::after {
     display: none;
@@ -1621,7 +1642,7 @@ section {
 .projects-header {
   position: relative;
   z-index: 2;
-  margin-bottom: 3.75rem;
+  margin-bottom: 1.75rem;
   text-align: center;
   max-width: 50rem;
   margin-left: auto;
@@ -1629,12 +1650,12 @@ section {
 }
 @media (max-width: 63.99875rem) {
   .projects-header {
-    margin-bottom: 3rem;
+    margin-bottom: 1.375rem;
   }
 }
 @media (max-width: 47.99875rem) {
   .projects-header {
-    margin-bottom: 2rem;
+    margin-bottom: 1.125rem;
   }
 }
 
@@ -1642,31 +1663,39 @@ section {
   position: relative;
   display: inline-block;
   font-family: "Philosopher", sans-serif;
-  font-size: clamp(1.75rem, 1.347107438rem + 1.652892562vw, 3rem);
-  font-weight: 700;
+  font-size: clamp(1.875rem, 1.3512396694rem + 2.1487603306vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
   color: var(--color-bg-green);
-  margin: 0 0 2rem 0;
-  line-height: 1.2;
+  background: linear-gradient(135deg, var(--color-bg-green) 0%, var(--color-beige-dark) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 1.125rem 0;
+  line-height: 1.15;
 }
 .projects-title::after {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -1rem;
+  bottom: -0.875rem;
   transform: translateX(-50%);
-  width: 4rem;
-  height: 3px;
-  background: var(--color-bg-green);
-  border-radius: 2px;
+  width: 5rem;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-bg-green), var(--color-beige-dark));
+  border-radius: 3px;
 }
 @media (max-width: 47.99875rem) {
   .projects-title {
-    font-size: 1.75rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.875rem;
+    letter-spacing: 0.0625rem;
+    margin-bottom: 0.875rem;
   }
   .projects-title::after {
-    width: 2.75rem;
-    bottom: -0.75rem;
+    width: 3.125rem;
+    height: 3px;
+    bottom: -0.625rem;
   }
 }
 
@@ -1689,29 +1718,29 @@ section {
 .projects-category {
   position: relative;
   z-index: 2;
-  margin-bottom: 6.25rem;
+  margin-bottom: 3.5rem;
 }
 .projects-category:last-child {
   margin-bottom: 0;
 }
 @media (max-width: 63.99875rem) {
   .projects-category {
-    margin-bottom: 4.375rem;
+    margin-bottom: 2.5rem;
   }
 }
 @media (max-width: 47.99875rem) {
   .projects-category {
-    margin-bottom: 3.125rem;
+    margin-bottom: 1.75rem;
   }
 }
 
 .projects-category__header {
-  margin-bottom: 3rem;
+  margin-bottom: 1.25rem;
   text-align: center;
 }
 @media (max-width: 47.99875rem) {
   .projects-category__header {
-    margin-bottom: 2rem;
+    margin-bottom: 0.875rem;
   }
 }
 
@@ -1719,13 +1748,19 @@ section {
   font-family: "Philosopher", sans-serif;
   font-size: clamp(1.375rem, 1.173553719rem + 0.826446281vw, 2rem);
   font-weight: 700;
+  letter-spacing: 0.0625rem;
   color: var(--color-bg-green);
+  background: linear-gradient(135deg, var(--color-bg-green) 0%, var(--color-beige-dark) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin: 0 0 0.625rem 0;
   line-height: 1.2;
 }
 @media (max-width: 47.99875rem) {
   .projects-category__title {
     font-size: 1.375rem;
+    letter-spacing: 0;
   }
 }
 
@@ -1906,20 +1941,6 @@ section {
   .project-accordion__row {
     gap: 1.5rem;
     padding: 0 0.125rem 1.75rem 0.125rem;
-  }
-}
-
-/* чередование сторон, как в исходном дизайне */
-.project-accordion__item:nth-child(even) .project-accordion__row {
-  direction: rtl;
-}
-.project-accordion__item:nth-child(even) .project-accordion__row .project-content,
-.project-accordion__item:nth-child(even) .project-accordion__row .project-image {
-  direction: ltr;
-}
-@media (max-width: 63.99875rem) {
-  .project-accordion__item:nth-child(even) .project-accordion__row {
-    direction: ltr;
   }
 }
 
