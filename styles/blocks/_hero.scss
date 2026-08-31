@@ -7,7 +7,7 @@
     background: var(--color-bg-main);
     transition: background-color 0.4s ease;
     overflow: hidden;
-    min-height: 100vh;
+    min-height: rem(750); // было 100vh — теперь высота под реальный контент
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,10 +15,12 @@
 
     @include tablet {
         padding: rem(40) rem(24);
+        min-height: rem(480);
     }
 
     @include mobile {
         padding: rem(20) rem(16);
+        min-height: rem(400);
     }
 }
 
@@ -27,7 +29,7 @@
     top: 40%;
     left: 50%;
     translate: -50% -50%;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'PlayfairDisplay', sans-serif;
     font-size: fluid(250, 80);
     font-weight: 800;
     white-space: nowrap;

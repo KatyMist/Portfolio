@@ -4,8 +4,7 @@
 .skills-section {
     padding: rem(80) rem(32);
     background: var(--color-bg-main);
-    border-bottom: 1px solid var(--color-bg-beige);
-    transition: background-color 0.4s ease, border-color 0.4s ease;
+    transition: background-color 0.4s ease;
 
     @include tablet {
         padding: rem(60) rem(24);
@@ -42,14 +41,30 @@
 .skills-title,
 .courses-title {
     position: relative;
-    font-family: 'Philosopher', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(24);
+    font-family: 'PlayfairDisplay', sans-serif;
     font-size: fluid(36, 24);
     font-weight: 700;
+    line-height: 1;
     color: var(--color-bg-green);
     margin: 0 0 rem(28) 0;
-    line-height: 1.2;
     text-align: center;
     transition: color 0.4s ease;
+
+    .line {
+        flex: 0 0 rem(120); // было flex: 1 — теперь фиксированная длина
+        height: 1px;
+        background: var(--color-bg-beige);
+        transition: background-color 0.4s ease;
+    }
+
+    .text {
+        flex-shrink: 0;
+        position: relative;
+    }
 
     &::after {
         content: '';
@@ -57,8 +72,8 @@
         left: 50%;
         bottom: rem(-14);
         transform: translateX(-50%);
-        width: rem(64);
-        height: 3px;
+        width: rem(24);
+        height: 1px;
         background: var(--color-bg-green);
         border-radius: 2px;
     }
@@ -66,17 +81,28 @@
     @include mobile {
         font-size: rem(24);
         margin-bottom: rem(22);
+        gap: rem(14);
+
+        .line {
+            display: none;
+        }
 
         &::after {
-            width: rem(44);
+            width: rem(20);
             bottom: rem(-10);
+        }
+    }
+
+    @include tablet {
+        .line {
+            flex-basis: rem(60); // покороче на планшете
         }
     }
 }
 
 .skills-description,
 .courses-description {
-    font-family: 'Philosopher', sans-serif;
+    font-family: 'PlayfairDisplay', sans-serif;
     font-size: rem(16);
     font-weight: 400;
     color: var(--color-text-light);
@@ -107,10 +133,21 @@
     grid-template-columns: repeat(2, 1fr);
     gap: rem(32);
     align-items: start;
+    max-width: rem(1200);
+    margin: 0 auto;
+    padding: rem(48);
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: rem(24);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
 
     @include mobile {
         grid-template-columns: 1fr;
         gap: rem(24);
+        padding: rem(24);
+        border-radius: rem(16);
     }
 }
 
@@ -130,7 +167,7 @@
 }
 
 .skills-col__title {
-    font-family: 'Philosopher', sans-serif;
+    font-family: 'PlayfairDisplay', sans-serif;
     font-size: fluid(28, 20);
     font-weight: 700;
     color: var(--color-text);
@@ -163,18 +200,21 @@
     align-items: center;
     gap: rem(14);
     padding: rem(18) rem(22);
-    background: var(--color-white);
-    border: 1px solid rgba($color-bg-beige, 0.5);
-    border-radius: rem(12);
-    font-family: 'Philosopher', sans-serif;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: rem(16);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    font-family: 'PlayfairDisplay', sans-serif;
     font-size: rem(15);
     color: var(--color-text);
-    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 
     @include hover {
-        background: rgba($color-bg-beige, 0.15);
-        border-color: var(--color-bg-green);
-        box-shadow: 0 8px 24px rgba($color-bg-green, 0.15);
+        background: rgba(255, 255, 255, 0.65);
+        box-shadow: 0 10px 28px rgba($color-bg-green, 0.15);
+        transform: translateY(-2px);
     }
 
     @include mobile {
@@ -182,7 +222,6 @@
         font-size: rem(14);
     }
 }
-
 .skills-list__link {
     display: flex;
     align-items: center;
@@ -220,33 +259,46 @@
     align-items: center;
     justify-content: center;
     gap: rem(10);
-    margin: rem(24) auto 0;
-    padding: rem(10) rem(20);
-    background: none;
-    border: none;
+    margin: rem(32) auto 0;
+    padding: rem(14) rem(28);
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 100px;
     cursor: pointer;
-    font-family: 'Philosopher', sans-serif;
+    font-family: 'PlayfairDisplay', sans-serif;
     font-size: rem(13);
     font-weight: 700;
     letter-spacing: rem(2);
     text-transform: uppercase;
     color: var(--color-text);
-    transition: color 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, color 0.3s ease;
 
     &__arrow {
-        font-size: rem(14);
+        display: inline-block;
+        width: rem(8);
+        height: rem(8);
+        border-right: 2px solid currentColor;
+        border-bottom: 2px solid currentColor;
+        transform: rotate(45deg);
         transition: transform 0.3s ease;
 
         &--up {
-            transform: rotate(180deg);
+            transform: rotate(-135deg);
         }
     }
 
     @include hover {
+        background: rgba(255, 255, 255, 0.75);
         color: var(--color-bg-green);
+        box-shadow: 0 8px 24px rgba($color-bg-green, 0.15);
+        transform: translateY(-2px);
+    }
 
-        .load-more__arrow:not(&--up) {
-            transform: translateY(rem(3));
-        }
+    @include mobile {
+        padding: rem(12) rem(22);
+        font-size: rem(12);
     }
 }

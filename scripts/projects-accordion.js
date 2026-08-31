@@ -1,8 +1,9 @@
-document.addEventListener('DOMContentLoaded', () => {
+export function initProjectAccordion() {
     const items = document.querySelectorAll('.project-accordion__item');
 
     items.forEach((item) => {
         const toggle = item.querySelector('.project-accordion__toggle');
+        if (!toggle) return;
 
         toggle.addEventListener('click', () => {
             const isOpen = item.classList.contains('is-open');
@@ -11,4 +12,4 @@ document.addEventListener('DOMContentLoaded', () => {
             toggle.setAttribute('aria-expanded', String(!isOpen));
         });
     });
-});
+}

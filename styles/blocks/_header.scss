@@ -1,19 +1,44 @@
 @use '../helpers' as *;
 @use '../variables' as *;
 
-.header { //шапка сайта
-    padding: rem(24) rem(32);
+.header {
+    padding: rem(16) rem(32);
     background: var(--color-bg-main);
     position: sticky;
     top: 0;
     z-index: 100;
     display: flex;
-    justify-content: flex-end;  
+    justify-content: space-between;
     align-items: center;
-    gap: rem(20);
     transition: background-color 0.4s ease;
 
-     @include mobile {
-        padding: rem(16) rem(12);
+    @include mobile {
+        padding: rem(12) rem(12);
+    }
+}
+
+.header__right {
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    height: rem(56); // жёстко фиксируем высоту самого контейнера
+    overflow: hidden; // подстраховка от переполнения
+
+    img,
+    svg {
+        height: 100%;
+        width: auto;
+        max-width: none;
+        display: block;
+    }
+
+    @include mobile {
+        height: rem(38);
     }
 }
