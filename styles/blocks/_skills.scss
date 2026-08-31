@@ -195,6 +195,14 @@
     padding: 0;
 }
 
+.skills-list__item.js-reveal {
+    @for $i from 1 through 12 {
+        &:nth-child(#{$i}) {
+            transition-delay: #{$i * 0.05}s;
+        }
+    }
+}
+
 .skills-list__item {
     display: flex;
     align-items: center;
