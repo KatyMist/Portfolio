@@ -85,6 +85,7 @@
 
 // КАРТОЧКА-СТЕКЛО — идентична .skills-columns
 .contacts-card {
+    position: relative; // нужно для абсолютного позиционирования декора
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     gap: rem(48);
@@ -98,6 +99,7 @@
     border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: rem(24);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+    overflow: hidden; // чтобы декор не вылезал за скруглённые углы
 
     @include tablet {
         grid-template-columns: 1fr;
@@ -111,6 +113,23 @@
         border-radius: rem(16);
     }
 }
+
+.contacts-card__decor {
+    position: absolute;
+    top: 50%;
+    right: rem(-40);
+    translate: 0 -50%;
+    width: rem(330);
+    height: auto;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 0;
+
+    @include tablet {
+        display: none; 
+    }
+}
+
 
 .contacts-card__divider {
     width: 1px;
@@ -217,6 +236,8 @@
 }
 
 .contacts-card__right {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
