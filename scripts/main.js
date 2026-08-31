@@ -6,6 +6,7 @@ import { initLoadMore } from './loadMore.js';
 import { initTheme } from './theme.js';
 import { initActiveNavOnScroll } from './active-nav.js';
 import { initProjectAccordion } from './projects-accordion.js';
+import { initReveal } from './reveal.js';
 
 initBurger();
 initLoader();
@@ -15,3 +16,4 @@ initLoadMore();
 initTheme();
 initActiveNavOnScroll();
 initProjectAccordion();
+initReveal();
