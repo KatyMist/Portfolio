@@ -2,6 +2,8 @@
 @use '../variables' as *;
 
 .nav {
+    flex-shrink: 0;
+
     @include mobile {
         position: fixed;
         top: rem(60);
@@ -23,13 +25,10 @@
 .nav__list {
     display: flex;
     gap: rem(40);
-    justify-content: flex-end;  
     flex-wrap: wrap;
-    padding-right: rem(32);      
 
     @include tablet {
         gap: rem(24);
-        padding-right: rem(24);
     }
 
     @include mobile {
@@ -41,7 +40,7 @@
 }
 
 .nav__link {
-    font-family: 'Philosopher', sans-serif;
+    font-family: 'PlayfairDisplay', sans-serif;
     font-weight: 600;
     font-size: rem(14);
     color: var(--color-text);

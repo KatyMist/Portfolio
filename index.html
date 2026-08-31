@@ -12,7 +12,8 @@
     <meta property="og:image" content="/images/Main.jpg">
     
     <link rel="stylesheet" href="./styles/main.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/1.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-touch-icon-120.png" />
     <link rel="canonical" href="https://katymist.github.io/Portfolio/">
     
 
@@ -37,44 +38,424 @@
 </head>
 <body>
     <header class="header">
-        <nav class="nav" id="nav">
-            <ul class="nav__list">
-                <li><a href="index.html" class="nav__link is-active">ОБО МНЕ</a></li>
-                <li><a href="skills.html" class="nav__link">НАВЫКИ</a></li>
-                <li><a href="projects.html" class="nav__link">ПОРТФОЛИО</a></li>
-                <li><a href="contacts.html" class="nav__link">КОНТАКТЫ</a></li>
-            </ul>
-        </nav>
+        <a href="index.html" class="header__logo">
+            <img src="./images/1.svg" alt="Екатерина Туманова — Frontend Developer">
+        </a>
 
-        <button class="theme-switch" id="themeToggle" type="button" aria-label="Переключить тему" data-theme-state="light">
-            <span class="theme-switch__track">
-                <span class="theme-switch__thumb">
-                    <svg class="theme-switch__icon theme-switch__icon--sun" viewBox="0 0 24 24" fill="none">
-                        <circle cx="12" cy="12" r="4" fill="currentColor"/>
-                        <path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-                    </svg>
-                    <svg class="theme-switch__icon theme-switch__icon--moon" viewBox="0 0 24 24" fill="none">
-                        <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" fill="currentColor"/>
-                    </svg>
+        <div class="header__right">
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html#hero" class="nav__link is-active">ОБО МНЕ</a></li>
+                    <li><a href="index.html#skills" class="nav__link">НАВЫКИ</a></li>
+                    <li><a href="index.html#projects" class="nav__link">ПОРТФОЛИО</a></li>
+                    <li><a href="index.html#contacts" class="nav__link">КОНТАКТЫ</a></li>
+                </ul>
+            </nav>
+
+            <button class="theme-switch" id="themeToggle" type="button" aria-label="Переключить тему" data-theme-state="light">
+                <span class="theme-switch__track">
+                    <span class="theme-switch__thumb">
+                        <svg class="theme-switch__icon theme-switch__icon--sun" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="4" fill="currentColor"/>
+                            <path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                        </svg>
+                        <svg class="theme-switch__icon theme-switch__icon--moon" viewBox="0 0 24 24" fill="none">
+                            <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" fill="currentColor"/>
+                        </svg>
+                    </span>
                 </span>
-            </span>
-        </button>
+            </button>
 
-        <button class="burger" id="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+            <button class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero" id="hero">
             <div class="hero__bg-title">ПОРТФОЛИО</div>
             <div class="hero__year">'26</div>
             
             <div class="hero__overlay-text">
                 <h2 class="hero__overlay-name">Екатерина Туманова</h2>
                 <p class="hero__overlay-role">Frontend Developer</p>
+            </div>
+        </section>
+
+        <section class="skills-section" id="skills">
+            <div class="skills-header">
+                <h2 class="skills-title">
+                    <span class="line"></span>
+                    <span class="text">СТЕК И ИНСТРУМЕНТЫ</span>
+                    <span class="line"></span>
+                </h2>
+            </div>
+
+            <div class="skills-columns js-load-more-content">
+                <div class="skills-col">
+                    <h3 class="skills-col__title">Технические навыки</h3>
+                    <ul class="skills-list">
+                        <li class="skills-list__item"><span class="dot"></span>HTML5, CSS3, SCSS</li>
+                        <li class="skills-list__item"><span class="dot"></span>JavaScript</li>
+                        <li class="skills-list__item"><span class="dot"></span>Адаптивная и кроссбраузерная вёрстка</li>
+                        <li class="skills-list__item"><span class="dot"></span>Семантическая вёрстка, БЭМ (BEM)</li>
+                        <li class="skills-list__item"><span class="dot"></span>REST API, Fetch API</li>
+                        <li class="skills-list__item"><span class="dot"></span>Базовое SEO</li>
+                    </ul>
+
+                    <h3 class="skills-col__title skills-col__title--spaced">Изучаю сейчас</h3>
+                    <ul class="skills-list">
+                        <li class="skills-list__item"><span class="dot"></span>React</li>
+                        <li class="skills-list__item"><span class="dot"></span>Английский язык (A2)</li>
+                    </ul>
+                </div>
+
+                <div class="skills-col">
+                    <h3 class="skills-col__title">Инструменты и подход</h3>
+                        <ul class="skills-list">
+                            <li class="skills-list__item"><span class="dot"></span>Git, GitHub</li>
+                            <li class="skills-list__item"><span class="dot"></span>Vite</li>
+                            <li class="skills-list__item"><span class="dot"></span>Figma (вёрстка по макетам)</li>
+                            <li class="skills-list__item"><span class="dot"></span>Markdown</li>
+                            <li class="skills-list__item"><span class="dot"></span>Компонентный подход</li>
+                            <li class="skills-list__item"><span class="dot"></span>Чистый и читаемый код</li>
+                            <li class="skills-list__item"><span class="dot"></span>Базовая оптимизация производительности</li>
+                        </ul>
+
+                    <h3 class="skills-col__title skills-col__title--spaced">Языки</h3>
+                        <ul class="skills-list">
+                            <li class="skills-list__item"><span class="dot"></span>Русский — родной</li>
+                        </ul>
+                </div> 
+            </div>
+        </section>
+
+        <section class="courses-section">
+            <div class="courses-header">
+                <h2 class="courses-title">
+                    <span class="line"></span>
+                    <span class="text">ОБУЧЕНИЕ И СЕРТИФИКАТЫ</span>
+                    <span class="line"></span>
+                </h2>
+            </div>
+
+            <div class="skills-columns js-load-more-content">
+                <div class="skills-col">
+                    <h3 class="skills-col__title">Курсы Stepik</h3>
+                    <p class="courses-description">
+                        Продолжаю учиться и совершенствовать свои навыки каждый день!<br>
+                        <a href="https://stepik.org/users/1179792686/profile" class="courses-link" target="_blank">→ Все курсы на Stepik</a>
+                    </p>
+                    <ul class="skills-list">
+                        <li class="skills-list__item">
+                            <span class="dot"></span>
+                            <a href="https://stepik.org/cert/3217403" target="_blank" class="skills-list__link">Твой JavaScript</a>
+                        </li>
+                        <li class="skills-list__item">
+                            <span class="dot"></span>
+                            <a href="https://stepik.org/cert/3167224" target="_blank" class="skills-list__link">Погружение в JavaScript: для начинающих</a>
+                        </li>
+                        <li class="skills-list__item">
+                            <span class="dot"></span>
+                            <a href="https://stepik.org/cert/3164880" target="_blank" class="skills-list__link">HTML CSS JS (lite)</a>
+                        </li>
+                        <li class="skills-list__item">
+                            <span class="dot"></span>
+                            <a href="https://stepik.org/cert/3125831" target="_blank" class="skills-list__link">Веб-разработка для начинающих: HTML и CSS</a>
+                        </li>
+                        <li class="skills-list__item">
+                            <span class="dot"></span>
+                            <a href="https://stepik.org/cert/3247384" target="_blank" class="skills-list__link">Основы Git и GitHub</a>
+                        </li>
+                        <li class="skills-list__item">
+                            <span class="dot"></span>
+                            <a href="https://stepik.org/cert/3307686" target="_blank" class="skills-list__link">Markdown</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="skills-col">
+                    <h3 class="skills-col__title">Другие площадки</h3>
+                    <p class="skills-empty">Скоро здесь появятся курсы с других платформ</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-section" id="projects">
+            <div class="projects-container">
+                <div class="projects-header">
+                    <h2 class="projects-title">
+                        <span class="line"></span>
+                        <span class="text">МОИ ПРОЕКТЫ</span>
+                        <span class="line"></span>
+                    </h2>
+                </div>
+
+                <!-- ===== Коммерческие проекты ===== -->
+                <div class="projects-category">
+                    <div class="projects-category__header">
+                        <h3 class="projects-category__title">Коммерческие</h3>
+                        <p class="projects-category__desc">Разработка сайтов для реальных заказчиков и собственных проектов.</p>
+                    </div>
+
+                    <div class="project-accordion">
+                        <!-- Сайт для подолога -->
+                        <article class="project-accordion__item">
+                            <button class="project-accordion__toggle" type="button" aria-expanded="false" aria-controls="panel-commercial-1">
+                                <span class="project-accordion__number">01</span>
+                                <span class="project-accordion__name">Сайт для школы-студии подологии и здоровой эстетики Анны Кудуровой</span>
+                                <span class="project-accordion__icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="project-accordion__panel" id="panel-commercial-1">
+                                <div class="project-accordion__inner">
+                                    <div class="project-accordion__row">
+                                        <div class="project-content">
+                                            <p class="project-type">Полноценный коммерческий проект, разработанный с нуля по брифу заказчика</p>
+                                            <p class="project-description">Сайт для школы-студии подологии и здоровой эстетики Анны Кудуровой. Проект создан с учётом специфики направления, позиционирования бренда и потребностей целевой аудитории.</p>
+                                            <p class="project-description">Самостоятельно разработала структуру сайта, реализовала адаптивную вёрстку, подключила необходимый функционал, выполнила базовую SEO-оптимизацию и настроила Яндекс Метрику для аналитики посещаемости и поведения пользователей.</p>
+                                            <p class="project-description"><strong>Результат:</strong> современный, быстрый и адаптивный сайт, готовый к публикации, продвижению и дальнейшему развитию.</p>
+                                            <div class="project-buttons">
+                                                <a href="https://annakudurova.ru/" class="project-btn" target="_blank">Смотреть проект →</a>
+                                                <a href="https://github.com/KatyMist/-Podolog_Anna_Kudurova" class="project-btn project-btn--secondary" target="_blank">Разработка →</a>
+                                            </div>
+                                        </div>
+                                        <div class="project-image">
+                                            <img src="./images/project/3.jpg" alt="Сайт подолога" class="project-img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Личный сайт-портфолио -->
+                        <article class="project-accordion__item">
+                            <button class="project-accordion__toggle" type="button" aria-expanded="false" aria-controls="panel-commercial-2">
+                                <span class="project-accordion__number">02</span>
+                                <span class="project-accordion__name">Персональный сайт-портфолио</span>
+                                <span class="project-accordion__icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="project-accordion__panel" id="panel-commercial-2">
+                                <div class="project-accordion__inner">
+                                    <div class="project-accordion__row">
+                                        <div class="project-content">
+                                            <p class="project-type">Персональный проект</p>
+                                            <p class="project-description">Личный сайт-портфолио с авторской концепцией и индивидуальным визуальным стилем.</p>
+                                            <p class="project-description">Самостоятельно разработала структуру, дизайн и цветовую палитру, реализовала адаптивную вёрстку и интерактивные элементы с использованием HTML, SCSS и JavaScript.</p>
+                                            <p class="project-description"><strong>Результат:</strong>  уникальный персональный сайт, полностью созданный с нуля.</p>
+                                            <div class="project-buttons">
+                                                <a href="https://katymist.github.io/Portfolio/" class="project-btn" target="_blank">Смотреть проект →</a>
+                                                <a href="https://github.com/KatyMist/Portfolio" class="project-btn project-btn--secondary" target="_blank">Разработка →</a>
+                                            </div>
+                                        </div>
+                                        <div class="project-image">
+                                            <img src="./images/project/4.jpg" alt="Портфолио сайт" class="project-img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Экспертное сопровождение лесопользования -->
+                        <article class="project-accordion__item">
+                            <button class="project-accordion__toggle" type="button" aria-expanded="false" aria-controls="panel-commercial-2">
+                                <span class="project-accordion__number">03</span>
+                                <span class="project-accordion__name">Сайт по разработке документации в сфере лесного хозяйства</span>
+                                <span class="project-accordion__icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="project-accordion__panel" id="panel-commercial-2">
+                                <div class="project-accordion__inner">
+                                    <div class="project-accordion__row">
+                                        <div class="project-content">
+                                            <p class="project-type">Полностью авторский коммерческий проект — от идеи и концепции до готового сайта</p>
+                                            <p class="project-description">Сайт для специалиста в сфере лесного хозяйства, полностью разработанный с нуля: от формирования концепции и структуры до визуального оформления, frontend-разработки и публикации.</p>
+                                            <p class="project-description">Продумала структуру и пользовательский сценарий, разработала визуальную концепцию, подобрала цветовую палитру, типографику и графические элементы, создав единый стиль проекта в соответствии с его тематикой.</p>
+                                            <p class="project-description">Реализовала адаптивную вёрстку на HTML, SCSS и JavaScript, обеспечив корректное отображение сайта на различных устройствах. Особое внимание уделила семантической разметке, структуре кода, навигации и визуальной иерархии контента.</p>
+                                            <p class="project-description">Выполнила базовую SEO-оптимизацию: проработала структуру заголовков и метатеги, оптимизировала изображения и подготовила сайт к корректной индексации поисковыми системами. Также выполнила сборку проекта и разместила готовый сайт в интернете.</p>
+                                            <p class="project-description"><strong>Результат:</strong> современный, адаптивный и полностью авторский коммерческий сайт, созданный мной с нуля — от идеи и визуальной концепции до готового продукта.</p>
+                                            <div class="project-buttons">
+                                                <a href="https://ulles.ru/" class="project-btn" target="_blank">Смотреть проект →</a>
+                                                <a href="https://github.com/KatyMist/SilvaPro" class="project-btn project-btn--secondary" target="_blank">Разработка →</a>
+                                            </div>
+                                        </div>
+                                        <div class="project-image">
+                                            <img src="./images/project/7.jpg" alt="Портфолио сайт" class="project-img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- ===== Учебные проекты ===== -->
+                <div class="projects-category">
+                    <div class="projects-category__header">
+                        <h3 class="projects-category__title">Учебные</h3>
+                        <p class="projects-category__desc">Проекты, выполненные в процессе обучения и для развития навыков.</p>
+                    </div>
+
+                    <div class="project-accordion">
+                        <!-- Kropp Fitness -->
+                        <article class="project-accordion__item">
+                            <button class="project-accordion__toggle" type="button" aria-expanded="false" aria-controls="panel-edu-1">
+                                <span class="project-accordion__number">01</span>
+                                <span class="project-accordion__name">Kropp Fitness</span>
+                                <span class="project-accordion__icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="project-accordion__panel" id="panel-edu-1">
+                                <div class="project-accordion__inner">
+                                    <div class="project-accordion__row">
+                                        <div class="project-content">
+                                            <p class="project-type">Учебный проект</p>
+                                            <p class="project-description">Адаптивный лендинг фитнес-клуба, созданный в рамках обучения по видеоуроку. Проект позволил закрепить навыки семантической и адаптивной вёрстки с использованием <b>HTML</b> и <b>CSS</b>.</p>
+                                            <div class="project-buttons">
+                                                <a href="https://katymist.github.io/KROPP-FITNESS/" class="project-btn" target="_blank">Смотреть проект →</a>
+                                                <a href="https://github.com/KatyMist/KROPP-FITNESS" class="project-btn project-btn--secondary" target="_blank">Разработка →</a>
+                                            </div>
+                                        </div>
+                                        <div class="project-image">
+                                            <img src="./images/project/1.jpg" alt="Kropp Fitness сайт" class="project-img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Future Tech -->
+                        <article class="project-accordion__item">
+                            <button class="project-accordion__toggle" type="button" aria-expanded="false" aria-controls="panel-edu-2">
+                                <span class="project-accordion__number">02</span>
+                                <span class="project-accordion__name">Future Tech</span>
+                                <span class="project-accordion__icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="project-accordion__panel" id="panel-edu-2">
+                                <div class="project-accordion__inner">
+                                    <div class="project-accordion__row">
+                                        <div class="project-content">
+                                            <p class="project-type">Учебный проект</p>
+                                            <p class="project-description">Лендинг о технологиях будущего, выполненный в рамках обучения по видеоуроку. В процессе разработки реализованы адаптивная вёрстка и интерактивные элементы с использованием <b>HTML</b>, <b>SCSS</b> и <b>JavaScript</b>.</p>
+                                            <div class="project-buttons">
+                                                <a href="https://katymist.github.io/FUTURE-TECH/" class="project-btn" target="_blank">Смотреть проект →</a>
+                                                <a href="https://github.com/KatyMist/FUTURE-TECH" class="project-btn project-btn--secondary" target="_blank">Разработка →</a>
+                                            </div>
+                                        </div>
+                                        <div class="project-image">
+                                            <img src="./images/project/2.jpg" alt="Future Tech сайт" class="project-img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Todo React -->
+                        <article class="project-accordion__item">
+                            <button class="project-accordion__toggle" type="button" aria-expanded="false" aria-controls="panel-edu-3">
+                                <span class="project-accordion__number">03</span>
+                                <span class="project-accordion__name">Todo React</span>
+                                <span class="project-accordion__icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="project-accordion__panel" id="panel-edu-3">
+                                <div class="project-accordion__inner">
+                                    <div class="project-accordion__row">
+                                        <div class="project-content">
+                                            <p class="project-type">Учебный проект</p>
+                                            <p class="project-description">Todo React — учебное SPA-приложение для управления задачами, разработанное в процессе изучения React. Проект создан на основе видеоуроков с последующей самостоятельной доработкой. В ходе разработки были освоены компонентный подход, React Hooks, Context API, взаимодействие с REST API и организация структуры приложения.</p>
+                                            <p class="project-description">Реализованы создание, поиск, редактирование, удаление и изменение статуса задач с синхронизацией данных через JSON Server.</p>
+                                            <div class="project-buttons">
+                                                <a href="https://katymist.github.io/todo-react/" class="project-btn" target="_blank">Смотреть проект →</a>
+                                                <a href="https://github.com/KatyMist/todo-react" class="project-btn project-btn--secondary" target="_blank">Разработка →</a>
+                                            </div>
+                                        </div>
+                                        <div class="project-image">
+                                            <img src="./images/project/5.jpg" alt="Todo React проект" class="project-img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Pizzeria - Gestione del Menu -->
+                        <article class="project-accordion__item">
+                            <button class="project-accordion__toggle" type="button" aria-expanded="false" aria-controls="panel-edu-4">
+                                <span class="project-accordion__number">04</span>
+                                <span class="project-accordion__name">Pizzeria — Gestione del Menu</span>
+                                <span class="project-accordion__icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="project-accordion__panel" id="panel-edu-4">
+                                <div class="project-accordion__inner">
+                                    <div class="project-accordion__row">
+                                        <div class="project-content">
+                                            <p class="project-type">Учебный проект</p>
+                                            <p class="project-description">SPA-приложение для управления меню пиццерии, разработанное на React и TypeScript. Реализованы CRUD-операции, контролируемые формы с валидацией и сохранением данных в localStorage.</p>
+                                            <p class="project-description">Основная логика выполнена в рамках обучающего курса, дизайн интерфейса, адаптивная вёрстка и стилизация на SCSS разработаны самостоятельно.</p>
+                                            <div class="project-buttons">
+                                                <a href="https://katymist.github.io/React-Typescript-Project-Public-Starter/" class="project-btn" target="_blank">Смотреть проект →</a>
+                                                <a href="https://github.com/KatyMist/React-Typescript-Project-Public-Starter" class="project-btn project-btn--secondary" target="_blank">Разработка →</a>
+                                            </div>
+                                        </div>
+                                        <div class="project-image">
+                                            <img src="./images/project/6.jpg" alt="Pizzeria проект" class="project-img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contacts-section" id="contacts">
+            <div class="contacts-header">
+                <h2 class="contacts-title">
+                    <span class="line"></span>
+                    <span class="text">КОНТАКТЫ</span>
+                    <span class="line"></span>
+                </h2>
+            </div>
+
+            <div class="contacts-card">
+                <div class="contacts-card__left">
+                    <h3 class="contacts-name">Екатерина Туманова</h3>
+                    <p class="contacts-role">Frontend Developer</p>
+
+                    <ul class="contacts-list">
+                        <li class="contacts-list__item">
+                            <a href="https://github.com/KatyMist" target="_blank" class="contacts-list__link">
+                                <span class="contacts-list__label">GitHub</span>
+                                <span class="contacts-list__value">github.com/KatyMist</span>
+                            </a>
+                        </li>
+                        <li class="contacts-list__item">
+                            <a href="https://stepik.org/users/1179792686/profile" target="_blank" class="contacts-list__link">
+                                <span class="contacts-list__label">Stepik</span>
+                                <span class="contacts-list__value">Сертификаты и курсы</span>
+                            </a>
+                        </li>
+                        <li class="contacts-list__item">
+                            <a href="https://ulyanovsk.hh.ru/resume/b77b4490ff107e4c760039ed1f5262426e565a" target="_blank" class="contacts-list__link">
+                                <span class="contacts-list__label">HH.ru</span>
+                                <span class="contacts-list__value">Резюме и опыт работы</span>
+                            </a>
+                        </li>
+                        <li class="contacts-list__item">
+                            <a href="https://t.me/katymist" target="_blank" class="contacts-list__link">
+                                <span class="contacts-list__label">Telegram</span>
+                                <span class="contacts-list__value">@katymist</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="contacts-card__divider"></div>
+
+                <div class="contacts-card__right">
+                    <h3 class="contacts-card__heading">Открыта к интересным проектам и сотрудничеству</h3>
+                    <p class="contacts-card__text">Напишите мне удобным способом — буду рада обсудить идеи и задачи.</p>
+                </div>
             </div>
         </section>
     </main>

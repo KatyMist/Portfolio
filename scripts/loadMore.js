@@ -1,5 +1,9 @@
 export function initLoadMore() {
     document.querySelectorAll('.js-load-more-content').forEach((block) => {
+        // защита от повторной инициализации одного и того же блока
+        if (block.dataset.loadMoreInit) return;
+        block.dataset.loadMoreInit = 'true';
+
         block.classList.add('is-hidden');
 
         const button = document.createElement('button');
@@ -8,8 +12,8 @@ export function initLoadMore() {
 
         const setLabel = (isHidden) => {
             button.innerHTML = isHidden
-                ? `<span>Показать</span><span class="load-more__arrow">↓</span><span>все</span>`
-                : `<span>Свернуть</span><span class="load-more__arrow load-more__arrow--up">↑</span><span>список</span>`;
+                ? `ПОКАЗАТЬ <span class="load-more__arrow"></span> ВСЕ`
+                : `СВЕРНУТЬ <span class="load-more__arrow load-more__arrow--up"></span> СПИСОК`;
         };
 
         setLabel(true);
