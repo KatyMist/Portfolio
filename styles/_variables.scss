@@ -64,6 +64,15 @@ $font-weight-bold: 700;
     --color-border: #{$color-border};
     --color-glow: rgba(232, 199, 212, 0.3);
 
+    --glass-bg: rgba(255, 255, 255, 0.35);
+    --glass-border: rgba(255, 255, 255, 0.6);
+    --glass-shadow: rgba(0, 0, 0, 0.06);
+    --glass-item-bg: rgba(255, 255, 255, 0.5);
+    --glass-item-bg-hover: rgba(255, 255, 255, 0.65);
+    --glass-item-border: rgba(255, 255, 255, 0.7);
+    --glass-item-shadow: rgba(0, 0, 0, 0.06);
+    --glass-item-shadow-hover: rgba(188, 198, 178, 0.15);
+
     --theme-transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -96,4 +105,14 @@ $font-weight-bold: 700;
     --color-secondary: #93A8CE;
     --color-border: rgba(255, 255, 255, 0.1);
     --color-glow: rgba(185, 140, 160, 0.1);
+
+    --glass-bg: rgba(255, 255, 255, 0.06);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --glass-shadow: rgba(0, 0, 0, 0.3);
+    --glass-item-bg: rgba(255, 255, 255, 0.08);
+    --glass-item-bg-hover: rgba(255, 255, 255, 0.14);
+    --glass-item-border: rgba(255, 255, 255, 0.15);
+    --glass-item-shadow: rgba(0, 0, 0, 0.25);
+    --glass-item-shadow-hover: rgba(168, 184, 156, 0.25);
 }
+

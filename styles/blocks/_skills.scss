@@ -136,12 +136,13 @@
     max-width: rem(1200);
     margin: 0 auto;
     padding: rem(48);
-    background: rgba(255, 255, 255, 0.35);
+    background: var(--glass-bg);
     backdrop-filter: blur(20px) saturate(160%);
     -webkit-backdrop-filter: blur(20px) saturate(160%);
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    border: 1px solid var(--glass-border);
     border-radius: rem(24);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 8px 32px var(--glass-shadow);
+    transition: var(--theme-transition);
 
     @include mobile {
         grid-template-columns: 1fr;
@@ -208,20 +209,20 @@
     align-items: center;
     gap: rem(14);
     padding: rem(18) rem(22);
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--glass-item-bg);
     backdrop-filter: blur(16px) saturate(160%);
     -webkit-backdrop-filter: blur(16px) saturate(160%);
-    border: 1px solid rgba(255, 255, 255, 0.7);
+    border: 1px solid var(--glass-item-border);
     border-radius: rem(16);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 16px var(--glass-item-shadow);
     font-family: 'PlayfairDisplay', sans-serif;
     font-size: rem(15);
     color: var(--color-text);
-    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
 
     @include hover {
-        background: rgba(255, 255, 255, 0.65);
-        box-shadow: 0 10px 28px rgba($color-bg-green, 0.15);
+        background: var(--glass-item-bg-hover);
+        box-shadow: 0 10px 28px var(--glass-item-shadow-hover);
         transform: translateY(-2px);
     }
 
@@ -230,6 +231,7 @@
         font-size: rem(14);
     }
 }
+
 .skills-list__link {
     display: flex;
     align-items: center;
@@ -269,10 +271,10 @@
     gap: rem(10);
     margin: rem(32) auto 0;
     padding: rem(14) rem(28);
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--glass-item-bg);
     backdrop-filter: blur(12px) saturate(160%);
     -webkit-backdrop-filter: blur(12px) saturate(160%);
-    border: 1px solid rgba(255, 255, 255, 0.7);
+    border: 1px solid var(--glass-item-border);
     border-radius: 100px;
     cursor: pointer;
     font-family: 'PlayfairDisplay', sans-serif;
@@ -281,7 +283,7 @@
     letter-spacing: rem(2);
     text-transform: uppercase;
     color: var(--color-text);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 16px var(--glass-item-shadow);
     transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, color 0.3s ease;
 
     &__arrow {
@@ -299,9 +301,9 @@
     }
 
     @include hover {
-        background: rgba(255, 255, 255, 0.75);
+        background: var(--glass-item-bg-hover);
         color: var(--color-bg-green);
-        box-shadow: 0 8px 24px rgba($color-bg-green, 0.15);
+        box-shadow: 0 8px 24px var(--glass-item-shadow-hover);
         transform: translateY(-2px);
     }
 

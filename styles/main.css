@@ -21,6 +21,14 @@
   --color-secondary: #C5D7F2;
   --color-border: rgba(0, 0, 0, 0.1);
   --color-glow: rgba(232, 199, 212, 0.3);
+  --glass-bg: rgba(255, 255, 255, 0.35);
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --glass-shadow: rgba(0, 0, 0, 0.06);
+  --glass-item-bg: rgba(255, 255, 255, 0.5);
+  --glass-item-bg-hover: rgba(255, 255, 255, 0.65);
+  --glass-item-border: rgba(255, 255, 255, 0.7);
+  --glass-item-shadow: rgba(0, 0, 0, 0.06);
+  --glass-item-shadow-hover: rgba(188, 198, 178, 0.15);
   --theme-transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -47,6 +55,14 @@
   --color-secondary: #93A8CE;
   --color-border: rgba(255, 255, 255, 0.1);
   --color-glow: rgba(185, 140, 160, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-shadow: rgba(0, 0, 0, 0.3);
+  --glass-item-bg: rgba(255, 255, 255, 0.08);
+  --glass-item-bg-hover: rgba(255, 255, 255, 0.14);
+  --glass-item-border: rgba(255, 255, 255, 0.15);
+  --glass-item-shadow: rgba(0, 0, 0, 0.25);
+  --glass-item-shadow-hover: rgba(168, 184, 156, 0.25);
 }
 
 /*
@@ -2287,12 +2303,13 @@ section {
   max-width: 75rem;
   margin: 0 auto;
   padding: 3rem;
-  background: rgba(255, 255, 255, 0.35);
+  background: var(--glass-bg);
   backdrop-filter: blur(20px) saturate(160%);
   -webkit-backdrop-filter: blur(20px) saturate(160%);
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--glass-border);
   border-radius: 1.5rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 32px var(--glass-shadow);
+  transition: var(--theme-transition);
 }
 @media (max-width: 47.99875rem) {
   .skills-columns {
@@ -2387,28 +2404,28 @@ section {
   align-items: center;
   gap: 0.875rem;
   padding: 1.125rem 1.375rem;
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--glass-item-bg);
   backdrop-filter: blur(16px) saturate(160%);
   -webkit-backdrop-filter: blur(16px) saturate(160%);
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--glass-item-border);
   border-radius: 1rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 16px var(--glass-item-shadow);
   font-family: "PlayfairDisplay", sans-serif;
   font-size: 0.9375rem;
   color: var(--color-text);
-  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
 }
 @media (any-hover: hover) {
   .skills-list__item:hover {
-    background: rgba(255, 255, 255, 0.65);
-    box-shadow: 0 10px 28px rgba(188, 198, 178, 0.15);
+    background: var(--glass-item-bg-hover);
+    box-shadow: 0 10px 28px var(--glass-item-shadow-hover);
     transform: translateY(-2px);
   }
 }
 @media (any-hover: none) {
   .skills-list__item:active {
-    background: rgba(255, 255, 255, 0.65);
-    box-shadow: 0 10px 28px rgba(188, 198, 178, 0.15);
+    background: var(--glass-item-bg-hover);
+    box-shadow: 0 10px 28px var(--glass-item-shadow-hover);
     transform: translateY(-2px);
   }
 }
@@ -2463,10 +2480,10 @@ section {
   gap: 0.625rem;
   margin: 2rem auto 0;
   padding: 0.875rem 1.75rem;
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--glass-item-bg);
   backdrop-filter: blur(12px) saturate(160%);
   -webkit-backdrop-filter: blur(12px) saturate(160%);
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--glass-item-border);
   border-radius: 100px;
   cursor: pointer;
   font-family: "PlayfairDisplay", sans-serif;
@@ -2475,7 +2492,7 @@ section {
   letter-spacing: 0.125rem;
   text-transform: uppercase;
   color: var(--color-text);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 16px var(--glass-item-shadow);
   transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, color 0.3s ease;
 }
 .load-more__arrow {
@@ -2492,17 +2509,17 @@ section {
 }
 @media (any-hover: hover) {
   .load-more:hover {
-    background: rgba(255, 255, 255, 0.75);
+    background: var(--glass-item-bg-hover);
     color: var(--color-bg-green);
-    box-shadow: 0 8px 24px rgba(188, 198, 178, 0.15);
+    box-shadow: 0 8px 24px var(--glass-item-shadow-hover);
     transform: translateY(-2px);
   }
 }
 @media (any-hover: none) {
   .load-more:active {
-    background: rgba(255, 255, 255, 0.75);
+    background: var(--glass-item-bg-hover);
     color: var(--color-bg-green);
-    box-shadow: 0 8px 24px rgba(188, 198, 178, 0.15);
+    box-shadow: 0 8px 24px var(--glass-item-shadow-hover);
     transform: translateY(-2px);
   }
 }
@@ -2602,13 +2619,14 @@ section {
   max-width: 75rem;
   margin: 0 auto;
   padding: 3rem;
-  background: rgba(255, 255, 255, 0.35);
+  background: var(--glass-bg);
   backdrop-filter: blur(20px) saturate(160%);
   -webkit-backdrop-filter: blur(20px) saturate(160%);
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--glass-border);
   border-radius: 1.5rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 32px var(--glass-shadow);
   overflow: hidden;
+  transition: var(--theme-transition);
 }
 @media (max-width: 63.99875rem) {
   .contacts-card {
@@ -2686,26 +2704,26 @@ section {
   flex-direction: column;
   gap: 0.125rem;
   padding: 1.125rem 1.375rem;
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--glass-item-bg);
   backdrop-filter: blur(16px) saturate(160%);
   -webkit-backdrop-filter: blur(16px) saturate(160%);
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--glass-item-border);
   border-radius: 1rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 16px var(--glass-item-shadow);
   text-decoration: none;
-  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
 }
 @media (any-hover: hover) {
   .contacts-list__link:hover {
-    background: rgba(255, 255, 255, 0.65);
-    box-shadow: 0 10px 28px rgba(188, 198, 178, 0.15);
+    background: var(--glass-item-bg-hover);
+    box-shadow: 0 10px 28px var(--glass-item-shadow-hover);
     transform: translateY(-2px);
   }
 }
 @media (any-hover: none) {
   .contacts-list__link:active {
-    background: rgba(255, 255, 255, 0.65);
-    box-shadow: 0 10px 28px rgba(188, 198, 178, 0.15);
+    background: var(--glass-item-bg-hover);
+    box-shadow: 0 10px 28px var(--glass-item-shadow-hover);
     transform: translateY(-2px);
   }
 }
