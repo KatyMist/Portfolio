@@ -15,12 +15,15 @@
 
     @include tablet {
         padding: rem(40) rem(24);
-        min-height: rem(480);
+        // на весь экран, чтобы следующая секция не залезала на первый экран
+        min-height: 100vh;
+        min-height: 100svh;
     }
 
     @include mobile {
         padding: rem(20) rem(16);
-        min-height: rem(400);
+        min-height: 100vh;
+        min-height: 100svh;
     }
 }
 
