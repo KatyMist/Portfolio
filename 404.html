@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Страница не найдена — Екатерина Туманова</title>
+    <title data-i18n="nf.meta.title">Page Not Found — Ekaterina Tumanova</title>
 
     <!-- Open Graph теги для соцсетей -->
-    <meta name="description" content="Страница не найдена — Екатерина Туманова Frontend Developer">
-    <meta property="og:title" content="404 — Страница не найдена">
-    <meta property="og:description" content="Запрашиваемая страница не найдена">
+    <meta name="description" content="Page not found — Ekaterina Tumanova, Frontend Developer" data-i18n-attr="content:nf.meta.description">
+    <meta property="og:title" content="404 — Page Not Found" data-i18n-attr="content:nf.meta.ogTitle">
+    <meta property="og:description" content="The requested page could not be found" data-i18n-attr="content:nf.meta.ogDescription">
     <meta property="og:image" content="/images/Main.jpg">
 
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
     <script src="./scripts/main.js" type="module" defer></script>
+    <script src="./scripts/lang-init.js"></script>
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -35,10 +36,10 @@
     <header class="header">
         <nav class="nav" id="nav">
             <ul class="nav__list">
-                <li><a href="index.html" class="nav__link">ОБО МНЕ</a></li>
-                <li><a href="skills.html" class="nav__link">НАВЫКИ</a></li>
-                <li><a href="projects.html" class="nav__link">ПОРТФОЛИО</a></li>
-                <li><a href="contacts.html" class="nav__link">КОНТАКТЫ</a></li>
+                <li><a href="index.html" class="nav__link" data-i18n="common.nav.about">ABOUT ME</a></li>
+                <li><a href="skills.html" class="nav__link" data-i18n="common.nav.skills">SKILLS</a></li>
+                <li><a href="projects.html" class="nav__link" data-i18n="common.nav.portfolio">PORTFOLIO</a></li>
+                <li><a href="contacts.html" class="nav__link" data-i18n="common.nav.contacts">CONTACTS</a></li>
             </ul>
         </nav>
         <button class="burger" id="burger">
@@ -53,11 +54,11 @@
             <div class="notfound-container">
                 <h1 class="notfound__code">404</h1>
                 <img src="./images/cat.png" alt="" class="notfound__image">
-                <h2 class="notfound__title">Упс! Что-то пошло не так</h2>
-                <p class="notfound__text">
-                    Запрашиваемая страница не найдена. Возможно, ссылка устарела или адрес введён с ошибкой.
+                <h2 class="notfound__title" data-i18n="nf.title">Oops! Something went wrong</h2>
+                <p class="notfound__text" data-i18n="nf.text">
+                    The page you're looking for couldn't be found. The link may be outdated, or the address may have been entered incorrectly.
                 </p>
-                <a href="index.html" class="notfound__link">← На главную</a>
+                <a href="index.html" class="notfound__link" data-i18n="nf.link">← Back to home</a>
             </div>
         </section>
     </main>
@@ -67,11 +68,11 @@
             <p class="footer__text">© 2026 Ekaterina Tumanova — Frontend Developer | AI-assisted development</p>
         </div>
         <div class="footer__right">
-            <a href="process.html" class="footer__link">Процесс разработки</a>
+            <a href="process.html" class="footer__link" data-i18n="common.footer.process">Development process</a>
             <span class="footer__divider">|</span>
-            <a href="privacy.html" class="footer__link">Политика конфеденциальности</a>
+            <a href="privacy.html" class="footer__link" data-i18n="common.footer.privacy">Privacy Policy</a>
             <span class="footer__divider">|</span>
-            <p class="footer__text-small">Сайт использует сервис веб-аналитики Яндекс.Метрика</p>
+            <p class="footer__text-small" data-i18n="common.footer.analytics">This website uses the Yandex.Metrica web analytics service</p>
         </div>
     </footer>
 
@@ -79,7 +80,7 @@
 
     <div class="loading-screen" id="loadingScreen">
         <div class="loading-content">
-            <div class="loading-name" id="nameLoader">Екатерина Туманова</div>
+            <div class="loading-name" id="nameLoader">Ekaterina Tumanova</div>
             <div class="loading-role" id="roleLoader">Frontend Developer</div>
         </div>
     </div>
@@ -88,12 +89,12 @@
         <div class="cookies-banner__container">
             <div class="cookies-banner__content">
                 <img class="cookies-banner__icon" src="./icons/heart.svg" alt="Cookies" />
-                <p class="cookies-banner__text">
-                    Мы используем <a href="privacy.html" class="cookies-banner__link">cookie-файлы</a> 
-                    для корректной работы сайта и анализа посещаемости
+                <p class="cookies-banner__text" data-i18n="common.cookies.text" data-i18n-html>
+                    We use <a href="privacy.html" class="cookies-banner__link">cookies</a>
+                    to ensure the site works correctly and to analyze traffic
                 </p>
             </div>
-            <button class="cookies-banner__accept" id="acceptCookies">Согласен</button>
+            <button class="cookies-banner__accept" id="acceptCookies" data-i18n="common.cookies.accept">Accept</button>
             <button class="cookies-banner__close" id="closeCookies">×</button>
         </div>
     </div>

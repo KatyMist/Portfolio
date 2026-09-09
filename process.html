@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Процесс разработки — Екатерина Туманова</title>
-    <meta name="description" content="Процесс разработки сайта">
+    <title data-i18n="proc.meta.title">Development Process — Ekaterina Tumanova</title>
+    <meta name="description" content="Website development process" data-i18n-attr="content:proc.meta.description">
     
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="icon" href="./1.svg" type="image/svg+xml" />
@@ -27,25 +27,31 @@
     <!-- /Yandex.Metrika counter -->
 
     <script src="./scripts/theme-init.js"></script>
+    <script src="./scripts/lang-init.js"></script>
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
     <header class="header">
         <a href="index.html" class="header__logo">
-            <img src="./images/1.svg" alt="Екатерина Туманова — Frontend Developer">
+            <img src="./images/1.svg" alt="Ekaterina Tumanova — Frontend Developer" data-i18n-attr="alt:common.logo.alt">
         </a>
 
         <div class="header__right">
             <nav class="nav" id="nav">
                 <ul class="nav__list">
-                    <li><a href="index.html#hero" class="nav__link">ОБО МНЕ</a></li>
-                    <li><a href="index.html#skills" class="nav__link">НАВЫКИ</a></li>
-                    <li><a href="index.html#projects" class="nav__link">ПОРТФОЛИО</a></li>
-                    <li><a href="index.html#contacts" class="nav__link">КОНТАКТЫ</a></li>
+                    <li><a href="index.html#hero" class="nav__link" data-i18n="common.nav.about">ABOUT ME</a></li>
+                    <li><a href="index.html#skills" class="nav__link" data-i18n="common.nav.skills">SKILLS</a></li>
+                    <li><a href="index.html#projects" class="nav__link" data-i18n="common.nav.portfolio">PORTFOLIO</a></li>
+                    <li><a href="index.html#contacts" class="nav__link" data-i18n="common.nav.contacts">CONTACTS</a></li>
                 </ul>
             </nav>
 
-            <button class="theme-switch" id="themeToggle" type="button" aria-label="Переключить тему" data-theme-state="light">
+            <div class="lang-switch" id="langSwitch" role="group" aria-label="Switch language" data-i18n-attr="aria-label:common.langSwitch.ariaLabel">
+                <button type="button" class="lang-switch__btn" data-lang-btn="en" aria-pressed="true">EN</button>
+                <button type="button" class="lang-switch__btn" data-lang-btn="ru" aria-pressed="false">RU</button>
+            </div>
+
+            <button class="theme-switch" id="themeToggle" type="button" aria-label="Toggle theme" data-i18n-attr="aria-label:common.themeToggle.ariaLabel" data-theme-state="light">
                 <span class="theme-switch__track">
                     <span class="theme-switch__thumb">
                         <svg class="theme-switch__icon theme-switch__icon--sun" viewBox="0 0 24 24" fill="none">
@@ -69,117 +75,117 @@
 
     <main>
         <section class="hero process-section">
-            <div class="hero__bg-title">ПРОЦЕСС</div>
+            <div class="hero__bg-title" data-i18n="proc.hero.bgTitle">PROCESS</div>
 
             <div class="process-wrapper">
                 <!-- ЛЕВАЯ НАВИГАЦИЯ -->
                 <aside class="process-sidebar">
                     <nav class="process-nav">
                         <ul class="process-nav__list">
-                            <li><a href="#section-1" class="process-nav__link">01. Бриф и концепция</a></li>
-                            <li><a href="#section-2" class="process-nav__link">02. Продумывание структуры</a></li>
-                            <li><a href="#section-3" class="process-nav__link">03. Подготовка материалов</a></li>
-                            <li><a href="#section-4" class="process-nav__link">04. Утверждение макета</a></li>
-                            <li><a href="#section-5" class="process-nav__link">05. Вёрстка и разработка</a></li>
-                            <li><a href="#section-6" class="process-nav__link">06. Адаптация под устройства</a></li>
-                            <li><a href="#section-7" class="process-nav__link">07. Тестирование и финальные правки</a></li>
-                            <li><a href="#section-8" class="process-nav__link">08. Публикация сайта</a></li>
-                            <li><a href="#section-9" class="process-nav__link">09. Передача проекта</a></li>
+                            <li><a href="#section-1" class="process-nav__link" data-i18n="proc.step1">01. Brief &amp; Concept</a></li>
+                            <li><a href="#section-2" class="process-nav__link" data-i18n="proc.step2">02. Structure Planning</a></li>
+                            <li><a href="#section-3" class="process-nav__link" data-i18n="proc.step3">03. Gathering Materials</a></li>
+                            <li><a href="#section-4" class="process-nav__link" data-i18n="proc.step4">04. Design Approval</a></li>
+                            <li><a href="#section-5" class="process-nav__link" data-i18n="proc.step5">05. Markup &amp; Development</a></li>
+                            <li><a href="#section-6" class="process-nav__link" data-i18n="proc.step6">06. Device Adaptation</a></li>
+                            <li><a href="#section-7" class="process-nav__link" data-i18n="proc.step7">07. Testing &amp; Final Revisions</a></li>
+                            <li><a href="#section-8" class="process-nav__link" data-i18n="proc.step8">08. Website Publishing</a></li>
+                            <li><a href="#section-9" class="process-nav__link" data-i18n="proc.step9">09. Project Handover</a></li>
                         </ul>
                     </nav>
                 </aside>
 
                 <!-- ПРАВАЯ ЧАСТЬ - КОНТЕНТ -->
                 <div class="process-content">
-                    <h1 class="process__title">Процесс разработки</h1>
-                    <p class="process__subtitle-intro">
-                        Основное направление моего развития — Frontend Development и работа в команде.
-                        Представленные ниже этапы показывают, как может быть организована работа при разработке индивидуального сайта.
+                    <h1 class="process__title" data-i18n="proc.title">Development Process</h1>
+                    <p class="process__subtitle-intro" data-i18n="proc.intro">
+                        My main focus is frontend development and working within a team.
+                        The stages below show how the work can be organized when building a custom website.
                     </p>
 
                     <section id="section-1">
-                        <h2 class="process__subtitle">01. Бриф и концепция</h2>
-                        <p class="process__text">Работа начинается с небольшого брифа, где вы рассказываете о своем проекте, пожеланиях и предпочтениях.</p>
-                        <p class="process__text">На его основе я создаю ориентировочный макет будущего сайта. Затем мы вместе обсуждаем предложенную концепцию, при необходимости корректируем ее и только после согласования переходим к разработке.</p>
-                        <a href="./Проектныи_Бриф.docx" download class="process__download-btn">
-                            Скачать бриф
+                        <h2 class="process__subtitle" data-i18n="proc.step1">01. Brief &amp; Concept</h2>
+                        <p class="process__text" data-i18n="proc.s1.p1">The work starts with a short brief, where you describe your project, wishes, and preferences.</p>
+                        <p class="process__text" data-i18n="proc.s1.p2">Based on it, I create a preliminary layout of the future website. We then discuss the proposed concept together, adjust it if needed, and only move on to development once it's approved.</p>
+                        <a href="./Проектныи_Бриф.docx" download class="process__download-btn" data-i18n="proc.s1.btn">
+                            Download the brief
                         </a>
                     </section>
 
                     <section id="section-2">
-                        <h2 class="process__subtitle">02. Продумывание структуры</h2>
-                        <p class="process__text">На этом этапе формируется логика будущего сайта:</p>
+                        <h2 class="process__subtitle" data-i18n="proc.step2">02. Structure Planning</h2>
+                        <p class="process__text" data-i18n="proc.s2.p1">At this stage, the logic of the future website takes shape:</p>
                         <ul class="process__list">
-                            <li class="process__item">определяется список страниц;</li>
-                            <li class="process__item">продумывается последовательность блоков;</li>
-                            <li class="process__item">выстраивается удобный путь пользователя;</li>
-                            <li class="process__item">определяется расположение ключевых элементов.</li>
+                            <li class="process__item" data-i18n="proc.s2.li1">the list of pages is defined;</li>
+                            <li class="process__item" data-i18n="proc.s2.li2">the sequence of blocks is planned;</li>
+                            <li class="process__item" data-i18n="proc.s2.li3">a convenient user journey is mapped out;</li>
+                            <li class="process__item" data-i18n="proc.s2.li4">the placement of key elements is determined.</li>
                         </ul>
-                        <p class="process__text">Главная задача — сделать сайт не только привлекательным, но и понятным, удобным и логичным для посетителя.</p>
+                        <p class="process__text" data-i18n="proc.s2.p2">The main goal is to make the site not just attractive, but also clear, convenient, and logical for the visitor.</p>
                     </section>
 
                     <section id="section-3">
-                        <h2 class="process__subtitle">03. Подготовка материалов</h2>
-                        <p class="process__text">Перед началом разработки мы собираем все необходимые материалы для проекта. Это помогает быстрее приступить к работе и создать сайт, который будет соответствовать вашим ожиданиям.</p>
+                        <h2 class="process__subtitle" data-i18n="proc.step3">03. Gathering Materials</h2>
+                        <p class="process__text" data-i18n="proc.s3.p1">Before development begins, we gather all the materials the project needs. This helps get started faster and build a website that matches your expectations.</p>
                         <ul class="process__list">
-                            <li class="process__item">тексты (при наличии);</li>
-                            <li class="process__item">фотографии, изображения или другой визуальный контент;</li>
-                            <li class="process__item">логотип и фирменный стиль (если есть);</li>
-                            <li class="process__item">примеры сайтов, которые вам нравятся;</li>
-                            <li class="process__item">дополнительная информация о компании, услугах или продукции.</li>
+                            <li class="process__item" data-i18n="proc.s3.li1">texts (if available);</li>
+                            <li class="process__item" data-i18n="proc.s3.li2">photos, images, or other visual content;</li>
+                            <li class="process__item" data-i18n="proc.s3.li3">logo and brand identity (if any);</li>
+                            <li class="process__item" data-i18n="proc.s3.li4">examples of websites you like;</li>
+                            <li class="process__item" data-i18n="proc.s3.li5">additional information about the company, services, or products.</li>
                         </ul>
                     </section>
 
                     <section id="section-4">
-                        <h2 class="process__subtitle">04. Утверждение макета</h2>
-                        <p class="process__text">На основе ваших пожеланий и референсов формируется визуальная концепция будущего сайта: цветовая палитра, типографика, стилистика интерфейса и общая атмосфера проекта.</p>
-                        <p class="process__text">Перед началом разработки я подготавливаю макет, который мы согласовываем. После утверждения переходим к реализации.</p>
+                        <h2 class="process__subtitle" data-i18n="proc.step4">04. Design Approval</h2>
+                        <p class="process__text" data-i18n="proc.s4.p1">Based on your preferences and references, a visual concept for the future website is formed: color palette, typography, interface style, and the project's overall mood.</p>
+                        <p class="process__text" data-i18n="proc.s4.p2">Before development starts, I prepare a layout for us to approve together. Once approved, we move on to implementation.</p>
                     </section>
 
                     <section id="section-5">
-                        <h2 class="process__subtitle">05. Вёрстка и разработка</h2>
-                        <p class="process__text">После утверждения дизайна начинается разработка сайта с использованием современных технологий: HTML, SCSS и JavaScript.</p>
-                        <p class="process__text">Реализуются адаптивная вёрстка, анимации, интерактивные элементы и функциональность, предусмотренная проектом.</p>
+                        <h2 class="process__subtitle" data-i18n="proc.step5">05. Markup &amp; Development</h2>
+                        <p class="process__text" data-i18n="proc.s5.p1">Once the design is approved, development begins using modern technologies: HTML, SCSS, and JavaScript.</p>
+                        <p class="process__text" data-i18n="proc.s5.p2">This includes responsive markup, animations, interactive elements, and any functionality the project requires.</p>
                     </section>
 
                     <section id="section-6">
-                        <h2 class="process__subtitle">06. Адаптация под устройства</h2>
-                        <p class="process__text">Сайт проверяется и оптимизируется для различных устройств и современных браузеров:</p>
+                        <h2 class="process__subtitle" data-i18n="proc.step6">06. Device Adaptation</h2>
+                        <p class="process__text" data-i18n="proc.s6.p1">The website is checked and optimized for various devices and modern browsers:</p>
                         <ul class="process__list">
-                            <li class="process__item">смартфоны;</li>
-                            <li class="process__item">планшеты;</li>
-                            <li class="process__item">ноутбуки;</li>
-                            <li class="process__item">большие мониторы.</li>
+                            <li class="process__item" data-i18n="proc.s6.li1">smartphones;</li>
+                            <li class="process__item" data-i18n="proc.s6.li2">tablets;</li>
+                            <li class="process__item" data-i18n="proc.s6.li3">laptops;</li>
+                            <li class="process__item" data-i18n="proc.s6.li4">large monitors.</li>
                         </ul>
-                        <p class="process__text">Адаптивность закладывается на этапе разработки, а не добавляется после завершения проекта.</p>
+                        <p class="process__text" data-i18n="proc.s6.p2">Responsiveness is built in from the development stage, not added on after the project is finished.</p>
                     </section>
 
                     <section id="section-7">
-                        <h2 class="process__subtitle">07. Тестирование и финальные правки</h2>
-                        <p class="process__text">Перед публикацией проводится комплексная проверка проекта:</p>
+                        <h2 class="process__subtitle" data-i18n="proc.step7">07. Testing &amp; Final Revisions</h2>
+                        <p class="process__text" data-i18n="proc.s7.p1">Before publishing, the project undergoes a comprehensive review:</p>
                         <ul class="process__list">
-                            <li class="process__item">корректность отображения;</li>
-                            <li class="process__item">работа форм и ссылок;</li>
-                            <li class="process__item">скорость загрузки;</li>
-                            <li class="process__item">соответствие утверждённому макету.</li>
+                            <li class="process__item" data-i18n="proc.s7.li1">correct display;</li>
+                            <li class="process__item" data-i18n="proc.s7.li2">forms and links working properly;</li>
+                            <li class="process__item" data-i18n="proc.s7.li3">loading speed;</li>
+                            <li class="process__item" data-i18n="proc.s7.li4">compliance with the approved layout.</li>
                         </ul>
-                        <p class="process__text">После просмотра вы можете предоставить перечень замечаний в рамках согласованного объёма работ, после чего проект подготавливается к публикации.</p>
+                        <p class="process__text" data-i18n="proc.s7.p2">After reviewing it, you can provide a list of revisions within the agreed scope of work, after which the project is prepared for publishing.</p>
                     </section>
 
                     <section id="section-8">
-                        <h2 class="process__subtitle">08. Публикация сайта</h2>
-                        <p class="process__text">После завершения разработки сайт размещается на выбранном вами хостинге и подключается к вашему доменному имени.</p>
-                        <p class="process__text">Если домен или хостинг ещё не выбраны, я помогу с выбором подходящего варианта и предоставлю рекомендации. Перед публикацией выполняется базовая SEO-настройка: мета-теги, заголовки страниц, favicon, Open Graph и другие необходимые параметры для корректного отображения и индексации сайта.</p>
+                        <h2 class="process__subtitle" data-i18n="proc.step8">08. Website Publishing</h2>
+                        <p class="process__text" data-i18n="proc.s8.p1">Once development is complete, the website is deployed to your chosen hosting and connected to your domain name.</p>
+                        <p class="process__text" data-i18n="proc.s8.p2">If you haven't chosen a domain or hosting yet, I'll help you pick a suitable option and provide recommendations. Before publishing, basic SEO setup is performed: meta tags, page titles, favicon, Open Graph, and other parameters needed for the site to display and get indexed correctly.</p>
                     </section>
 
                     <section id="section-9">
-                        <h2 class="process__subtitle">09. Передача проекта</h2>
-                        <p class="process__text">После завершения работ вы получаете:</p>
+                        <h2 class="process__subtitle" data-i18n="proc.step9">09. Project Handover</h2>
+                        <p class="process__text" data-i18n="proc.s9.p1">Once the work is complete, you receive:</p>
                         <ul class="process__list">
-                            <li class="process__item">ссылку на готовый сайт;</li>
-                            <li class="process__item">исходные файлы проекта (если это предусмотрено договорённостями).</li>
+                            <li class="process__item" data-i18n="proc.s9.li1">a link to the finished website;</li>
+                            <li class="process__item" data-i18n="proc.s9.li2">the project's source files (if agreed upon in advance).</li>
                         </ul>
-                        <p class="process__text">Дальнейшее развитие, внесение новых изменений, обучение работе с кодом или сопровождение проекта не входят в стоимость разработки и выполняются отдельно по договорённости. При необходимости вы можете обратиться ко мне либо к любому другому специалисту.</p>
+                        <p class="process__text" data-i18n="proc.s9.p2">Further development, new changes, code-related training, or project support are not included in the development cost and are handled separately, by agreement. If needed, you can reach out to me or any other specialist.</p>
                     </section>
                 </div>
             </div>
@@ -191,11 +197,11 @@
             <p class="footer__text">© 2026 Ekaterina Tumanova — Frontend Developer | AI-assisted development</p>
         </div>
         <div class="footer__right">
-            <a href="process.html" class="footer__link">Процесс разработки</a>
+            <a href="process.html" class="footer__link" data-i18n="common.footer.process">Development process</a>
             <span class="footer__divider">|</span>
-            <a href="privacy.html" class="footer__link">Политика конфеденциальности</a>
+            <a href="privacy.html" class="footer__link" data-i18n="common.footer.privacy">Privacy Policy</a>
             <span class="footer__divider">|</span>
-            <p class="footer__text-small">Сайт использует сервис веб-аналитики Яндекс.Метрика</p>
+            <p class="footer__text-small" data-i18n="common.footer.analytics">This website uses the Yandex.Metrica web analytics service</p>
         </div>
     </footer>
 
@@ -203,7 +209,7 @@
 
     <div class="loading-screen" id="loadingScreen">
         <div class="loading-content">
-            <div class="loading-name" id="nameLoader">Екатерина Туманова</div>
+            <div class="loading-name" id="nameLoader">Ekaterina Tumanova</div>
             <div class="loading-role" id="roleLoader">Frontend Developer</div>
         </div>
     </div>
@@ -212,12 +218,12 @@
         <div class="cookies-banner__container">
             <div class="cookies-banner__content">
                 <img class="cookies-banner__icon" src="./icons/heart.svg" alt="Cookies" />
-                <p class="cookies-banner__text">
-                    Мы используем <a href="privacy.html" class="cookies-banner__link">cookie-файлы</a>
-                    для корректной работы сайта и анализа посещаемости
+                <p class="cookies-banner__text" data-i18n="common.cookies.text" data-i18n-html>
+                    We use <a href="privacy.html" class="cookies-banner__link">cookies</a>
+                    to ensure the site works correctly and to analyze traffic
                 </p>
             </div>
-            <button class="cookies-banner__accept" id="acceptCookies">Согласен</button>
+            <button class="cookies-banner__accept" id="acceptCookies" data-i18n="common.cookies.accept">Accept</button>
             <button class="cookies-banner__close" id="closeCookies">×</button>
         </div>
     </div>

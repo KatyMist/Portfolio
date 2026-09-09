@@ -1,0 +1,55 @@
+@use '../helpers' as *;
+@use '../variables' as *;
+
+// ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА
+
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: rem(2);
+    padding: rem(3);
+    border-radius: 999px;
+    background: var(--color-bg-beige);
+    flex-shrink: 0;
+    transition: background-color 0.4s ease;
+}
+
+.lang-switch__btn {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: rem(32);
+    height: rem(22);
+    padding: 0 rem(4);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 999px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: rem(11);
+    letter-spacing: rem(0.5);
+    color: var(--color-text-light);
+    transition: color 0.3s ease, background-color 0.3s ease;
+
+    @include hover {
+        color: var(--color-text);
+    }
+
+    &[aria-pressed="true"] {
+        background: var(--color-bg-green);
+        color: var(--color-white);
+
+        @include hover {
+            color: var(--color-white);
+        }
+    }
+
+    @include mobile {
+        min-width: rem(28);
+        height: rem(20);
+        font-size: rem(10);
+    }
+}

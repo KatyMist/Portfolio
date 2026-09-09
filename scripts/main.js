@@ -1,4 +1,5 @@
 import { initBurger } from './burger.js';
+import { initI18n } from './i18n.js';
 import { initLoader } from './loader.js';
 import { initCookies } from './cookies.js';
 import { initCursor } from './cursor.js';
@@ -8,6 +9,7 @@ import { initActiveNavOnScroll } from './active-nav.js';
 import { initProjectAccordion } from './projects-accordion.js';
 import { initReveal } from './reveal.js';
 
+initI18n();
 initBurger();
 initLoader();
 initCookies();

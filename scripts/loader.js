@@ -1,3 +1,5 @@
+import { translations, getCurrentLang } from './i18n.js';
+
 export function initLoader() {
     const loadingScreen = document.getElementById('loadingScreen');
     const nameLoader = document.getElementById('nameLoader');
@@ -13,7 +15,8 @@ export function initLoader() {
     nameLoader.textContent = '';
     roleLoader.textContent = '';
 
-    const name = 'Екатерина Туманова';
+    const lang = getCurrentLang();
+    const name = translations['loader.name'] ? (translations['loader.name'][lang] ?? translations['loader.name'].en) : 'Ekaterina Tumanova';
     const role = 'Frontend Developer';
     let nameIdx = 0;
     let roleIdx = 0;
@@ -43,7 +46,7 @@ export function initLoader() {
     function hideLoader() {
         loadingScreen.classList.add('fade-out');
         console.log('✅ fade-out added');
-        
+
         setTimeout(() => {
             loadingScreen.style.display = 'none';
             console.log('✅ Loader hidden');
