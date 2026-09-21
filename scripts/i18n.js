@@ -11,6 +11,7 @@ export const translations = {
     'common.name': { en: 'Ekaterina Tumanova', ru: 'Екатерина Туманова' },
     'common.logo.alt': { en: 'Ekaterina Tumanova — Frontend Developer', ru: 'Екатерина Туманова — Frontend Developer' },
     'common.nav.about': { en: 'ABOUT ME', ru: 'ОБО МНЕ' },
+    'common.nav.home': { en: 'HOME', ru: 'ГЛАВНАЯ' },
     'common.nav.skills': { en: 'SKILLS', ru: 'НАВЫКИ' },
     'common.nav.portfolio': { en: 'PORTFOLIO', ru: 'ПОРТФОЛИО' },
     'common.nav.contacts': { en: 'CONTACTS', ru: 'КОНТАКТЫ' },
