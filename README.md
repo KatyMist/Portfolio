@@ -19,10 +19,10 @@ Frontend Developer & Designer
 
 <br>
 
-[!NOTE]
-**О проекте.** Личный проект, сделанный с нуля: идея, структура, визуальный стиль, цветовая палитра и код — мои. Сайт двуязычный (RU / EN) и поддерживает светлую и тёмную тему. Здесь собраны мои навыки, сертификаты, коммерческие и учебные проекты, а также описан процесс работы над сайтом.
-
-**About the project.** A personal project built from scratch: the concept, structure, visual style, color palette and code are all my own. The website is bilingual (RU / EN) and supports light and dark themes. It brings together my skills, certificates, commercial and educational projects, and describes how I work on a website.
+> [!NOTE]
+> **О проекте.** Личный проект, сделанный с нуля: идея, структура, визуальный стиль, цветовая палитра и код — мои. Сайт двуязычный (RU / EN) и поддерживает светлую и тёмную тему. Здесь собраны мои навыки, сертификаты, коммерческие и учебные проекты, а также описан процесс работы над сайтом.
+>
+> **About the project.** A personal project built from scratch: the concept, structure, visual style, color palette and code are all my own. The website is bilingual (RU / EN) and supports light and dark themes. It brings together my skills, certificates, commercial and educational projects, and describes how I work on a website.
 
 ---
 
