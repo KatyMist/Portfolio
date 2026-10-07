@@ -36,7 +36,7 @@ A single-page portfolio website for a frontend developer, with a few supporting 
 |---|---|
 | [Главная · Home](https://katymist.github.io/Portfolio/#hero) | Первый экран с именем и специализацией<br>Hero section with my name and role |
 | [Навыки · Skills](https://katymist.github.io/Portfolio/#skills) | Стек, инструменты, языки, что изучаю сейчас<br>Stack, tools, languages, what I'm learning now |
-| [Обучение · Education](https://katymist.github.io/Portfolio/#education) | Курсы и сертификаты Stepik<br>Stepik courses and certificates |
+| [Обучение · Education](https://katymist.github.io/Portfolio/#education) | Курсы и сертификаты<br>Courses and certificates |
 | [Проекты · Projects](https://katymist.github.io/Portfolio/#projects) | Коммерческие и учебные проекты в аккордеоне<br>Commercial and educational projects in an accordion |
 | [Контакты · Contacts](https://katymist.github.io/Portfolio/#contacts) | GitHub, Stepik, HH.ru, Telegram<br>GitHub, Stepik, HH.ru, Telegram |
 | [Процесс · Process](https://katymist.github.io/Portfolio/process.html) | Этапы работы над сайтом и бриф для скачивания<br>Website development stages and a downloadable brief |
