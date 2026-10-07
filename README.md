@@ -7,12 +7,12 @@ Frontend Developer & Designer
 
 <a href="https://katymist.github.io/Portfolio/"><img src="https://img.shields.io/badge/ОТКРЫТЬ_САЙТ-KATYMIST.GITHUB.IO-a9b79c?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=2f2e2b" alt="Открыть сайт"></a>
 
-<img src="https://skillicons.dev/icons?i=html,sass,js,github" alt="HTML, Sass, JavaScript, GitHub">
+<img src="https://skillicons.dev/icons?i=html,sass,js,figma,github" alt="HTML, Sass, JavaScript, Figma, GitHub">
 
 <img src="https://img.shields.io/badge/RU-Русский-a9b79c?labelColor=2f2e2b" alt="Русский"> <img src="https://img.shields.io/badge/EN-English-a9b79c?labelColor=2f2e2b" alt="English">
 
 <a href="https://katymist.github.io/Portfolio/">
- <img width="1800" height="1068" alt="preview" src="https://github.com/user-attachments/assets/00630e14-072e-4bd5-8018-a3433b2f35ae" />
+  <img src="screenshots/preview.jpg" alt="Home page on desktop and smartphone" width="100%">
 </a>
 
 </div>
@@ -60,51 +60,51 @@ A single-page portfolio website for a frontend developer, with a few supporting 
 <details open>
 <summary><b>Тёмная тема · Dark Theme</b></summary>
 <br>
-<img width="1800" height="1068" alt="dark-theme" src="https://github.com/user-attachments/assets/1c537064-1bb0-47c5-954d-5a987caf2e0c" />
+<img src="screenshots/dark-theme.jpg" alt="Dark theme" width="100%">
 </details>
 
 <details>
 <summary><b>Навыки · Skills</b></summary>
 <br>
-<img width="1800" height="1059" alt="skills" src="https://github.com/user-attachments/assets/58a28e68-69dd-4176-be34-d8cb4bda1584" />
+<img src="screenshots/skills.jpg" alt="Skills section" width="100%">
 </details>
 
 <details>
 <summary><b>Проекты · Projects</b></summary>
 <br>
-<img width="1800" height="1887" alt="projects" src="https://github.com/user-attachments/assets/d632e5d3-9ff3-465f-81f0-f23b5197499c" />
+<img src="screenshots/projects.jpg" alt="Projects section" width="100%">
 <br><br>
-<img width="1800" height="1068" alt="dark-theme" src="https://github.com/user-attachments/assets/1536ac64-fc28-422c-a9cc-eb74282f4947" />
+<img src="screenshots/projects-dark.jpg" alt="Projects section in dark theme" width="100%">
 </details>
 
 <details>
 <summary><b>Контакты · Contacts</b></summary>
 <br>
-<img width="1800" height="1105" alt="contacts" src="https://github.com/user-attachments/assets/92bbb2e6-0a96-4364-95bb-6648a59d5648" />
+<img src="screenshots/contacts.jpg" alt="Contacts section" width="100%">
 </details>
 
 <details>
 <summary><b>Процесс разработки · Development Process</b></summary>
 <br>
-<img width="1800" height="1640" alt="process" src="https://github.com/user-attachments/assets/e6e3b43d-c0f0-4711-a1b5-e7aeea979f38" />
+<img src="screenshots/process.jpg" alt="Development process page" width="100%">
 </details>
 
 <details>
 <summary><b>Прелоадер · Preloader</b></summary>
 <br>
-<img width="1800" height="1216" alt="loader" src="https://github.com/user-attachments/assets/8562a936-ee62-4852-b8be-9dd396447eb5" />
+<img src="screenshots/loader.jpg" alt="Preloader" width="100%">
 </details>
 
 <details>
 <summary><b>Страница 404 · 404 Page</b></summary>
 <br>
-<img width="1800" height="1216" alt="404" src="https://github.com/user-attachments/assets/dfc9e5b6-4842-4dd8-b159-05a48f495e57" />
+<img src="screenshots/404.jpg" alt="404 page" width="100%">
 </details>
 
 <details>
 <summary><b>Мобильная версия · Mobile Version</b></summary>
 <br>
-<img width="1800" height="922" alt="mobile" src="https://github.com/user-attachments/assets/217e041d-d5eb-4691-97a0-aad30f0f0678" />
+<img src="screenshots/mobile.jpg" alt="Mobile version" width="100%">
 </details>
 
 
