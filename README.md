@@ -132,6 +132,7 @@ The portfolio has two sections: **commercial** projects — websites for real cl
 
 ## Структура проекта · Project Structure
 
+```text
 ├── index.html            # Главная: навыки, проекты, контакты · Home: skills, projects, contacts
 ├── process.html          # Процесс разработки · Development process
 ├── privacy.html          # Политика конфиденциальности · Privacy policy
@@ -145,8 +146,9 @@ The portfolio has two sections: **commercial** projects — websites for real cl
 │   ├── i18n.js           # Переводы RU / EN · RU / EN translations
 │   ├── theme.js          # Светлая / тёмная тема · Light / dark theme
 │   └── ...               # Прелоадер, курсор, аккордеон и др. · Preloader, cursor, accordion, etc.
-├── images/  icons/  fonts/
-└── screenshots/          # Изображения для README · README images
+└── images/  icons/  fonts/
+```
+
 ## Запуск локально · Running Locally
 
 git clone https://github.com/KatyMist/Portfolio.git
