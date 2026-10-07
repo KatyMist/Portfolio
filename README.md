@@ -67,7 +67,7 @@ The portfolio has two sections: **commercial** projects — websites for real cl
 <br>
 <img width="1800" height="1887" alt="projects" src="https://github.com/user-attachments/assets/d632e5d3-9ff3-465f-81f0-f23b5197499c" />
 <br><br>
-<img width="1800" height="1068" alt="dark-theme" src="https://github.com/user-attachments/assets/1536ac64-fc28-422c-a9cc-eb74282f4947" />
+<img width="1800" height="1068" alt="projects-dark" src="https://github.com/user-attachments/assets/1536ac64-fc28-422c-a9cc-eb74282f4947" />
 </details>
 
 <details>
@@ -151,14 +151,20 @@ The portfolio has two sections: **commercial** projects — websites for real cl
 
 ## Запуск локально · Running Locally
 
+```bash
 git clone https://github.com/KatyMist/Portfolio.git
 cd Portfolio
 npm install
 npm run dev      # компиляция стилей в режиме наблюдения · compile styles in watch mode
 npx serve .      # локальный сервер · local server
+```
+
 Сборка стилей без source map · Build styles without a source map:
 
+```bash
 npm run build
+```
+
 ## Автор · Author
 
 **Екатерина Туманова · Ekaterina Tumanova** — Frontend Developer & Designer
