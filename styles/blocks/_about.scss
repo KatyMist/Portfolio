@@ -1,0 +1,132 @@
+@use '../helpers' as *;
+@use '../variables' as *;
+
+// ОБО МНЕ
+.about-section {
+    padding: rem(80) rem(32);
+    background: var(--color-bg-main);
+    transition: background-color 0.4s ease;
+
+    @include tablet {
+        padding: rem(60) rem(24);
+    }
+
+    @include mobile {
+        padding: rem(40) rem(16);
+    }
+}
+
+.about-card {
+    display: grid;
+    grid-template-columns: rem(360) 1fr;
+    gap: rem(64);
+    align-items: center;
+    max-width: rem(1200);
+    margin: 0 auto;
+    padding: rem(56) rem(64);
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border: 1px solid var(--glass-border);
+    border-radius: rem(24);
+    box-shadow: 0 8px 32px var(--glass-shadow);
+    transition: var(--theme-transition);
+
+    @include tablet {
+        grid-template-columns: rem(260) 1fr;
+        gap: rem(40);
+        padding: rem(40);
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        gap: rem(32);
+        padding: rem(28) rem(20);
+        border-radius: rem(16);
+    }
+}
+
+.about-photo {
+    position: relative;
+    margin: 0;
+
+    // декоративная рамка со смещением
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        transform: translate(rem(16), rem(16));
+        border: 1px solid var(--color-bg-green);
+        border-radius: rem(20);
+        transition: transform 0.4s ease, border-color 0.4s ease;
+    }
+
+    // ховер как у картинок проектов: приподнимается + внешняя рамка
+    @include hover {
+        &::before {
+            transform: translate(rem(24), rem(24)); // линия отъезжает наружу и остаётся видна
+        }
+
+        .about-photo__img {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow:
+                0 0 0 rem(3) var(--color-bg-green),
+                0 30px 80px rgba($color-bg-green, 0.35);
+        }
+    }
+
+    @include mobile {
+        max-width: rem(260);
+        margin: 0 auto;
+
+        &::before {
+            transform: translate(rem(12), rem(12));
+        }
+    }
+}
+
+.about-photo__img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: rem(20);
+    box-shadow: 0 20px 60px rgba($color-bg-green, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+
+    @include mobile {
+        text-align: center;
+    }
+}
+
+.about-greeting {
+    font-family: 'PlayfairDisplay', sans-serif;
+    font-size: fluid(36, 26);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-text);
+    margin: 0 0 rem(4) 0;
+    transition: color 0.4s ease;
+}
+
+.about-text {
+    font-family: 'Philosopher', sans-serif;
+    font-size: fluid(17, 15);
+    line-height: 1.7;
+    color: var(--color-text-light);
+    margin: 0;
+    transition: color 0.4s ease;
+
+    strong {
+        color: var(--color-text);
+        font-weight: 700;
+    }
+}

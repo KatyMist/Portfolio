@@ -40,6 +40,25 @@ export const translations = {
 
     'idx.hero.bgTitle': { en: 'PORTFOLIO', ru: 'ПОРТФОЛИО' },
 
+    'idx.about.title': { en: 'ABOUT ME', ru: 'ОБО МНЕ' },
+    'idx.about.greeting': { en: "Hi! I'm Ekaterina", ru: 'Привет! Я Екатерина' },
+    'idx.about.text1': {
+        en: "I'm a <strong>frontend developer</strong> with a professional background in ecology, forestry, and public and municipal administration. I build modern responsive websites with a well-thought-out structure, convenient navigation, and attention to detail.",
+        ru: "Я <strong>Frontend-разработчик</strong> с профессиональным бэкграундом в сфере экологии, лесного хозяйства и государственного и муниципального управления. Создаю современные адаптивные сайты с продуманной структурой, удобной навигацией и вниманием к деталям.",
+    },
+    'idx.about.text2': {
+        en: "In development, I enjoy the combination of logic, visual design, and solving practical problems. I work with HTML, CSS/SCSS, JavaScript, Git/GitHub, and Vite. I follow the principles of semantic and responsive markup and pay attention to code quality and interface usability.",
+        ru: "В разработке мне интересны сочетание логики, визуальной составляющей и решение практических задач. Умею работать с HTML, CSS/SCSS, JavaScript, Git/GitHub и Vite. Применяю принципы семантической и адаптивной вёрстки, уделяю внимание качеству кода и удобству интерфейсов.",
+    },
+    'idx.about.text3': {
+        en: "Right now I'm deepening my knowledge of React and TypeScript at RS School, developing my technical skills, and working on projects that put what I've learned into practice.",
+        ru: "Сейчас углубляю знания React и TypeScript в RS School, развиваю технические навыки и работаю над проектами, применяя изученные технологии на практике.",
+    },
+    'idx.about.text4': {
+        en: "I'm open to offers and new professional opportunities. I want to grow within a team, take part in building modern web products, and apply my knowledge to solve real-world problems.",
+        ru: "Открыта к предложениям и новым профессиональным возможностям. Хочу развиваться в команде, участвовать в создании современных веб-продуктов и применять свои знания для решения реальных задач.",
+    },
+
     'idx.skills.title': { en: 'STACK & TOOLS', ru: 'СТЕК И ИНСТРУМЕНТЫ' },
     'idx.skills.col1.title': { en: 'Technical skills', ru: 'Технические навыки' },
     'idx.skills.item.responsive': { en: 'Responsive, cross-browser markup', ru: 'Адаптивная и кроссбраузерная вёрстка' },

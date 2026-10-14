@@ -30,7 +30,8 @@
 }
 
 .skills-header,
-.courses-header {
+.courses-header,
+.about-header {
     margin-bottom: rem(50);
 
     @include mobile {
@@ -39,7 +40,8 @@
 }
 
 .skills-title,
-.courses-title {
+.courses-title,
+.about-title {
     position: relative;
     display: flex;
     align-items: center;

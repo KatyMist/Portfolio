@@ -42,14 +42,7 @@
     font-display: swap;
 }
 
-// PLAYPEN SANS ПРОПИСЬ
-@font-face {
-    font-family: 'PlaypenSans';
-    src: url(../fonts/PlaypenSans-Regular.woff2) format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
+
 
 //MarckScript 
 
@@ -77,23 +70,6 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Philosopher';
-    src: url('../fonts/Philosopher-Italic.woff2') format('woff2');
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Philosopher';
-    src: url('../fonts/Philosopher-BoldItalic.woff2') format('woff2');
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-// NEW! 
 
 @font-face {
     font-family: 'PlayfairDisplay';
@@ -103,13 +79,7 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'PlayfairDisplay';
-    src: url(../fonts/PlayfairDisplay-Italic.woff2) format('woff2');
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-}
+
 
 // Обычный амперсанд (&) для заголовков вместо фигурного из Playfair Display
 @font-face {

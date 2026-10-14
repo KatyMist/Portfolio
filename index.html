@@ -62,6 +62,7 @@
             <nav class="nav" id="nav">
                 <ul class="nav__list">
                     <li><a href="index.html#hero" class="nav__link" data-i18n="common.nav.home">HOME</a></li>
+                    <li><a href="index.html#about" class="nav__link" data-i18n="common.nav.about">ABOUT ME</a></li>
                     <li><a href="index.html#skills" class="nav__link" data-i18n="common.nav.skills">SKILLS</a></li>
                     <li><a href="index.html#projects" class="nav__link" data-i18n="common.nav.portfolio">PORTFOLIO</a></li>
                     <li><a href="index.html#contacts" class="nav__link" data-i18n="common.nav.contacts">CONTACTS</a></li>
@@ -103,6 +104,30 @@
             <div class="hero__overlay-text">
                 <h2 class="hero__overlay-name" data-i18n="common.name">Ekaterina Tumanova</h2>
                 <p class="hero__overlay-role">Frontend Developer</p>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="about-header js-reveal">
+                <h2 class="about-title">
+                    <span class="line"></span>
+                    <span class="text" data-i18n="idx.about.title">ABOUT ME</span>
+                    <span class="line"></span>
+                </h2>
+            </div>
+
+            <div class="about-card js-reveal">
+                <figure class="about-photo">
+                    <img src="./images/about.webp" alt="Ekaterina Tumanova" class="about-photo__img" width="800" height="1000" loading="lazy" data-i18n-attr="alt:common.name">
+                </figure>
+
+                <div class="about-content">
+                    <h3 class="about-greeting" data-i18n="idx.about.greeting">Hi! I'm Ekaterina</h3>
+                    <p class="about-text" data-i18n="idx.about.text1" data-i18n-html>I'm a <strong>frontend developer</strong> with a professional background in ecology, forestry, and public and municipal administration. I build modern responsive websites with a well-thought-out structure, convenient navigation, and attention to detail.</p>
+                    <p class="about-text" data-i18n="idx.about.text2" data-i18n-html>In development, I enjoy the combination of logic, visual design, and solving practical problems. I work with HTML, CSS/SCSS, JavaScript, Git/GitHub, and Vite. I follow the principles of semantic and responsive markup and pay attention to code quality and interface usability.</p>
+                    <p class="about-text" data-i18n="idx.about.text3" data-i18n-html>Right now I'm deepening my knowledge of React and TypeScript at RS School, developing my technical skills, and working on projects that put what I've learned into practice.</p>
+                    <p class="about-text" data-i18n="idx.about.text4" data-i18n-html>I'm open to offers and new professional opportunities. I want to grow within a team, take part in building modern web products, and apply my knowledge to solve real-world problems.</p>
+                </div>
             </div>
         </section>
 
@@ -610,6 +635,12 @@
                     <p class="contacts-role">Frontend Developer</p>
 
                     <ul class="contacts-list">
+                        <li class="contacts-list__item">
+                            <a href="mailto:tumanova.ekaterina73@gmail.com" class="contacts-list__link">
+                                <span class="contacts-list__label">Email</span>
+                                <span class="contacts-list__value">tumanova.ekaterina73@gmail.com</span>
+                            </a>
+                        </li>
                         <li class="contacts-list__item">
                             <a href="https://github.com/KatyMist" target="_blank" class="contacts-list__link">
                                 <span class="contacts-list__label">GitHub</span>

@@ -25,10 +25,10 @@ export function initLoader() {
         if (nameIdx < name.length) {
             nameLoader.textContent += name[nameIdx];
             nameIdx++;
-            setTimeout(addNameChar, 40);
+            setTimeout(addNameChar, 25);
         } else {
             console.log('✅ Name done, starting role');
-            setTimeout(addRoleChar, 500);
+            setTimeout(addRoleChar, 200);
         }
     }
 
@@ -36,7 +36,7 @@ export function initLoader() {
         if (roleIdx < role.length) {
             roleLoader.textContent += role[roleIdx];
             roleIdx++;
-            setTimeout(addRoleChar, 40);
+            setTimeout(addRoleChar, 25);
         } else {
             console.log('✅ Role done, hiding loader');
             hideLoader();
@@ -50,7 +50,7 @@ export function initLoader() {
         setTimeout(() => {
             loadingScreen.style.display = 'none';
             console.log('✅ Loader hidden');
-        }, 800); // ← ВАЖНО: совпадает с transition 0.8s
+        }, 500); // ← ВАЖНО: совпадает с transition 0.5s
     }
 
     // SAFETY timeout
@@ -59,7 +59,7 @@ export function initLoader() {
             console.log('⚠️ SAFETY: Forcing loader hide');
             loadingScreen.style.display = 'none';
         }
-    }, 5000);
+    }, 3500);
 
     // Старт
     console.log('📍 Starting loader animation');
