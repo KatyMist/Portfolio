@@ -44,11 +44,16 @@ export const translations = {
     'idx.skills.col1.title': { en: 'Technical skills', ru: 'Технические навыки' },
     'idx.skills.item.responsive': { en: 'Responsive, cross-browser markup', ru: 'Адаптивная и кроссбраузерная вёрстка' },
     'idx.skills.item.bem': { en: 'Semantic markup, BEM methodology', ru: 'Семантическая вёрстка, БЭМ (BEM)' },
+    'idx.skills.item.spa': { en: 'SPA (single-page applications)', ru: 'SPA (одностраничные приложения)' },
     'idx.skills.item.seo': { en: 'Basic SEO', ru: 'Базовое SEO' },
     'idx.skills.col1.title2': { en: 'Currently learning', ru: 'Изучаю сейчас' },
+    'idx.skills.item.tests': { en: 'Unit testing (Vitest, Jest)', ru: 'Unit-тестирование (Vitest, Jest)' },
+    'idx.skills.item.gitflow': { en: 'Team Git workflow: branches, pull requests, code review', ru: 'Командная работа в Git: ветки, pull request, code review' },
     'idx.skills.item.english': { en: 'English (A2)', ru: 'Английский язык (A2)' },
     'idx.skills.col2.title': { en: 'Tools & approach', ru: 'Инструменты и подход' },
     'idx.skills.item.figma': { en: 'Figma (markup from designs)', ru: 'Figma (вёрстка по макетам)' },
+    'idx.skills.item.deploy': { en: 'GitHub Pages, GitHub Actions (deploy)', ru: 'GitHub Pages, GitHub Actions (деплой)' },
+    'idx.skills.item.metrica': { en: 'Yandex.Metrica (analytics)', ru: 'Яндекс.Метрика (аналитика)' },
     'idx.skills.item.component': { en: 'Component-based approach', ru: 'Компонентный подход' },
     'idx.skills.item.cleanCode': { en: 'Clean, readable code', ru: 'Чистый и читаемый код' },
     'idx.skills.item.perf': { en: 'Basic performance optimization', ru: 'Базовая оптимизация производительности' },
@@ -65,7 +70,14 @@ export const translations = {
     'idx.courses.cert2': { en: 'JavaScript Deep Dive: for Beginners', ru: 'Погружение в JavaScript: для начинающих' },
     'idx.courses.cert4': { en: 'Web Development for Beginners: HTML and CSS', ru: 'Веб-разработка для начинающих: HTML и CSS' },
     'idx.courses.cert5': { en: 'Git and GitHub Basics', ru: 'Основы Git и GitHub' },
-    'idx.courses.col2.title': { en: 'Other platforms', ru: 'Другие площадки' },
+    'idx.courses.col2.title': { en: 'RS School', ru: 'RS School' },
+    'idx.courses.rs.description': {
+        en: 'Free courses by The Rolling Scopes developer community<br>\n                        <a href="https://rs.school/" class="courses-link" target="_blank">→ rs.school</a>',
+        ru: 'Бесплатные курсы от сообщества разработчиков The Rolling Scopes<br>\n                        <a href="https://rs.school/" class="courses-link" target="_blank">→ rs.school</a>',
+    },
+    'idx.courses.rs1': { en: 'JS / Front-end Short Track 2026 Q3 — in progress', ru: 'JS / Front-end Short Track 2026 Q3 — в процессе' },
+    'idx.courses.rs2': { en: 'Fullstack Engineering 2026 Q3 — in progress', ru: 'Fullstack Engineering 2026 Q3 — в процессе' },
+    'idx.courses.col3.title': { en: 'Other platforms', ru: 'Другие площадки' },
     'idx.courses.empty': { en: 'Courses from other platforms will appear here soon', ru: 'Скоро здесь появятся курсы с других платформ' },
 
     'idx.projects.title': { en: 'MY PROJECTS', ru: 'МОИ ПРОЕКТЫ' },
@@ -77,6 +89,7 @@ export const translations = {
     'idx.project.viewBtn': { en: 'View project →', ru: 'Смотреть проект →' },
     'idx.project.codeBtn': { en: 'Source code →', ru: 'Разработка →' },
     'idx.project.eduType': { en: 'Educational project', ru: 'Учебный проект' },
+    'idx.project.rsType': { en: 'RS School · Figma design & specification', ru: 'RS School · вёрстка по макету Figma и ТЗ' },
 
     'idx.project1.name': { en: "Website for Anna Kudurova's podiatry and wellness aesthetics school-studio", ru: 'Сайт для школы-студии подологии и здоровой эстетики Анны Кудуровой' },
     'idx.project1.type': { en: "A full-scale commercial project built from scratch based on the client's brief", ru: 'Полноценный коммерческий проект, разработанный с нуля по брифу заказчика' },
@@ -108,7 +121,7 @@ export const translations = {
         en: '<strong>Result:</strong> a modern, responsive, fully original commercial website that I built from scratch — from the initial idea and visual concept to the finished product.',
         ru: '<strong>Результат:</strong> современный, адаптивный и полностью авторский коммерческий сайт, созданный мной с нуля — от идеи и визуальной концепции до готового продукта.',
     },
-    'idx.project3.imgAlt': { en: 'Portfolio website', ru: 'Портфолио сайт' },
+    'idx.project3.imgAlt': { en: 'Forestry documentation website', ru: 'Сайт лесной документации' },
 
     'idx.project4.desc': {
         en: 'A responsive fitness club landing page built while following a video tutorial. The project helped reinforce semantic and responsive markup skills using <b>HTML</b> and <b>CSS</b>.',
@@ -138,6 +151,14 @@ export const translations = {
         ru: '<strong>Стек: TypeScript · React · Vite · CSS/SCSS</strong>',
     },
     'idx.project8.imgAlt': { en: 'Chessland project', ru: 'Chessland проект' },
+
+    'idx.project9.desc1': { en: 'MiniGames is an SPA catalog of browser mini-games, built independently from a Figma design and a technical specification as part of the RS School course. Written in TypeScript without frameworks.', ru: 'MiniGames — SPA-каталог браузерных мини-игр. Сделан самостоятельно по макету Figma и техническому заданию в рамках курса RS School, на TypeScript без фреймворков.' },
+    'idx.project9.desc2': { en: 'I implemented a responsive layout, a client-side router, a game library with filtering, sorting and pagination, game cards with comments and likes, Firebase authentication (email and Google), and form validation. The code is covered with unit tests (Vitest) and checked by ESLint and Prettier; the work was done in feature branches through pull requests and code review.', ru: 'Реализовала адаптивную вёрстку, клиентский роутер, библиотеку игр с фильтрацией, сортировкой и пагинацией, карточки игр с комментариями и лайками, авторизацию через Firebase (email и Google) и валидацию форм. Код покрыт unit-тестами (Vitest) и проверяется ESLint и Prettier; работа велась в отдельных ветках через pull request и code review.' },
+    'idx.project9.imgAlt': { en: 'MiniGames project', ru: 'Проект MiniGames' },
+
+    'idx.project10.desc1': { en: 'Coffee House is a responsive coffee shop landing page with a menu catalog, built independently from a Figma design and a technical specification as part of the RS School course.', ru: 'Coffee House — адаптивный лендинг кофейни с каталогом меню. Сделан самостоятельно по макету Figma и техническому заданию в рамках курса RS School.' },
+    'idx.project10.desc2': { en: 'I implemented responsive markup following the design, a light and dark theme switch, a burger menu, a favorite drinks slider, a menu catalog with category filtering, and a product modal window.', ru: 'Реализовала адаптивную вёрстку по макету, переключение светлой и тёмной темы, бургер-меню, слайдер популярных напитков, каталог с фильтрацией по категориям и модальное окно товара.' },
+    'idx.project10.imgAlt': { en: 'Coffee House landing page', ru: 'Лендинг Coffee House' },
 
     'idx.contacts.title': { en: 'CONTACTS', ru: 'КОНТАКТЫ' },
     'idx.contacts.value.stepik': { en: 'Certificates and courses', ru: 'Сертификаты и курсы' },

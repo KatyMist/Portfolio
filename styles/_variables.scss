@@ -73,6 +73,8 @@ $font-weight-bold: 700;
     --glass-item-shadow: rgba(0, 0, 0, 0.06);
     --glass-item-shadow-hover: rgba(188, 198, 178, 0.15);
 
+    --mockup-bg: linear-gradient(160deg, #F8F6F2 0%, #EFEAE2 55%, #E4E9DE 100%);
+
     --theme-transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -114,5 +116,7 @@ $font-weight-bold: 700;
     --glass-item-border: rgba(255, 255, 255, 0.15);
     --glass-item-shadow: rgba(0, 0, 0, 0.25);
     --glass-item-shadow-hover: rgba(168, 184, 156, 0.25);
+
+    --mockup-bg: linear-gradient(160deg, #2C2E29 0%, #252722 55%, #22261F 100%);
 }
 

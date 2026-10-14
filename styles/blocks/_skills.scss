@@ -45,7 +45,7 @@
     align-items: center;
     justify-content: center;
     gap: rem(24);
-    font-family: 'PlayfairDisplay', sans-serif;
+    font-family: 'TitleAmp', 'PlayfairDisplay', sans-serif;
     font-size: fluid(36, 24);
     font-weight: 700;
     line-height: 1;
@@ -168,7 +168,7 @@
 }
 
 .skills-col__title {
-    font-family: 'PlayfairDisplay', sans-serif;
+    font-family: 'TitleAmp', 'PlayfairDisplay', sans-serif;
     font-size: fluid(28, 20);
     font-weight: 700;
     color: var(--color-text);

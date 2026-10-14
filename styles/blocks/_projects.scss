@@ -324,6 +324,17 @@
     overflow: hidden;
 }
 
+// После раскрытия убираем обрезку, чтобы эффект наведения на картинку был виден снаружи
+.project-accordion__item.is-open .project-accordion__inner {
+    animation: project-panel-overflow 0s 0.4s forwards;
+}
+
+@keyframes project-panel-overflow {
+    to {
+        overflow: visible;
+    }
+}
+
 .project-accordion__row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -449,12 +460,15 @@
     margin: 0 auto;
     border-radius: rem(12);
     overflow: hidden;
+    background: var(--mockup-bg); // фон под мокапом меняется вместе с темой
     box-shadow: 0 20px 60px rgba($color-bg-green, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     @include hover {
-        transform: translateY(-8px);
-        box-shadow: 0 30px 80px rgba($color-bg-green, 0.25);
+        transform: translateY(-6px) scale(1.02);
+        box-shadow:
+            0 0 0 rem(3) var(--color-bg-green),
+            0 30px 80px rgba($color-bg-green, 0.35);
     }
 
     @include tablet {
@@ -472,4 +486,58 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+}
+
+// СТЕК ПРОЕКТА (значки технологий)
+.project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(8);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include mobile {
+        gap: rem(6);
+    }
+}
+
+.project-stack__item {
+    display: inline-flex;
+    align-items: center;
+    gap: rem(6);
+    padding: rem(5) rem(12) rem(5) rem(10);
+    font-family: 'Oswald', sans-serif;
+    font-size: rem(12);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    color: var(--color-text-light);
+    background: var(--glass-item-bg);
+    border: 1px solid var(--color-bg-beige);
+    border-radius: rem(999);
+    transition: var(--theme-transition), transform 0.3s ease;
+
+    @include hover {
+        transform: translateY(-2px);
+        color: var(--color-text);
+        border-color: var(--color-bg-green);
+
+        .project-stack__icon {
+            fill: var(--color-primary);
+        }
+    }
+
+    @include mobile {
+        padding: rem(4) rem(10) rem(4) rem(8);
+        font-size: rem(11);
+    }
+}
+
+.project-stack__icon {
+    width: rem(14);
+    height: rem(14);
+    flex-shrink: 0;
+    fill: var(--color-bg-green);
+    transition: fill 0.3s ease;
 }
