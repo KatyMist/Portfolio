@@ -191,6 +191,7 @@ export const translations = {
     'idx.contacts.title': { en: 'CONTACTS', ru: 'КОНТАКТЫ' },
     'idx.contacts.value.stepik': { en: 'Certificates and courses', ru: 'Сертификаты и курсы' },
     'idx.contacts.value.hh': { en: 'Resume and work experience', ru: 'Резюме и опыт работы' },
+    'idx.contacts.value.habr': { en: 'Profile and skills', ru: 'Профиль и навыки' },
     'idx.contacts.heading': { en: 'Open to new opportunities', ru: 'Открыта к новым возможностям' },
     'idx.contacts.text': { en: "Looking for a team to start my professional journey in frontend development. I'd love the opportunity to grow professionally, keep learning, and work on interesting projects.", ru: 'Ищу команду для начала профессионального пути во frontend-разработке. Буду рада возможности развиваться профессионально, учиться и работать над интересными проектами.' },
 
