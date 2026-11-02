@@ -7,6 +7,14 @@
 const STORAGE_KEY = 'lang';
 
 export const translations = {
+    'idx.degree.university.management': { en: 'Ulyanovsk State University, Ulyanovsk', ru: 'Ульяновский государственный университет, Ульяновск' },
+    'idx.degree.heading': { en: "Higher education", ru: "Высшее образование" },
+    'idx.degree.count': { en: "02 master’s degrees", ru: "02 магистратуры" },
+    'idx.degree.level': { en: "Master’s degree", ru: "Магистр" },
+    'idx.degree.forestry': { en: "Forestry", ru: "Лесное дело" },
+    'idx.degree.management': { en: "Public and Municipal Administration", ru: "Государственное и муниципальное управление" },
+    'idx.degree.university': { en: "Volga State University of Technology, Yoshkar-Ola", ru: "Поволжский государственный технологический университет, Йошкар-Ола" },
+    'idx.degree.honors': { en: "Graduated with honors", ru: "Диплом с отличием" },
     'loader.status': { en: 'Loading', ru: 'Загрузка' },
     'idx.education.count': { en: "06 certificates", ru: "06 сертификатов" },
     'idx.education.summary': { en: "Completed courses and certificates", ru: "Завершённые курсы и сертификаты" },

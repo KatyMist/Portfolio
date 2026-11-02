@@ -37,7 +37,7 @@ A single-page portfolio website for a frontend developer, with supporting pages.
 | [Главная · Home](https://katymist.github.io/Portfolio/#hero) | «Превращаю идеи в цифровые продукты»: имя, специализация и кнопка перехода к проектам<br>“Turning ideas into digital products”: name, role and a link to projects |
 | [Обо мне · About me](https://katymist.github.io/Portfolio/#about) | Опыт, подход к работе и портрет с мягким изменением контура<br>Background, approach to work and a portrait with a gently changing outline |
 | [Навыки · Skills](https://katymist.github.io/Portfolio/#skills) | Технические навыки, инструменты, изучаемые технологии и языки<br>Technical skills, tools, technologies I’m learning and languages |
-| [Обучение · Education](https://katymist.github.io/Portfolio/#education) | Шесть сертификатов и ссылка на профиль Stepik<br>Six certificates and a link to my Stepik profile |
+| [Обучение · Education](https://katymist.github.io/Portfolio/#education) | Шесть сертификатов Stepik и две магистратуры с отличием<br>Six Stepik certificates and two master’s degrees with honors |
 | [Проекты · Projects](https://katymist.github.io/Portfolio/#projects) | Три коммерческих и личных проекта, семь учебных — в горизонтальных лентах с переворотом карточек<br>Three commercial and personal projects and seven learning projects, in horizontal flip-card galleries |
 | [Контакты · Contacts](https://katymist.github.io/Portfolio/#contacts) | Email, Telegram, HH.ru, Habr Career, GitHub и Stepik<br>Email, Telegram, HH.ru, Habr Career, GitHub and Stepik |
 | [Процесс · Process](https://katymist.github.io/Portfolio/process.html) | Этапы работы над сайтом и бриф для скачивания<br>Website development stages and a downloadable brief |
