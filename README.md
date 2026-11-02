@@ -144,7 +144,7 @@ Each card shows a title and preview on the front, with a description, tech stack
 | **Карточки сертификатов** — каждая целиком ведёт на сертификат Stepik | **Certificate cards** — each entire card links to its Stepik certificate |
 | **Шесть активных контактов** — Email, Telegram, HH.ru, Habr Career, GitHub и Stepik | **Six contact links** — Email, Telegram, HH.ru, Habr Career, GitHub and Stepik |
 | **Мягкие эффекты наведения** и настройка уменьшенного движения для основных новых эффектов | **Subtle hover effects** and reduced-motion alternatives for the main new effects |
-| **Прелоадер** с эффектом печатающегося текста | **Preloader** with a typewriter text effect |
+| **Прелоадер** с монограммой, мягкой анимацией и плавным исчезновением | **Preloader** with a monogram, subtle animation and a soft fade-out |
 | **Анимация появления** отдельных блоков при прокрутке (IntersectionObserver) | **Reveal-on-scroll** animations for selected blocks (IntersectionObserver) |
 | **Кастомный курсор** с мерцающим шлейфом | **Custom cursor** with a sparkle trail |
 | **SVG-фавикон** с монограммой «Е» | **SVG favicon** with an “Е” monogram |

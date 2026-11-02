@@ -7,6 +7,7 @@
 const STORAGE_KEY = 'lang';
 
 export const translations = {
+    'loader.status': { en: 'Loading', ru: 'Загрузка' },
     'idx.education.count': { en: "06 certificates", ru: "06 сертификатов" },
     'idx.education.summary': { en: "Completed courses and certificates", ru: "Завершённые курсы и сертификаты" },
     'idx.education.profile': { en: "All courses on Stepik", ru: "Все курсы на Stepik" },

@@ -1,67 +1,38 @@
-import { translations, getCurrentLang } from './i18n.js';
-
 export function initLoader() {
-    const loadingScreen = document.getElementById('loadingScreen');
-    const nameLoader = document.getElementById('nameLoader');
-    const roleLoader = document.getElementById('roleLoader');
+    const screen = document.getElementById('loadingScreen');
+    if (!screen) return;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const started = performance.now();
+    let dismissed = false;
+    let safetyTimer;
 
-    if (!loadingScreen || !nameLoader || !roleLoader) {
-        console.log('❌ Loader elements not found');
-        return;
-    }
+    screen.hidden = false;
+    screen.setAttribute('aria-hidden', 'false');
 
-    console.log('✅ Loader initialized');
+    const finish = () => {
+        screen.hidden = true;
+        screen.setAttribute('aria-hidden', 'true');
+    };
+    const dismiss = () => {
+        if (dismissed) return;
+        dismissed = true;
+        clearTimeout(safetyTimer);
+        screen.classList.add('fade-out');
+        screen.inert = true;
+        if (reduceMotion) finish();
+        else setTimeout(finish, 400);
+    };
+    const ready = () => {
+        const delay = reduceMotion ? 0 : Math.max(0, 650 - (performance.now() - started));
+        setTimeout(dismiss, delay);
+    };
+    const pageLoaded = () => {
+        if (document.fonts) document.fonts.ready.then(ready, ready);
+        else ready();
+    };
 
-    nameLoader.textContent = '';
-    roleLoader.textContent = '';
-
-    const lang = getCurrentLang();
-    const name = translations['loader.name'] ? (translations['loader.name'][lang] ?? translations['loader.name'].en) : 'Ekaterina Tumanova';
-    const role = 'Frontend Developer';
-    let nameIdx = 0;
-    let roleIdx = 0;
-
-    function addNameChar() {
-        if (nameIdx < name.length) {
-            nameLoader.textContent += name[nameIdx];
-            nameIdx++;
-            setTimeout(addNameChar, 25);
-        } else {
-            console.log('✅ Name done, starting role');
-            setTimeout(addRoleChar, 200);
-        }
-    }
-
-    function addRoleChar() {
-        if (roleIdx < role.length) {
-            roleLoader.textContent += role[roleIdx];
-            roleIdx++;
-            setTimeout(addRoleChar, 25);
-        } else {
-            console.log('✅ Role done, hiding loader');
-            hideLoader();
-        }
-    }
-
-    function hideLoader() {
-        loadingScreen.classList.add('fade-out');
-        console.log('✅ fade-out added');
-
-        setTimeout(() => {
-            loadingScreen.style.display = 'none';
-            console.log('✅ Loader hidden');
-        }, 500); // ← ВАЖНО: совпадает с transition 0.5s
-    }
-
-    // SAFETY timeout
-    setTimeout(() => {
-        if (loadingScreen && loadingScreen.style.display !== 'none') {
-            console.log('⚠️ SAFETY: Forcing loader hide');
-            loadingScreen.style.display = 'none';
-        }
-    }, 3500);
-
-    // Старт
-    console.log('📍 Starting loader animation');
-    addNameChar();
+    // The overlay must never hold the page indefinitely on a slow connection.
+    safetyTimer = setTimeout(dismiss, 2500);
+    if (document.readyState === 'complete') pageLoaded();
+    else window.addEventListener('load', pageLoaded, { once: true });
 }

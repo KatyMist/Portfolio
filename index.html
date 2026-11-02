@@ -689,10 +689,13 @@
 
     <div class="cursor" id="cursor"></div>
 
-    <div class="loading-screen" id="loadingScreen">
-        <div class="loading-content">
-            <div class="loading-name" id="nameLoader">Ekaterina Tumanova</div>
+    <div class="loading-screen" id="loadingScreen" hidden aria-hidden="true">
+        <div class="loading-content" role="status" aria-live="polite">
+            <img class="loading-mark" src="./favicon.svg" width="64" height="64" alt="" aria-hidden="true">
+            <div class="loading-name" id="nameLoader" data-i18n="loader.name">Ekaterina Tumanova</div>
             <div class="loading-role" id="roleLoader">Frontend Developer</div>
+            <div class="loading-track" aria-hidden="true"><span></span></div>
+            <span class="loading-caption" data-i18n="loader.status">Loading</span>
         </div>
     </div>
 
