@@ -4302,3 +4302,26 @@ main section[id] {
     transform: none;
   }
 }
+.ui-arrow {
+  display: block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.ui-arrow-decoration {
+  display: inline-flex;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .ui-arrow-decoration,
+  .cover__cta > .ui-arrow-decoration {
+    display: none;
+  }
+  .cover__cta {
+    justify-content: center;
+    gap: 0;
+    padding: 12px 22px;
+  }
+}

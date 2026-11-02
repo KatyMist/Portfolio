@@ -51,7 +51,7 @@ export const translations = {
     'idx.projects.intro': { en: 'Commercial and personal projects — from idea to launch.', ru: 'Коммерческие и личные проекты — от идеи до запуска.' },
 
     'idx.flip.details': { en: 'Explore project', ru: 'Подробнее о проекте' },
-    'idx.flip.back': { en: 'Back ↶', ru: 'Назад ↶' },
+    'idx.flip.back': { en: 'Back', ru: 'Назад' },
     'idx.flip.description': { en: 'Project description', ru: 'Описание проекта' },
     'idx.flip.cards': { en: 'Project cards. Use arrow keys to scroll.', ru: 'Карточки проектов. Используйте стрелки для прокрутки.' },
     'idx.flip.browse': { en: 'Browse projects', ru: 'Листайте проекты' },
@@ -162,8 +162,8 @@ export const translations = {
     'idx.projects.edu.g3.title': { en: 'Markup from video tutorials', ru: 'Вёрстка по видеоурокам' },
     'idx.projects.edu.g3.meta': { en: '2 projects · HTML, CSS, SCSS, JS', ru: '2 проекта · HTML, CSS, SCSS, JS' },
 
-    'idx.project.viewBtn': { en: 'View project →', ru: 'Смотреть проект →' },
-    'idx.project.codeBtn': { en: 'Source code →', ru: 'Разработка →' },
+    'idx.project.viewBtn': { en: 'View project', ru: 'Смотреть проект' },
+    'idx.project.codeBtn': { en: 'Source code', ru: 'Разработка' },
     'idx.project.eduType': { en: 'Educational project', ru: 'Учебный проект' },
     'idx.project.rsType': { en: 'Built from Figma designs', ru: 'Вёрстка по макетам Figma' },
 
