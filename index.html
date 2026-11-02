@@ -12,7 +12,7 @@
     <meta property="og:image" content="/images/Main.jpg">
     
     <link rel="stylesheet" href="./styles/main.css">
-    <link rel="icon" href="./1.svg" type="image/svg+xml" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" sizes="any">
     <link rel="canonical" href="https://katymist.github.io/Portfolio/">
     
 
@@ -32,7 +32,6 @@
     <noscript><div><img src="https://mc.yandex.ru/watch/109337117" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
 
-    <script src="./scripts/theme-init.js"></script>
     <script src="./scripts/lang-init.js"></script>
 </head>
 <body>
@@ -54,344 +53,351 @@
         <symbol id="i-metrica" viewBox="0 0 24 24"><path d="M3 20h18v2H3zM5 11h3v7H5zm5.5-5h3v12h-3zM16 8h3v10h-3z"/></symbol>
     </svg>
     <header class="header">
-        <a href="index.html" class="header__logo">
-            <img src="./images/1.svg" alt="Ekaterina Tumanova — Frontend Developer" data-i18n-attr="alt:common.logo.alt">
-        </a>
-
-        <div class="header__right">
-            <nav class="nav" id="nav">
-                <ul class="nav__list">
-                    <li><a href="index.html#hero" class="nav__link" data-i18n="common.nav.home">HOME</a></li>
-                    <li><a href="index.html#about" class="nav__link" data-i18n="common.nav.about">ABOUT ME</a></li>
-                    <li><a href="index.html#skills" class="nav__link" data-i18n="common.nav.skills">SKILLS</a></li>
-                    <li><a href="index.html#projects" class="nav__link" data-i18n="common.nav.portfolio">PORTFOLIO</a></li>
-                    <li><a href="index.html#contacts" class="nav__link" data-i18n="common.nav.contacts">CONTACTS</a></li>
-                </ul>
-            </nav>
-
-            <div class="lang-switch" id="langSwitch" role="group" aria-label="Switch language" data-i18n-attr="aria-label:common.langSwitch.ariaLabel">
+        <div class="page-counter" role="group" aria-label="Section" data-i18n-attr="aria-label:common.sectionCounter.label">
+            <span class="page-counter__current">01</span>
+            <span class="page-counter__separator" aria-hidden="true">/</span>
+            <span class="page-counter__total">06</span>
+        </div>
+        <div class="lang-switch" id="langSwitch" role="group" aria-label="Switch language" data-i18n-attr="aria-label:common.langSwitch.ariaLabel">
                 <button type="button" class="lang-switch__btn" data-lang-btn="en" aria-pressed="true">EN</button>
                 <button type="button" class="lang-switch__btn" data-lang-btn="ru" aria-pressed="false">RU</button>
             </div>
-
-            <button class="theme-switch" id="themeToggle" type="button" aria-label="Toggle theme" data-i18n-attr="aria-label:common.themeToggle.ariaLabel" data-theme-state="light">
-                <span class="theme-switch__track">
-                    <span class="theme-switch__thumb">
-                        <svg class="theme-switch__icon theme-switch__icon--sun" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="4" fill="currentColor"/>
-                            <path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-                        </svg>
-                        <svg class="theme-switch__icon theme-switch__icon--moon" viewBox="0 0 24 24" fill="none">
-                            <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" fill="currentColor"/>
-                        </svg>
-                    </span>
-                </span>
-            </button>
-
-            <button class="burger" id="burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
     </header>
 
     <main>
-        <section class="hero" id="hero">
-            <div class="hero__bg-title" data-i18n="idx.hero.bgTitle">PORTFOLIO</div>
-            <div class="hero__year">'26</div>
-            
-            <div class="hero__overlay-text">
-                <h2 class="hero__overlay-name" data-i18n="common.name">Ekaterina Tumanova</h2>
-                <p class="hero__overlay-role">Frontend Developer</p>
+        <section class="hero" id="hero" aria-labelledby="cover-title">
+            <div class="cover">
+                <div class="cover__layout">
+                <div class="cover__content">
+                    <div class="section-intro__eyebrow cover__eyebrow">
+                        <span>Frontend Developer</span>
+                        <span class="section-intro__slash" aria-hidden="true">/</span>
+                        <span class="section-intro__count">2026</span>
+                    </div>
+                    <h1 class="cover__title" id="cover-title">
+                        <span data-i18n="idx.cover.title1">Turning ideas</span>
+                        <span class="cover__title-accent" data-i18n="idx.cover.title2">into digital products</span>
+                    </h1>
+                    <p class="cover__name" data-i18n="common.name">Ekaterina Tumanova</p>
+                    <p class="cover__description" data-i18n="idx.cover.description">Easy-to-use interfaces, clear navigation, and attention to detail.</p>
+                    <a class="cover__cta" href="#projects"><span data-i18n="idx.cover.cta">Explore projects</span><span aria-hidden="true">↗</span></a>
+                </div>
+                </div>
             </div>
         </section>
 
         <section class="about-section" id="about">
-            <div class="about-header js-reveal">
-                <h2 class="about-title">
-                    <span class="line"></span>
-                    <span class="text" data-i18n="idx.about.title">ABOUT ME</span>
-                    <span class="line"></span>
-                </h2>
-            </div>
+            <header class="section-intro">
+                <div class="section-intro__eyebrow">
+                    <span data-i18n="idx.intro.about.label">About me</span>
+                    <span class="section-intro__slash" aria-hidden="true">/</span>
+                    <span class="section-intro__count">02</span>
+                </div>
+                <h2 class="section-intro__title" data-i18n="idx.intro.about.title">A little about me</h2>
+                <p class="section-intro__description" data-i18n="idx.intro.about.description">What interests me and how I approach my work.</p>
+            </header>
 
-            <div class="about-card js-reveal">
+            <div class="about-layout js-reveal">
                 <figure class="about-photo">
-                    <img src="./images/about.webp" alt="Ekaterina Tumanova" class="about-photo__img" width="800" height="1000" loading="lazy" data-i18n-attr="alt:common.name">
+                    <div class="about-photo__frame">
+                        <img src="./images/about.webp" alt="Ekaterina Tumanova" class="about-photo__img" width="800" height="1000" loading="lazy" data-i18n-attr="alt:common.name">
+                    </div>
+                    <figcaption class="about-photo__caption">
+                        <span class="about-photo__name" data-i18n="common.name">Ekaterina Tumanova</span>
+                        <span class="about-photo__role">Frontend Developer</span>
+                    </figcaption>
                 </figure>
-
                 <div class="about-content">
-                    <h3 class="about-greeting" data-i18n="idx.about.greeting">Hi! I'm Ekaterina</h3>
-                    <p class="about-text" data-i18n="idx.about.text1" data-i18n-html>I'm a <strong>frontend developer</strong> with a professional background in ecology, forestry, and public and municipal administration. I build modern responsive websites with a well-thought-out structure, convenient navigation, and attention to detail.</p>
-                    <p class="about-text" data-i18n="idx.about.text2" data-i18n-html>In development, I enjoy the combination of logic, visual design, and solving practical problems. I work with HTML, CSS/SCSS, JavaScript, Git/GitHub, and Vite. I follow the principles of semantic and responsive markup and pay attention to code quality and interface usability.</p>
-                    <p class="about-text" data-i18n="idx.about.text3" data-i18n-html>Right now I'm deepening my knowledge of React and TypeScript at RS School, developing my technical skills, and working on projects that put what I've learned into practice.</p>
-                    <p class="about-text" data-i18n="idx.about.text4" data-i18n-html>I'm open to offers and new professional opportunities. I want to grow within a team, take part in building modern web products, and apply my knowledge to solve real-world problems.</p>
+                    <h3 class="about-focus" data-i18n="idx.about.focus">I enjoy turning complex tasks into clear interfaces</h3>
+                    <p class="about-text" data-i18n="idx.about.summary">I’m growing as a frontend developer: building websites, working on learning apps, and deepening my knowledge of React and TypeScript. I focus on logic, usability, and the details.</p>
+                    <p class="about-text" data-i18n="idx.about.background">Before development, I worked in ecology and forestry. That experience taught me to approach tasks systematically and take responsibility for the result. Now I want to apply these skills in a team and grow as a developer.</p>
+                    <ul class="about-highlights">
+                        <li class="about-highlights__item">HTML / CSS / JavaScript</li>
+                        <li class="about-highlights__item" data-i18n="idx.about.learning">Learning React & TypeScript</li>
+                        <li class="about-highlights__item" data-i18n="idx.about.collaboration">Open to working in a team</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <section class="skills-section" id="skills">
-            <div class="skills-header js-reveal">
-                <h2 class="skills-title">
-                    <span class="line"></span>
-                    <span class="text" data-i18n="idx.skills.title">STACK &amp; TOOLS</span>
-                    <span class="line"></span>
-                </h2>
-            </div>
-
-            <div class="skills-columns js-load-more-content js-reveal">
-                <div class="skills-col">
-                    <h3 class="skills-col__title" data-i18n="idx.skills.col1.title">Technical skills</h3>
-                    <ul class="skills-list">
-                        <li class="skills-list__item"><span class="dot"></span>HTML5, CSS3, SCSS</li>
-                        <li class="skills-list__item"><span class="dot"></span>JavaScript</li>
-                        <li class="skills-list__item"><span class="dot"></span><span data-i18n="idx.skills.item.responsive">Responsive, cross-browser markup</span></li>
-                        <li class="skills-list__item"><span class="dot"></span><span data-i18n="idx.skills.item.bem">Semantic markup, BEM methodology</span></li>
-                        <li class="skills-list__item"><span class="dot"></span>REST API, Fetch API</li>
-                        <li class="skills-list__item"><span class="dot"></span><span data-i18n="idx.skills.item.spa">SPA (single-page applications)</span></li>
-                        <li class="skills-list__item"><span class="dot"></span><span data-i18n="idx.skills.item.seo">Basic SEO</span></li>
-                    </ul>
-
-                    <h3 class="skills-col__title skills-col__title--spaced" data-i18n="idx.skills.col1.title2">Currently learning</h3>
-                    <ul class="skills-list">
-                        <li class="skills-list__item"><span class="dot"></span>React</li>
-                        <li class="skills-list__item"><span class="dot"></span>TypeScript</li>
-                        <li class="skills-list__item"><span class="dot"></span><span data-i18n="idx.skills.item.tests">Unit testing (Vitest, Jest)</span></li>
-                        <li class="skills-list__item"><span class="dot"></span>Firebase Authentication</li>
-                        <li class="skills-list__item"><span class="dot"></span><span data-i18n="idx.skills.item.gitflow">Team Git workflow: branches, pull requests, code review</span></li>
-                        <li class="skills-list__item"><span class="dot"></span><span data-i18n="idx.skills.item.english">English (A2)</span></li>
-                    </ul>
+            <header class="section-intro">
+                <div class="section-intro__eyebrow">
+                    <span data-i18n="idx.intro.skills.label">Expertise</span>
+                    <span class="section-intro__slash" aria-hidden="true">/</span>
+                    <span class="section-intro__count">03</span>
                 </div>
+                <h2 class="section-intro__title" data-i18n="idx.intro.skills.title">Stack & tools</h2>
+                <p class="section-intro__description" data-i18n="idx.intro.skills.description">My toolkit for building digital products — and what I’m learning next.</p>
+            </header>
 
-                <div class="skills-col">
-                    <h3 class="skills-col__title" data-i18n="idx.skills.col2.title">Tools & approach</h3>
-                        <ul class="skills-list">
-                            <li class="skills-list__item"><span class="dot"></span>Git, GitHub</li>
-                            <li class="skills-list__item"><span class="dot"></span><span data-i18n="idx.skills.item.deploy">GitHub Pages, GitHub Actions (deploy)</span></li>
-                            <li class="skills-list__item"><span class="dot"></span>Vite</li>
-                            <li class="skills-list__item"><span class="dot"></span><span data-i18n="idx.skills.item.figma">Figma (markup from designs)</span></li>
-                            <li class="skills-list__item"><span class="dot"></span>Markdown</li>
-                            <li class="skills-list__item"><span class="dot"></span><span data-i18n="idx.skills.item.metrica">Yandex.Metrica (analytics)</span></li>
-                            <li class="skills-list__item"><span class="dot"></span><span data-i18n="idx.skills.item.component">Component-based approach</span></li>
-                            <li class="skills-list__item"><span class="dot"></span><span data-i18n="idx.skills.item.perf">Basic performance optimization</span></li>
+            <div class="toolkit">
+                <div class="toolkit-grid">
+                    <article class="toolkit-card">
+                        <div class="toolkit-card__heading">
+                            <span class="toolkit-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-html5"></use></svg></span>
+                            <h3 class="toolkit-card__title" data-i18n="idx.skills.col1.title">Technical skills</h3>
+                        </div>
+                        <ul class="toolkit-chips">
+                        <li class="toolkit-chip">HTML5, CSS3, SCSS</li>
+                        <li class="toolkit-chip">JavaScript</li>
+                        <li class="toolkit-chip"><span data-i18n="idx.skills.item.responsive">Responsive, cross-browser markup</span></li>
+                        <li class="toolkit-chip"><span data-i18n="idx.skills.item.bem">Semantic markup, BEM methodology</span></li>
+                        <li class="toolkit-chip">REST API, Fetch API</li>
+                        <li class="toolkit-chip"><span data-i18n="idx.skills.item.spa">SPA (single-page applications)</span></li>
+                        <li class="toolkit-chip"><span data-i18n="idx.skills.item.seo">Basic SEO</span></li>
+                    </ul>
+                    </article>
+                    <article class="toolkit-card">
+                        <div class="toolkit-card__heading">
+                            <span class="toolkit-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-vite"></use></svg></span>
+                            <h3 class="toolkit-card__title" data-i18n="idx.skills.col2.title">Tools & approach</h3>
+                        </div>
+                        <ul class="toolkit-chips">
+                            <li class="toolkit-chip">Git, GitHub</li>
+                            <li class="toolkit-chip"><span data-i18n="idx.skills.item.deploy">GitHub Pages, GitHub Actions (deploy)</span></li>
+                            <li class="toolkit-chip">Vite</li>
+                            <li class="toolkit-chip"><span data-i18n="idx.skills.item.figma">Figma (markup from designs)</span></li>
+                            <li class="toolkit-chip">Markdown</li>
+                            <li class="toolkit-chip"><span data-i18n="idx.skills.item.metrica">Yandex.Metrica (analytics)</span></li>
+                            <li class="toolkit-chip"><span data-i18n="idx.skills.item.component">Component-based approach</span></li>
+                            <li class="toolkit-chip"><span data-i18n="idx.skills.item.perf">Basic performance optimization</span></li>
                         </ul>
-
-                    <h3 class="skills-col__title skills-col__title--spaced" data-i18n="idx.skills.col2.title2">Languages</h3>
-                        <ul class="skills-list">
-                            <li class="skills-list__item"><span class="dot"></span><span data-i18n="idx.skills.item.russian">Russian — native</span></li>
-                        </ul>
-                </div> 
+                    </article>
+                    <article class="toolkit-card">
+                        <div class="toolkit-card__heading">
+                            <span class="toolkit-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-react"></use></svg></span>
+                            <h3 class="toolkit-card__title" data-i18n="idx.skills.col1.title2">Currently learning</h3>
+                        </div>
+                        <ul class="toolkit-chips">
+                        <li class="toolkit-chip">React</li>
+                        <li class="toolkit-chip">TypeScript</li>
+                        <li class="toolkit-chip"><span data-i18n="idx.skills.item.tests">Unit testing (Vitest, Jest)</span></li>
+                        <li class="toolkit-chip">Firebase Authentication</li>
+                        <li class="toolkit-chip"><span data-i18n="idx.skills.item.gitflow">Team Git workflow: branches, pull requests, code review</span></li>
+                    </ul>
+                    </article>
+                </div>
+                <div class="toolkit-languages">
+                    <h3 class="toolkit-languages__title" data-i18n="idx.skills.col2.title2">Languages</h3>
+                    <ul class="toolkit-chips">
+                            <li class="toolkit-chip"><span data-i18n="idx.skills.item.russian">Russian — native</span></li>
+                        <li class="toolkit-chip"><span data-i18n="idx.skills.item.english">English (A2)</span></li></ul>
+                </div>
             </div>
         </section>
 
         <section class="courses-section" id="education">
-            <div class="courses-header">
-                <h2 class="courses-title">
-                    <span class="line"></span>
-                    <span class="text" data-i18n="idx.courses.title">EDUCATION &amp; CERTIFICATES</span>
-                    <span class="line"></span>
-                </h2>
-            </div>
-
-            <div class="skills-columns js-load-more-content">
-                <div class="skills-col">
-                    <h3 class="skills-col__title" data-i18n="idx.courses.col1.title">Stepik courses</h3>
-                    <p class="courses-description" data-i18n="idx.courses.description" data-i18n-html>
-                        I keep learning and improving my skills every day!<br>
-                        <a href="https://stepik.org/users/1179792686/profile" class="courses-link" target="_blank">→ All courses on Stepik</a>
-                    </p>
-                    <ul class="skills-list">
-                        <li class="skills-list__item">
-                            <span class="dot"></span>
-                            <a href="https://stepik.org/cert/3217403" target="_blank" class="skills-list__link" data-i18n="idx.courses.cert1">Your JavaScript</a>
-                        </li>
-                        <li class="skills-list__item">
-                            <span class="dot"></span>
-                            <a href="https://stepik.org/cert/3167224" target="_blank" class="skills-list__link" data-i18n="idx.courses.cert2">JavaScript Deep Dive: for Beginners</a>
-                        </li>
-                        <li class="skills-list__item">
-                            <span class="dot"></span>
-                            <a href="https://stepik.org/cert/3164880" target="_blank" class="skills-list__link">HTML CSS JS (lite)</a>
-                        </li>
-                        <li class="skills-list__item">
-                            <span class="dot"></span>
-                            <a href="https://stepik.org/cert/3125831" target="_blank" class="skills-list__link" data-i18n="idx.courses.cert4">Web Development for Beginners: HTML and CSS</a>
-                        </li>
-                        <li class="skills-list__item">
-                            <span class="dot"></span>
-                            <a href="https://stepik.org/cert/3247384" target="_blank" class="skills-list__link" data-i18n="idx.courses.cert5">Git and GitHub Basics</a>
-                        </li>
-                        <li class="skills-list__item">
-                            <span class="dot"></span>
-                            <a href="https://stepik.org/cert/3307686" target="_blank" class="skills-list__link">Markdown</a>
-                        </li>
-                    </ul>
+            <header class="section-intro">
+                <div class="section-intro__eyebrow">
+                    <span data-i18n="idx.intro.courses.label">Learning</span>
+                    <span class="section-intro__slash" aria-hidden="true">/</span>
+                    <span class="section-intro__count">04</span>
                 </div>
+                <h2 class="section-intro__title" data-i18n="idx.intro.courses.title">Always learning</h2>
+                <p class="section-intro__description" data-i18n="idx.intro.courses.description">Courses, certificates, and the next step in my development.</p>
+            </header>
 
-                <div class="skills-col">
-                    <h3 class="skills-col__title" data-i18n="idx.courses.col3.title">Other platforms</h3>
-                    <p class="skills-empty" data-i18n="idx.courses.empty">Courses from other platforms will appear here soon</p>
+            <div class="education-board">
+                <div class="education-board__heading">
+                    <div>
+                        <div class="education-board__label"><h3 data-i18n="idx.courses.col1.title">Stepik courses</h3><span class="education-board__count" data-i18n="idx.education.count">06 certificates</span></div>
+                        <p class="education-board__summary" data-i18n="idx.education.summary">Completed courses and certificates</p>
+                    </div>
+                    <a class="education-profile" href="https://stepik.org/users/1179792686/profile" target="_blank" rel="noopener noreferrer"><span data-i18n="idx.education.profile">All courses on Stepik</span><span aria-hidden="true">↗</span></a>
+                </div>
+                <ul class="education-grid">
+                    <li>
+                        <a class="education-course" href="https://stepik.org/cert/3217403" target="_blank" rel="noopener noreferrer">
+                            <span class="education-course__seal" aria-hidden="true">✓</span>
+                            <span class="education-course__content"><span class="education-course__title" data-i18n="idx.courses.cert1">Your JavaScript</span><span class="education-course__meta" data-i18n="idx.education.certificate">Stepik · Certificate</span></span>
+                            <span class="education-course__arrow" aria-hidden="true">↗</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="education-course" href="https://stepik.org/cert/3167224" target="_blank" rel="noopener noreferrer">
+                            <span class="education-course__seal" aria-hidden="true">✓</span>
+                            <span class="education-course__content"><span class="education-course__title" data-i18n="idx.courses.cert2">JavaScript Deep Dive: for Beginners</span><span class="education-course__meta" data-i18n="idx.education.certificate">Stepik · Certificate</span></span>
+                            <span class="education-course__arrow" aria-hidden="true">↗</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="education-course" href="https://stepik.org/cert/3164880" target="_blank" rel="noopener noreferrer">
+                            <span class="education-course__seal" aria-hidden="true">✓</span>
+                            <span class="education-course__content"><span class="education-course__title">HTML CSS JS (lite)</span><span class="education-course__meta" data-i18n="idx.education.certificate">Stepik · Certificate</span></span>
+                            <span class="education-course__arrow" aria-hidden="true">↗</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="education-course" href="https://stepik.org/cert/3125831" target="_blank" rel="noopener noreferrer">
+                            <span class="education-course__seal" aria-hidden="true">✓</span>
+                            <span class="education-course__content"><span class="education-course__title" data-i18n="idx.courses.cert4">Web Development for Beginners: HTML and CSS</span><span class="education-course__meta" data-i18n="idx.education.certificate">Stepik · Certificate</span></span>
+                            <span class="education-course__arrow" aria-hidden="true">↗</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="education-course" href="https://stepik.org/cert/3247384" target="_blank" rel="noopener noreferrer">
+                            <span class="education-course__seal" aria-hidden="true">✓</span>
+                            <span class="education-course__content"><span class="education-course__title" data-i18n="idx.courses.cert5">Git and GitHub Basics</span><span class="education-course__meta" data-i18n="idx.education.certificate">Stepik · Certificate</span></span>
+                            <span class="education-course__arrow" aria-hidden="true">↗</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="education-course" href="https://stepik.org/cert/3307686" target="_blank" rel="noopener noreferrer">
+                            <span class="education-course__seal" aria-hidden="true">✓</span>
+                            <span class="education-course__content"><span class="education-course__title">Markdown</span><span class="education-course__meta" data-i18n="idx.education.certificate">Stepik · Certificate</span></span>
+                            <span class="education-course__arrow" aria-hidden="true">↗</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="education-note">
+                    <span class="education-note__dot" aria-hidden="true"></span>
+                    <span data-i18n="idx.courses.empty">Courses from other platforms will appear here soon</span>
                 </div>
             </div>
         </section>
 
         <section class="projects-section" id="projects">
             <div class="projects-container">
-                <div class="projects-header">
-                    <h2 class="projects-title">
-                        <span class="line"></span>
-                        <span class="text" data-i18n="idx.projects.title">MY PROJECTS</span>
-                        <span class="line"></span>
-                    </h2>
-                </div>
+                <header class="section-intro">
+                    <div class="section-intro__eyebrow">
+                        <span data-i18n="idx.projects.eyebrow">Portfolio</span>
+                        <span class="section-intro__slash" aria-hidden="true">/</span>
+                        <span class="section-intro__count" data-i18n="idx.projects.count">03 projects</span>
+                    </div>
+                    <h2 class="section-intro__title" data-i18n="idx.projects.headline">Websites with character</h2>
+                    <p class="section-intro__description" data-i18n="idx.projects.intro">Commercial and personal projects — from idea to launch.</p>
+                </header>
 
                 <!-- ===== Коммерческие проекты ===== -->
                 <div class="projects-category">
-                    <div class="projects-category__header">
-                        <h3 class="projects-category__title" data-i18n="idx.projects.commercial.title">Commercial</h3>
-                        <p class="projects-category__desc" data-i18n="idx.projects.commercial.desc">Building websites for real clients and personal projects.</p>
-                    </div>
-
-                    <div class="project-accordion js-reveal">
-                        <!-- Сайт для подолога -->
-                        <article class="project-accordion__item">
-                            <button class="project-accordion__toggle" type="button" aria-expanded="false" aria-controls="panel-commercial-1">
-                                <span class="project-accordion__number">01</span>
-                                <span class="project-accordion__name" data-i18n="idx.project1.name">Website for Anna Kudurova's podiatry and wellness aesthetics school-studio</span>
-                                <span class="project-accordion__icon" aria-hidden="true"></span>
-                            </button>
-                            <div class="project-accordion__panel" id="panel-commercial-1 ">
-                                <div class="project-accordion__inner">
-                                    <div class="project-accordion__row">
-                                        <div class="project-content">
-                                            <p class="project-type" data-i18n="idx.project1.type">A full-scale commercial project built from scratch based on the client's brief</p>
-                                            <p class="project-description" data-i18n="idx.project1.desc1">A website for Anna Kudurova's podiatry and wellness aesthetics school-studio. The project was built with the field's specifics, brand positioning, and target audience needs in mind.</p>
-                                            <p class="project-description" data-i18n="idx.project1.desc2">I independently designed the site structure, implemented responsive markup, wired up the required functionality, performed basic SEO optimization, and set up Yandex.Metrica to track traffic and user behavior.</p>
-                                            <p class="project-description" data-i18n="idx.project1.desc3" data-i18n-html><strong>Result:</strong> a modern, fast, and responsive website, ready for launch, promotion, and further development.</p>
-                                            <ul class="project-stack" aria-label="Tech stack">
+                    <div class="commercial-gallery" role="region" aria-label="Commercial projects" data-i18n-attr="aria-label:idx.projects.commercial.title">
+                        <div class="commercial-gallery__track" id="commercial-track" tabindex="0" aria-label="Project cards" data-i18n-attr="aria-label:idx.flip.cards">
+                        <article class="commercial-card" aria-labelledby="commercial-title-1">
+                            <div class="commercial-card__inner">
+                                <button class="commercial-card__front" type="button" aria-expanded="false" aria-controls="commercial-back-1">
+                                    <span class="commercial-card__number">01 / 03</span>
+                                    <span class="commercial-card__title" id="commercial-title-1" data-i18n="idx.project1.name">Website for Anna Kudurova's podiatry and wellness aesthetics school-studio</span>
+                                    <img src="./images/project/mockups/p3.webp" alt="Podiatry studio website" class="commercial-card__image" loading="lazy" data-i18n-attr="alt:idx.project1.imgAlt">
+                                    <span class="commercial-card__hint"><span data-i18n="idx.flip.details">Explore project</span><span aria-hidden="true">↗</span></span>
+                                </button>
+                                <div class="commercial-card__back" id="commercial-back-1" aria-hidden="true" inert>
+                                    <div class="commercial-card__back-header"><span class="commercial-card__number">01 / 03</span><button class="commercial-card__return" type="button" data-i18n="idx.flip.back">Back ↶</button></div>
+                                    <h4 class="commercial-card__back-title" data-i18n="idx.project1.name">Website for Anna Kudurova's podiatry and wellness aesthetics school-studio</h4>
+                                    <div class="commercial-card__description" tabindex="0" aria-label="Project description" data-i18n-attr="aria-label:idx.flip.description"><p class="project-type" data-i18n="idx.project1.type">A full-scale commercial project built from scratch based on the client's brief</p>
+<p class="project-description" data-i18n="idx.project1.desc1">A website for Anna Kudurova's podiatry and wellness aesthetics school-studio. The project was built with the field's specifics, brand positioning, and target audience needs in mind.</p>
+<p class="project-description" data-i18n="idx.project1.desc2">I independently designed the site structure, implemented responsive markup, wired up the required functionality, performed basic SEO optimization, and set up Yandex.Metrica to track traffic and user behavior.</p>
+<p class="project-description" data-i18n="idx.project1.desc3" data-i18n-html><strong>Result:</strong> a modern, fast, and responsive website, ready for launch, promotion, and further development.</p></div>
+                                    <ul class="project-stack" aria-label="Tech stack">
                                                 <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-html5"></use></svg>HTML5</li>
                                                 <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-scss"></use></svg>SCSS</li>
                                                 <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-js"></use></svg>JavaScript</li>
                                                 <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-metrica"></use></svg>Yandex.Metrica</li>
                                             </ul>
-                                            <div class="project-buttons">
-                                                <a href="https://annakudurova.ru/" class="project-btn" target="_blank" data-i18n="idx.project.viewBtn">View project →</a>
-                                                <a href="https://github.com/KatyMist/-Podolog_Anna_Kudurova" class="project-btn project-btn--secondary" target="_blank" data-i18n="idx.project.codeBtn">Source code →</a>
+                                    <div class="commercial-card__links">
+                                                <a href="https://annakudurova.ru/" class="project-btn" target="_blank" rel="noopener noreferrer" data-i18n="idx.project.viewBtn">View project →</a>
+                                                <a href="https://github.com/KatyMist/-Podolog_Anna_Kudurova" class="project-btn project-btn--secondary" target="_blank" rel="noopener noreferrer" data-i18n="idx.project.codeBtn">Source code →</a>
                                             </div>
-                                        </div>
-                                        <div class="project-image">
-                                            <img src="./images/project/mockups/p3.webp" alt="Podiatry studio website" class="project-img" data-i18n-attr="alt:idx.project1.imgAlt">
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </article>
-
-                        <!-- Личный сайт-портфолио -->
-                        <article class="project-accordion__item">
-                            <button class="project-accordion__toggle" type="button" aria-expanded="false" aria-controls="panel-commercial-2">
-                                <span class="project-accordion__number">02</span>
-                                <span class="project-accordion__name" data-i18n="idx.project2.name">Personal portfolio website</span>
-                                <span class="project-accordion__icon" aria-hidden="true"></span>
-                            </button>
-                            <div class="project-accordion__panel" id="panel-commercial-2">
-                                <div class="project-accordion__inner">
-                                    <div class="project-accordion__row">
-                                        <div class="project-content">
-                                            <p class="project-type" data-i18n="idx.project2.type">Personal project</p>
-                                            <p class="project-description" data-i18n="idx.project2.desc1">A personal portfolio website with an original concept and a distinctive visual style.</p>
-                                            <p class="project-description" data-i18n="idx.project2.desc2">I independently designed the structure, visual design, and color palette, and implemented responsive markup and interactive elements using HTML, SCSS, and JavaScript.</p>
-                                            <p class="project-description" data-i18n="idx.project2.desc3" data-i18n-html><strong>Result:</strong> a unique personal website built entirely from scratch.</p>
-                                            <ul class="project-stack" aria-label="Tech stack">
+                        <article class="commercial-card" aria-labelledby="commercial-title-2">
+                            <div class="commercial-card__inner">
+                                <button class="commercial-card__front" type="button" aria-expanded="false" aria-controls="commercial-back-2">
+                                    <span class="commercial-card__number">02 / 03</span>
+                                    <span class="commercial-card__title" id="commercial-title-2" data-i18n="idx.project2.name">Personal portfolio website</span>
+                                    <img src="./images/project/mockups/p4-v2.png" alt="Portfolio website" class="commercial-card__image" loading="lazy" data-i18n-attr="alt:idx.project2.imgAlt">
+                                    <span class="commercial-card__hint"><span data-i18n="idx.flip.details">Explore project</span><span aria-hidden="true">↗</span></span>
+                                </button>
+                                <div class="commercial-card__back" id="commercial-back-2" aria-hidden="true" inert>
+                                    <div class="commercial-card__back-header"><span class="commercial-card__number">02 / 03</span><button class="commercial-card__return" type="button" data-i18n="idx.flip.back">Back ↶</button></div>
+                                    <h4 class="commercial-card__back-title" data-i18n="idx.project2.name">Personal portfolio website</h4>
+                                    <div class="commercial-card__description" tabindex="0" aria-label="Project description" data-i18n-attr="aria-label:idx.flip.description"><p class="project-type" data-i18n="idx.project2.type">Personal project</p>
+<p class="project-description" data-i18n="idx.project2.desc1">A personal portfolio website with an original concept and a distinctive visual style.</p>
+<p class="project-description" data-i18n="idx.project2.desc2">I independently designed the structure, visual design, and color palette, and implemented responsive markup and interactive elements using HTML, SCSS, and JavaScript.</p>
+<p class="project-description" data-i18n="idx.project2.desc3" data-i18n-html><strong>Result:</strong> a unique personal website built entirely from scratch.</p></div>
+                                    <ul class="project-stack" aria-label="Tech stack">
                                                 <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-html5"></use></svg>HTML5</li>
                                                 <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-scss"></use></svg>SCSS</li>
                                                 <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-js"></use></svg>JavaScript</li>
                                                 <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-metrica"></use></svg>Yandex.Metrica</li>
                                             </ul>
-                                            <div class="project-buttons">
-                                                <a href="https://katymist.github.io/Portfolio/" class="project-btn" target="_blank" data-i18n="idx.project.viewBtn">View project →</a>
-                                                <a href="https://github.com/KatyMist/Portfolio" class="project-btn project-btn--secondary" target="_blank" data-i18n="idx.project.codeBtn">Source code →</a>
+                                    <div class="commercial-card__links">
+                                                <a href="https://katymist.github.io/Portfolio/" class="project-btn" target="_blank" rel="noopener noreferrer" data-i18n="idx.project.viewBtn">View project →</a>
+                                                <a href="https://github.com/KatyMist/Portfolio" class="project-btn project-btn--secondary" target="_blank" rel="noopener noreferrer" data-i18n="idx.project.codeBtn">Source code →</a>
                                             </div>
-                                        </div>
-                                        <div class="project-image">
-                                            <img src="./images/project/mockups/p4.webp" alt="Portfolio website" class="project-img" data-i18n-attr="alt:idx.project2.imgAlt">
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </article>
-
-                        <!-- Экспертное сопровождение лесопользования -->
-                        <article class="project-accordion__item">
-                            <button class="project-accordion__toggle" type="button" aria-expanded="false" aria-controls="panel-commercial-2">
-                                <span class="project-accordion__number">03</span>
-                                <span class="project-accordion__name" data-i18n="idx.project3.name">Documentation website for a forestry specialist</span>
-                                <span class="project-accordion__icon" aria-hidden="true"></span>
-                            </button>
-                            <div class="project-accordion__panel" id="panel-commercial-2">
-                                <div class="project-accordion__inner">
-                                    <div class="project-accordion__row">
-                                        <div class="project-content">
-                                            <p class="project-type" data-i18n="idx.project3.type">A fully original commercial project — from concept to finished website</p>
-                                            <p class="project-description" data-i18n="idx.project3.desc1">A website for a forestry industry specialist, built entirely from scratch: from concept and structure to visual design, frontend development, and publishing.</p>
-                                            <p class="project-description" data-i18n="idx.project3.desc2">I planned the site structure and user flow, developed the visual concept, and chose the color palette, typography, and graphic elements to create a cohesive style matching the project's subject.</p>
-                                            <p class="project-description" data-i18n="idx.project3.desc3">I implemented responsive markup with HTML, SCSS, and JavaScript, ensuring the site displays correctly across devices, with particular attention to semantic markup, code structure, navigation, and content hierarchy.</p>
-                                            <p class="project-description" data-i18n="idx.project3.desc4">I performed basic SEO optimization: refined the heading structure and meta tags, optimized images, and prepared the site for correct indexing by search engines. I also built the project and deployed the finished site online.</p>
-                                            <p class="project-description" data-i18n="idx.project3.desc5" data-i18n-html><strong>Result:</strong> a modern, responsive, fully original commercial website that I built from scratch — from the initial idea and visual concept to the finished product.</p>
-                                            <ul class="project-stack" aria-label="Tech stack">
+                        <article class="commercial-card" aria-labelledby="commercial-title-3">
+                            <div class="commercial-card__inner">
+                                <button class="commercial-card__front" type="button" aria-expanded="false" aria-controls="commercial-back-3">
+                                    <span class="commercial-card__number">03 / 03</span>
+                                    <span class="commercial-card__title" id="commercial-title-3" data-i18n="idx.project3.name">Documentation website for a forestry specialist</span>
+                                    <img src="./images/project/mockups/p7.webp" alt="Portfolio website" class="commercial-card__image" loading="lazy" data-i18n-attr="alt:idx.project3.imgAlt">
+                                    <span class="commercial-card__hint"><span data-i18n="idx.flip.details">Explore project</span><span aria-hidden="true">↗</span></span>
+                                </button>
+                                <div class="commercial-card__back" id="commercial-back-3" aria-hidden="true" inert>
+                                    <div class="commercial-card__back-header"><span class="commercial-card__number">03 / 03</span><button class="commercial-card__return" type="button" data-i18n="idx.flip.back">Back ↶</button></div>
+                                    <h4 class="commercial-card__back-title" data-i18n="idx.project3.name">Documentation website for a forestry specialist</h4>
+                                    <div class="commercial-card__description" tabindex="0" aria-label="Project description" data-i18n-attr="aria-label:idx.flip.description"><p class="project-type" data-i18n="idx.project3.type">A fully original commercial project — from concept to finished website</p>
+<p class="project-description" data-i18n="idx.project3.desc1">A website for a forestry industry specialist, built entirely from scratch: from concept and structure to visual design, frontend development, and publishing.</p>
+<p class="project-description" data-i18n="idx.project3.desc2">I planned the site structure and user flow, developed the visual concept, and chose the color palette, typography, and graphic elements to create a cohesive style matching the project's subject.</p>
+<p class="project-description" data-i18n="idx.project3.desc3">I implemented responsive markup with HTML, SCSS, and JavaScript, ensuring the site displays correctly across devices, with particular attention to semantic markup, code structure, navigation, and content hierarchy.</p>
+<p class="project-description" data-i18n="idx.project3.desc4">I performed basic SEO optimization: refined the heading structure and meta tags, optimized images, and prepared the site for correct indexing by search engines. I also built the project and deployed the finished site online.</p>
+<p class="project-description" data-i18n="idx.project3.desc5" data-i18n-html><strong>Result:</strong> a modern, responsive, fully original commercial website that I built from scratch — from the initial idea and visual concept to the finished product.</p></div>
+                                    <ul class="project-stack" aria-label="Tech stack">
                                                 <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-html5"></use></svg>HTML5</li>
                                                 <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-scss"></use></svg>SCSS</li>
                                                 <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-js"></use></svg>JavaScript</li>
                                                 <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-vite"></use></svg>Vite</li>
                                                 <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-metrica"></use></svg>Yandex.Metrica</li>
                                             </ul>
-                                            <div class="project-buttons">
-                                                <a href="https://ulles.ru/" class="project-btn" target="_blank" data-i18n="idx.project.viewBtn">View project →</a>
-                                                <a href="https://github.com/KatyMist/SilvaPro" class="project-btn project-btn--secondary" target="_blank" data-i18n="idx.project.codeBtn">Source code →</a>
+                                    <div class="commercial-card__links">
+                                                <a href="https://ulles.ru/" class="project-btn" target="_blank" rel="noopener noreferrer" data-i18n="idx.project.viewBtn">View project →</a>
+                                                <a href="https://github.com/KatyMist/SilvaPro" class="project-btn project-btn--secondary" target="_blank" rel="noopener noreferrer" data-i18n="idx.project.codeBtn">Source code →</a>
                                             </div>
-                                        </div>
-                                        <div class="project-image">
-                                            <img src="./images/project/mockups/p7.webp" alt="Portfolio website" class="project-img" data-i18n-attr="alt:idx.project3.imgAlt">
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </article>
+                        </div>
+                        <div class="commercial-gallery__controls">
+                            <button class="commercial-gallery__arrow" type="button" data-gallery-prev aria-controls="commercial-track" aria-label="Previous projects" data-i18n-attr="aria-label:idx.flip.prev">←</button>
+                            <span class="commercial-gallery__caption" data-i18n="idx.flip.browse">Browse projects</span>
+                            <button class="commercial-gallery__arrow" type="button" data-gallery-next aria-controls="commercial-track" aria-label="Next projects" data-i18n-attr="aria-label:idx.flip.next">→</button>
+                        </div>
                     </div>
                 </div>
 
                 <!-- ===== Учебные проекты ===== -->
-                <div class="projects-category">
-                    <div class="projects-category__header">
-                        <h3 class="projects-category__title" data-i18n="idx.projects.edu.title">Educational</h3>
-                        <p class="projects-category__desc" data-i18n="idx.projects.edu.desc">Projects built while learning and developing new skills.</p>
-                    </div>
-
-                    <div class="projects-group">
-                        <div class="projects-group__header">
-                            <span class="projects-group__stage" data-i18n="idx.projects.edu.g1.stage">Stage 3 · now</span>
-                            <h4 class="projects-group__title" data-i18n="idx.projects.edu.g1.title" data-i18n-html>RS School: built from a Figma design &amp; specification</h4>
-                            <p class="projects-group__meta" data-i18n="idx.projects.edu.g1.meta">2 projects · TypeScript, JavaScript, SCSS</p>
-                        </div>
-
-                        <div class="project-accordion">
-
-                            <!-- MiniGames -->
-                            <article class="project-accordion__item">
-                                <button class="project-accordion__toggle" type="button" aria-expanded="false" aria-controls="panel-edu-6">
-                                    <span class="project-accordion__number">01</span>
-                                    <span class="project-accordion__name">MiniGames</span>
-                                    <span class="project-accordion__icon" aria-hidden="true"></span>
-                                </button>
-                                <div class="project-accordion__panel" id="panel-edu-6">
-                                    <div class="project-accordion__inner">
-                                        <div class="project-accordion__row">
-                                            <div class="project-content">
-                                                <p class="project-type" data-i18n="idx.project.rsType">RS School · Figma design &amp; specification</p>
-                                                <p class="project-description" data-i18n="idx.project9.desc1">MiniGames is an SPA catalog of browser mini-games, built independently from a Figma design and a technical specification as part of the RS School course. Written in TypeScript without frameworks.</p>
-                                                <p class="project-description" data-i18n="idx.project9.desc2">I implemented a responsive layout, a client-side router, a game library with filtering, sorting and pagination, game cards with comments and likes, Firebase authentication (email and Google), and form validation. The code is covered with unit tests (Vitest) and checked by ESLint and Prettier; the work was done in feature branches through pull requests and code review.</p>
-                                                <ul class="project-stack" aria-label="Tech stack">
+                <div class="projects-category educational-projects">
+                    <header class="section-intro">
+                        <div class="section-intro__eyebrow"><span data-i18n="idx.projects.edu.eyebrow">Practice</span><span class="section-intro__slash" aria-hidden="true">/</span><span class="section-intro__count" data-i18n="idx.projects.edu.count">07 projects</span></div>
+                        <h3 class="section-intro__title" data-i18n="idx.projects.edu.title">Learning through projects</h3>
+                        <p class="section-intro__description" data-i18n="idx.projects.edu.desc">Projects built while learning and developing new skills.</p>
+                    </header>
+                    <div class="learning-group">
+                        <header class="learning-group__header">
+                            <h4 class="learning-group__title" id="edu-1-title" data-i18n="idx.projects.edu.g1.title">Built from Figma designs</h4>
+                            <p class="learning-group__meta" data-i18n="idx.projects.edu.g1.meta">2 projects · TypeScript, JavaScript, SCSS</p>
+                        </header>
+                        <div class="commercial-gallery" role="region" aria-labelledby="edu-1-title">
+                            <div class="commercial-gallery__track" id="edu-1-track" tabindex="0" aria-label="Project cards" data-i18n-attr="aria-label:idx.flip.cards">
+                                <article class="commercial-card" aria-labelledby="edu-1-1-title">
+                                    <div class="commercial-card__inner">
+                                        <button class="commercial-card__front" type="button" aria-expanded="false" aria-controls="edu-1-1-back">
+                                            <span class="commercial-card__number">01 / 02</span>
+                                            <span class="commercial-card__title" id="edu-1-1-title">MiniGames</span>
+                                            <img src="./images/project/mockups/p9.webp" alt="MiniGames project" class="commercial-card__image" loading="lazy" data-i18n-attr="alt:idx.project9.imgAlt">
+                                            <span class="commercial-card__hint"><span data-i18n="idx.flip.details">Explore project</span><span aria-hidden="true">↗</span></span>
+                                        </button>
+                                        <div class="commercial-card__back" id="edu-1-1-back" aria-hidden="true" inert>
+                                            <div class="commercial-card__back-header"><span class="commercial-card__number">01 / 02</span><button class="commercial-card__return" type="button" data-i18n="idx.flip.back">Back ↶</button></div>
+                                            <h5 class="commercial-card__back-title">MiniGames</h5>
+                                            <div class="commercial-card__description" tabindex="0" aria-label="Project description" data-i18n-attr="aria-label:idx.flip.description"><p class="project-type" data-i18n="idx.project.rsType">Built from Figma designs</p>
+<p class="project-description" data-i18n="idx.project9.desc1">MiniGames is an SPA catalog of browser mini-games, built independently from a Figma design and a technical specification. Written in TypeScript without frameworks.</p>
+<p class="project-description" data-i18n="idx.project9.desc2">I implemented a responsive layout, a client-side router, a game library with filtering, sorting and pagination, game cards with comments and likes, Firebase authentication (email and Google), and form validation. The code is covered with unit tests (Vitest) and checked by ESLint and Prettier; the work was done in feature branches through pull requests and code review.</p></div>
+                                            <ul class="project-stack" aria-label="Tech stack">
                                                     <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-ts"></use></svg>TypeScript</li>
                                                     <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-vite"></use></svg>Vite</li>
                                                     <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-scss"></use></svg>SCSS</li>
@@ -400,147 +406,124 @@
                                                     <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-eslint"></use></svg>ESLint</li>
                                                     <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-prettier"></use></svg>Prettier</li>
                                                 </ul>
-                                                <div class="project-buttons">
-                                                    <a href="https://katymist.github.io/MiniGames-Story-1/" class="project-btn" target="_blank" data-i18n="idx.project.viewBtn">View project →</a>
-                                                    <a href="https://github.com/KatyMist/MiniGames-Story-1" class="project-btn project-btn--secondary" target="_blank" data-i18n="idx.project.codeBtn">Source code →</a>
+                                            <div class="commercial-card__links">
+                                                    <a href="https://katymist.github.io/MiniGames-Story-1/" class="project-btn" target="_blank" rel="noopener noreferrer" data-i18n="idx.project.viewBtn">View project →</a>
+                                                    <a href="https://github.com/KatyMist/MiniGames-Story-1" class="project-btn project-btn--secondary" target="_blank" rel="noopener noreferrer" data-i18n="idx.project.codeBtn">Source code →</a>
                                                 </div>
-                                            </div>
-                                            <div class="project-image">
-                                                <img src="./images/project/mockups/p9.webp" alt="MiniGames project" class="project-img" loading="lazy" data-i18n-attr="alt:idx.project9.imgAlt">
-                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </article>
-
-
-                            <!-- Coffee House -->
-                            <article class="project-accordion__item">
-                                <button class="project-accordion__toggle" type="button" aria-expanded="false" aria-controls="panel-edu-7">
-                                    <span class="project-accordion__number">02</span>
-                                    <span class="project-accordion__name">Coffee House</span>
-                                    <span class="project-accordion__icon" aria-hidden="true"></span>
-                                </button>
-                                <div class="project-accordion__panel" id="panel-edu-7">
-                                    <div class="project-accordion__inner">
-                                        <div class="project-accordion__row">
-                                            <div class="project-content">
-                                                <p class="project-type" data-i18n="idx.project.rsType">RS School · Figma design &amp; specification</p>
-                                                <p class="project-description" data-i18n="idx.project10.desc1">Coffee House is a responsive coffee shop landing page with a menu catalog, built independently from a Figma design and a technical specification as part of the RS School course.</p>
-                                                <p class="project-description" data-i18n="idx.project10.desc2">I implemented responsive markup following the design, a light and dark theme switch, a burger menu, a favorite drinks slider, a menu catalog with category filtering, and a product modal window.</p>
-                                                <ul class="project-stack" aria-label="Tech stack">
+                                </article>
+                                <article class="commercial-card" aria-labelledby="edu-1-2-title">
+                                    <div class="commercial-card__inner">
+                                        <button class="commercial-card__front" type="button" aria-expanded="false" aria-controls="edu-1-2-back">
+                                            <span class="commercial-card__number">02 / 02</span>
+                                            <span class="commercial-card__title" id="edu-1-2-title">Coffee House</span>
+                                            <img src="./images/project/mockups/p10.webp" alt="Coffee House landing page" class="commercial-card__image" loading="lazy" data-i18n-attr="alt:idx.project10.imgAlt">
+                                            <span class="commercial-card__hint"><span data-i18n="idx.flip.details">Explore project</span><span aria-hidden="true">↗</span></span>
+                                        </button>
+                                        <div class="commercial-card__back" id="edu-1-2-back" aria-hidden="true" inert>
+                                            <div class="commercial-card__back-header"><span class="commercial-card__number">02 / 02</span><button class="commercial-card__return" type="button" data-i18n="idx.flip.back">Back ↶</button></div>
+                                            <h5 class="commercial-card__back-title">Coffee House</h5>
+                                            <div class="commercial-card__description" tabindex="0" aria-label="Project description" data-i18n-attr="aria-label:idx.flip.description"><p class="project-type" data-i18n="idx.project.rsType">Built from Figma designs</p>
+<p class="project-description" data-i18n="idx.project10.desc1">Coffee House is a responsive coffee shop landing page with a menu catalog, built independently from a Figma design and a technical specification.</p>
+<p class="project-description" data-i18n="idx.project10.desc2">I implemented responsive markup following the design, a light and dark theme switch, a burger menu, a favorite drinks slider, a menu catalog with category filtering, and a product modal window.</p></div>
+                                            <ul class="project-stack" aria-label="Tech stack">
                                                     <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-html5"></use></svg>HTML5</li>
                                                     <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-scss"></use></svg>SCSS</li>
                                                     <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-js"></use></svg>JavaScript</li>
                                                     <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-vite"></use></svg>Vite</li>
                                                     <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-figma"></use></svg>Figma</li>
                                                 </ul>
-                                                <div class="project-buttons">
-                                                    <a href="https://katymist.github.io/rsschool-landing-page/" class="project-btn" target="_blank" data-i18n="idx.project.viewBtn">View project →</a>
-                                                    <a href="https://github.com/KatyMist/rsschool-landing-page/tree/landing-page-part-2" class="project-btn project-btn--secondary" target="_blank" data-i18n="idx.project.codeBtn">Source code →</a>
+                                            <div class="commercial-card__links">
+                                                    <a href="https://katymist.github.io/rsschool-landing-page/" class="project-btn" target="_blank" rel="noopener noreferrer" data-i18n="idx.project.viewBtn">View project →</a>
+                                                    <a href="https://github.com/KatyMist/rsschool-landing-page/tree/landing-page-part-2" class="project-btn project-btn--secondary" target="_blank" rel="noopener noreferrer" data-i18n="idx.project.codeBtn">Source code →</a>
                                                 </div>
-                                            </div>
-                                            <div class="project-image">
-                                                <img src="./images/project/mockups/p10.webp" alt="Coffee House landing page" class="project-img" loading="lazy" data-i18n-attr="alt:idx.project10.imgAlt">
-                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </article>
+                                </article>
+                            </div>
+                            <div class="commercial-gallery__controls">
+                                <button class="commercial-gallery__arrow" type="button" data-gallery-prev aria-controls="edu-1-track" aria-label="Previous projects" data-i18n-attr="aria-label:idx.flip.prev">←</button>
+                                <span class="commercial-gallery__caption" data-i18n="idx.flip.browse">Browse projects</span>
+                                <button class="commercial-gallery__arrow" type="button" data-gallery-next aria-controls="edu-1-track" aria-label="Next projects" data-i18n-attr="aria-label:idx.flip.next">→</button>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="projects-group">
-                        <div class="projects-group__header">
-                            <span class="projects-group__stage" data-i18n="idx.projects.edu.g2.stage">Stage 2</span>
-                            <h4 class="projects-group__title" data-i18n="idx.projects.edu.g2.title" data-i18n-html>React from video tutorials, with my own design</h4>
-                            <p class="projects-group__meta" data-i18n="idx.projects.edu.g2.meta">3 projects · React, TypeScript, SCSS</p>
-                        </div>
-
-                        <div class="project-accordion">
-
-                            <!-- Chessland -->
-                            <article class="project-accordion__item">
-                                <button class="project-accordion__toggle" type="button" aria-expanded="false" aria-controls="panel-edu-4">
-                                    <span class="project-accordion__number">01</span>
-                                    <span class="project-accordion__name">Chessland</span>
-                                    <span class="project-accordion__icon" aria-hidden="true"></span>
-                                </button>
-                                <div class="project-accordion__panel" id="panel-edu-4">
-                                    <div class="project-accordion__inner">
-                                        <div class="project-accordion__row">
-                                            <div class="project-content">
-                                                <p class="project-type" data-i18n="idx.project.eduType">Educational project</p>
-                                                <p class="project-description" data-i18n="idx.project8.desc1">An interactive online chess game built from a training video tutorial, with additional custom game-logic improvements and a completely redesigned interface style.</p>
-                                                <p class="project-description" data-i18n="idx.project8.desc2">Development implemented the core chess mechanics and interaction with the board and pieces, along with custom changes and improvements to the application logic.</p>
-                                                <p class="project-description" data-i18n="idx.project8.desc3">Special attention was given to the visual side — the tutorial's default design was reworked into a more modern, original style.</p>
-                                                <ul class="project-stack" aria-label="Tech stack">
+                    <div class="learning-group">
+                        <header class="learning-group__header">
+                            <h4 class="learning-group__title" id="edu-2-title" data-i18n="idx.projects.edu.g2.title">React from video tutorials, with my own design</h4>
+                            <p class="learning-group__meta" data-i18n="idx.projects.edu.g2.meta">3 projects · React, TypeScript, SCSS</p>
+                        </header>
+                        <div class="commercial-gallery" role="region" aria-labelledby="edu-2-title">
+                            <div class="commercial-gallery__track" id="edu-2-track" tabindex="0" aria-label="Project cards" data-i18n-attr="aria-label:idx.flip.cards">
+                                <article class="commercial-card" aria-labelledby="edu-2-1-title">
+                                    <div class="commercial-card__inner">
+                                        <button class="commercial-card__front" type="button" aria-expanded="false" aria-controls="edu-2-1-back">
+                                            <span class="commercial-card__number">01 / 03</span>
+                                            <span class="commercial-card__title" id="edu-2-1-title">Chessland</span>
+                                            <img loading="lazy" src="./images/project/mockups/p8.webp" alt="Chessland project" class="commercial-card__image" data-i18n-attr="alt:idx.project8.imgAlt">
+                                            <span class="commercial-card__hint"><span data-i18n="idx.flip.details">Explore project</span><span aria-hidden="true">↗</span></span>
+                                        </button>
+                                        <div class="commercial-card__back" id="edu-2-1-back" aria-hidden="true" inert>
+                                            <div class="commercial-card__back-header"><span class="commercial-card__number">01 / 03</span><button class="commercial-card__return" type="button" data-i18n="idx.flip.back">Back ↶</button></div>
+                                            <h5 class="commercial-card__back-title">Chessland</h5>
+                                            <div class="commercial-card__description" tabindex="0" aria-label="Project description" data-i18n-attr="aria-label:idx.flip.description"><p class="project-type" data-i18n="idx.project.eduType">Educational project</p>
+<p class="project-description" data-i18n="idx.project8.desc1">An interactive online chess game built from a training video tutorial, with additional custom game-logic improvements and a completely redesigned interface style.</p>
+<p class="project-description" data-i18n="idx.project8.desc2">Development implemented the core chess mechanics and interaction with the board and pieces, along with custom changes and improvements to the application logic.</p>
+<p class="project-description" data-i18n="idx.project8.desc3">Special attention was given to the visual side — the tutorial's default design was reworked into a more modern, original style.</p></div>
+                                            <ul class="project-stack" aria-label="Tech stack">
                                                     <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-react"></use></svg>React</li>
                                                     <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-ts"></use></svg>TypeScript</li>
                                                     <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-css3"></use></svg>CSS3</li>
                                                 </ul>
-                                                <div class="project-buttons">
-                                                    <a href="https://katymist.github.io/Chess/" class="project-btn" target="_blank" data-i18n="idx.project.viewBtn">View project →</a>
-                                                    <a href="https://github.com/KatyMist/Chess" class="project-btn project-btn--secondary" target="_blank" data-i18n="idx.project.codeBtn">Source code →</a>
+                                            <div class="commercial-card__links">
+                                                    <a href="https://katymist.github.io/Chess/" class="project-btn" target="_blank" rel="noopener noreferrer" data-i18n="idx.project.viewBtn">View project →</a>
+                                                    <a href="https://github.com/KatyMist/Chess" class="project-btn project-btn--secondary" target="_blank" rel="noopener noreferrer" data-i18n="idx.project.codeBtn">Source code →</a>
                                                 </div>
-                                            </div>
-                                            <div class="project-image">
-                                                <img src="./images/project/mockups/p8.webp" alt="Chessland project" class="project-img" data-i18n-attr="alt:idx.project8.imgAlt">
-                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </article>
-
-
-                            <!-- Pizzeria - Gestione del Menu -->
-                            <article class="project-accordion__item">
-                                <button class="project-accordion__toggle" type="button" aria-expanded="false" aria-controls="panel-edu-4">
-                                    <span class="project-accordion__number">02</span>
-                                    <span class="project-accordion__name">Pizzeria — Gestione del Menu</span>
-                                    <span class="project-accordion__icon" aria-hidden="true"></span>
-                                </button>
-                                <div class="project-accordion__panel" id="panel-edu-4">
-                                    <div class="project-accordion__inner">
-                                        <div class="project-accordion__row">
-                                            <div class="project-content">
-                                                <p class="project-type" data-i18n="idx.project.eduType">Educational project</p>
-                                                <p class="project-description" data-i18n="idx.project7.desc1">An SPA for managing a pizzeria menu, built with React and TypeScript. Implemented CRUD operations, controlled forms with validation, and data persistence in localStorage.</p>
-                                                <p class="project-description" data-i18n="idx.project7.desc2">The core logic was built as part of a training course, while the interface design, responsive markup, and SCSS styling were done independently.</p>
-                                                <ul class="project-stack" aria-label="Tech stack">
+                                </article>
+                                <article class="commercial-card" aria-labelledby="edu-2-2-title">
+                                    <div class="commercial-card__inner">
+                                        <button class="commercial-card__front" type="button" aria-expanded="false" aria-controls="edu-2-2-back">
+                                            <span class="commercial-card__number">02 / 03</span>
+                                            <span class="commercial-card__title" id="edu-2-2-title">Pizzeria — Gestione del Menu</span>
+                                            <img loading="lazy" src="./images/project/mockups/p6.webp" alt="Pizzeria project" class="commercial-card__image" data-i18n-attr="alt:idx.project7.imgAlt">
+                                            <span class="commercial-card__hint"><span data-i18n="idx.flip.details">Explore project</span><span aria-hidden="true">↗</span></span>
+                                        </button>
+                                        <div class="commercial-card__back" id="edu-2-2-back" aria-hidden="true" inert>
+                                            <div class="commercial-card__back-header"><span class="commercial-card__number">02 / 03</span><button class="commercial-card__return" type="button" data-i18n="idx.flip.back">Back ↶</button></div>
+                                            <h5 class="commercial-card__back-title">Pizzeria — Gestione del Menu</h5>
+                                            <div class="commercial-card__description" tabindex="0" aria-label="Project description" data-i18n-attr="aria-label:idx.flip.description"><p class="project-type" data-i18n="idx.project.eduType">Educational project</p>
+<p class="project-description" data-i18n="idx.project7.desc1">An SPA for managing a pizzeria menu, built with React and TypeScript. Implemented CRUD operations, controlled forms with validation, and data persistence in localStorage.</p>
+<p class="project-description" data-i18n="idx.project7.desc2">The core logic was built as part of a training course, while the interface design, responsive markup, and SCSS styling were done independently.</p></div>
+                                            <ul class="project-stack" aria-label="Tech stack">
                                                     <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-react"></use></svg>React</li>
                                                     <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-ts"></use></svg>TypeScript</li>
                                                     <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-scss"></use></svg>SCSS</li>
                                                 </ul>
-                                                <div class="project-buttons">
-                                                    <a href="https://katymist.github.io/React-Typescript-Project-Public-Starter/" class="project-btn" target="_blank" data-i18n="idx.project.viewBtn">View project →</a>
-                                                    <a href="https://github.com/KatyMist/React-Typescript-Project-Public-Starter" class="project-btn project-btn--secondary" target="_blank" data-i18n="idx.project.codeBtn">Source code →</a>
+                                            <div class="commercial-card__links">
+                                                    <a href="https://katymist.github.io/React-Typescript-Project-Public-Starter/" class="project-btn" target="_blank" rel="noopener noreferrer" data-i18n="idx.project.viewBtn">View project →</a>
+                                                    <a href="https://github.com/KatyMist/React-Typescript-Project-Public-Starter" class="project-btn project-btn--secondary" target="_blank" rel="noopener noreferrer" data-i18n="idx.project.codeBtn">Source code →</a>
                                                 </div>
-                                            </div>
-                                            <div class="project-image">
-                                                <img src="./images/project/mockups/p6.webp" alt="Pizzeria project" class="project-img" data-i18n-attr="alt:idx.project7.imgAlt">
-                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </article>
-
-
-                            <!-- Todo React -->
-                            <article class="project-accordion__item">
-                                <button class="project-accordion__toggle" type="button" aria-expanded="false" aria-controls="panel-edu-3">
-                                    <span class="project-accordion__number">03</span>
-                                    <span class="project-accordion__name">Todo React</span>
-                                    <span class="project-accordion__icon" aria-hidden="true"></span>
-                                </button>
-                                <div class="project-accordion__panel" id="panel-edu-3">
-                                    <div class="project-accordion__inner">
-                                        <div class="project-accordion__row">
-                                            <div class="project-content">
-                                                <p class="project-type" data-i18n="idx.project.eduType">Educational project</p>
-                                                <p class="project-description" data-i18n="idx.project6.desc1">Todo React is an educational SPA for task management, built while learning React. The project started from video tutorials and was then extended independently. Development covered the component-based approach, React Hooks, the Context API, working with a REST API, and structuring the application.</p>
-                                                <p class="project-description" data-i18n="idx.project6.desc2">Implemented creating, searching, editing, deleting, and changing the status of tasks, with data synced through JSON Server.</p>
-                                                <ul class="project-stack" aria-label="Tech stack">
+                                </article>
+                                <article class="commercial-card" aria-labelledby="edu-2-3-title">
+                                    <div class="commercial-card__inner">
+                                        <button class="commercial-card__front" type="button" aria-expanded="false" aria-controls="edu-2-3-back">
+                                            <span class="commercial-card__number">03 / 03</span>
+                                            <span class="commercial-card__title" id="edu-2-3-title">Todo React</span>
+                                            <img loading="lazy" src="./images/project/mockups/p5.webp" alt="Todo React project" class="commercial-card__image" data-i18n-attr="alt:idx.project6.imgAlt">
+                                            <span class="commercial-card__hint"><span data-i18n="idx.flip.details">Explore project</span><span aria-hidden="true">↗</span></span>
+                                        </button>
+                                        <div class="commercial-card__back" id="edu-2-3-back" aria-hidden="true" inert>
+                                            <div class="commercial-card__back-header"><span class="commercial-card__number">03 / 03</span><button class="commercial-card__return" type="button" data-i18n="idx.flip.back">Back ↶</button></div>
+                                            <h5 class="commercial-card__back-title">Todo React</h5>
+                                            <div class="commercial-card__description" tabindex="0" aria-label="Project description" data-i18n-attr="aria-label:idx.flip.description"><p class="project-type" data-i18n="idx.project.eduType">Educational project</p>
+<p class="project-description" data-i18n="idx.project6.desc1">Todo React is an educational SPA for task management, built while learning React. The project started from video tutorials and was then extended independently. Development covered the component-based approach, React Hooks, the Context API, working with a REST API, and structuring the application.</p>
+<p class="project-description" data-i18n="idx.project6.desc2">Implemented creating, searching, editing, deleting, and changing the status of tasks, with data synced through JSON Server.</p></div>
+                                            <ul class="project-stack" aria-label="Tech stack">
                                                     <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-react"></use></svg>React</li>
                                                     <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-js"></use></svg>JavaScript</li>
                                                     <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-vite"></use></svg>Vite</li>
@@ -548,90 +531,83 @@
                                                     <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-json"></use></svg>JSON Server</li>
                                                     <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-eslint"></use></svg>ESLint</li>
                                                 </ul>
-                                                <div class="project-buttons">
-                                                    <a href="https://katymist.github.io/todo-react/" class="project-btn" target="_blank" data-i18n="idx.project.viewBtn">View project →</a>
-                                                    <a href="https://github.com/KatyMist/todo-react" class="project-btn project-btn--secondary" target="_blank" data-i18n="idx.project.codeBtn">Source code →</a>
+                                            <div class="commercial-card__links">
+                                                    <a href="https://katymist.github.io/todo-react/" class="project-btn" target="_blank" rel="noopener noreferrer" data-i18n="idx.project.viewBtn">View project →</a>
+                                                    <a href="https://github.com/KatyMist/todo-react" class="project-btn project-btn--secondary" target="_blank" rel="noopener noreferrer" data-i18n="idx.project.codeBtn">Source code →</a>
                                                 </div>
-                                            </div>
-                                            <div class="project-image">
-                                                <img src="./images/project/mockups/p5.webp" alt="Todo React project" class="project-img" data-i18n-attr="alt:idx.project6.imgAlt">
-                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </article>
+                                </article>
+                            </div>
+                            <div class="commercial-gallery__controls">
+                                <button class="commercial-gallery__arrow" type="button" data-gallery-prev aria-controls="edu-2-track" aria-label="Previous projects" data-i18n-attr="aria-label:idx.flip.prev">←</button>
+                                <span class="commercial-gallery__caption" data-i18n="idx.flip.browse">Browse projects</span>
+                                <button class="commercial-gallery__arrow" type="button" data-gallery-next aria-controls="edu-2-track" aria-label="Next projects" data-i18n-attr="aria-label:idx.flip.next">→</button>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="projects-group">
-                        <div class="projects-group__header">
-                            <span class="projects-group__stage" data-i18n="idx.projects.edu.g3.stage">Stage 1</span>
-                            <h4 class="projects-group__title" data-i18n="idx.projects.edu.g3.title" data-i18n-html>Markup from video tutorials</h4>
-                            <p class="projects-group__meta" data-i18n="idx.projects.edu.g3.meta">2 projects · HTML, CSS, SCSS, JS</p>
-                        </div>
-
-                        <div class="project-accordion">
-
-                            <!-- Future Tech -->
-                            <article class="project-accordion__item">
-                                <button class="project-accordion__toggle" type="button" aria-expanded="false" aria-controls="panel-edu-2">
-                                    <span class="project-accordion__number">01</span>
-                                    <span class="project-accordion__name">Future Tech</span>
-                                    <span class="project-accordion__icon" aria-hidden="true"></span>
-                                </button>
-                                <div class="project-accordion__panel" id="panel-edu-2">
-                                    <div class="project-accordion__inner">
-                                        <div class="project-accordion__row">
-                                            <div class="project-content">
-                                                <p class="project-type" data-i18n="idx.project.eduType">Educational project</p>
-                                                <p class="project-description" data-i18n="idx.project5.desc" data-i18n-html>A landing page about future technologies, built while following a video tutorial. Development included responsive markup and interactive elements using <b>HTML</b>, <b>SCSS</b>, and <b>JavaScript</b>.</p>
-                                                <ul class="project-stack" aria-label="Tech stack">
+                    <div class="learning-group">
+                        <header class="learning-group__header">
+                            <h4 class="learning-group__title" id="edu-3-title" data-i18n="idx.projects.edu.g3.title">Markup from video tutorials</h4>
+                            <p class="learning-group__meta" data-i18n="idx.projects.edu.g3.meta">2 projects · HTML, CSS, SCSS, JS</p>
+                        </header>
+                        <div class="commercial-gallery" role="region" aria-labelledby="edu-3-title">
+                            <div class="commercial-gallery__track" id="edu-3-track" tabindex="0" aria-label="Project cards" data-i18n-attr="aria-label:idx.flip.cards">
+                                <article class="commercial-card" aria-labelledby="edu-3-1-title">
+                                    <div class="commercial-card__inner">
+                                        <button class="commercial-card__front" type="button" aria-expanded="false" aria-controls="edu-3-1-back">
+                                            <span class="commercial-card__number">01 / 02</span>
+                                            <span class="commercial-card__title" id="edu-3-1-title">Future Tech</span>
+                                            <img loading="lazy" src="./images/project/mockups/p2.webp" alt="Future Tech website" class="commercial-card__image" data-i18n-attr="alt:idx.project5.imgAlt">
+                                            <span class="commercial-card__hint"><span data-i18n="idx.flip.details">Explore project</span><span aria-hidden="true">↗</span></span>
+                                        </button>
+                                        <div class="commercial-card__back" id="edu-3-1-back" aria-hidden="true" inert>
+                                            <div class="commercial-card__back-header"><span class="commercial-card__number">01 / 02</span><button class="commercial-card__return" type="button" data-i18n="idx.flip.back">Back ↶</button></div>
+                                            <h5 class="commercial-card__back-title">Future Tech</h5>
+                                            <div class="commercial-card__description" tabindex="0" aria-label="Project description" data-i18n-attr="aria-label:idx.flip.description"><p class="project-type" data-i18n="idx.project.eduType">Educational project</p>
+<p class="project-description" data-i18n="idx.project5.desc" data-i18n-html>A landing page about future technologies, built while following a video tutorial. Development included responsive markup and interactive elements using <b>HTML</b>, <b>SCSS</b>, and <b>JavaScript</b>.</p></div>
+                                            <ul class="project-stack" aria-label="Tech stack">
                                                     <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-html5"></use></svg>HTML5</li>
                                                     <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-scss"></use></svg>SCSS</li>
                                                     <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-js"></use></svg>JavaScript</li>
                                                 </ul>
-                                                <div class="project-buttons">
-                                                    <a href="https://katymist.github.io/FUTURE-TECH/" class="project-btn" target="_blank" data-i18n="idx.project.viewBtn">View project →</a>
-                                                    <a href="https://github.com/KatyMist/FUTURE-TECH" class="project-btn project-btn--secondary" target="_blank" data-i18n="idx.project.codeBtn">Source code →</a>
+                                            <div class="commercial-card__links">
+                                                    <a href="https://katymist.github.io/FUTURE-TECH/" class="project-btn" target="_blank" rel="noopener noreferrer" data-i18n="idx.project.viewBtn">View project →</a>
+                                                    <a href="https://github.com/KatyMist/FUTURE-TECH" class="project-btn project-btn--secondary" target="_blank" rel="noopener noreferrer" data-i18n="idx.project.codeBtn">Source code →</a>
                                                 </div>
-                                            </div>
-                                            <div class="project-image">
-                                                <img src="./images/project/mockups/p2.webp" alt="Future Tech website" class="project-img" data-i18n-attr="alt:idx.project5.imgAlt">
-                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </article>
-
-                            <!-- Kropp Fitness -->
-                            <article class="project-accordion__item">
-                                <button class="project-accordion__toggle" type="button" aria-expanded="false" aria-controls="panel-edu-1">
-                                    <span class="project-accordion__number">02</span>
-                                    <span class="project-accordion__name">Kropp Fitness</span>
-                                    <span class="project-accordion__icon" aria-hidden="true"></span>
-                                </button>
-                                <div class="project-accordion__panel" id="panel-edu-1">
-                                    <div class="project-accordion__inner">
-                                        <div class="project-accordion__row">
-                                            <div class="project-content">
-                                                <p class="project-type" data-i18n="idx.project.eduType">Educational project</p>
-                                                <p class="project-description" data-i18n="idx.project4.desc" data-i18n-html>A responsive fitness club landing page built while following a video tutorial. The project helped reinforce semantic and responsive markup skills using <b>HTML</b> and <b>CSS</b>.</p>
-                                                <ul class="project-stack" aria-label="Tech stack">
+                                </article>
+                                <article class="commercial-card" aria-labelledby="edu-3-2-title">
+                                    <div class="commercial-card__inner">
+                                        <button class="commercial-card__front" type="button" aria-expanded="false" aria-controls="edu-3-2-back">
+                                            <span class="commercial-card__number">02 / 02</span>
+                                            <span class="commercial-card__title" id="edu-3-2-title">Kropp Fitness</span>
+                                            <img loading="lazy" src="./images/project/mockups/p1.webp" alt="Kropp Fitness website" class="commercial-card__image" data-i18n-attr="alt:idx.project4.imgAlt">
+                                            <span class="commercial-card__hint"><span data-i18n="idx.flip.details">Explore project</span><span aria-hidden="true">↗</span></span>
+                                        </button>
+                                        <div class="commercial-card__back" id="edu-3-2-back" aria-hidden="true" inert>
+                                            <div class="commercial-card__back-header"><span class="commercial-card__number">02 / 02</span><button class="commercial-card__return" type="button" data-i18n="idx.flip.back">Back ↶</button></div>
+                                            <h5 class="commercial-card__back-title">Kropp Fitness</h5>
+                                            <div class="commercial-card__description" tabindex="0" aria-label="Project description" data-i18n-attr="aria-label:idx.flip.description"><p class="project-type" data-i18n="idx.project.eduType">Educational project</p>
+<p class="project-description" data-i18n="idx.project4.desc" data-i18n-html>A responsive fitness club landing page built while following a video tutorial. The project helped reinforce semantic and responsive markup skills using <b>HTML</b> and <b>CSS</b>.</p></div>
+                                            <ul class="project-stack" aria-label="Tech stack">
                                                     <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-html5"></use></svg>HTML5</li>
                                                     <li class="project-stack__item"><svg class="project-stack__icon" aria-hidden="true"><use href="#i-css3"></use></svg>CSS3</li>
                                                 </ul>
-                                                <div class="project-buttons">
-                                                    <a href="https://katymist.github.io/KROPP-FITNESS/" class="project-btn" target="_blank" data-i18n="idx.project.viewBtn">View project →</a>
-                                                    <a href="https://github.com/KatyMist/KROPP-FITNESS" class="project-btn project-btn--secondary" target="_blank" data-i18n="idx.project.codeBtn">Source code →</a>
+                                            <div class="commercial-card__links">
+                                                    <a href="https://katymist.github.io/KROPP-FITNESS/" class="project-btn" target="_blank" rel="noopener noreferrer" data-i18n="idx.project.viewBtn">View project →</a>
+                                                    <a href="https://github.com/KatyMist/KROPP-FITNESS" class="project-btn project-btn--secondary" target="_blank" rel="noopener noreferrer" data-i18n="idx.project.codeBtn">Source code →</a>
                                                 </div>
-                                            </div>
-                                            <div class="project-image">
-                                                <img src="./images/project/mockups/p1.webp" alt="Kropp Fitness website" class="project-img" data-i18n-attr="alt:idx.project4.imgAlt">
-                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </article>
+                                </article>
+                            </div>
+                            <div class="commercial-gallery__controls">
+                                <button class="commercial-gallery__arrow" type="button" data-gallery-prev aria-controls="edu-3-track" aria-label="Previous projects" data-i18n-attr="aria-label:idx.flip.prev">←</button>
+                                <span class="commercial-gallery__caption" data-i18n="idx.flip.browse">Browse projects</span>
+                                <button class="commercial-gallery__arrow" type="button" data-gallery-next aria-controls="edu-3-track" aria-label="Next projects" data-i18n-attr="aria-label:idx.flip.next">→</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -639,67 +615,61 @@
         </section>
 
         <section class="contacts-section" id="contacts">
-            <div class="contacts-header">
-                <h2 class="contacts-title">
-                    <span class="line"></span>
-                    <span class="text" data-i18n="idx.contacts.title">CONTACTS</span>
-                    <span class="line"></span>
-                </h2>
-            </div>
-
-            <div class="contacts-card js-reveal">
-                <div class="contacts-card__left">
-                    <h3 class="contacts-name" data-i18n="common.name">Ekaterina Tumanova</h3>
-                    <p class="contacts-role">Frontend Developer</p>
-
-                    <ul class="contacts-list">
-                        <li class="contacts-list__item">
-                            <a href="mailto:tumanova.ekaterina73@gmail.com" class="contacts-list__link">
-                                <span class="contacts-list__label">Email</span>
-                                <span class="contacts-list__value">tumanova.ekaterina73@gmail.com</span>
-                            </a>
-                        </li>
-                        <li class="contacts-list__item">
-                            <a href="https://t.me/katymist" target="_blank" rel="noopener" class="contacts-list__link">
-                                <span class="contacts-list__label">Telegram</span>
-                                <span class="contacts-list__value">@katymist</span>
-                            </a>
-                        </li>
-                        <li class="contacts-list__item">
-                            <a href="https://ulyanovsk.hh.ru/resume/b77b4490ff107e4c760039ed1f5262426e565a" target="_blank" rel="noopener" class="contacts-list__link">
-                                <span class="contacts-list__label">HH.ru</span>
-                                <span class="contacts-list__value" data-i18n="idx.contacts.value.hh">Resume and work experience</span>
-                            </a>
-                        </li>
-                        <li class="contacts-list__item">
-                            <a href="https://career.habr.com/katymist" target="_blank" rel="noopener" class="contacts-list__link">
-                                <span class="contacts-list__label">Habr Career</span>
-                                <span class="contacts-list__value" data-i18n="idx.contacts.value.habr">Profile and skills</span>
-                            </a>
-                        </li>
-                        <li class="contacts-list__item">
-                            <a href="https://github.com/KatyMist" target="_blank" rel="noopener" class="contacts-list__link">
-                                <span class="contacts-list__label">GitHub</span>
-                                <span class="contacts-list__value">github.com/KatyMist</span>
-                            </a>
-                        </li>
-                        <li class="contacts-list__item">
-                            <a href="https://stepik.org/users/1179792686/profile" target="_blank" rel="noopener" class="contacts-list__link">
-                                <span class="contacts-list__label">Stepik</span>
-                                <span class="contacts-list__value" data-i18n="idx.contacts.value.stepik">Certificates and courses</span>
-                            </a>
-                        </li>
-                    </ul>
+            <header class="section-intro">
+                <div class="section-intro__eyebrow">
+                    <span data-i18n="idx.intro.contacts.label">Contact</span>
+                    <span class="section-intro__slash" aria-hidden="true">/</span>
+                    <span class="section-intro__count">06</span>
                 </div>
+                <h2 class="section-intro__title" data-i18n="idx.intro.contacts.title">Let’s connect</h2>
+                <p class="section-intro__description" data-i18n="idx.intro.contacts.description">Open to offers and new professional opportunities.</p>
+            </header>
 
-                <div class="contacts-card__divider"></div>
-
-                <div class="contacts-card__right">
-                    <h3 class="contacts-card__heading" data-i18n="idx.contacts.heading">Open to new opportunities</h3>
-                    <p class="contacts-card__text" data-i18n="idx.contacts.text">Looking for a team to start my professional journey in frontend development. I'd love the opportunity to grow professionally, keep learning, and work on interesting projects.</p>
-                </div>
-
-                <img src="./images/F1.png" alt="" class="contacts-card__decor" aria-hidden="true">
+            <div class="contact-hub">
+                <ul class="contact-grid">
+                    <li>
+                        <a class="contact-link" href="mailto:tumanova.ekaterina73@gmail.com">
+                            <span class="contact-link__icon" aria-hidden="true">@</span>
+                            <span class="contact-link__content"><span class="contact-link__label">Email</span><span class="contact-link__value">tumanova.ekaterina73@gmail.com</span></span>
+                            <span class="contact-link__arrow" aria-hidden="true">↗</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="contact-link" href="https://t.me/katymist" target="_blank" rel="noopener noreferrer">
+                            <span class="contact-link__icon" aria-hidden="true">↗</span>
+                            <span class="contact-link__content"><span class="contact-link__label">Telegram</span><span class="contact-link__value">@katymist</span></span>
+                            <span class="contact-link__arrow" aria-hidden="true">↗</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="contact-link" href="https://ulyanovsk.hh.ru/resume/b77b4490ff107e4c760039ed1f5262426e565a" target="_blank" rel="noopener noreferrer">
+                            <span class="contact-link__icon" aria-hidden="true">hh</span>
+                            <span class="contact-link__content"><span class="contact-link__label">HH.ru</span><span class="contact-link__value" data-i18n="idx.contacts.value.hh">Resume and work experience</span></span>
+                            <span class="contact-link__arrow" aria-hidden="true">↗</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="contact-link" href="https://career.habr.com/katymist" target="_blank" rel="noopener noreferrer">
+                            <span class="contact-link__icon" aria-hidden="true">H</span>
+                            <span class="contact-link__content"><span class="contact-link__label">Habr Career</span><span class="contact-link__value" data-i18n="idx.contacts.value.habr">Profile and skills</span></span>
+                            <span class="contact-link__arrow" aria-hidden="true">↗</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="contact-link" href="https://github.com/KatyMist" target="_blank" rel="noopener noreferrer">
+                            <span class="contact-link__icon" aria-hidden="true">GH</span>
+                            <span class="contact-link__content"><span class="contact-link__label">GitHub</span><span class="contact-link__value">github.com/KatyMist</span></span>
+                            <span class="contact-link__arrow" aria-hidden="true">↗</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="contact-link" href="https://stepik.org/users/1179792686/profile" target="_blank" rel="noopener noreferrer">
+                            <span class="contact-link__icon" aria-hidden="true">S</span>
+                            <span class="contact-link__content"><span class="contact-link__label">Stepik</span><span class="contact-link__value" data-i18n="idx.contacts.value.stepik">Certificates and courses</span></span>
+                            <span class="contact-link__arrow" aria-hidden="true">↗</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
     </main>
@@ -729,7 +699,7 @@
     <div class="cookies-banner" id="cookiesBanner">
         <div class="cookies-banner__container">
             <div class="cookies-banner__content">
-                <img class="cookies-banner__icon" src="./icons/heart.svg" alt="Cookies" />
+                <img class="cookies-banner__icon" src="./icons/heart.svg?v=2" alt="Cookies" />
                 <p class="cookies-banner__text" data-i18n="common.cookies.text" data-i18n-html>
                     We use <a href="privacy.html" class="cookies-banner__link">cookies</a>
                     to ensure the site works correctly and to analyze traffic

@@ -1,257 +1,55 @@
 @use '../helpers' as *;
-@use '../variables' as *;
-
 .contacts-section {
-    padding: rem(80) rem(32);
+    margin-bottom: 0;
+    padding: rem(80) rem(32) rem(12);
     background: var(--color-bg-main);
-    transition: background-color 0.4s ease;
-
-    @include tablet {
-        padding: rem(60) rem(24);
-    }
-
-    @include mobile {
-        padding: rem(40) rem(16);
-    }
+    @include tablet { padding: rem(60) rem(24) rem(12); }
+    @include mobile { padding: rem(40) rem(16) rem(12); }
 }
-
-.contacts-header {
-    margin-bottom: rem(50);
-
-    @include mobile {
-        margin-bottom: rem(32);
-    }
-}
-
-.contacts-title {
-    position: relative;
+.contact-hub { display: block; max-width: 1200px; margin: 36px auto 0; align-items: start; }
+.contact-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; padding: 0; margin: 0; list-style: none; }
+.contact-grid > li { min-width: 0; }
+.contact-link {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: rem(24);
-    font-family: 'PlayfairDisplay', sans-serif;
-    font-size: fluid(36, 24);
-    font-weight: 700;
-    line-height: 1;
-    color: var(--color-bg-green);
-    margin: 0;
-    text-align: center;
-    transition: color 0.4s ease;
-
-    .line {
-        flex: 0 0 rem(120);
-        height: 1px;
-        background: var(--color-bg-beige);
-        transition: background-color 0.4s ease;
-    }
-
-    .text {
-        flex-shrink: 0;
-        position: relative;
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        left: 50%;
-        bottom: rem(-14);
-        transform: translateX(-50%);
-        width: rem(24);
-        height: 1px;
-        background: var(--color-bg-green);
-        border-radius: 2px;
-    }
-
-    @include mobile {
-        font-size: rem(24);
-        gap: rem(14);
-
-        .line {
-            display: none;
-        }
-
-        &::after {
-            width: rem(20);
-            bottom: rem(-10);
-        }
-    }
-
-    @include tablet {
-        .line {
-            flex-basis: rem(60);
-        }
-    }
-}
-
-// КАРТОЧКА-СТЕКЛО — идентична .skills-columns
-// КАРТОЧКА-СТЕКЛО — идентична .skills-columns
-.contacts-card {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1.5fr auto 1fr;
-    gap: rem(48);
-    align-items: center;
-    max-width: rem(1200);
-    margin: 0 auto;
-    padding: rem(48);
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px) saturate(160%);
-    -webkit-backdrop-filter: blur(20px) saturate(160%);
-    border: 1px solid var(--glass-border);
-    border-radius: rem(24);
-    box-shadow: 0 8px 32px var(--glass-shadow);
-    overflow: hidden;
-    transition: var(--theme-transition);
-
-    @include tablet {
-        grid-template-columns: 1fr;
-        gap: rem(32);
-        padding: rem(24);
-        border-radius: rem(16);
-    }
-
-    @include mobile {
-        padding: rem(24);
-        border-radius: rem(16);
-    }
-}
-
-.contacts-card__decor {
-    position: absolute;
-    top: 50%;
-    right: rem(-40);
-    translate: 0 -50%;
-    width: rem(330);
-    height: auto;
-    opacity: 0.5;
-    pointer-events: none;
-    z-index: 0;
-
-    @include tablet {
-        display: none; 
-    }
-}
-
-
-.contacts-card__divider {
-    width: 1px;
+    gap: 12px;
+    min-height: 90px;
     height: 100%;
-    background: var(--color-bg-beige);
-    transition: background-color 0.4s ease;
-
-    @include tablet {
-        width: 100%;
-        height: 1px;
-    }
+    padding: 17px;
+    border: 1px solid rgba(146, 158, 131, 0.17);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.35);
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+.contact-grid > li:first-child .contact-link { background: #eef2e7; }
+.contact-grid > li:nth-child(2) .contact-link { background: #f3edf0; }
+.contact-link__icon { display: grid; place-items: center; flex-shrink: 0; width: 32px; height: 32px; border-radius: 11px; background: #e7ecde; color: #7a8a6a; font: 500 11px/1 'Manrope', sans-serif; }
+.contact-grid > li:nth-child(2n) .contact-link__icon { background: #eee5eb; color: #9b8594; }
+.contact-grid > li:nth-child(3n) .contact-link__icon { background: #eee9df; color: #998a6d; }
+.contact-link__content { display: flex; flex-direction: column; gap: 5px; flex: 1; min-width: 0; }
+.contact-link__label { color: #637157; font: 500 12px/1.4 'Manrope', sans-serif; }
+.contact-link__value { color: #8a9180; font: 400 10px/1.6 'Manrope', sans-serif; overflow-wrap: anywhere; }
+.contact-link__arrow { flex-shrink: 0; font: 400 18px/1 'Manrope', sans-serif; color: #92a181; transition: transform 0.3s ease; }
+.contact-link:focus-visible { outline: 2px solid #879777; outline-offset: 4px; }
+@media (hover: hover) {
+    .contact-grid > li .contact-link:hover { background: #e7eedc; border-color: rgba(146, 158, 131, 0.32); transform: translateY(-2px); box-shadow: 0 6px 18px rgba(111, 123, 94, 0.06); }
+    .contact-grid > li:nth-child(2n) .contact-link:hover { background: #eee4ea; }
+    .contact-link:hover .contact-link__arrow { transform: translate(2px, -2px); }
+}
+.contact-link:active { background: #e0e8d4; }
+@media (max-width: 1000px) {
+    .contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+    .contact-hub { margin-top: 28px; }
+    .contact-grid { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+    .contact-link { min-height: 78px; padding: 15px; border-radius: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .contact-link, .contact-link__arrow { transition: none; }
+    .contact-grid > li .contact-link:hover, .contact-link:hover .contact-link__arrow { transform: none; }
 }
 
-// ЛЕВАЯ ЧАСТЬ
-.contacts-name {
-    font-family: 'PlayfairDisplay', sans-serif;
-    font-size: fluid(28, 22);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 0 0 rem(4) 0;
-}
 
-.contacts-role {
-    font-family: 'Manrope', sans-serif;
-    font-size: rem(14);
-    font-weight: 600;
-    color: var(--color-bg-green);
-    margin: 0 0 rem(24) 0;
-    transition: color 0.4s ease;
-}
-
-.contacts-list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: rem(24) rem(10);
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    @include mobile {
-        grid-template-columns: 1fr;
-        row-gap: rem(10);
-
-        .contacts-list__item:nth-child(odd):not(:first-child) {
-            margin-top: rem(14);
-        }
-    }
-}
-
-.contacts-list__link {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: rem(4);
-    height: 100%;
-    padding: rem(16) rem(20);
-    background: var(--glass-item-bg);
-    backdrop-filter: blur(16px) saturate(160%);
-    -webkit-backdrop-filter: blur(16px) saturate(160%);
-    border: 1px solid var(--glass-item-border);
-    border-radius: rem(14);
-    box-shadow: 0 4px 16px var(--glass-item-shadow);
-    text-decoration: none;
-    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
-
-    @include hover {
-        background: var(--glass-item-bg-hover);
-        box-shadow: 0 10px 28px var(--glass-item-shadow-hover);
-        transform: translateY(-2px);
-    }
-}
-
-.contacts-list__label {
-    font-family: 'PlayfairDisplay', sans-serif;
-    font-size: rem(15);
-    font-weight: 700;
-    color: var(--color-bg-green);
-    transition: color 0.4s ease;
-}
-
-.contacts-list__value {
-    font-family: 'Manrope', sans-serif;
-    font-size: rem(13);
-    color: var(--color-text-light);
-    overflow-wrap: anywhere;
-    transition: color 0.4s ease;
-}
-
-// ПРАВАЯ ЧАСТЬ
-.contacts-card__heading {
-    font-family: 'PlayfairDisplay', sans-serif;
-    font-size: fluid(24, 18);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 0 0 rem(16) 0;
-    line-height: 1.3;
-}
-
-.contacts-card__text {
-    font-family: 'MarckScript-Regular', sans-serif;
-    font-size: rem(16);
-    color: var(--color-text-light);
-    margin: 0;
-    line-height: 1.6;
-    transition: color 0.4s ease;
-}
-
-.contacts-card__left {
-    display: flex;
-    flex-direction: column;
-}
-
-.contacts-card__right {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    @include tablet {
-        text-align: center;
-    }
-}
+// Keep the background clear above the compact final section at the page end.
+.section-stack--end > section:not(:last-child) { visibility: hidden; }

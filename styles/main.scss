@@ -17,7 +17,6 @@
 @use './blocks/loading';
 @use './blocks/footer';
 @use './blocks/privacy';
-@use './blocks/burger';
 @use './blocks/cookies';
 @use './blocks/projects';
 @use './blocks/skills';
@@ -25,9 +24,12 @@
 @use './blocks/cursor';
 @use './blocks/notfound';
 @use './blocks/process';
-@use './blocks/theme-switch';
 @use './blocks/lang-switch';
 @use './blocks/header';
-@use './blocks/nav';
 @use './blocks/reveal';
-
+@use './blocks/section-stack';
+@use './blocks/commercial-gallery';
+@use './blocks/section-intro';
+@use './blocks/cover';
+@use './blocks/toolkit';
+@use './blocks/education-board';

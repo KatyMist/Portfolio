@@ -1,0 +1,21 @@
+// Each section stays behind the next one after its entire content has scrolled.
+@media (prefers-reduced-motion: no-preference) {
+    .section-stack > section[id] {
+        position: sticky;
+        top: var(--stack-top, 0px);
+        z-index: var(--stack-order, 0);
+        min-height: 100vh;
+        min-height: 100svh;
+        background-color: var(--color-bg-main);
+    }
+}
+
+.section-stack + .footer {
+    position: relative;
+    z-index: 7;
+    background-color: var(--color-bg-main);
+}
+
+
+// The final section ends with its content rather than an empty viewport.
+.section-stack > section[id]:last-child { position: relative; top: auto; min-height: 0; }
