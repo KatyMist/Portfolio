@@ -72,61 +72,61 @@ Each card shows a title and preview on the front, with a description, tech stack
 <details open>
 <summary><b>Главная · Home</b></summary>
 <br>
-<img width="1440" alt="Первый экран сайта · Website hero" src="images/readme/home.jpg">
+<img width="1704" height="905" alt="Снимок экрана — 2026-11-03 в 09 32 19" src="https://github.com/user-attachments/assets/64d63caa-d9dc-48c5-9801-930eacc359ff" />
 </details>
 
 <details>
 <summary><b>Обо мне · About me</b></summary>
 <br>
-<img width="1440" alt="Раздел обо мне · About me section" src="images/readme/about.jpg">
+<img width="1708" height="902" alt="Снимок экрана — 2026-11-03 в 09 33 07" src="https://github.com/user-attachments/assets/a62209bb-6a47-4fae-a563-dec6ddf96bc7" />
 </details>
 
 <details>
 <summary><b>Навыки · Skills</b></summary>
 <br>
-<img width="1440" alt="Компактный стек · Skills and tools" src="images/readme/skills.jpg">
+<img width="1704" height="898" alt="Снимок экрана — 2026-11-03 в 09 33 26" src="https://github.com/user-attachments/assets/956f3e1c-d5fc-42c2-b2d6-1caf65246419" />
 </details>
 
 <details>
 <summary><b>Обучение · Education</b></summary>
 <br>
-<img width="1440" alt="Курсы и сертификаты · Courses and certificates" src="images/readme/education.jpg">
+<img width="1708" height="910" alt="Снимок экрана — 2026-11-03 в 09 33 56" src="https://github.com/user-attachments/assets/e7670123-0a50-4fe8-90f7-e076153b8085" />
 </details>
 
 <details>
 <summary><b>Коммерческие и личные проекты · Commercial & Personal Projects</b></summary>
 <br>
-<img width="1440" alt="Карточки проектов · Project cards" src="images/readme/projects.jpg">
+<img width="1686" height="781" alt="Снимок экрана — 2026-11-03 в 09 34 25" src="https://github.com/user-attachments/assets/227ebce1-4ef1-444d-a4d7-34098b8c1247" />
 </details>
 
 <details>
 <summary><b>Учебные проекты · Learning Projects</b></summary>
 <br>
-<img width="1440" alt="Группы учебных проектов · Learning project groups" src="images/readme/educational-projects.jpg">
+<img width="1685" height="826" alt="Снимок экрана — 2026-11-03 в 09 34 46" src="https://github.com/user-attachments/assets/8bc5c09d-07f2-4c90-9797-af7b34f509a6" />
 </details>
 
 <details>
 <summary><b>Контакты · Contacts</b></summary>
 <br>
-<img width="1440" alt="Контакты · Contact links" src="images/readme/contacts.jpg">
+<img width="1694" height="476" alt="Снимок экрана — 2026-11-03 в 09 35 16" src="https://github.com/user-attachments/assets/6d17c064-7bdc-467d-b64e-87a7d171f85f" />
 </details>
 
 <details>
 <summary><b>Процесс разработки · Development Process</b></summary>
 <br>
-<img width="1440" alt="Процесс разработки · Development process" src="images/readme/process.jpg">
+<img width="1694" height="891" alt="Снимок экрана — 2026-11-03 в 09 35 34" src="https://github.com/user-attachments/assets/de5701e3-54c1-4b1a-a1c9-61250a8aaca9" />
 </details>
 
 <details>
 <summary><b>Страница 404 · 404 Page</b></summary>
 <br>
-<img width="1440" alt="Страница не найдена · Page not found" src="images/readme/404.jpg">
+<img width="1695" height="819" alt="Снимок экрана — 2026-11-03 в 09 36 06" src="https://github.com/user-attachments/assets/f4c39d06-b894-4938-82e9-e91d9016578d" />
 </details>
 
 <details>
 <summary><b>Мобильная версия · Mobile Version</b></summary>
 <br>
-<img width="390" alt="Мобильная версия сайта · Mobile website" src="images/readme/mobile.jpg">
+<img width="232" height="577" alt="Снимок экрана — 2026-11-03 в 09 36 45" src="https://github.com/user-attachments/assets/6949261d-868a-45c1-be18-e8730f239ab7" />
 </details>
 
 ## Возможности · Features
