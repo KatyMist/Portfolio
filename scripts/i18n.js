@@ -28,9 +28,12 @@ export const translations = {
     'idx.projects.edu.eyebrow': { en: 'Practice', ru: 'Практика' },
     'idx.projects.edu.count': { en: '07 projects', ru: '07 проектов' },
 
-    'idx.cover.title1': { en: "Turning ideas", ru: "Превращаю идеи" },
-    'idx.cover.title2': { en: "into digital products", ru: "в цифровые продукты" },
-    'idx.cover.description': { en: "Easy-to-use interfaces, clear navigation, and attention to detail.", ru: "Удобные интерфейсы, понятная навигация и внимание к деталям." },
+    'idx.cover.title1': { en: "Digital", ru: "Цифровые" },
+    'idx.cover.title2': { en: "products", ru: "продукты" },
+    'idx.cover.description': { en: "I build websites and interfaces that are easy to use.", ru: "Создаю сайты и интерфейсы, которыми удобно пользоваться." },
+    'idx.cover.portfolio': { en: 'Portfolio', ru: 'Портфолио' },
+    'idx.cover.eyebrow': { en: 'From an idea to an interface that works', ru: 'От идеи до работающего интерфейса' },
+    'idx.cover.role': { en: 'Frontend developer', ru: 'Frontend-разработчик' },
     'idx.cover.cta': { en: "Explore projects", ru: "Посмотреть проекты" },
     'idx.cover.scroll': { en: "Scroll to discover", ru: "Листайте вниз" },
     'idx.intro.about.label': { en: "About me", ru: "Обо мне" },
@@ -258,12 +261,18 @@ export const translations = {
     'proc.step8': { en: '08. Website Publishing', ru: '08. Публикация сайта' },
     'proc.step9': { en: '09. Project Handover', ru: '09. Передача проекта' },
 
+    'document.home': { en: 'Back to home', ru: 'На главную' },
+    'document.contents': { en: 'Contents', ru: 'Содержание' },
+    'document.proc.label': { en: 'Collaboration', ru: 'Сотрудничество' },
+    'document.priv.label': { en: 'Information', ru: 'Информация' },
+    'document.steps': { en: '09 stages', ru: '09 этапов' },
+    'proc.brief.title': { en: 'A brief tailored to your project', ru: 'Бриф под вашу задачу' },
+    'proc.brief.text': { en: 'I create a unique brief for each client, taking into account the goals, audience, and specifics of the project. We discuss the questions together to define the scope before work begins.', ru: 'Бриф составляю индивидуально для каждого клиента — с учётом целей, аудитории и особенностей проекта. Вопросы обсуждаем вместе, чтобы до начала работы определить задачи и объём проекта.' },
     'proc.title': { en: 'Development Process', ru: 'Процесс разработки' },
     'proc.intro': { en: 'My main focus is frontend development and working within a team. The stages below show how the work can be organized when building a custom website.', ru: 'Основное направление моего развития — Frontend Development и работа в команде. Представленные ниже этапы показывают, как может быть организована работа при разработке индивидуального сайта.' },
 
     'proc.s1.p1': { en: 'The work starts with a short brief, where you describe your project, wishes, and preferences.', ru: 'Работа начинается с небольшого брифа, где вы рассказываете о своем проекте, пожеланиях и предпочтениях.' },
     'proc.s1.p2': { en: "Based on it, I create a preliminary layout of the future website. We then discuss the proposed concept together, adjust it if needed, and only move on to development once it's approved.", ru: 'На его основе я создаю ориентировочный макет будущего сайта. Затем мы вместе обсуждаем предложенную концепцию, при необходимости корректируем ее и только после согласования переходим к разработке.' },
-    'proc.s1.btn': { en: 'Download the brief', ru: 'Скачать бриф' },
 
     'proc.s2.p1': { en: 'At this stage, the logic of the future website takes shape:', ru: 'На этом этапе формируется логика будущего сайта:' },
     'proc.s2.li1': { en: 'the list of pages is defined;', ru: 'определяется список страниц;' },
@@ -417,7 +426,7 @@ export const translations = {
     'nf.meta.ogDescription': { en: 'The requested page could not be found', ru: 'Запрашиваемая страница не найдена' },
     'nf.title': { en: 'Oops! Something went wrong', ru: 'Упс! Что-то пошло не так' },
     'nf.text': { en: "The page you're looking for couldn't be found. The link may be outdated, or the address may have been entered incorrectly.", ru: 'Запрашиваемая страница не найдена. Возможно, ссылка устарела или адрес введён с ошибкой.' },
-    'nf.link': { en: '← Back to home', ru: '← На главную' },
+    'nf.link': { en: 'Back to home', ru: 'На главную' },
 };
 
 function resolve(key, lang) {

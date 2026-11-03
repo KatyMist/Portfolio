@@ -40,7 +40,7 @@ A single-page portfolio website for a frontend developer, with supporting pages.
 | [Обучение · Education](https://katymist.github.io/Portfolio/#education) | Шесть сертификатов Stepik и две магистратуры с отличием<br>Six Stepik certificates and two master’s degrees with honors |
 | [Проекты · Projects](https://katymist.github.io/Portfolio/#projects) | Три коммерческих и личных проекта, семь учебных — в горизонтальных лентах с переворотом карточек<br>Three commercial and personal projects and seven learning projects, in horizontal flip-card galleries |
 | [Контакты · Contacts](https://katymist.github.io/Portfolio/#contacts) | Email, Telegram, HH.ru, Habr Career, GitHub и Stepik<br>Email, Telegram, HH.ru, Habr Career, GitHub and Stepik |
-| [Процесс · Process](https://katymist.github.io/Portfolio/process.html) | Этапы работы над сайтом и бриф для скачивания<br>Website development stages and a downloadable brief |
+| [Процесс · Process](https://katymist.github.io/Portfolio/process.html) | Этапы работы над сайтом и индивидуальный бриф для каждого клиента<br>Website development stages and a tailored brief for each client |
 | [Политика · Privacy](https://katymist.github.io/Portfolio/privacy.html) | Политика конфиденциальности<br>Privacy policy |
 
 ## Проекты · Projects
@@ -148,7 +148,7 @@ Each card shows a title and preview on the front, with a description, tech stack
 | **Анимация появления** отдельных блоков при прокрутке (IntersectionObserver) | **Reveal-on-scroll** animations for selected blocks (IntersectionObserver) |
 | **Кастомный курсор** с мерцающим шлейфом | **Custom cursor** with a sparkle trail |
 | **SVG-фавикон** с монограммой «Е» | **SVG favicon** with an “Е” monogram |
-| **Страница «Процесс разработки»** с брифом для скачивания | **“Development process” page** with a downloadable brief |
+| **Страница «Процесс разработки»** с индивидуальным брифом | **“Development process” page** with a tailored brief |
 | **Баннер cookies** с сохранением согласия и политика конфиденциальности | **Cookie banner** with remembered consent and a privacy policy |
 | **SEO**: мета-теги, Open Graph, canonical | **SEO**: meta tags, Open Graph, canonical |
 | **Яндекс.Метрика** | **Yandex.Metrica** |

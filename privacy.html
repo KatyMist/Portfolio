@@ -40,12 +40,23 @@
 
     <main>
         <section class="hero privacy-section">
-            <div class="hero__bg-title" data-i18n="priv.hero.bgTitle">POLICY</div>
+            <header class="document-heading">
+                <a class="document-back" href="index.html" data-i18n="document.home">Back to home</a>
+                <div class="section-intro__eyebrow">
+                    <span data-i18n="document.priv.label">Information</span>
+                    <span class="section-intro__slash" aria-hidden="true">/</span>
+                    <span class="section-intro__count">Cookies</span>
+                </div>
+                <h1 class="privacy__title" data-i18n="priv.title">Privacy Policy and Cookie Usage</h1>
+                <p class="privacy__date" data-i18n="priv.date">Last updated: July 1, 2026</p>
+            </header>
+
             
             <div class="privacy-wrapper">
                 <!-- ЛЕВАЯ НАВИГАЦИЯ -->
                 <aside class="privacy-sidebar">
-                    <nav class="privacy-nav">
+                    <p class="document-toc-label" data-i18n="document.contents">Contents</p>
+                    <nav class="privacy-nav" aria-label="Page contents" data-i18n-attr="aria-label:document.contents">
                         <ul class="privacy-nav__list">
                             <li><a href="#section-1" class="privacy-nav__link" data-i18n="priv.nav1">1. General Provisions</a></li>
                             <li><a href="#section-2" class="privacy-nav__link" data-i18n="priv.nav2">2. Key Terms Used in this Policy</a></li>
@@ -65,8 +76,7 @@
 
                 <!-- ПРАВАЯ ЧАСТЬ - КОНТЕНТ -->
                 <div class="privacy-content">
-                    <h1 class="privacy__title" data-i18n="priv.title">Privacy Policy and Cookie Usage</h1>
-                    <p class="privacy__date" data-i18n="priv.date">Last updated: July 1, 2026</p>
+
                     
                     <section id="section-1">
                         <h2 class="privacy__subtitle" data-i18n="priv.nav1">1. General Provisions</h2>
@@ -211,7 +221,6 @@
 
     <div class="loading-screen" id="loadingScreen" hidden aria-hidden="true">
         <div class="loading-content" role="status" aria-live="polite">
-            <img class="loading-mark" src="./favicon.svg" width="64" height="64" alt="" aria-hidden="true">
             <div class="loading-name" id="nameLoader" data-i18n="loader.name">Ekaterina Tumanova</div>
             <div class="loading-role" id="roleLoader">Frontend Developer</div>
             <div class="loading-track" aria-hidden="true"><span></span></div>

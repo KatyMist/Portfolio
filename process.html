@@ -39,12 +39,26 @@
 
     <main>
         <section class="hero process-section">
-            <div class="hero__bg-title" data-i18n="proc.hero.bgTitle">PROCESS</div>
+            <header class="document-heading">
+                <a class="document-back" href="index.html" data-i18n="document.home">Back to home</a>
+                <div class="section-intro__eyebrow">
+                    <span data-i18n="document.proc.label">Collaboration</span>
+                    <span class="section-intro__slash" aria-hidden="true">/</span>
+                    <span class="section-intro__count" data-i18n="document.steps">09 stages</span>
+                </div>
+                <h1 class="process__title" data-i18n="proc.title">Development Process</h1>
+                <p class="process__subtitle-intro" data-i18n="proc.intro">
+                        My main focus is frontend development and working within a team.
+                        The stages below show how the work can be organized when building a custom website.
+                    </p>
+            </header>
+
 
             <div class="process-wrapper">
                 <!-- ЛЕВАЯ НАВИГАЦИЯ -->
                 <aside class="process-sidebar">
-                    <nav class="process-nav">
+                    <p class="document-toc-label" data-i18n="document.contents">Contents</p>
+                    <nav class="process-nav" aria-label="Page contents" data-i18n-attr="aria-label:document.contents">
                         <ul class="process-nav__list">
                             <li><a href="#section-1" class="process-nav__link" data-i18n="proc.step1">01. Brief &amp; Concept</a></li>
                             <li><a href="#section-2" class="process-nav__link" data-i18n="proc.step2">02. Structure Planning</a></li>
@@ -61,19 +75,16 @@
 
                 <!-- ПРАВАЯ ЧАСТЬ - КОНТЕНТ -->
                 <div class="process-content">
-                    <h1 class="process__title" data-i18n="proc.title">Development Process</h1>
-                    <p class="process__subtitle-intro" data-i18n="proc.intro">
-                        My main focus is frontend development and working within a team.
-                        The stages below show how the work can be organized when building a custom website.
-                    </p>
+
 
                     <section id="section-1">
                         <h2 class="process__subtitle" data-i18n="proc.step1">01. Brief &amp; Concept</h2>
                         <p class="process__text" data-i18n="proc.s1.p1">The work starts with a short brief, where you describe your project, wishes, and preferences.</p>
                         <p class="process__text" data-i18n="proc.s1.p2">Based on it, I create a preliminary layout of the future website. We then discuss the proposed concept together, adjust it if needed, and only move on to development once it's approved.</p>
-                        <a href="./Проектныи_Бриф.docx" download class="process__download-btn" data-i18n="proc.s1.btn">
-                            Download the brief
-                        </a>
+                        <aside class="document-note">
+                            <h3 data-i18n="proc.brief.title">A brief tailored to your project</h3>
+                            <p data-i18n="proc.brief.text">I create a unique brief for each client, taking into account the goals, audience, and specifics of the project. We discuss the questions together to define the scope before work begins.</p>
+                        </aside>
                     </section>
 
                     <section id="section-2">
@@ -173,7 +184,6 @@
 
     <div class="loading-screen" id="loadingScreen" hidden aria-hidden="true">
         <div class="loading-content" role="status" aria-live="polite">
-            <img class="loading-mark" src="./favicon.svg" width="64" height="64" alt="" aria-hidden="true">
             <div class="loading-name" id="nameLoader" data-i18n="loader.name">Ekaterina Tumanova</div>
             <div class="loading-role" id="roleLoader">Frontend Developer</div>
             <div class="loading-track" aria-hidden="true"><span></span></div>

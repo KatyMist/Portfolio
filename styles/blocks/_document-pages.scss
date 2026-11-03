@@ -1,0 +1,145 @@
+// Shared layout for the process and cookie policy pages.
+.process-section.hero, .privacy-section.hero {
+    display: block;
+    min-height: 0;
+    padding: 0;
+    margin-bottom: 0;
+    overflow: visible;
+    background: var(--color-bg-main);
+}
+.document-heading {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 106px 32px 34px;
+}
+.document-back {
+    position: absolute;
+    top: 20px;
+    left: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    padding: 9px 16px;
+    border: 1px solid rgba(142, 158, 126, 0.22);
+    border-radius: 999px;
+    color: #637456;
+    background: #e8eddf;
+    font: 500 10px/1.5 'Manrope', sans-serif;
+    transition: background-color 0.25s ease;
+}
+.process__title, .privacy__title {
+    max-width: 930px;
+    margin: 0 0 18px;
+    color: #59644f;
+    font: 400 clamp(34px, 4.5vw, 56px)/1.13 'PlayfairDisplay', serif;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+}
+.process__subtitle-intro, .privacy__date {
+    max-width: 680px;
+    margin: 0;
+    color: #858b7c;
+    font: 400 12px/1.85 'Manrope', sans-serif;
+}
+.process-wrapper, .privacy-wrapper {
+    display: grid;
+    grid-template-columns: 225px minmax(0, 1fr);
+    align-items: start;
+    gap: 54px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px 56px;
+}
+.process-sidebar, .privacy-sidebar {
+    position: sticky;
+    top: 84px;
+    padding: 20px 14px 12px;
+    border: 1px solid rgba(146, 158, 131, 0.17);
+    border-radius: 22px;
+    background: #f0f2e9;
+    max-height: calc(100svh - 108px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #bcc6b2 transparent;
+}
+.document-toc-label {
+    margin: 0 10px 12px;
+    color: #939b87;
+    font: 500 9px/1.5 'Manrope', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+}
+.process-nav__list, .privacy-nav__list { margin: 0; padding: 0; list-style: none; }
+.process-nav__link, .privacy-nav__link {
+    display: block;
+    padding: 9px 10px;
+    border-radius: 11px;
+    color: #75816a;
+    font: 400 10px/1.7 'Manrope', sans-serif;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+.process-content, .privacy-content { min-width: 0; }
+.process-content > section, .privacy-content > section {
+    margin: 0;
+    padding: 27px 0;
+    border-top: 1px solid rgba(146, 158, 131, 0.2);
+    scroll-margin-top: 78px;
+}
+.process-content > section:first-child, .privacy-content > section:first-child { padding-top: 22px; }
+.process__subtitle, .privacy__subtitle {
+    margin: 0 0 17px;
+    color: #606c54;
+    font: 400 clamp(23px, 2.3vw, 29px)/1.35 'PlayfairDisplay', serif;
+    letter-spacing: -0.015em;
+    overflow-wrap: anywhere;
+}
+.process__text, .privacy__text, .process__item, .privacy__item {
+    margin: 0 0 12px;
+    color: #808775;
+    font: 400 12px/1.9 'Manrope', sans-serif;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+.privacy__text b { color: #68755c; font-weight: 600; }
+.process__list, .privacy__list { padding-left: 18px; margin: 0 0 16px; list-style: disc; }
+.process__item, .privacy__item { padding-left: 3px; margin-bottom: 7px; }
+.process__item::marker, .privacy__item::marker { color: #a7b298; }
+.process__text a, .privacy__text a { color: #637456; text-decoration: underline; text-underline-offset: 3px; }
+.process-content > section > :last-child, .privacy-content > section > :last-child { margin-bottom: 0; }
+.document-note {
+    margin: 22px 0 0;
+    padding: 22px 24px;
+    border: 1px solid rgba(146, 158, 131, 0.18);
+    border-radius: 20px;
+    background: #eef2e7;
+}
+.document-note h3 { margin: 0 0 9px; color: #657456; font: 400 22px/1.35 'PlayfairDisplay', serif; }
+.document-note p { margin: 0; color: #7d8970; font: 400 12px/1.85 'Manrope', sans-serif; }
+.process-section a:focus-visible, .privacy-section a:focus-visible { outline: 2px solid #879777; outline-offset: 3px; }
+@media (hover: hover) {
+    .document-back:hover { background: #dfe7d5; }
+    .process-nav__link:hover, .privacy-nav__link:hover { background: #e3e9d9; color: #536347; }
+}
+@media (max-width: 800px) {
+    .process-wrapper, .privacy-wrapper { grid-template-columns: minmax(0, 1fr); gap: 26px; }
+    .process-sidebar, .privacy-sidebar { position: static; max-height: none; padding: 16px; border-radius: 18px; }
+    .document-toc-label { margin-left: 0; margin-bottom: 8px; }
+    .process-nav__list, .privacy-nav__list { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; scrollbar-width: thin; scrollbar-color: #bcc6b2 transparent; }
+    .process-nav__list li, .privacy-nav__list li { flex: 0 0 auto; }
+    .process-nav__link, .privacy-nav__link { max-width: 270px; min-height: 44px; display: flex; align-items: center; padding: 10px 12px; background: rgba(255, 255, 255, 0.55); }
+}
+@media (max-width: 600px) {
+    .document-heading { padding: 95px 20px 25px; }
+    .document-back { left: 20px; top: 15px; }
+    .process-wrapper, .privacy-wrapper { padding: 0 20px 30px; gap: 23px; }
+    .process__title, .privacy__title { font-size: 35px; }
+    .process__subtitle-intro, .privacy__date { font-size: 11px; }
+    .process__text, .privacy__text, .process__item, .privacy__item { font-size: 12px; line-height: 1.85; }
+    .document-note { padding: 18px; border-radius: 17px; }
+    .document-note h3 { font-size: 21px; }
+    .document-note p { font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) { .document-back, .process-nav__link, .privacy-nav__link { transition: none; } }
