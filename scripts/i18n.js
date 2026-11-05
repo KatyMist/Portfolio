@@ -15,7 +15,6 @@ export const translations = {
     'idx.degree.management': { en: "Public and Municipal Administration", ru: "Государственное и муниципальное управление" },
     'idx.degree.university': { en: "Volga State University of Technology, Yoshkar-Ola", ru: "Поволжский государственный технологический университет, Йошкар-Ола" },
     'idx.degree.honors': { en: "Graduated with honors", ru: "Диплом с отличием" },
-    'loader.status': { en: 'Loading', ru: 'Загрузка' },
     'idx.education.count': { en: "06 certificates", ru: "06 сертификатов" },
     'idx.education.summary': { en: "Completed courses and certificates", ru: "Завершённые курсы и сертификаты" },
     'idx.education.profile': { en: "All courses on Stepik", ru: "Все курсы на Stepik" },
@@ -80,7 +79,6 @@ export const translations = {
     },
     'common.cookies.accept': { en: 'Accept', ru: 'Согласен' },
 
-    'loader.name': { en: 'Ekaterina Tumanova', ru: 'Екатерина Туманова' },
 
     'loadMore.show': { en: 'SHOW', ru: 'ПОКАЗАТЬ' },
     'loadMore.showSuffix': { en: 'ALL', ru: 'ВСЕ' },

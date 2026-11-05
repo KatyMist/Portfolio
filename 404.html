@@ -18,7 +18,6 @@
 
     <script src="./scripts/main.js" type="module" defer></script>
     <script src="./scripts/lang-init.js"></script>
-    <script src="./scripts/loader-init.js"></script>
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -36,14 +35,6 @@
 
 </head>
 <body>
-    <div class="loading-screen" id="loadingScreen" hidden aria-hidden="true">
-        <div class="loading-content" role="status" aria-live="polite">
-            <div class="loading-name" id="nameLoader" data-i18n="loader.name">Ekaterina Tumanova</div>
-            <div class="loading-role" id="roleLoader">Frontend Developer</div>
-            <div class="loading-track" aria-hidden="true"><span></span></div>
-            <span class="loading-caption" data-i18n="loader.status">Loading</span>
-        </div>
-    </div>
     <header class="header">
         <div class="lang-switch" id="langSwitch" role="group" aria-label="Switch language" data-i18n-attr="aria-label:common.langSwitch.ariaLabel">
                 <button type="button" class="lang-switch__btn" data-lang-btn="en" aria-pressed="true">EN</button>
