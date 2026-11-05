@@ -965,11 +965,15 @@ ul, ol {
   padding: 24px;
   background: #faf8f4;
   opacity: 1;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.18s ease;
 }
 
 .loading-screen[hidden] {
   display: none;
+}
+
+.is-loading .loading-screen[hidden] {
+  display: grid;
 }
 
 .loading-screen.fade-out {

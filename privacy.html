@@ -6,6 +6,8 @@
     <title data-i18n="priv.meta.title">Privacy Policy — Ekaterina Tumanova</title>
     <meta name="description" content="Privacy Policy" data-i18n-attr="content:priv.meta.description">
     
+    <link rel="preload" href="./fonts/PlayfairDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" sizes="any">
     <link rel="canonical" href="https://katymist.github.io/Portfolio/">
@@ -27,10 +29,19 @@
     <!-- /Yandex.Metrika counter -->
 
     <script src="./scripts/lang-init.js"></script>
+    <script src="./scripts/loader-init.js"></script>
     <link rel="stylesheet" href="./styles/main.css">
 
 </head>
 <body>
+    <div class="loading-screen" id="loadingScreen" hidden aria-hidden="true">
+        <div class="loading-content" role="status" aria-live="polite">
+            <div class="loading-name" id="nameLoader" data-i18n="loader.name">Ekaterina Tumanova</div>
+            <div class="loading-role" id="roleLoader">Frontend Developer</div>
+            <div class="loading-track" aria-hidden="true"><span></span></div>
+            <span class="loading-caption" data-i18n="loader.status">Loading</span>
+        </div>
+    </div>
     <header class="header">
         <div class="lang-switch" id="langSwitch" role="group" aria-label="Switch language" data-i18n-attr="aria-label:common.langSwitch.ariaLabel">
                 <button type="button" class="lang-switch__btn" data-lang-btn="en" aria-pressed="true">EN</button>
@@ -219,14 +230,7 @@
 
     <div class="cursor" id="cursor"></div>
 
-    <div class="loading-screen" id="loadingScreen" hidden aria-hidden="true">
-        <div class="loading-content" role="status" aria-live="polite">
-            <div class="loading-name" id="nameLoader" data-i18n="loader.name">Ekaterina Tumanova</div>
-            <div class="loading-role" id="roleLoader">Frontend Developer</div>
-            <div class="loading-track" aria-hidden="true"><span></span></div>
-            <span class="loading-caption" data-i18n="loader.status">Loading</span>
-        </div>
-    </div>
+
 
     <div class="cookies-banner" id="cookiesBanner">
         <div class="cookies-banner__container">

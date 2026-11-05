@@ -1,8 +1,9 @@
 export function initLoader() {
+    const root = document.documentElement;
     const screen = document.getElementById('loadingScreen');
-    if (!screen) return;
+    // A late module must not bring the loader back after the fallback dismissed it.
+    if (!screen || !root.classList.contains('is-loading')) return;
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const started = performance.now();
     let dismissed = false;
     let safetyTimer;
 
@@ -12,6 +13,7 @@ export function initLoader() {
     const finish = () => {
         screen.hidden = true;
         screen.setAttribute('aria-hidden', 'true');
+        root.classList.remove('is-loading');
     };
     const dismiss = () => {
         if (dismissed) return;
@@ -20,19 +22,19 @@ export function initLoader() {
         screen.classList.add('fade-out');
         screen.inert = true;
         if (reduceMotion) finish();
-        else setTimeout(finish, 400);
+        else setTimeout(finish, 180);
     };
     const ready = () => {
-        const delay = reduceMotion ? 0 : Math.max(0, 650 - (performance.now() - started));
-        setTimeout(dismiss, delay);
-    };
-    const pageLoaded = () => {
-        if (document.fonts) document.fonts.ready.then(ready, ready);
-        else ready();
+        // Let translated text and the section layout settle before revealing them.
+        requestAnimationFrame(() => requestAnimationFrame(dismiss));
     };
 
-    // The overlay must never hold the page indefinitely on a slow connection.
-    safetyTimer = setTimeout(dismiss, 2500);
-    if (document.readyState === 'complete') pageLoaded();
-    else window.addEventListener('load', pageLoaded, { once: true });
+    safetyTimer = setTimeout(dismiss, 1500);
+    // Images and analytics below the first screen must not delay interaction.
+    if (document.fonts) {
+        Promise.all([
+            document.fonts.load('400 16px "PlayfairDisplay"'),
+            document.fonts.load('400 12px "Manrope"'),
+        ]).then(ready, ready);
+    } else ready();
 }
