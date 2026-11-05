@@ -1,55 +1,71 @@
 @use '../helpers' as *;
+
 .contacts-section {
     margin-bottom: 0;
-    padding: rem(80) rem(32) rem(12);
+    padding: 80px 32px 24px;
     background: var(--color-bg-main);
-    @include tablet { padding: rem(60) rem(24) rem(12); }
-    @include mobile { padding: rem(40) rem(16) rem(12); }
 }
-.contact-hub { display: block; max-width: 1200px; margin: 36px auto 0; align-items: start; }
-.contact-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; padding: 0; margin: 0; list-style: none; }
-.contact-grid > li { min-width: 0; }
-.contact-link {
+.contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: start;
+    gap: clamp(48px, 7vw, 110px);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.contact-layout .section-intro { margin: 0; padding: 0; }
+.contact-layout .section-intro__title { max-width: 350px; }
+.contact-layout .section-intro__description { max-width: 290px; }
+.contact-hub { min-width: 0; padding-top: 2px; }
+.contact-direct { border-top: 1px solid rgba(146, 158, 131, 0.3); }
+.contact-direct__link {
     display: flex;
     align-items: center;
-    gap: 12px;
-    min-height: 90px;
-    height: 100%;
-    padding: 17px;
-    border: 1px solid rgba(146, 158, 131, 0.17);
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.35);
-    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 111px;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(146, 158, 131, 0.25);
+    color: #606e53;
+    transition: color 0.3s ease;
 }
-.contact-grid > li:first-child .contact-link { background: #eef2e7; }
-.contact-grid > li:nth-child(2) .contact-link { background: #f3edf0; }
-.contact-link__icon { display: grid; place-items: center; flex-shrink: 0; width: 32px; height: 32px; border-radius: 11px; background: #e7ecde; color: #7a8a6a; font: 500 11px/1 'Manrope', sans-serif; }
-.contact-grid > li:nth-child(2n) .contact-link__icon { background: #eee5eb; color: #9b8594; }
-.contact-grid > li:nth-child(3n) .contact-link__icon { background: #eee9df; color: #998a6d; }
-.contact-link__content { display: flex; flex-direction: column; gap: 5px; flex: 1; min-width: 0; }
-.contact-link__label { color: #637157; font: 500 12px/1.4 'Manrope', sans-serif; }
-.contact-link__value { color: #8a9180; font: 400 10px/1.6 'Manrope', sans-serif; overflow-wrap: anywhere; }
-.contact-link__arrow { flex-shrink: 0; font: 400 18px/1 'Manrope', sans-serif; color: #92a181; transition: transform 0.3s ease; }
-.contact-link:focus-visible { outline: 2px solid #879777; outline-offset: 4px; }
+.contact-direct__content { display: flex; flex-direction: column; gap: 9px; min-width: 0; transition: transform 0.3s ease; }
+.contact-direct__title { font: 400 clamp(29px, 3vw, 37px)/1.2 'PlayfairDisplay', serif; letter-spacing: -0.025em; }
+.contact-direct__value { color: #89927d; font: 400 11px/1.7 'Manrope', sans-serif; overflow-wrap: anywhere; }
+.contact-direct__arrow { color: #91a17f; flex-shrink: 0; transition: transform 0.3s ease; }
+.contact-direct__arrow .ui-arrow { width: 23px; height: 23px; }
+.contact-resources { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 28px; padding-top: 24px; }
+.contact-resources__label { margin: 0 0 6px; color: #929b87; font: 400 9px/1.6 'Manrope', sans-serif; text-transform: uppercase; letter-spacing: 1.2px; }
+.contact-resources__links { display: flex; flex-wrap: wrap; align-items: center; gap: 0 23px; list-style: none; padding: 0; margin: 0; }
+.contact-resources__links a { display: inline-flex; align-items: center; min-height: 44px; color: #69785b; font: 400 11px/1.6 'Manrope', sans-serif; text-decoration: underline; text-decoration-color: rgba(146, 158, 131, 0.35); text-underline-offset: 5px; transition: color 0.3s ease, text-decoration-color 0.3s ease; }
+.contact-hub a:focus-visible { outline: 2px solid #879777; outline-offset: 5px; border-radius: 3px; }
 @media (hover: hover) {
-    .contact-grid > li .contact-link:hover { background: #e7eedc; border-color: rgba(146, 158, 131, 0.32); transform: translateY(-2px); box-shadow: 0 6px 18px rgba(111, 123, 94, 0.06); }
-    .contact-grid > li:nth-child(2n) .contact-link:hover { background: #eee4ea; }
-    .contact-link:hover .contact-link__arrow { transform: translate(2px, -2px); }
+    .contact-direct__link:hover { color: #81936d; }
+    .contact-direct__link:hover .contact-direct__content { transform: translateX(4px); }
+    .contact-direct__link:hover .contact-direct__arrow { transform: translate(2px, -2px); }
+    .contact-resources__links a:hover { color: #536347; text-decoration-color: #81936d; }
 }
-.contact-link:active { background: #e0e8d4; }
-@media (max-width: 1000px) {
-    .contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 800px) {
+    .contacts-section { padding: 56px 24px 20px; }
+    .contact-layout { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+    .contact-layout .section-intro__title { max-width: none; }
+    .contact-layout .section-intro__description { max-width: 420px; }
 }
 @media (max-width: 600px) {
-    .contact-hub { margin-top: 28px; }
-    .contact-grid { grid-template-columns: minmax(0, 1fr); gap: 10px; }
-    .contact-link { min-height: 78px; padding: 15px; border-radius: 18px; }
+    .contacts-section { padding: 40px 20px 20px; }
+    .contact-layout { gap: 25px; }
+    .contact-direct__link { min-height: 96px; padding: 19px 0; }
+    .contact-direct__title { font-size: 31px; }
+    .contact-direct__value { font-size: 10px; }
+    .contact-resources { padding-top: 20px; gap: 18px; }
+    .contact-resources__label { font-size: 8px; letter-spacing: 0.8px; }
+    .contact-resources__links { gap: 0 17px; }
+    .contact-resources__links a { font-size: 10px; }
 }
 @media (prefers-reduced-motion: reduce) {
-    .contact-link, .contact-link__arrow { transition: none; }
-    .contact-grid > li .contact-link:hover, .contact-link:hover .contact-link__arrow { transform: none; }
+    .contact-hub a, .contact-direct__content, .contact-direct__arrow { transition: none; }
+    .contact-direct__link:hover .contact-direct__content, .contact-direct__link:hover .contact-direct__arrow { transform: none; }
 }
-
 
 // Keep the background clear above the compact final section at the page end.
 .section-stack--end > section:not(:last-child) { visibility: hidden; }

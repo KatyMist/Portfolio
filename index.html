@@ -651,7 +651,8 @@
         </section>
 
         <section class="contacts-section" id="contacts">
-            <header class="section-intro">
+            <div class="contact-layout">
+                <header class="section-intro">
                 <div class="section-intro__eyebrow">
                     <span data-i18n="idx.intro.contacts.label">Contact</span>
                     <span class="section-intro__slash" aria-hidden="true">/</span>
@@ -660,52 +661,40 @@
                 <h2 class="section-intro__title" data-i18n="idx.intro.contacts.title">Let’s connect</h2>
                 <p class="section-intro__description" data-i18n="idx.intro.contacts.description">Open to offers and new professional opportunities.</p>
             </header>
-
-            <div class="contact-hub">
-                <ul class="contact-grid">
-                    <li>
-                        <a class="contact-link" href="mailto:tumanova.ekaterina73@gmail.com">
-                            <span class="contact-link__icon" aria-hidden="true">@</span>
-                            <span class="contact-link__content"><span class="contact-link__label">Email</span><span class="contact-link__value">tumanova.ekaterina73@gmail.com</span></span>
-                            <span class="ui-arrow-decoration contact-link__arrow" aria-hidden="true"><svg class="ui-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
+                <div class="contact-hub">
+                    <div class="contact-direct">
+                        <a class="contact-direct__link" href="mailto:tumanova.ekaterina73@gmail.com">
+                            <span class="contact-direct__content">
+                                <span class="contact-direct__title">Email</span>
+                                <span class="contact-direct__value">tumanova.ekaterina73@gmail.com</span>
+                            </span>
+                            <span class="contact-direct__arrow ui-arrow-decoration" aria-hidden="true"><svg class="ui-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
                         </a>
-                    </li>
-                    <li>
-                        <a class="contact-link" href="https://t.me/katymist" target="_blank" rel="noopener noreferrer">
-                            <span class="contact-link__icon" aria-hidden="true"><svg class="ui-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
-                            <span class="contact-link__content"><span class="contact-link__label">Telegram</span><span class="contact-link__value">@katymist</span></span>
-                            <span class="ui-arrow-decoration contact-link__arrow" aria-hidden="true"><svg class="ui-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
+                        <a class="contact-direct__link" href="https://t.me/katymist" target="_blank" rel="noopener noreferrer">
+                            <span class="contact-direct__content">
+                                <span class="contact-direct__title">Telegram</span>
+                                <span class="contact-direct__value">@katymist</span>
+                            </span>
+                            <span class="contact-direct__arrow ui-arrow-decoration" aria-hidden="true"><svg class="ui-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
                         </a>
-                    </li>
-                    <li>
-                        <a class="contact-link" href="https://ulyanovsk.hh.ru/resume/b77b4490ff107e4c760039ed1f5262426e565a" target="_blank" rel="noopener noreferrer">
-                            <span class="contact-link__icon" aria-hidden="true">hh</span>
-                            <span class="contact-link__content"><span class="contact-link__label">HH.ru</span><span class="contact-link__value" data-i18n="idx.contacts.value.hh">Resume and work experience</span></span>
-                            <span class="ui-arrow-decoration contact-link__arrow" aria-hidden="true"><svg class="ui-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="contact-link" href="https://career.habr.com/katymist" target="_blank" rel="noopener noreferrer">
-                            <span class="contact-link__icon" aria-hidden="true">H</span>
-                            <span class="contact-link__content"><span class="contact-link__label">Habr Career</span><span class="contact-link__value" data-i18n="idx.contacts.value.habr">Profile and skills</span></span>
-                            <span class="ui-arrow-decoration contact-link__arrow" aria-hidden="true"><svg class="ui-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="contact-link" href="https://github.com/KatyMist" target="_blank" rel="noopener noreferrer">
-                            <span class="contact-link__icon" aria-hidden="true">GH</span>
-                            <span class="contact-link__content"><span class="contact-link__label">GitHub</span><span class="contact-link__value">github.com/KatyMist</span></span>
-                            <span class="ui-arrow-decoration contact-link__arrow" aria-hidden="true"><svg class="ui-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="contact-link" href="https://stepik.org/users/1179792686/profile" target="_blank" rel="noopener noreferrer">
-                            <span class="contact-link__icon" aria-hidden="true">S</span>
-                            <span class="contact-link__content"><span class="contact-link__label">Stepik</span><span class="contact-link__value" data-i18n="idx.contacts.value.stepik">Certificates and courses</span></span>
-                            <span class="ui-arrow-decoration contact-link__arrow" aria-hidden="true"><svg class="ui-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
-                        </a>
-                    </li>
-                </ul>
+                    </div>
+                    <div class="contact-resources">
+                        <div class="contact-resources__group">
+                            <h3 class="contact-resources__label" id="contact-resumes" data-i18n="idx.contacts.resumes">Résumé</h3>
+                            <ul class="contact-resources__links" aria-labelledby="contact-resumes">
+                                <li><a href="https://ulyanovsk.hh.ru/resume/b77b4490ff107e4c760039ed1f5262426e565a" target="_blank" rel="noopener noreferrer" aria-label="Résumé on hh.ru" data-i18n-attr="aria-label:idx.contacts.resume.hh">hh.ru</a></li>
+                                <li><a href="https://career.habr.com/katymist" target="_blank" rel="noopener noreferrer" aria-label="Résumé on Habr Career" data-i18n-attr="aria-label:idx.contacts.resume.habr">Habr Career</a></li>
+                            </ul>
+                        </div>
+                        <div class="contact-resources__group">
+                            <h3 class="contact-resources__label" id="contact-work" data-i18n="idx.contacts.work">Code &amp; learning</h3>
+                            <ul class="contact-resources__links" aria-labelledby="contact-work">
+                                <li><a href="https://github.com/KatyMist" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                                <li><a href="https://stepik.org/users/1179792686/profile" target="_blank" rel="noopener noreferrer">Stepik</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

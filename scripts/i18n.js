@@ -241,6 +241,10 @@ export const translations = {
 
     'idx.contacts.title': { en: 'CONTACTS', ru: 'КОНТАКТЫ' },
     'idx.contacts.value.stepik': { en: 'Certificates and courses', ru: 'Сертификаты и курсы' },
+    'idx.contacts.resumes': { en: 'Résumé', ru: 'Резюме' },
+    'idx.contacts.work': { en: 'Code & learning', ru: 'Код и обучение' },
+    'idx.contacts.resume.hh': { en: 'Résumé on hh.ru', ru: 'Резюме на hh.ru' },
+    'idx.contacts.resume.habr': { en: 'Résumé on Habr Career', ru: 'Резюме на Habr Карьере' },
     'idx.contacts.value.hh': { en: 'Resume and work experience', ru: 'Резюме и опыт работы' },
     'idx.contacts.value.habr': { en: 'Profile and skills', ru: 'Профиль и навыки' },
     'idx.contacts.heading': { en: 'Open to new opportunities', ru: 'Открыта к новым возможностям' },
@@ -251,13 +255,13 @@ export const translations = {
     'proc.meta.description': { en: 'Website development process', ru: 'Процесс разработки сайта' },
     'proc.hero.bgTitle': { en: 'PROCESS', ru: 'ПРОЦЕСС' },
 
-    'proc.step1': { en: '01. Brief & Concept', ru: '01. Бриф и концепция' },
-    'proc.step2': { en: '02. Structure Planning', ru: '02. Продумывание структуры' },
-    'proc.step3': { en: '03. Gathering Materials', ru: '03. Подготовка материалов' },
-    'proc.step4': { en: '04. Design Approval', ru: '04. Утверждение макета' },
-    'proc.step5': { en: '05. Markup & Development', ru: '05. Вёрстка и разработка' },
-    'proc.step6': { en: '06. Device Adaptation', ru: '06. Адаптация под устройства' },
-    'proc.step7': { en: '07. Testing & Final Revisions', ru: '07. Тестирование и финальные правки' },
+    "proc.step1": {"en": "01. Introduction & Individual Brief", "ru": "01. Знакомство и индивидуальный бриф"},
+    "proc.step2": {"en": "02. Structure & Logic", "ru": "02. Структура и логика"},
+    "proc.step3": {"en": "03. Project Materials", "ru": "03. Материалы проекта"},
+    "proc.step4": {"en": "04. Visual Concept", "ru": "04. Визуальная концепция"},
+    "proc.step5": {"en": "05. Interface Development", "ru": "05. Разработка интерфейса"},
+    "proc.step6": {"en": "06. Device Checks", "ru": "06. Проверка на устройствах"},
+    "proc.step7": {"en": "07. Testing & Review", "ru": "07. Тестирование и согласование"},
     'proc.step8': { en: '08. Website Publishing', ru: '08. Публикация сайта' },
     'proc.step9': { en: '09. Project Handover', ru: '09. Передача проекта' },
 
@@ -269,10 +273,10 @@ export const translations = {
     'proc.brief.title': { en: 'A brief tailored to your project', ru: 'Бриф под вашу задачу' },
     'proc.brief.text': { en: 'I create a unique brief for each client, taking into account the goals, audience, and specifics of the project. We discuss the questions together to define the scope before work begins.', ru: 'Бриф составляю индивидуально для каждого клиента — с учётом целей, аудитории и особенностей проекта. Вопросы обсуждаем вместе, чтобы до начала работы определить задачи и объём проекта.' },
     'proc.title': { en: 'Development Process', ru: 'Процесс разработки' },
-    'proc.intro': { en: 'My main focus is frontend development and working within a team. The stages below show how the work can be organized when building a custom website.', ru: 'Основное направление моего развития — Frontend Development и работа в команде. Представленные ниже этапы показывают, как может быть организована работа при разработке индивидуального сайта.' },
+    "proc.intro": {"en": "From the first discussion to launch: we define the structure, agree on the visual direction, and build a working interface. These stages show how I organize work on a custom website.", "ru": "От первого обсуждения задачи до публикации: продумываем структуру, согласовываем визуальное направление и создаём работающий интерфейс. Эти этапы показывают, как я организую работу над индивидуальным сайтом."},
 
-    'proc.s1.p1': { en: 'The work starts with a short brief, where you describe your project, wishes, and preferences.', ru: 'Работа начинается с небольшого брифа, где вы рассказываете о своем проекте, пожеланиях и предпочтениях.' },
-    'proc.s1.p2': { en: "Based on it, I create a preliminary layout of the future website. We then discuss the proposed concept together, adjust it if needed, and only move on to development once it's approved.", ru: 'На его основе я создаю ориентировочный макет будущего сайта. Затем мы вместе обсуждаем предложенную концепцию, при необходимости корректируем ее и только после согласования переходим к разработке.' },
+    "proc.s1.p1": {"en": "We start by getting to know your project: its goals, audience, requirements, and preferences. These discussions form the basis of an individual brief.", "ru": "Начинаем со знакомства с проектом: обсуждаем его цели, аудиторию, пожелания и требования. На основе этого формируем индивидуальный бриф."},
+    "proc.s1.p2": {"en": "We define the tasks, required functionality, and scope of work. This gives us a shared understanding of the result before moving on to the website structure.", "ru": "Фиксируем задачи, необходимую функциональность и объём работы. Это помогает сформировать общее представление о результате и перейти к проработке структуры сайта."},
 
     'proc.s2.p1': { en: 'At this stage, the logic of the future website takes shape:', ru: 'На этом этапе формируется логика будущего сайта:' },
     'proc.s2.li1': { en: 'the list of pages is defined;', ru: 'определяется список страниц;' },
@@ -288,10 +292,10 @@ export const translations = {
     'proc.s3.li4': { en: 'examples of websites you like;', ru: 'примеры сайтов, которые вам нравятся;' },
     'proc.s3.li5': { en: 'additional information about the company, services, or products.', ru: 'дополнительная информация о компании, услугах или продукции.' },
 
-    'proc.s4.p1': { en: "Based on your preferences and references, a visual concept for the future website is formed: color palette, typography, interface style, and the project's overall mood.", ru: 'На основе ваших пожеланий и референсов формируется визуальная концепция будущего сайта: цветовая палитра, типографика, стилистика интерфейса и общая атмосфера проекта.' },
-    'proc.s4.p2': { en: 'Before development starts, I prepare a layout for us to approve together. Once approved, we move on to implementation.', ru: 'Перед началом разработки я подготавливаю макет, который мы согласовываем. После утверждения переходим к реализации.' },
+    "proc.s4.p1": {"en": "I develop the visual direction of the website: colors, typography, and the styling of key interface elements, drawing on your goals, preferences, and references.", "ru": "Продумываю визуальный стиль сайта: цвета, типографику и оформление основных элементов с учётом задач проекта, ваших пожеланий и референсов."},
+    "proc.s4.p2": {"en": "I may use AI to create a preliminary visualization of the idea. This sketch helps us agree on the overall direction. Interface details are refined during development, taking the content, functionality, and different screen sizes into account.", "ru": "Для предварительной визуализации идеи могу использовать ИИ. Такой эскиз помогает согласовать общее направление. Детали интерфейса уточняются в процессе разработки с учётом контента, функциональности и разных размеров экранов."},
 
-    'proc.s5.p1': { en: 'Once the design is approved, development begins using modern technologies: HTML, SCSS, and JavaScript.', ru: 'После утверждения дизайна начинается разработка сайта с использованием современных технологий: HTML, SCSS и JavaScript.' },
+    "proc.s5.p1": {"en": "Once the structure and visual direction are agreed, I build the interface using HTML, SCSS, and JavaScript.", "ru": "После согласования структуры и визуального направления разрабатываю интерфейс с использованием HTML, SCSS и JavaScript."},
     'proc.s5.p2': { en: 'This includes responsive markup, animations, interactive elements, and any functionality the project requires.', ru: 'Реализуются адаптивная вёрстка, анимации, интерактивные элементы и функциональность, предусмотренная проектом.' },
 
     'proc.s6.p1': { en: 'The website is checked and optimized for various devices and modern browsers:', ru: 'Сайт проверяется и оптимизируется для различных устройств и современных браузеров:' },
@@ -305,7 +309,7 @@ export const translations = {
     'proc.s7.li1': { en: 'correct display;', ru: 'корректность отображения;' },
     'proc.s7.li2': { en: 'forms and links working properly;', ru: 'работа форм и ссылок;' },
     'proc.s7.li3': { en: 'loading speed;', ru: 'скорость загрузки;' },
-    'proc.s7.li4': { en: 'compliance with the approved layout.', ru: 'соответствие утверждённому макету.' },
+    "proc.s7.li4": {"en": "consistency with the agreed structure and visual direction.", "ru": "соответствие согласованной структуре и визуальному направлению."},
     'proc.s7.p2': { en: 'After reviewing it, you can provide a list of revisions within the agreed scope of work, after which the project is prepared for publishing.', ru: 'После просмотра вы можете предоставить перечень замечаний в рамках согласованного объёма работ, после чего проект подготавливается к публикации.' },
 
     'proc.s8.p1': { en: 'Once development is complete, the website is deployed to your chosen hosting and connected to your domain name.', ru: 'После завершения разработки сайт размещается на выбранном вами хостинге и подключается к вашему доменному имени.' },
